@@ -1,0 +1,48 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "food photography, culinary art, professional lighting, high detail, 8k uhd"
+  negative: "blurry, low quality, distorted, deformed, people, hands"
+
+# List of prompts to generate
+prompts:
+  - "artisanal cheese board with honey drizzle"
+  - "fresh sushi platter with garnishes"
+  - "rustic sourdough bread display"
+  - "colorful macarons pyramid"
+  - "farm-to-table vegetable arrangement"
+  - "chocolate dessert with gold leaf"
+  - "craft cocktail with aromatics"
+  - "morning pastry with coffee setup"
+
+# Order of magnitude variations
+variations:
+  lighting_setup:
+    type: "sequential"
+    values: ["soft natural light", "dramatic side light", "backlit glow", "overhead diffused"]
+  styling_mood:
+    type: "random"
+    values: ["rustic", "minimalist", "luxurious", "casual"]
+  photography_style:
+    type: "static"
+    values: ["commercial food photography"]
+
+# Workflow configurations
+workflows:
+  dev:
+    steps: 20
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1, 2, 3]
+  schnell:
+    steps: 4
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1, 2]
+  default:
+    steps: 30
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1]

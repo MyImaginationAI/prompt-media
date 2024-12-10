@@ -1,0 +1,48 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "background texture, abstract surface, professional photography, high detail, 8k uhd"
+  negative: "blurry, low quality, distorted, deformed, foreground elements, focal objects"
+
+# List of prompts to generate
+prompts:
+  - "bokeh light effect"
+  - "gradient color blend"
+  - "abstract smoke texture"
+  - "water ripple surface"
+  - "marble swirl pattern"
+  - "ethereal cloud formation"
+  - "light beam diffusion"
+  - "abstract wave pattern"
+
+# Order of magnitude variations
+variations:
+  mood:
+    type: "sequential"
+    values: ["serene", "dynamic", "mysterious", "energetic"]
+  texture_type:
+    type: "random"
+    values: ["smooth", "textured", "layered", "atmospheric"]
+  style:
+    type: "static"
+    values: ["abstract background"]
+
+# Workflow configurations
+workflows:
+  dev:
+    steps: 20
+    cfg_scale: 7
+    width: 1216
+    height: 1216
+    seeds: [1, 2, 3]
+  schnell:
+    steps: 4
+    cfg_scale: 7
+    width: 1216
+    height: 1216
+    seeds: [1, 2]
+  default:
+    steps: 30
+    cfg_scale: 7
+    width: 1216
+    height: 1216
+    seeds: [1]

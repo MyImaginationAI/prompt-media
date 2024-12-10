@@ -1,0 +1,48 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "prop concept art, item design, technical detail, high detail, 8k uhd"
+  negative: "blurry, low quality, distorted, deformed, photographic, existing items"
+
+# List of prompts to generate
+prompts:
+  - "energy weapon prototype"
+  - "advanced medical device"
+  - "quantum computing interface"
+  - "explorer's survival gear"
+  - "alien artifact discovery"
+  - "bio-enhanced armor suit"
+  - "dimensional travel device"
+  - "advanced communication tool"
+
+# Order of magnitude variations
+variations:
+  design_stage:
+    type: "sequential"
+    values: ["initial sketch", "technical drawing", "detail view", "context shot"]
+  technology_level:
+    type: "random"
+    values: ["advanced tech", "alien tech", "hybrid tech", "experimental tech"]
+  art_style:
+    type: "static"
+    values: ["technical concept art"]
+
+# Workflow configurations
+workflows:
+  dev:
+    steps: 20
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1, 2, 3]
+  schnell:
+    steps: 4
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1, 2]
+  default:
+    steps: 30
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1]

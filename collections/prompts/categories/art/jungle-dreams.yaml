@@ -1,0 +1,36 @@
+prompt_settings:
+  prefix: "psychedelic jungle art, vibrant rainforest creatures, fantasy painting"
+  negative: "blurry, low quality, distorted, deformed, photographic, muted colors"
+
+prompts:
+  - "technicolor toucan with crystal feathers"
+  - "mystical tree frog with galaxy patterns"
+  - "luminous butterfly collection in spiral formation"
+  - "rainbow macaw creating light trails"
+  - "chameleon changing into spectrum colors"
+  - "iridescent panther in phosphorescent jungle"
+
+variations:
+  style:
+    type: "static"
+    values: ["highly detailed", "artistic", "acrylic painting style"]
+
+workflows:
+  dev:
+    steps: 20
+    cfg_scale: 7
+    width: 1344
+    height: 768
+    seeds: [1, 2, 3]
+  schnell:
+    steps: 4
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1,2]
+  default:
+    steps: 30
+    cfg_scale: 7
+    width: 768
+    height: 768
+    seeds: [1]

@@ -1,0 +1,48 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "fractal art, mathematical patterns, infinite detail, 8k uhd"
+  negative: "blurry, low quality, distorted, deformed, photographic, realistic"
+
+# List of prompts to generate
+prompts:
+  - "mandelbrot set exploration"
+  - "spiral fractal patterns"
+  - "julia set visualization"
+  - "recursive geometric fractals"
+  - "organic fractal growth"
+  - "crystalline fractal structure"
+  - "fibonacci spiral fractals"
+  - "kaleidoscopic fractal patterns"
+
+# Order of magnitude variations
+variations:
+  complexity:
+    type: "sequential"
+    values: ["simple iteration", "moderate complexity", "high complexity", "infinite detail"]
+  color_theme:
+    type: "random"
+    values: ["rainbow spectrum", "monochromatic", "dual tone", "metallic"]
+  rendering_style:
+    type: "static"
+    values: ["digital art"]
+
+# Workflow configurations
+workflows:
+  dev:
+    steps: 20
+    cfg_scale: 7
+    width: 1216
+    height: 1216
+    seeds: [1, 2, 3]
+  schnell:
+    steps: 4
+    cfg_scale: 7
+    width: 1216
+    height: 1216
+    seeds: [1, 2]
+  default:
+    steps: 30
+    cfg_scale: 7
+    width: 1216
+    height: 1216
+    seeds: [1]

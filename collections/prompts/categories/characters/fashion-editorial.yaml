@@ -1,0 +1,48 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "high fashion photography, editorial style, designer clothing, high detail, 8k uhd"
+  negative: "blurry, low quality, distorted, deformed, cartoon style, multiple people, casual clothing"
+
+# List of prompts to generate
+prompts:
+  - "avant-garde couture in urban setting"
+  - "vintage glamour on classic staircase"
+  - "futuristic fashion in minimal space"
+  - "ethereal gown in nature"
+  - "structured suit in architectural setting"
+  - "dramatic costume in theatrical lighting"
+  - "sustainable fashion in natural light"
+  - "cultural fusion fashion statement"
+
+# Order of magnitude variations
+variations:
+  lighting_setup:
+    type: "sequential"
+    values: ["high fashion lighting", "moody editorial", "natural daylight", "dramatic spotlight"]
+  fashion_mood:
+    type: "random"
+    values: ["elegant", "edgy", "avant-garde", "classical"]
+  photography_style:
+    type: "static"
+    values: ["fashion editorial"]
+
+# Workflow configurations
+workflows:
+  dev:
+    steps: 20
+    cfg_scale: 7
+    width: 832
+    height: 1216
+    seeds: [1, 2, 3]
+  schnell:
+    steps: 4
+    cfg_scale: 7
+    width: 832
+    height: 1216
+    seeds: [1, 2]
+  default:
+    steps: 30
+    cfg_scale: 7
+    width: 832
+    height: 1216
+    seeds: [1]

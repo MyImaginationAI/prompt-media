@@ -1,0 +1,48 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "vehicle concept art, industrial design, technical illustration, high detail, 8k uhd"
+  negative: "blurry, low quality, distorted, deformed, photographic, existing vehicles"
+
+# List of prompts to generate
+prompts:
+  - "hover car with transparent canopy"
+  - "deep sea exploration vessel"
+  - "mars colony transport vehicle"
+  - "bio-organic flying machine"
+  - "quantum teleportation pod"
+  - "modular urban transport"
+  - "atmospheric skimmer craft"
+  - "suborbital passenger vehicle"
+
+# Order of magnitude variations
+variations:
+  design_phase:
+    type: "sequential"
+    values: ["rough sketch", "detailed wireframe", "color concept", "final render"]
+  technology_era:
+    type: "random"
+    values: ["near future", "far future", "alternate reality", "post-apocalyptic"]
+  art_style:
+    type: "static"
+    values: ["technical concept art"]
+
+# Workflow configurations
+workflows:
+  dev:
+    steps: 20
+    cfg_scale: 7
+    width: 1344
+    height: 768
+    seeds: [1, 2, 3]
+  schnell:
+    steps: 4
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1, 2]
+  default:
+    steps: 30
+    cfg_scale: 7
+    width: 1344
+    height: 768
+    seeds: [1]

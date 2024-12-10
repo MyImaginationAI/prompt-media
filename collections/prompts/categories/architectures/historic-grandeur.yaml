@@ -1,0 +1,48 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "historical architecture, architectural photography, detailed craftsmanship, 8k uhd"
+  negative: "blurry, low quality, distorted, deformed, modern elements, contemporary style"
+
+# List of prompts to generate
+prompts:
+  - "gothic cathedral with flying buttresses"
+  - "ancient roman amphitheater"
+  - "medieval castle on hilltop"
+  - "victorian mansion with ornate details"
+  - "chinese imperial palace complex"
+  - "renaissance palazzo in florence"
+  - "aztec temple pyramid"
+  - "ottoman mosque with minarets"
+
+# Order of magnitude variations
+variations:
+  time_period:
+    type: "sequential"
+    values: ["ancient", "medieval", "renaissance", "colonial"]
+  architectural_detail:
+    type: "random"
+    values: ["ornate carvings", "detailed stonework", "decorative elements", "period-specific features"]
+  photography_style:
+    type: "static"
+    values: ["architectural photography"]
+
+# Workflow configurations
+workflows:
+  dev:
+    steps: 20
+    cfg_scale: 7
+    width: 832
+    height: 1216
+    seeds: [1, 2, 3]
+  schnell:
+    steps: 4
+    cfg_scale: 7
+    width: 832
+    height: 1216
+    seeds: [1, 2]
+  default:
+    steps: 30
+    cfg_scale: 7
+    width: 832
+    height: 1216
+    seeds: [1]

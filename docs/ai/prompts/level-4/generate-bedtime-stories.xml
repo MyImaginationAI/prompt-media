@@ -1,0 +1,86 @@
+<purpose>
+    Create content based on the instructions, example-output, orientations-directives and inspirations-directives.
+</purpose>
+
+<instructions>
+    <instruction>Output in JSON format</instruction>
+    <instruction>Understand orders of magnitude at ai\docs\orders-of-magnitude.md</instruction>
+    <instruction>Analyze the engine\image\flux\prompts\queue\year\month\date\example.json</instruction>
+    <instruction>Write, at least 10 files, in the same format as the example-output, each file should be based on inspirations-directives</instruction>
+    <instruction>Decide the orientation of each file, based on orientations-directives.</instruction>
+    <instruction>Each file should have at least 30 prompts</instruction>
+    <instruction>Save the files in today's date folder in the same format as directory-format, example engine\image\flux\prompts\queue\2024\11\23</instruction>
+    <instruction>After all the files have been created, in libs\make\flux.mk, please update the make target, flux/run/trending, accordingly.</instruction>
+</instructions>
+
+<example-output>
+{
+    "cfg_scale": 1,
+    "steps": 20,
+    "seeds": [1],
+    "width": 832,
+    "height": 1216,
+    "prefix_prompt": "cozy children's illustration style, warm colors, gentle lighting, dreamy atmosphere,",
+    "prompts": [
+        "sleepy teddy bear waking up in a cozy bed",
+        "sleepy teddy bear waking up in a cozy bed, looking to the right",
+        "sleepy teddy bear waking up in a cozy bed, looking to the left",
+        "teddy bear holding a white blanket, going downstairs",
+        "teddy bear holding a white blanket, going downstairs, rubbing his eyes",
+        "teddy bear holding a white blanket, opening the fridge door",
+        "teddy bear holding a white blanket, opening the fridge door, rubbing his eyes",
+        "teddy bear holding a white blanket, going upstairs",
+        "teddy bear holding a white blanket, going upstairs, rubbing his eyes",
+        "teddy bear holding a white blanket, going downstairs",
+        "teddy bear holding a white blanket, going downstairs, rubbing his eyes",
+        "teddy bear holding a white blanket, opening the fridge door",
+        "teddy bear holding a white blanket, opening the fridge door, rubbing his eyes",
+        "teddy bear holding a white blanket, going upstairs",
+        "teddy bear holding a white blanket, going upstairs, rubbing his eyes",
+        "teddy bear holding a white blanket, going downstairs",
+        "teddy bear holding a white blanket, going downstairs, rubbing his eyes",
+        "teddy bear holding a white blanket, opening the fridge door",
+        "teddy bear holding a white blanket, opening the fridge door, rubbing his eyes",
+        "teddy bear holding a white blanket, going upstairs",
+    ],
+    "ooms": [
+        {
+            "oom": {
+                "key": "style",
+                "value": "highly detailed",
+                "type": "static"
+            }
+        },
+        {
+            "oom": {
+                "key": "scenario",
+                "value": "in a forest",
+                "type": "static"
+            }
+        }
+    ]
+}
+
+</example-output>
+
+<orientations-directives>
+Portrait:
+    "width": 832,
+    "height": 1216,
+
+Landscape:
+    "width": 1216,
+    "height": 832,
+
+Wide:
+    "width": 1344,
+    "height": 768,
+</orientations-directives>
+
+<directory-format>
+engine\image\flux\prompts\queue\yyyy\mm\dd\1-example.json
+</directory-format>
+
+<inspirations-directives>
+    Friendly, SFW, bedtime stories
+</inspirations-directives>

@@ -1,0 +1,48 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "abstract art, geometric shapes, clean lines, minimalist, 8k uhd"
+  negative: "blurry, low quality, distorted, deformed, realistic, photographic"
+
+# List of prompts to generate
+prompts:
+  - "interlocking circles and squares"
+  - "floating geometric pyramids"
+  - "spiraling fractal patterns"
+  - "cubic maze structure"
+  - "tessellating hexagons"
+  - "flowing ribbon geometry"
+  - "crystalline formations"
+  - "nested sacred geometry"
+
+# Order of magnitude variations
+variations:
+  color_scheme:
+    type: "sequential"
+    values: ["monochromatic", "complementary colors", "analogous colors", "triadic colors"]
+  complexity:
+    type: "random"
+    values: ["minimal", "moderate", "complex", "intricate"]
+  texture:
+    type: "static"
+    values: ["smooth gradients"]
+
+# Workflow configurations
+workflows:
+  dev:
+    steps: 20
+    cfg_scale: 7
+    width: 1216
+    height: 1216
+    seeds: [1, 2, 3]
+  schnell:
+    steps: 4
+    cfg_scale: 7
+    width: 1216
+    height: 1216
+    seeds: [1, 2]
+  default:
+    steps: 30
+    cfg_scale: 7
+    width: 1216
+    height: 1216
+    seeds: [1]

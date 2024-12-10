@@ -1,0 +1,48 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "professional in action, documentary style, authentic moment, high detail, 8k uhd"
+  negative: "blurry, low quality, distorted, deformed, cartoon style, multiple people, staged pose"
+
+# List of prompts to generate
+prompts:
+  - "surgeon performing delicate operation"
+  - "firefighter during rescue operation"
+  - "chef creating culinary masterpiece"
+  - "artist working on large canvas"
+  - "scientist conducting experiment"
+  - "carpenter crafting custom furniture"
+  - "conductor leading orchestra"
+  - "archaeologist at excavation site"
+
+# Order of magnitude variations
+variations:
+  environment:
+    type: "sequential"
+    values: ["professional setting", "field work", "studio space", "emergency scene"]
+  action_type:
+    type: "random"
+    values: ["focused work", "critical moment", "skilled execution", "creative process"]
+  documentation_style:
+    type: "static"
+    values: ["photojournalistic"]
+
+# Workflow configurations
+workflows:
+  dev:
+    steps: 20
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1, 2, 3]
+  schnell:
+    steps: 4
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1, 2]
+  default:
+    steps: 30
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1]

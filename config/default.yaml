@@ -1,0 +1,66 @@
+# =============================================================================
+# Default Configuration
+# =============================================================================
+
+# Server Configuration
+server:
+  host: "127.0.0.1"
+  port: 7860
+  debug: false
+
+# Media Configuration
+media:
+  base_dir: "media"  # Base directory for all media files
+  paths:
+    images: "images"  # Relative to base_dir
+    videos: "videos"  # Relative to base_dir
+    audio: "audio"    # Relative to base_dir
+    other: "other"    # Relative to base_dir
+
+# Image Generation
+image:
+  output_dir: "generated_images"
+  default_seeds: 1
+  seed_start: 1
+  seed_end: 10
+  video_duration: 3
+  cfg_scale: 1
+  steps: 20
+
+# Model Configuration
+model:
+  torch_device: "cuda"
+  torch_dtype: "float16"
+  torch_compile: false
+  torch_blas_prefer_hipblaslt: 0
+  hsa_override_gfx_version: "11.0.0"
+
+# Paths Configuration
+paths:
+  prompt_media: "prompts.yaml"
+  windows_output: "D:/Downloads/stable-diffusion-outputs"
+
+# Logging Configuration
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "app.log"
+
+# API Configuration
+api:
+  timeout: 30
+  retries: 3
+  backoff_factor: 0.5
+
+# Security Configuration
+security:
+  api_key_header: "X-API-Key"
+  jwt_secret: null  # Set this in environment-specific config
+  jwt_algorithm: "HS256"
+  jwt_expiry: 3600  # 1 hour
+
+# Cache Configuration
+cache:
+  enabled: true
+  ttl: 3600  # 1 hour
+  max_size: 1000  # Maximum number of items to cache

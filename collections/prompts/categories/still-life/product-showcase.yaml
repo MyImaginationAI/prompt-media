@@ -1,0 +1,48 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "product photography, commercial quality, studio lighting, high detail, 8k uhd"
+  negative: "blurry, low quality, distorted, deformed, cluttered, messy"
+
+# List of prompts to generate
+prompts:
+  - "luxury watch on marble surface"
+  - "premium perfume bottle with reflection"
+  - "high-end headphones display"
+  - "designer handbag showcase"
+  - "smartphone with dynamic lighting"
+  - "jewelry on black velvet"
+  - "premium skincare product set"
+  - "athletic shoes with dramatic shadows"
+
+# Order of magnitude variations
+variations:
+  studio_setup:
+    type: "sequential"
+    values: ["white backdrop", "gradient background", "environmental context", "dark and moody"]
+  product_focus:
+    type: "random"
+    values: ["whole product", "detail shot", "lifestyle context", "feature highlight"]
+  photography_style:
+    type: "static"
+    values: ["commercial product photography"]
+
+# Workflow configurations
+workflows:
+  dev:
+    steps: 20
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1, 2, 3]
+  schnell:
+    steps: 4
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1, 2]
+  default:
+    steps: 30
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1]

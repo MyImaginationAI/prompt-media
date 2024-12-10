@@ -1,0 +1,48 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "abstract art, color theory, bold composition, high detail, 8k uhd"
+  negative: "blurry, low quality, distorted, deformed, representational, figurative"
+
+# List of prompts to generate
+prompts:
+  - "liquid color flow abstract"
+  - "color field painting style"
+  - "prismatic light refraction"
+  - "gradient color transition"
+  - "complementary color explosion"
+  - "rainbow spectrum waves"
+  - "chromatic smoke patterns"
+  - "color block composition"
+
+# Order of magnitude variations
+variations:
+  color_scheme:
+    type: "sequential"
+    values: ["warm palette", "cool palette", "neutral tones", "vibrant spectrum"]
+  composition_style:
+    type: "random"
+    values: ["flowing", "structured", "organic", "geometric"]
+  art_movement:
+    type: "static"
+    values: ["abstract expressionism"]
+
+# Workflow configurations
+workflows:
+  dev:
+    steps: 20
+    cfg_scale: 7
+    width: 1216
+    height: 1216
+    seeds: [1, 2, 3]
+  schnell:
+    steps: 4
+    cfg_scale: 7
+    width: 1216
+    height: 1216
+    seeds: [1, 2]
+  default:
+    steps: 30
+    cfg_scale: 7
+    width: 1216
+    height: 1216
+    seeds: [1]

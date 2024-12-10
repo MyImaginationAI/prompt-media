@@ -1,0 +1,61 @@
+# MyImaginationAI Brand Identity Prompt Media
+# Focus on innovative, creative, and imaginative visual elements that represent AI and imagination
+
+prompt_settings:
+  prefix: "professional branding, high end tech company, innovative AI startup, diverse modern design styles, text 'MyImaginationAI' in bold,"
+  negative: "blurry, low quality, distorted, deformed, amateur, cluttered, busy, text, words, letters"
+
+prompts:
+  - "a glowing cyberpunk brain made of neon circuits and neural networks, urban tech aesthetic with teal and purple accents"
+  - "graffiti-style imagination burst with street art elements, bold orange and black designs flowing into digital patterns"
+  - "futuristic urban workspace with holographic displays, cyberpunk aesthetics with neon teal and purple glows"
+  - "geometric brain logo in street art style, transforming into a digital network, black base with orange and purple highlights"
+  - "floating particles in urban tech style forming a lightbulb, white particles with teal and orange accents"
+  - "cyberpunk-inspired machine learning visualization, with neon circuits and urban grid patterns"
+  - "street art meets AI, creative assistant rendered in bold graffiti style"
+  - "imagination factory in cyberpunk aesthetic, conveyor belt of ideas with neon accents"
+
+variations:
+  style:
+    type: "static"
+    values: ["cyberpunk", "urban tech", "street art", "graffiti", "neon futuristic", "tech noir"]
+  color:
+    type: "sequential"
+    values: [
+      "black and white with orange accents",
+      "teal and purple neon glow",
+      "urban black with orange and teal highlights",
+      "white base with purple and orange elements",
+      "cyberpunk teal and black with purple accents"
+    ]
+  mood:
+    type: "random"
+    values: [
+      "innovative",
+      "urban",
+      "rebellious",
+      "futuristic",
+      "street-smart",
+      "cyber-creative"
+    ]
+
+# Using wide format for most brand assets (good for web banners and presentations)
+workflows:
+  dev:
+    steps: 20
+    cfg_scale: 7
+    width: 1344
+    height: 768
+    seeds: [1, 2, 3, 4]
+  schnell:
+    steps: 4
+    cfg_scale: 7
+    width: 1344
+    height: 768
+    seeds: [1, 2]
+  default:
+    steps: 30
+    cfg_scale: 7
+    width: 1344
+    height: 768
+    seeds: [1]

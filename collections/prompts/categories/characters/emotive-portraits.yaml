@@ -1,0 +1,48 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "portrait photography, emotional depth, cinematic lighting, high detail, 8k uhd"
+  negative: "blurry, low quality, distorted, deformed, cartoon style, multiple people"
+
+# List of prompts to generate
+prompts:
+  - "contemplative young artist in studio"
+  - "elderly wise person with kind eyes"
+  - "determined athlete after victory"
+  - "serene meditation practitioner"
+  - "passionate musician during performance"
+  - "focused craftsperson at work"
+  - "joyful dancer in motion"
+  - "thoughtful writer in library"
+
+# Order of magnitude variations
+variations:
+  lighting:
+    type: "sequential"
+    values: ["rembrandt lighting", "butterfly lighting", "split lighting", "loop lighting"]
+  emotion:
+    type: "random"
+    values: ["serene", "passionate", "contemplative", "joyful"]
+  composition:
+    type: "static"
+    values: ["intimate portrait framing"]
+
+# Workflow configurations
+workflows:
+  dev:
+    steps: 20
+    cfg_scale: 7
+    width: 832
+    height: 1216
+    seeds: [1, 2, 3]
+  schnell:
+    steps: 4
+    cfg_scale: 7
+    width: 832
+    height: 1216
+    seeds: [1, 2]
+  default:
+    steps: 30
+    cfg_scale: 7
+    width: 832
+    height: 1216
+    seeds: [1]

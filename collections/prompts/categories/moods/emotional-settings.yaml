@@ -1,0 +1,48 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "emotional scene, evocative setting, mood photography, high detail, 8k uhd"
+  negative: "blurry, low quality, distorted, deformed, people, figures"
+
+# List of prompts to generate
+prompts:
+  - "solitary chair by window"
+  - "empty playground at sunset"
+  - "withered flowers in vase"
+  - "door ajar in dark corridor"
+  - "childhood toy in attic"
+  - "unmade bed in morning light"
+  - "rain-streaked window view"
+  - "abandoned piano in ruins"
+
+# Order of magnitude variations
+variations:
+  emotional_tone:
+    type: "sequential"
+    values: ["melancholic", "hopeful", "nostalgic", "mysterious"]
+  color_mood:
+    type: "random"
+    values: ["warm tones", "cool tones", "muted colors", "high contrast"]
+  style:
+    type: "static"
+    values: ["fine art photography"]
+
+# Workflow configurations
+workflows:
+  dev:
+    steps: 20
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1, 2, 3]
+  schnell:
+    steps: 4
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1, 2]
+  default:
+    steps: 30
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1]

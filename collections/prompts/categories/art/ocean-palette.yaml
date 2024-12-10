@@ -1,0 +1,36 @@
+prompt_settings:
+  prefix: "underwater painting, vibrant sea creatures, abstract art style"
+  negative: "blurry, low quality, distorted, deformed, photographic, dull colors"
+
+prompts:
+  - "iridescent jellyfish dancing in bioluminescent waters"
+  - "rainbow colored octopus creating art with its tentacles"
+  - "school of tropical fish in neon colors"
+  - "majestic whale decorated with aurora patterns"
+  - "colorful seahorse among prismatic coral reefs"
+  - "playful dolphins trailing rainbow waves"
+
+variations:
+  style:
+    type: "static"
+    values: ["highly detailed", "artistic", "oil painting style"]
+
+workflows:
+  dev:
+    steps: 20
+    cfg_scale: 7
+    width: 1216
+    height: 832  # landscape orientation
+    seeds: [1, 2, 3]
+  schnell:
+    steps: 4
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1, 2]
+  default:
+    steps: 30
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1]

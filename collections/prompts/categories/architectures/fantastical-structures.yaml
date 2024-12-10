@@ -1,0 +1,48 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "fantasy architecture, impossible structures, magical buildings, high detail, 8k uhd"
+  negative: "blurry, low quality, distorted, deformed, realistic style, mundane"
+
+# List of prompts to generate
+prompts:
+  - "crystal palace floating in clouds"
+  - "living tree city with organic architecture"
+  - "underwater dome city"
+  - "gravity-defying spiral towers"
+  - "magical library with impossible geometry"
+  - "cloud castle with rainbow bridges"
+  - "steampunk clockwork building"
+  - "elemental temple of four seasons"
+
+# Order of magnitude variations
+variations:
+  magical_atmosphere:
+    type: "sequential"
+    values: ["ethereal glow", "mystical aura", "arcane energy", "dream-like haze"]
+  architectural_magic:
+    type: "random"
+    values: ["floating elements", "morphing structures", "magical materials", "impossible physics"]
+  style:
+    type: "static"
+    values: ["fantasy art masterpiece"]
+
+# Workflow configurations
+workflows:
+  dev:
+    steps: 20
+    cfg_scale: 7
+    width: 1344
+    height: 768
+    seeds: [1, 2, 3]
+  schnell:
+    steps: 4
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1, 2]
+  default:
+    steps: 30
+    cfg_scale: 7
+    width: 1344
+    height: 768
+    seeds: [1]

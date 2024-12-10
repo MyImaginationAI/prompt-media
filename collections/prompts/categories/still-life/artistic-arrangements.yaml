@@ -1,0 +1,48 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "still life arrangement, artistic composition, professional lighting, high detail, 8k uhd"
+  negative: "blurry, low quality, distorted, deformed, cluttered, chaotic"
+
+# List of prompts to generate
+prompts:
+  - "classic flower arrangement in crystal vase"
+  - "vintage books with dried flowers"
+  - "fruit bowl with dramatic lighting"
+  - "musical instruments composition"
+  - "shells and coastal objects"
+  - "art supplies still life"
+  - "tea ceremony arrangement"
+  - "seasonal botanical display"
+
+# Order of magnitude variations
+variations:
+  composition_style:
+    type: "sequential"
+    values: ["classical", "modern minimal", "wabi-sabi", "dutch masters"]
+  mood_lighting:
+    type: "random"
+    values: ["bright and airy", "dark and moody", "soft and dreamy", "dramatic contrast"]
+  artistic_influence:
+    type: "static"
+    values: ["fine art photography"]
+
+# Workflow configurations
+workflows:
+  dev:
+    steps: 20
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1, 2, 3]
+  schnell:
+    steps: 4
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1, 2]
+  default:
+    steps: 30
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1]

@@ -1,0 +1,48 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "urban landscape, architectural photography, cinematic, detailed cityscape, 8k uhd"
+  negative: "blurry, low quality, distorted, deformed, cartoon style"
+
+# List of prompts to generate
+prompts:
+  - "modern downtown skyline with glass skyscrapers"
+  - "historic european city center with cobblestone streets"
+  - "busy intersection with city lights"
+  - "aerial view of central park style urban oasis"
+  - "waterfront district with modern architecture"
+  - "night market in asian metropolis"
+  - "mediterranean coastal town"
+  - "industrial district transformation into art quarter"
+
+# Order of magnitude variations
+variations:
+  lighting:
+    type: "sequential"
+    values: ["golden hour", "blue hour", "night lights", "daylight"]
+  atmosphere:
+    type: "random"
+    values: ["bustling", "peaceful", "mysterious", "vibrant"]
+  composition:
+    type: "static"
+    values: ["wide panoramic shot"]
+
+# Workflow configurations
+workflows:
+  dev:
+    steps: 20
+    cfg_scale: 7
+    width: 1344
+    height: 768
+    seeds: [1, 2, 3]
+  schnell:
+    steps: 4
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1, 2]
+  default:
+    steps: 30
+    cfg_scale: 7
+    width: 1344
+    height: 768
+    seeds: [1]

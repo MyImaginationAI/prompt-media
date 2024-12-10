@@ -1,0 +1,35 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "black and white painting, therapeutic atmosphere, emotional depth, fine art"
+  negative: "color, blurry, low quality, distorted, deformed, oversaturated"
+
+# List of prompts to generate
+prompts:
+  - "compassionate therapist listening attentively in a cozy office, gentle expression"
+  - "healing hands reaching towards each other, symbolizing connection and trust"
+  - "peaceful meditation garden with flowing water and zen stones"
+  - "comforting therapy room with soft natural light streaming through windows"
+  - "symbolic bridge crossing over troubled waters, representing personal growth"
+  - "empty chair technique in therapy session, powerful emotional moment"
+  - "tree of life with roots representing past and branches showing growth"
+  - "safe haven therapy space with comfortable seating and calming artwork"
+
+# Order of magnitude variations
+variations:
+  style:
+    type: "static"
+    values: ["beautiful painting", "fine art", "highly detailed", "masterpiece"]
+
+# Image orientation: portrait for professional shots
+workflows:
+  dev:
+    steps: 20
+    cfg_scale: 7
+    width: 832
+    height: 1216
+    seeds: [42, 137, 256]
+  schnell:
+    steps: 4
+    cfg_scale: 7
+    width: 832
+    height: 1216

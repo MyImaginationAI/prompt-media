@@ -1,0 +1,48 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "stunning natural landscape, pristine wilderness, photorealistic, high detail, 8k uhd"
+  negative: "blurry, low quality, distorted, deformed, artificial, man-made structures"
+
+# List of prompts to generate
+prompts:
+  - "ancient redwood forest with morning mist"
+  - "pristine alpine lake reflecting snow peaks"
+  - "rolling hills of lavender fields"
+  - "cascading tropical waterfall in rainforest"
+  - "untouched desert dunes at sunrise"
+  - "wildflower meadow in mountain valley"
+  - "crystal clear turquoise lagoon"
+  - "moss-covered ancient rocks in forest"
+
+# Order of magnitude variations
+variations:
+  time_of_day:
+    type: "sequential"
+    values: ["golden hour", "morning light", "midday sun", "sunset glow"]
+  season:
+    type: "random"
+    values: ["spring bloom", "summer verdant", "autumn colors", "winter frost"]
+  perspective:
+    type: "static"
+    values: ["wide angle landscape"]
+
+# Workflow configurations
+workflows:
+  dev:
+    steps: 20
+    cfg_scale: 7
+    width: 1344
+    height: 768
+    seeds: [1, 2, 3]
+  schnell:
+    steps: 4
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1, 2]
+  default:
+    steps: 30
+    cfg_scale: 7
+    width: 1344
+    height: 768
+    seeds: [1]

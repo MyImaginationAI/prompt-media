@@ -1,0 +1,62 @@
+# MyImaginationAI Brand Identity Prompt Media
+# Focus on innovative, creative, and imaginative visual elements that represent AI and imagination
+
+prompt_settings:
+  prefix: "professional typography, centered composition, high-end design, premium branding, ultra high quality"
+  negative: "blurry, low quality, distorted, deformed, amateur, cluttered, busy, multiple texts, wrong text, misspelled text, extra text"
+
+prompts:
+  - "elegant 3D chrome text reading 'Prompt Media' floating in the center, surrounded by soft glowing particles and light streams, minimalist composition"
+  - "artistic neon typography 'Prompt Media' with flowing light trails, cyberpunk aesthetic, centered composition with dark background"
+  - "luxurious gold metallic 'Prompt Media' text with subtle reflections, modern serif font, floating in a clean studio environment"
+  - "crystalline glass text 'Prompt Media' with rainbow light refractions, premium 3D rendering, centered in frame"
+  - "liquid metal typography 'Prompt Media' with flowing mercury-like effects, ultra-modern design, perfect center alignment"
+  - "holographic 'Prompt Media' text floating in space, iridescent color shifts, clean futuristic design"
+  - "abstract geometric 'Prompt Media' typography, made of interconnected polygons, tech-inspired design"
+  - "elegant brush calligraphy 'Prompt Media' with digital particle effects, artistic fusion"
+  - "architectural 'Prompt Media' text built from modern building elements, premium 3D design"
+  - "flowing silk fabric forming 'Prompt Media' text, premium fashion aesthetic, centered composition"
+
+variations:
+  style:
+    type: "static"
+    values: ["ultra detailed", "professional", "premium quality", "centered composition"]
+  color:
+    type: "sequential"
+    values: [
+      "luxury gold and black",
+      "chrome and glass",
+      "holographic rainbow",
+      "modern monochrome with accent lights",
+      "deep space with neon accents"
+    ]
+  mood:
+    type: "random"
+    values: [
+      "elegant",
+      "futuristic",
+      "premium",
+      "innovative",
+      "artistic"
+    ]
+
+# Using wide format for most brand assets (good for web banners and presentations)
+workflows:
+  dev:
+    steps: 20
+    cfg_scale: 7
+    width: 1344
+    height: 768
+    seeds: [1, 2, 3, 4]
+  schnell:
+    steps: 4
+    cfg_scale: 7
+    width: 1344
+    height: 768
+    seeds: [1, 2]
+  default:
+    steps: 30
+    cfg_scale: 7
+    width: 1344
+    height: 768
+    seeds: [1]

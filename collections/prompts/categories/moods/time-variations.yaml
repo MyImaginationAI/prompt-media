@@ -1,0 +1,48 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "time of day photography, natural lighting, temporal mood, high detail, 8k uhd"
+  negative: "blurry, low quality, distorted, deformed, artificial lighting"
+
+# List of prompts to generate
+prompts:
+  - "first light over mountains"
+  - "golden hour in wheat field"
+  - "blue hour cityscape"
+  - "midday desert heat"
+  - "twilight harbor scene"
+  - "midnight urban street"
+  - "pre-dawn mist in valley"
+  - "sunset through storm clouds"
+
+# Order of magnitude variations
+variations:
+  sky_condition:
+    type: "sequential"
+    values: ["clear sky", "scattered clouds", "overcast", "dramatic clouds"]
+  location:
+    type: "random"
+    values: ["urban", "rural", "coastal", "mountainous"]
+  photography_style:
+    type: "static"
+    values: ["landscape photography"]
+
+# Workflow configurations
+workflows:
+  dev:
+    steps: 20
+    cfg_scale: 7
+    width: 1344
+    height: 768
+    seeds: [1, 2, 3]
+  schnell:
+    steps: 4
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1, 2]
+  default:
+    steps: 30
+    cfg_scale: 7
+    width: 1344
+    height: 768
+    seeds: [1]

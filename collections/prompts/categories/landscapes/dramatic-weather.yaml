@@ -1,0 +1,48 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "cinematic, atmospheric, dramatic lighting, high detail, 8k uhd"
+  negative: "blurry, low quality, distorted, deformed, cartoon, anime"
+
+# List of prompts to generate
+prompts:
+  - "lightning storm over mountain range"
+  - "tornado approaching wheat fields"
+  - "misty morning in dense forest"
+  - "desert sandstorm at sunset"
+  - "northern lights over frozen lake"
+  - "monsoon rain over tropical coast"
+  - "snow blizzard in alpine peaks"
+  - "rainbow after storm over valley"
+
+# Order of magnitude variations
+variations:
+  time_of_day:
+    type: "sequential"
+    values: ["golden hour", "blue hour", "midday", "twilight"]
+  mood:
+    type: "random"
+    values: ["ominous", "serene", "dramatic", "mystical"]
+  camera_angle:
+    type: "static"
+    values: ["wide angle landscape shot"]
+
+# Workflow configurations
+workflows:
+  dev:
+    steps: 20
+    cfg_scale: 7
+    width: 1344
+    height: 768
+    seeds: [1, 2, 3]
+  schnell:
+    steps: 4
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1, 2]
+  default:
+    steps: 30
+    cfg_scale: 7
+    width: 1344
+    height: 768
+    seeds: [1]

@@ -1,0 +1,48 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "interior design, architectural space, professional photography, high detail, 8k uhd"
+  negative: "blurry, low quality, distorted, deformed, exterior, outdoor scenes"
+
+# List of prompts to generate
+prompts:
+  - "minimalist japanese zen room"
+  - "luxurious art deco living space"
+  - "industrial loft conversion"
+  - "scandinavian modern kitchen"
+  - "bohemian artist studio"
+  - "modern luxury penthouse"
+  - "traditional english library"
+  - "tropical resort suite"
+
+# Order of magnitude variations
+variations:
+  lighting:
+    type: "sequential"
+    values: ["natural daylight", "ambient evening", "accent lighting", "dramatic spots"]
+  interior_style:
+    type: "random"
+    values: ["minimalist", "maximalist", "eclectic", "contemporary"]
+  photography_angle:
+    type: "static"
+    values: ["wide angle interior shot"]
+
+# Workflow configurations
+workflows:
+  dev:
+    steps: 20
+    cfg_scale: 7
+    width: 1344
+    height: 768
+    seeds: [1, 2, 3]
+  schnell:
+    steps: 4
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1, 2]
+  default:
+    steps: 30
+    cfg_scale: 7
+    width: 1344
+    height: 768
+    seeds: [1]

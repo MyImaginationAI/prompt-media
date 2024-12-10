@@ -1,0 +1,48 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "cyberpunk aesthetic, neon lights, high-tech, futuristic, detailed, 8k uhd"
+  negative: "blurry, low quality, distorted, deformed, anime, cartoon"
+
+# List of prompts to generate
+prompts:
+  - "towering skyscrapers with holographic advertisements"
+  - "street market with cybernetic vendors"
+  - "underground tech bazaar"
+  - "aerial view of neon-lit highways"
+  - "cybernetic augmentation clinic"
+  - "rooftop garden with bioluminescent plants"
+  - "subway station with holographic interfaces"
+  - "corporate district with flying vehicles"
+
+# Order of magnitude variations
+variations:
+  time_of_day:
+    type: "sequential"
+    values: ["neon twilight", "midnight glow", "cyber dawn", "digital dusk"]
+  weather:
+    type: "random"
+    values: ["acid rain", "neon fog", "clear night", "synthetic storm"]
+  style:
+    type: "static"
+    values: ["photorealistic"]
+
+# Workflow configurations
+workflows:
+  dev:
+    steps: 20
+    cfg_scale: 7
+    width: 1344
+    height: 768
+    seeds: [1, 2, 3]
+  schnell:
+    steps: 4
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1, 2]
+  default:
+    steps: 30
+    cfg_scale: 7
+    width: 832
+    height: 1216
+    seeds: [1]

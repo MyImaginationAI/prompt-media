@@ -1,0 +1,48 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "environment concept art, world building, atmospheric perspective, high detail, 8k uhd"
+  negative: "blurry, low quality, distorted, deformed, photographic, existing locations"
+
+# List of prompts to generate
+prompts:
+  - "floating crystal city"
+  - "underwater biodome colony"
+  - "quantum realm landscape"
+  - "volcanic research facility"
+  - "alien jungle megastructure"
+  - "arctic research station"
+  - "desert nomad settlement"
+  - "orbital habitat ring"
+
+# Order of magnitude variations
+variations:
+  time_of_day:
+    type: "sequential"
+    values: ["dawn atmosphere", "midday lighting", "sunset mood", "night ambiance"]
+  environmental_condition:
+    type: "random"
+    values: ["clear weather", "atmospheric event", "extreme conditions", "mysterious phenomenon"]
+  art_style:
+    type: "static"
+    values: ["environmental concept art"]
+
+# Workflow configurations
+workflows:
+  dev:
+    steps: 20
+    cfg_scale: 7
+    width: 1344
+    height: 768
+    seeds: [1, 2, 3]
+  schnell:
+    steps: 4
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1, 2]
+  default:
+    steps: 30
+    cfg_scale: 7
+    width: 1344
+    height: 768
+    seeds: [1]

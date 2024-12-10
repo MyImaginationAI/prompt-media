@@ -1,0 +1,48 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "weather photography, atmospheric conditions, natural phenomena, high detail, 8k uhd"
+  negative: "blurry, low quality, distorted, deformed, artificial effects"
+
+# List of prompts to generate
+prompts:
+  - "gentle snow falling in forest"
+  - "summer rain on city street"
+  - "fog rolling over hills"
+  - "rainbow after storm"
+  - "autumn wind in trees"
+  - "morning frost on leaves"
+  - "heat haze over desert"
+  - "sea spray on coastal rocks"
+
+# Order of magnitude variations
+variations:
+  intensity:
+    type: "sequential"
+    values: ["subtle", "moderate", "intense", "extreme"]
+  environment:
+    type: "random"
+    values: ["urban setting", "natural landscape", "coastal area", "mountain region"]
+  photography_style:
+    type: "static"
+    values: ["weather photography"]
+
+# Workflow configurations
+workflows:
+  dev:
+    steps: 20
+    cfg_scale: 7
+    width: 1344
+    height: 768
+    seeds: [1, 2, 3]
+  schnell:
+    steps: 4
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1, 2]
+  default:
+    steps: 30
+    cfg_scale: 7
+    width: 1344
+    height: 768
+    seeds: [1]

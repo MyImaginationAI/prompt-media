@@ -1,0 +1,48 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "atmospheric landscape, weather effects, moody environment, high detail, 8k uhd"
+  negative: "blurry, low quality, distorted, deformed, cartoon style"
+
+# List of prompts to generate
+prompts:
+  - "morning fog rolling over hills"
+  - "light snow falling in forest"
+  - "sun rays through storm clouds"
+  - "autumn mist in valley"
+  - "desert heat mirages"
+  - "rainbow after light rain"
+  - "morning dew on spider webs"
+  - "sea spray at coastal cliffs"
+
+# Order of magnitude variations
+variations:
+  time_cycle:
+    type: "sequential"
+    values: ["dawn", "morning", "afternoon", "evening"]
+  weather_intensity:
+    type: "random"
+    values: ["gentle", "building", "peak", "diminishing"]
+  mood:
+    type: "static"
+    values: ["atmospheric photography"]
+
+# Workflow configurations
+workflows:
+  dev:
+    steps: 20
+    cfg_scale: 7
+    width: 1344
+    height: 768
+    seeds: [1, 2, 3]
+  schnell:
+    steps: 4
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1, 2]
+  default:
+    steps: 30
+    cfg_scale: 7
+    width: 1344
+    height: 768
+    seeds: [1]

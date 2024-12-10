@@ -1,0 +1,48 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "seamless pattern, repeating texture, geometric design, high detail, 8k uhd"
+  negative: "blurry, low quality, distorted, deformed, irregular, random"
+
+# List of prompts to generate
+prompts:
+  - "islamic geometric pattern"
+  - "art deco repetition"
+  - "celtic knot design"
+  - "japanese asanoha pattern"
+  - "moroccan tile mosaic"
+  - "greek key pattern"
+  - "mandala circular design"
+  - "op art pattern"
+
+# Order of magnitude variations
+variations:
+  complexity:
+    type: "sequential"
+    values: ["simple", "intermediate", "complex", "intricate"]
+  color_scheme:
+    type: "random"
+    values: ["monochrome", "duotone", "limited palette", "full color"]
+  pattern_style:
+    type: "static"
+    values: ["geometric pattern"]
+
+# Workflow configurations
+workflows:
+  dev:
+    steps: 20
+    cfg_scale: 7
+    width: 1216
+    height: 1216
+    seeds: [1, 2, 3]
+  schnell:
+    steps: 4
+    cfg_scale: 7
+    width: 1216
+    height: 1216
+    seeds: [1, 2]
+  default:
+    steps: 30
+    cfg_scale: 7
+    width: 1216
+    height: 1216
+    seeds: [1]

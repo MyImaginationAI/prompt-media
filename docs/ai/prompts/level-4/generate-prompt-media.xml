@@ -1,0 +1,63 @@
+<purpose>
+    Create content based on the instructions and example-output.
+</purpose>
+
+<instructions>
+    <instruction>Output in YAML format</instruction>
+    <instruction>Understand @orders-of-magnitude.md</instruction>
+    <instruction>Analyze @prompt.sample.yaml, a prompt media file.</instruction>
+    <instruction>Write, at least 3 prompt media files </instruction>
+    <instruction>Each prompt media file should have at least 6 prompts, the prompts must be cohesive and coherent between them</instruction>
+    <instruction>Each prompt media file should be based on inspirations-directives</instruction>
+    <instruction>Decide the orientation of each file, based on orientations-directives.</instruction>
+    <instruction>Save the files under collections directory, collections/prompts/categories/art/<unique-name>.yaml</instruction>
+</instructions>
+
+<example-output>
+# Default prompt settings
+prompt_settings:
+  prefix: "steampunk aesthetic, brass and copper, victorian era, mechanical wonders"
+  negative: "blurry, low quality, distorted, deformed"
+
+# List of prompts to generate
+prompts:
+  - "steam-powered airship"
+  - "mechanical clockwork city"
+  - "victorian industrial factory"
+
+# Order of magnitude variations
+variations:
+  style:
+    type: "static"
+    values: ["highly detailed"]
+
+# Image sizes
+# portrait: 832x1216
+# landscape: 1216x832
+# wide: 1344x768
+
+# Workflow configurations
+workflows:
+  dev:
+    steps: 20
+    cfg_scale: 7
+    width: 1344
+    height: 768
+    seeds: [1, 2, 3]
+  schnell:
+    steps: 4
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1, 2]
+  default:
+    steps: 30
+    cfg_scale: 7
+    width: 768
+    height: 768
+    seeds: [1]
+</example-output>
+
+<inspirations-directives>
+    {{ inspiration }}
+</inspirations-directives>

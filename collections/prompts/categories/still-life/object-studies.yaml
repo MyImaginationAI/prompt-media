@@ -1,0 +1,48 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "object photography, detailed study, museum quality, high detail, 8k uhd"
+  negative: "blurry, low quality, distorted, deformed, multiple objects, cluttered"
+
+# List of prompts to generate
+prompts:
+  - "ancient pottery with patina"
+  - "vintage mechanical timepiece"
+  - "crystalline mineral specimen"
+  - "antique scientific instrument"
+  - "historical cultural artifact"
+  - "rare coin with details"
+  - "traditional craftsman's tools"
+  - "archaeological discovery piece"
+
+# Order of magnitude variations
+variations:
+  documentation_style:
+    type: "sequential"
+    values: ["museum archive", "artistic interpretation", "technical study", "historical record"]
+  object_focus:
+    type: "random"
+    values: ["whole object", "detail macro", "texture study", "contextual shot"]
+  photography_approach:
+    type: "static"
+    values: ["archival photography"]
+
+# Workflow configurations
+workflows:
+  dev:
+    steps: 20
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1, 2, 3]
+  schnell:
+    steps: 4
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1, 2]
+  default:
+    steps: 30
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1]

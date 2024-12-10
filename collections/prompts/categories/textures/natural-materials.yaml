@@ -1,0 +1,48 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "material texture, natural surface, macro photography, high detail, 8k uhd"
+  negative: "blurry, low quality, distorted, deformed, artificial materials, synthetic"
+
+# List of prompts to generate
+prompts:
+  - "aged wood grain detail"
+  - "rough stone surface texture"
+  - "tree bark close-up pattern"
+  - "layered mineral formation"
+  - "sand ripples texture"
+  - "moss and lichen surface"
+  - "leaf vein structure"
+  - "crystal formation detail"
+
+# Order of magnitude variations
+variations:
+  lighting:
+    type: "sequential"
+    values: ["direct light", "side lighting", "backlit", "diffused light"]
+  scale:
+    type: "random"
+    values: ["macro", "close-up", "ultra detail", "full texture"]
+  photography_style:
+    type: "static"
+    values: ["material study"]
+
+# Workflow configurations
+workflows:
+  dev:
+    steps: 20
+    cfg_scale: 7
+    width: 1216
+    height: 1216
+    seeds: [1, 2, 3]
+  schnell:
+    steps: 4
+    cfg_scale: 7
+    width: 1216
+    height: 1216
+    seeds: [1, 2]
+  default:
+    steps: 30
+    cfg_scale: 7
+    width: 1216
+    height: 1216
+    seeds: [1]

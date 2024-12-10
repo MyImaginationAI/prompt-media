@@ -1,0 +1,48 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "atmospheric photography, moody scene, cinematic lighting, high detail, 8k uhd"
+  negative: "blurry, low quality, distorted, deformed, flat lighting, harsh"
+
+# List of prompts to generate
+prompts:
+  - "misty forest path at dawn"
+  - "abandoned cathedral interior"
+  - "moonlit desert dunes"
+  - "foggy urban alleyway"
+  - "candlelit ancient library"
+  - "steam-filled train station"
+  - "underwater kelp forest"
+  - "starlit mountain peak"
+
+# Order of magnitude variations
+variations:
+  lighting:
+    type: "sequential"
+    values: ["ethereal glow", "dramatic shadows", "ambient light", "mysterious rays"]
+  atmosphere:
+    type: "random"
+    values: ["misty", "smoky", "dusty", "clear"]
+  mood:
+    type: "static"
+    values: ["cinematic atmosphere"]
+
+# Workflow configurations
+workflows:
+  dev:
+    steps: 20
+    cfg_scale: 7
+    width: 1344
+    height: 768
+    seeds: [1, 2, 3]
+  schnell:
+    steps: 4
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1, 2]
+  default:
+    steps: 30
+    cfg_scale: 7
+    width: 1344
+    height: 768
+    seeds: [1]

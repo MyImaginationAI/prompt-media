@@ -1,0 +1,48 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "fantasy landscape, magical environment, ethereal atmosphere, highly detailed, 8k uhd"
+  negative: "blurry, low quality, distorted, deformed, anime style, cartoon"
+
+# List of prompts to generate
+prompts:
+  - "floating islands with crystalline waterfalls"
+  - "ancient magical library city"
+  - "bioluminescent forest with giant mushrooms"
+  - "crystal cave system with magical energy"
+  - "city built in giant tree branches"
+  - "underwater civilization ruins"
+  - "portal nexus with multiple realms visible"
+  - "celestial observatory in cloud kingdom"
+
+# Order of magnitude variations
+variations:
+  magical_time:
+    type: "sequential"
+    values: ["arcane dawn", "mystic noon", "enchanted dusk", "magical midnight"]
+  environment_magic:
+    type: "random"
+    values: ["floating crystals", "magical aurora", "spirit wisps", "arcane runes"]
+  style:
+    type: "static"
+    values: ["fantasy art masterpiece"]
+
+# Workflow configurations
+workflows:
+  dev:
+    steps: 20
+    cfg_scale: 7
+    width: 1344
+    height: 768
+    seeds: [1, 2, 3]
+  schnell:
+    steps: 4
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1, 2]
+  default:
+    steps: 30
+    cfg_scale: 7
+    width: 1344
+    height: 768
+    seeds: [1]

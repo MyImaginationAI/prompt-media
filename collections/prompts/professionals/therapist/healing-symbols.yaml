@@ -1,0 +1,35 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "black and white artistic painting, therapeutic symbolism, emotional depth"
+  negative: "color, blurry, low quality, distorted, deformed, oversaturated"
+
+# List of prompts to generate
+prompts:
+  - "phoenix rising from ashes, symbolic rebirth and healing"
+  - "kintsugi pottery with gold seams, beautiful healing metaphor"
+  - "spiral staircase ascending into light, personal growth journey"
+  - "nurturing hands holding sprouting seedling, new beginnings"
+  - "weathered stone path through peaceful garden, life's journey"
+  - "ancient tree with exposed roots, grounding and stability"
+  - "ripples in still water, impact of therapeutic change"
+  - "balanced stones on beach, finding equilibrium and peace"
+
+# Order of magnitude variations
+variations:
+  style:
+    type: "static"
+    values: ["beautiful painting", "fine art", "highly detailed", "masterpiece"]
+
+# Image orientation: wide for symbolic landscapes
+workflows:
+  dev:
+    steps: 20
+    cfg_scale: 7
+    width: 1344
+    height: 768
+    seeds: [377, 610, 987]
+  schnell:
+    steps: 4
+    cfg_scale: 7
+    width: 1344
+    height: 768

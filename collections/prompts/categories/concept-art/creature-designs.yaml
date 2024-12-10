@@ -1,0 +1,48 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "creature concept art, character design, anatomical detail, high detail, 8k uhd"
+  negative: "blurry, low quality, distorted, deformed, photographic, existing animals"
+
+# List of prompts to generate
+prompts:
+  - "deep sea bioluminescent creature"
+  - "desert-adapted flying beast"
+  - "crystalline hive organism"
+  - "quantum phase shifter being"
+  - "symbiotic plant-animal hybrid"
+  - "arctic megafauna evolution"
+  - "volcanic environment creature"
+  - "psychic hive mind entity"
+
+# Order of magnitude variations
+variations:
+  design_view:
+    type: "sequential"
+    values: ["front view", "side view", "action pose", "anatomical study"]
+  environment_adaptation:
+    type: "random"
+    values: ["aquatic", "aerial", "terrestrial", "dimensional"]
+  art_style:
+    type: "static"
+    values: ["creature concept art"]
+
+# Workflow configurations
+workflows:
+  dev:
+    steps: 20
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1, 2, 3]
+  schnell:
+    steps: 4
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1, 2]
+  default:
+    steps: 30
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1]

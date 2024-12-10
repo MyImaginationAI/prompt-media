@@ -1,0 +1,44 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "high quality, detailed, 8k uhd, masterpiece"
+  negative: "blurry, low quality, distorted, deformed"
+
+# List of prompts to generate
+prompts:
+  - "A serene mountain landscape,"
+
+# Order of magnitude configurations
+variations:
+  time:
+    type: "sequential"
+    values: ["morning", "afternoon", "evening", "night"]
+  style:
+    type: "random"
+    values: ["realistic", "artistic", "abstract"]
+
+
+# Image sizes
+# portrait: 832x1216
+# landscape: 1216x832
+# wide: 1344x768
+
+# Workflow configurations
+workflows:
+  dev:
+    steps: 20
+    cfg_scale: 7
+    width: 1344
+    height: 768
+    seeds: [1, 2, 3]
+  schnell:
+    steps: 4
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1,2]
+  default:
+    steps: 30
+    cfg_scale: 7
+    width: 768
+    height: 768
+    seeds: [1]

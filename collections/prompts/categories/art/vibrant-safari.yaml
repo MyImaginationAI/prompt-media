@@ -1,0 +1,36 @@
+prompt_settings:
+  prefix: "vibrant watercolor painting, artistic, colorful animals, safari wildlife"
+  negative: "blurry, low quality, distorted, deformed, photographic, realistic"
+
+prompts:
+  - "majestic lion with rainbow mane, sunset colors"
+  - "playful zebra with prismatic stripes"
+  - "elegant giraffe with kaleidoscope patterns"
+  - "graceful elephant decorated with colorful mandala patterns"
+  - "energetic cheetah with neon spots"
+  - "peaceful rhinoceros surrounded by colorful butterflies"
+
+variations:
+  style:
+    type: "static"
+    values: ["highly detailed", "artistic", "watercolor style"]
+
+workflows:
+  dev:
+    steps: 20
+    cfg_scale: 7
+    width: 832
+    height: 1216  # portrait orientation
+    seeds: [1, 2, 3]
+  schnell:
+    steps: 4
+    cfg_scale: 7
+    width: 832
+    height: 1216
+    seeds: [1, 2]
+  default:
+    steps: 30
+    cfg_scale: 7
+    width: 832
+    height: 1216
+    seeds: [1]

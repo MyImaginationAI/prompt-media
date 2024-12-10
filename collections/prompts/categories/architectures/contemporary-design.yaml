@@ -1,0 +1,48 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "modern architecture, minimalist design, contemporary style, high detail, 8k uhd"
+  negative: "blurry, low quality, distorted, deformed, classical elements, vintage style"
+
+# List of prompts to generate
+prompts:
+  - "minimalist glass skyscraper"
+  - "sustainable green building with living walls"
+  - "parametric design museum"
+  - "floating cantilevered structure"
+  - "modern bridge with innovative design"
+  - "eco-friendly bamboo building"
+  - "geometric concrete art gallery"
+  - "solar-powered office complex"
+
+# Order of magnitude variations
+variations:
+  lighting_condition:
+    type: "sequential"
+    values: ["morning reflection", "midday contrast", "sunset glow", "night illumination"]
+  architectural_focus:
+    type: "random"
+    values: ["structural elements", "material textures", "geometric patterns", "technological integration"]
+  style:
+    type: "static"
+    values: ["architectural photography"]
+
+# Workflow configurations
+workflows:
+  dev:
+    steps: 20
+    cfg_scale: 7
+    width: 832
+    height: 1216
+    seeds: [1, 2, 3]
+  schnell:
+    steps: 4
+    cfg_scale: 7
+    width: 832
+    height: 1216
+    seeds: [1, 2]
+  default:
+    steps: 30
+    cfg_scale: 7
+    width: 832
+    height: 1216
+    seeds: [1]

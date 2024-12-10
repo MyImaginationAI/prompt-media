@@ -1,0 +1,48 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "professional photography, studio lighting, high end portrait, 8k uhd"
+  negative: "blurry, low quality, distorted, deformed, cartoon, anime, multiple people"
+
+# List of prompts to generate
+prompts:
+  - "confident business executive in modern office"
+  - "skilled artisan in workshop"
+  - "chef in professional kitchen"
+  - "scientist in advanced laboratory"
+  - "architect at construction site"
+  - "doctor in medical facility"
+  - "artist in creative studio"
+  - "athlete in training environment"
+
+# Order of magnitude variations
+variations:
+  lighting:
+    type: "sequential"
+    values: ["soft box lighting", "rim lighting", "natural window light", "dramatic spot light"]
+  pose:
+    type: "random"
+    values: ["looking at camera", "candid working pose", "environmental portrait", "profile view"]
+  style:
+    type: "static"
+    values: ["corporate photography"]
+
+# Workflow configurations
+workflows:
+  dev:
+    steps: 20
+    cfg_scale: 7
+    width: 832
+    height: 1216
+    seeds: [1, 2, 3]
+  schnell:
+    steps: 4
+    cfg_scale: 7
+    width: 832
+    height: 1216
+    seeds: [1, 2]
+  default:
+    steps: 30
+    cfg_scale: 7
+    width: 832
+    height: 1216
+    seeds: [1]

@@ -1,0 +1,35 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "monochromatic painting, psychological depth, emotional resonance"
+  negative: "color, blurry, low quality, distorted, deformed, oversaturated"
+
+# List of prompts to generate
+prompts:
+  - "labyrinth of the mind with light and shadow interplay"
+  - "broken mirror being pieced together, reflection showing healing"
+  - "lighthouse beacon in stormy seas, guiding light metaphor"
+  - "intertwined branches forming a heart shape, nature therapy"
+  - "floating paper boats on calm waters, inner child healing"
+  - "doorway opening to a bright future, therapeutic breakthrough"
+  - "protective cocoon transforming into butterfly, personal transformation"
+  - "gentle hands holding a delicate paper crane, hope and healing"
+
+# Order of magnitude variations
+variations:
+  style:
+    type: "static"
+    values: ["beautiful painting", "fine art", "highly detailed", "masterpiece"]
+
+# Image orientation: landscape for metaphorical scenes
+workflows:
+  dev:
+    steps: 20
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [89, 144, 233]
+  schnell:
+    steps: 4
+    cfg_scale: 7
+    width: 1216
+    height: 832

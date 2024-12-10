@@ -1,0 +1,48 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "fantasy art, mythological, highly detailed, ethereal, magical, 8k uhd"
+  negative: "blurry, low quality, distorted, deformed, anime, cartoon style"
+
+# List of prompts to generate
+prompts:
+  - "ancient dragon perched on crystal mountain"
+  - "phoenix rising from magical flames"
+  - "unicorn in enchanted forest glade"
+  - "merfolk kingdom under bioluminescent sea"
+  - "griffin soaring through aurora skies"
+  - "centaur archer in mystical woods"
+  - "kraken emerging from stormy waters"
+  - "chimera in volcanic landscape"
+
+# Order of magnitude variations
+variations:
+  time_cycle:
+    type: "sequential"
+    values: ["dawn", "midday", "dusk", "midnight"]
+  magical_atmosphere:
+    type: "random"
+    values: ["mystical fog", "magical sparkles", "ethereal glow", "arcane energy"]
+  art_style:
+    type: "static"
+    values: ["renaissance painting"]
+
+# Workflow configurations
+workflows:
+  dev:
+    steps: 20
+    cfg_scale: 7
+    width: 1344
+    height: 768
+    seeds: [1, 2, 3]
+  schnell:
+    steps: 4
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1, 2]
+  default:
+    steps: 30
+    cfg_scale: 7
+    width: 832
+    height: 1216
+    seeds: [1]
