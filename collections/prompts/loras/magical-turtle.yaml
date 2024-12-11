@@ -1,0 +1,37 @@
+# Default prompt settings
+prefix_prompt: "high quality, detailed, 8k uhd, masterpiece, mythp0rt, aidmafluxpro1.1"
+negative_prompt: "blurry, low quality, distorted, deformed"
+
+# Generation settings
+steps: 20
+cfg_scale: 7.0
+width: 832
+height: 832
+
+# List of prompts to generate
+prompts:
+  - "cinematic photo of a mythical turtle, long legs and tails, armor-like, with shell made with white diamonds, beautiful light"
+
+# Seeds for reproducibility
+seeds: [1881954142]
+
+# Variations for prompt combinations
+variations:
+  time:
+    type: "sequential"
+    values: ["morning", "afternoon", "evening", "night"]
+  style:
+    type: "random"
+    values: ["realistic", "artistic", "abstract"]
+
+# Optional, list of LoRA configurations
+loras:
+  - name: "aidmaFLUXpro1.1-FLUX-V0.1.safetensors"
+    strength_model: 0.5
+    strength_clip: 0.5
+  - name: "FluxMythV2.safetensors"
+    strength_model: 0.6
+    strength_clip: 0.6
+  - name: "Luminous_Shadowscape-000016.safetensors"
+    strength_model: 0.6
+    strength_clip: 0.6

@@ -38,8 +38,10 @@ SERVER_ADDRESS ?= $(APP_SERVER_HOST):$(APP_SERVER_PORT)
 # --- FLUX Model Commands ---
 FLUX_CMD = $(PYTHON) $(FLUX_SCRIPTS)/run.py
 PROMPT_MEDIA_FILE ?= prompt.yaml
+FLUX_WORKFLOW ?= $(FLUX_SCRIPTS)/workflows/api/flux1-dev-fp8-3-lora-units-api.json
+FLUX_LORAS ?= '[{"name":"aidmaFLUXpro1.1-FLUX-V0.1.safetensors","strength_model":0.5,"strength_clip":0.5},{"name":"FluxMythV2.safetensors","strength_model":0.6,"strength_clip":0.6},{"name":"Luminous_Shadowscape-000016.safetensors","strength_model":0.6,"strength_clip":0.6}]'
 
-.PHONY: flux flux/dev flux/schnell flux/dry-run
+.PHONY: flux flux/dev flux/schnell flux/dry-run flux/custom flux/lora flux/help
 
 # Simple development target
 flux: flux/dev
@@ -62,6 +64,35 @@ flux/schnell:
 		--output-dir $(MEDIA_IMAGES_DIR) \
 		--server $(SERVER_ADDRESS)
 
+# Custom workflow with default LoRAs
+flux/custom:
+	@if [ -z "$(FLUX_WORKFLOW)" ]; then \
+		echo "Error: FLUX_WORKFLOW path not specified"; \
+		echo "Usage: make flux/custom FLUX_WORKFLOW=path/to/workflow.json"; \
+		exit 1; \
+	fi
+	@mkdir -p "$(MEDIA_IMAGES_DIR)"
+	$(FLUX_CMD) \
+		--workflow $(FLUX_WORKFLOW) \
+		--prompt-media $(PROMPT_MEDIA_FILE) \
+		--output-dir $(MEDIA_IMAGES_DIR) \
+		--server $(SERVER_ADDRESS)
+
+# Custom workflow with LoRA configuration
+flux/lora:
+	@if [ -z "$(FLUX_WORKFLOW)" ]; then \
+		echo "Error: FLUX_WORKFLOW path not specified"; \
+		echo "Usage: make flux/lora FLUX_WORKFLOW=path/to/workflow.json [FLUX_LORAS='[{...}]']"; \
+		exit 1; \
+	fi
+	@mkdir -p "$(MEDIA_IMAGES_DIR)"
+	$(FLUX_CMD) \
+		--workflow $(FLUX_WORKFLOW) \
+		--prompt-media $(PROMPT_MEDIA_FILE) \
+		--output-dir $(MEDIA_IMAGES_DIR) \
+		--server $(SERVER_ADDRESS) \
+		--loras '$(FLUX_LORAS)'
+
 # Dry run (no image generation)
 flux/dry-run:
 	@mkdir -p "$(MEDIA_IMAGES_DIR)"
@@ -71,6 +102,24 @@ flux/dry-run:
 		--output-dir $(MEDIA_IMAGES_DIR) \
 		--server $(SERVER_ADDRESS) \
 		--dry-run
+
+# Help for FLUX targets
+flux/help:
+	@echo "FLUX Workflow Targets:"
+	@echo "  flux/dev      : Run development workflow (default)"
+	@echo "  flux/schnell  : Run schnell workflow"
+	@echo "  flux/custom   : Run custom workflow"
+	@echo "  flux/lora     : Run custom workflow with LoRA configuration"
+	@echo "  flux/dry-run  : Dry run (no image generation)"
+	@echo ""
+	@echo "Configuration Variables:"
+	@echo "  PROMPT_MEDIA_FILE : Path to prompt file (default: prompt.yaml)"
+	@echo "  FLUX_WORKFLOW    : Path to workflow JSON file"
+	@echo "  FLUX_LORAS       : JSON string of LoRA configurations"
+	@echo ""
+	@echo "Examples:"
+	@echo "  make flux/custom FLUX_WORKFLOW=path/to/workflow.json"
+	@echo "  make flux/lora FLUX_WORKFLOW=path/to/workflow.json FLUX_LORAS='[{\"name\":\"my-lora.safetensors\",\"strength_model\":0.7,\"strength_clip\":0.7}]'"
 
 # --- Stable Diffusion Commands ---
 SD_CMD = $(PYTHON) $(SD_SCRIPTS)/run.py
@@ -101,7 +150,12 @@ comfyui/start:
 	@echo "Starting ComfyUI server..."
 	@cd $(COMFYUI_DIR) && \
 		bash -c "source $(COMFYUI_VENV) && \
-		python main.py --listen --port 7860"
+		python main.py \
+		--listen \
+		--use-split-cross-attention \
+		--lowvram \
+		--cpu-vae \
+		--port 7860"
 
 comfyui/kill:
 	@echo "Killing ComfyUI processes..."
