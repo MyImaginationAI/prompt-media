@@ -1,0 +1,56 @@
+# Default prompt settings
+prefix_prompt: "high quality, detailed, 8k uhd, masterpiece, mythical, fantasy art, ethereal"
+negative_prompt: "blurry, low quality, distorted, deformed, modern, contemporary, urban, sci-fi"
+
+# Generation settings optimized for fantasy art
+steps: 25  # More steps for detailed fantasy elements
+cfg_scale: 8.0  # Higher cfg for more precise fantasy elements
+width: 896
+height: 896
+sampler: "dpm_2"  # DPM++ 2M Karras for quality
+
+# List of prompts to generate - focusing on mythical and fantasy themes
+prompts:
+  - "ancient dragon priestess in ceremonial robes, surrounded by glowing runes, crystal temple background, magical atmosphere"
+  - "mythical phoenix rising from golden flames, surrounded by floating magical crystals, ethereal light rays"
+  - "elven warrior queen on crystalline throne, magical forest backdrop, ethereal butterflies, flowing magical energy"
+  - "ancient tree of life, roots made of flowing water, branches of crystal, magical creatures nesting in its crown"
+  - "mystical unicorn in enchanted grove, flowing mane made of starlight, surrounded by glowing flowers and fairy lights"
+
+# Seeds for reproducibility
+seeds: [98765432, 23456789, 34567890, 45678901, 56789012]
+
+# Variations for prompt combinations
+variations:
+  time:
+    type: "sequential"
+    values: ["dawn", "twilight", "midnight", "golden hour"]
+  magic_type:
+    type: "random"
+    values: ["nature magic", "crystal magic", "celestial magic", "elemental magic"]
+  realm:
+    type: "sequential"
+    values: ["crystal realm", "enchanted forest", "celestial plane", "elemental sanctuary"]
+  atmosphere:
+    type: "random"
+    values: ["mystical", "ethereal", "magical", "otherworldly"]
+
+# Optional, list of LoRA configurations
+loras:
+  - name: "aidmaFLUXpro1.1-FLUX-V0.1.safetensors"
+    strength_model: 0.5
+    strength_clip: 0.5
+  - name: "FluxMythV2.safetensors"
+    strength_model: 0.6
+    strength_clip: 0.6
+  - name: "Luminous_Shadowscape-000016.safetensors"
+    strength_model: 0.6
+    strength_clip: 0.6
+
+# Notes on usage:
+# - Emphasize magical and mythical elements in prompts
+# - Include ethereal lighting and atmospheric effects
+# - Combine nature and magical elements
+# - Use fantasy-specific descriptors (ethereal, mystical, enchanted)
+# - Include magical creatures and fantasy races
+# - Add magical effects (glowing, floating, shimmering)

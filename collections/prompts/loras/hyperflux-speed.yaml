@@ -1,0 +1,40 @@
+# Default prompt settings
+prefix_prompt: "high quality, detailed, 8k uhd, masterpiece, hyperrealistic"
+negative_prompt: "blurry, low quality, distorted, deformed, ugly, bad anatomy"
+
+# Generation settings optimized for HyperFlux
+steps: 8  # HyperFlux is optimized for 8 steps
+cfg_scale: 7.0
+width: 832
+height: 832
+sampler: "dpm_2"  # DPM++ 2M Karras
+
+# List of prompts to generate
+prompts:
+  - "epic fantasy landscape, floating islands in the sky, magical crystals, ethereal light rays"
+  - "majestic dragon perched on a crystal mountain peak, scales reflecting sunlight"
+  - "mystical forest temple, ancient architecture, glowing runes, magical atmosphere"
+
+# Seeds for reproducibility
+seeds: [87654321, 12345678, 98765432]
+
+# Variations for prompt combinations
+variations:
+  time:
+    type: "sequential"
+    values: ["sunrise", "midday", "sunset", "twilight"]
+  atmosphere:
+    type: "random"
+    values: ["misty", "clear", "stormy", "magical"]
+  color_theme:
+    type: "sequential"
+    values: ["warm golden", "cool blue", "mystical purple", "ethereal white"]
+
+# LoRA configurations optimized for fast, high-quality generation
+loras:
+  - name: "hyperflux.safetensors"  # HyperFlux for fast, quality results
+    strength_model: 0.125  # Recommended strength for ComfyUI
+    strength_clip: 0.125
+  - name: "anti_blur.safetensors"  # Anti-blur for extra sharpness
+    strength_model: 1.6
+    strength_clip: 1.6
