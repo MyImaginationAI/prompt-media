@@ -1,0 +1,48 @@
+# Default prompt settings
+prefix_prompt: "high quality, detailed, 8k uhd, masterpiece, professional photography"
+negative_prompt: "blurry, low quality, distorted, deformed, ugly, bad anatomy, watermark"
+
+# Generation settings optimized for FluxTurbo
+steps: 12  # FluxTurbo works well with lower steps
+cfg_scale: 7.0
+width: 832
+height: 832
+sampler: "dpm_2"  # DPM++ 2M Karras for quality
+
+# List of prompts to generate - diverse scenes to test speed and quality
+prompts:
+  - "stunning landscape, snow-capped mountains, crystal clear lake reflection, dramatic clouds, golden hour"
+  - "modern architecture interior, minimalist design, natural light through large windows, geometric patterns"
+  - "portrait of a fashion model, high fashion clothing, studio lighting, professional makeup, detailed fabric"
+  - "aerial view of a colorful autumn forest, winding river, morning mist, sunlight breaking through clouds"
+
+# Seeds for reproducibility
+seeds: [11223344, 44332211, 55667788, 88776655]
+
+# Variations for prompt combinations
+variations:
+  lighting:
+    type: "sequential"
+    values: ["natural", "studio", "golden hour", "dramatic"]
+  style:
+    type: "random"
+    values: ["cinematic", "editorial", "documentary", "artistic"]
+  composition:
+    type: "sequential"
+    values: ["wide shot", "medium shot", "close-up", "extreme close-up"]
+
+# LoRA configurations optimized for fast, high-quality generation
+loras:
+  - name: "fluxturbo.safetensors"  # Primary LoRA for speed and quality
+    strength_model: 1.0  # Optimal weight for FluxTurbo
+    strength_clip: 1.0
+  - name: "anti_blur.safetensors"  # Maintain sharpness at low steps
+    strength_model: 1.0
+    strength_clip: 1.0
+
+# Notes on usage:
+# - FluxTurbo allows for quality results with fewer steps (8-15)
+# - Works well with both simple and complex scenes
+# - Maintains detail quality even at lower step counts
+# - Ideal for rapid prototyping and batch generation
+# - Can reduce generation time by ~50% compared to base model

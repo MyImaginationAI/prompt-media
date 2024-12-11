@@ -1,0 +1,44 @@
+# Default prompt settings
+prefix_prompt: "high quality, detailed, 8k uhd, masterpiece, sharp focus, intricate details"
+negative_prompt: "blurry, low quality, distorted, deformed, soft focus, out of focus, motion blur"
+
+# Generation settings optimized for sharp details
+steps: 25  # More steps for finer detail
+cfg_scale: 8.0  # Higher cfg for more precise detail adherence
+width: 896  # Slightly larger for more detail
+height: 896
+sampler: "dpm_2"  # DPM++ 2M Karras for quality
+
+# List of prompts to generate - focusing on scenes that benefit from sharp details
+prompts:
+  - "close-up portrait of an elderly person, wrinkled skin, weathered face, detailed eyes, natural lighting"
+  - "macro photography of a butterfly on a flower, intricate wing patterns, dewdrops on petals"
+  - "detailed cityscape at sunset, architectural details, window reflections, distant buildings in focus"
+  - "textured still life with vintage pocket watch, engraved details, metallic reflections"
+
+# Seeds for reproducibility
+seeds: [24681357, 13579246, 98765432, 56789012]
+
+# Variations for prompt combinations
+variations:
+  lighting:
+    type: "sequential"
+    values: ["natural light", "studio lighting", "golden hour", "dramatic shadows"]
+  focus_distance:
+    type: "sequential"
+    values: ["extreme close-up", "medium close-up", "medium shot", "wide shot"]
+  detail_emphasis:
+    type: "random"
+    values: ["texture details", "surface patterns", "fine structures", "micro details"]
+
+# LoRA configurations optimized for maximum sharpness
+loras:
+  - name: "anti_blur.safetensors"  # Primary LoRA for sharpness
+    strength_model: 1.0  # Maximum allowed strength
+    strength_clip: 1.0
+  - name: "sameface_fix.safetensors"  # For consistent facial features in portraits
+    strength_model: 0.7
+    strength_clip: 0.7
+  - name: "fluxturbo.safetensors"  # For better overall quality
+    strength_model: 1.0
+    strength_clip: 1.0
