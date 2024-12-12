@@ -1,0 +1,55 @@
+# Default prompt settings
+prompt_settings:
+  prefix: ""
+  negative: ""
+
+# List of prompts to generate
+prompts:
+  - "An enigmatic fortune teller in a dimly lit room, her hands hovering over a crystal ball. Her eyes are intense, peering into the swirling mists within the glass. The table in front of her is cluttered with tarot cards, candles, and strange artifacts, creating an atmosphere thick with mystery <lora:Luminous_Shadowscape:0.6>"
+  - "A solitary sailor, weathered by the sea, standing at the helm of a small boat. The ocean around him is vast and turbulent, but his hands are steady on the wheel. His face is stern and determined, eyes scanning the horizon for land <lora:Luminous_Shadowscape:0.8>"
+  - "A mysterious teenager girl in a wide-brimmed hat and dark sunglasses sits at an outdoor cafe, sipping coffee. She is reading a newspaper, but her eyes occasionally flicker to the street, as if expecting someone. Her posture is elegant, but her presence is enigmatic <lora:Luminous_Shadowscape-000016:0.8>"
+  - "A gritty underground boxing ring where two bloodied fighters square off under harsh lights. The crowd, a mix of tough-looking men and glamorous women, cheers and jeers. Sweat and blood fly as the fighters exchange brutal blows <lora:Luminous_Shadowscape:0.6>"
+  - "A mysterious teenager boy in a wide-brimmed hat and dark sunglasses sits at an outdoor cafe, sipping coffee. She is reading a newspaper, but her eyes occasionally flicker to the street, as if expecting someone. Her posture is elegant, but her presence is enigmatic <lora:Luminous_Shadowscape-000016:0.8>"
+  - "A mysterious man in a wide-brimmed hat and dark sunglasses sits at an outdoor cafe, sipping coffee. She is reading a newspaper, but her eyes occasionally flicker to the street, as if expecting someone. Her posture is elegant, but her presence is enigmatic <lora:Luminous_Shadowscape-000016:0.8>"
+  - "A mysterious woman in a wide-brimmed hat and dark sunglasses sits at an outdoor cafe, sipping coffee. She is reading a newspaper, but her eyes occasionally flicker to the street, as if expecting someone. Her posture is elegant, but her presence is enigmatic <lora:Luminous_Shadowscape-000016:0.8>"
+  - "A mysterious elderly man in a wide-brimmed hat and dark sunglasses sits at an outdoor cafe, sipping coffee. She is reading a newspaper, but her eyes occasionally flicker to the street, as if expecting someone. Her posture is elegant, but her presence is enigmatic <lora:Luminous_Shadowscape-000016:0.8>"
+  - "A mysterious elderly woman in a wide-brimmed hat and dark sunglasses sits at an outdoor cafe, sipping coffee. She is reading a newspaper, but her eyes occasionally flicker to the street, as if expecting someone. Her posture is elegant, but her presence is enigmatic <lora:Luminous_Shadowscape-000016:0.8>"
+
+# Order of magnitude configurations
+variations:
+  time:
+    type: "static"
+    values: [""]
+
+# Image sizes
+# portrait: 832x1216
+# landscape: 1216x832
+# wide: 1344x768
+
+# Workflow configurations
+workflows:
+  filename_prefix: "mysterious_woman"
+  flux_guidance: 1
+  dev:
+    steps: 25
+    cfg_scale: 7
+    width: 1344
+    height: 768
+    seeds: [1647211062, 1647211063, 1647211064, 1647211065, 1647211066]
+  schnell:
+    steps: 4
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1,2]
+  default:
+    steps: 24
+    cfg_scale: 7
+    width: 1344
+    height: 768
+    seeds: [1647211062, 1647211063, 1647211064, 1647211065, 1647211066]
+
+loras:
+  Luminous_Shadowscape-000016:
+    strength_model: 0.6
+    strength_clip: 0.6

@@ -172,7 +172,6 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env
 .venv
 env/
 venv/
@@ -320,8 +319,7 @@ data/*
 sd/*.yaml
 
 # Environment and Configuration
-.env
-.env.*
+.env.secrets*
 !.env.template
 config/*.local.yaml
 
@@ -334,3 +332,6 @@ queue.sh
 !docs/*.jpg
 !docs/*.jpeg
 !docs/*.gif
+
+# windsurf rules
+.windsurfrules

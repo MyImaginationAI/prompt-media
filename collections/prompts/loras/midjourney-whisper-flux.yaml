@@ -1,0 +1,54 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "high quality, detailed, 8k uhd, masterpiece"
+  negative: "blurry, low quality, distorted, deformed"
+
+# List of prompts to generate
+prompts:
+  - "A hyper-realistic portrait of a stunning supermodel, featuring a beautifully detailed face with intricate. The image blends futuristic and traditional elements with a neo mode, avant-garde style, characterized by delicate and sleek lines, vibrant colors, and exquisite details. The model's eyes captivate with complex colored irises, while her unique, crazy hairstyle adds to the surreal and mysterious charm. The overall composition is symmetrical and fluid, with an ethereal and timeless aura. The interplay of light and shadow enhances the high-fashion aesthetic, capturing the essence of cyberpunk and folklore in a visually striking and artistic statement,  Midjourney_Whisper, <lora:midjourney_whisper_flux_lora_v01:1>"
+  - "The image showcases her natural beauty, focusing on her flawless skin and delicate features"
+  - The composition blends modern and traditional elements with a neo mode, avant-garde style, characterized by elegant lines, vibrant colors, and exquisite details
+  - "The model's eyes captivate with complex colored irises, while her unique, crazy hairstyle adds to the surreal and mysterious charm"
+
+# Order of magnitude configurations
+variations:
+  time:
+    type: "sequential"
+    values: ["morning", "afternoon", "evening", "night"]
+  style:
+    type: "random"
+    values: ["realistic", "artistic", "abstract"]
+
+
+# Image sizes
+# portrait: 832x1216
+# landscape: 1216x832
+# wide: 1344x768
+
+# Workflow configurations
+workflows:
+  filename_prefix: "midjourney_whisper"
+  flux_guidance: 1
+  dev:
+    steps: 20
+    cfg_scale: 1
+    width: 1344
+    height: 768
+    seeds: [2512613439]
+  schnell:
+    steps: 4
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1,2]
+  default:
+    steps: 20
+    cfg_scale: 1
+    width: 1344
+    height: 768
+    seeds: [2512613439]
+
+loras:
+  midjourney_whisper_flux_lora_v01:
+    strength_model: 0.6
+    strength_clip: 0.6

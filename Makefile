@@ -142,7 +142,7 @@ sd: sd/txt2img
 COMFYUI_DIR ?= /home/valter/Workspaces/github.com/comfyanonymous/ComfyUI
 COMFYUI_VENV ?= $(COMFYUI_DIR)/venv/bin/activate
 
-.PHONY: comfyui comfyui/start comfyui/kill kill-comfyui
+.PHONY: comfyui comfyui/start comfyui/kill
 
 comfyui: comfyui/start
 
@@ -155,16 +155,11 @@ comfyui/start:
 		--use-split-cross-attention \
 		--lowvram \
 		--cpu-vae \
-		--port 7860"
+		--port 8188"
 
 comfyui/kill:
 	@echo "Killing ComfyUI processes..."
-	@pkill -f "python.*ComfyUI" || echo "No ComfyUI processes found"
-
-# Alias for comfyui/kill
-kill-comfyui:
-	@echo "Killing ComfyUI processes..."
-	@pkill -f "python.*ComfyUI" || echo "No ComfyUI processes found"
+	@pkill -f "python main.py" || echo "No ComfyUI processes found"
 
 # --- Image Composition Commands ---
 COMPOSER_CMD = $(PYTHON) tools/image_composer.py
@@ -244,7 +239,7 @@ batch: batch/schnell
 
 # Run all tests
 test:
-	$(PYTHON) -m pytest
+	pytest tests/test_workflow_selection.py tests/test_workflow_loading.py -v
 
 # Run tests with coverage report
 test-coverage:

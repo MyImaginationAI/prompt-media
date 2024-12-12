@@ -1,0 +1,52 @@
+# Default prompt settings
+prompt_settings:
+  prefix: ""
+  negative: ""
+
+# List of prompts to generate
+prompts:
+  - "A luminescent butterfly lands on a crystal flower in a moonlit garden, its wings casting prismatic shadows. The petals seem to pulse with an inner light, while ethereal mist swirls around ancient stone pathways <lora:Luminous_Shadowscape-000016:0.8>"
+  - "A mysterious gardener tends to floating orbs of water containing rare aquatic plants. Their hands glow with a soft blue light as they shape the liquid spheres in the air, surrounded by floating lanterns <lora:Luminous_Shadowscape-000016:0.8>"
+  - "An ancient tree with bark made of mirrors stands in the center of a phosphorescent meadow. Its leaves are made of stained glass, catching and fracturing moonlight into rainbow patterns below <lora:Luminous_Shadowscape-000016:0.8>"
+  - "A young witch harvests starlight-infused herbs from her levitating garden beds. The plants emit a soft silver glow, and her familiar, a spectral fox, watches from atop a mushroom ring <lora:Luminous_Shadowscape-000016:0.8>"
+  - "Time-lapse flowers bloom in reverse, their petals absorbing light instead of reflecting it. A clockwork hummingbird hovers nearby, its mechanical wings leaving trails of golden sparks <lora:Luminous_Shadowscape-000016:0.8>"
+  - "A grove of crystal trees catches the last rays of sunset, each branch terminating in a different precious gemstone. The ground below is carpeted with luminous moss forming intricate magical sigils <lora:Luminous_Shadowscape-000016:0.8>"
+
+# Order of magnitude configurations
+variations:
+  time:
+    type: "static"
+    values: [""]
+
+# Image sizes
+# portrait: 832x1216
+# landscape: 1216x832
+# wide: 1344x768
+
+# Workflow configurations
+workflows:
+  filename_prefix: "enchanted_botanica"
+  flux_guidance: 1
+  dev:
+    steps: 25
+    cfg_scale: 7
+    width: 1344
+    height: 768
+    seeds: [2647211062, 2647211063, 2647211064, 2647211065, 2647211066]
+  schnell:
+    steps: 4
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1,2]
+  default:
+    steps: 24
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [2647211062, 2647211063]
+
+loras:
+  Luminous_Shadowscape-000016:
+    strength_model: 0.6
+    strength_clip: 0.6

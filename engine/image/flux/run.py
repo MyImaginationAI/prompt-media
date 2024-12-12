@@ -89,57 +89,63 @@ else:
 # Schema definition for YAML validation
 FLUX_CONFIG_SCHEMA = {
     "type": "object",
-    "required": ["prefix_prompt", "negative_prompt", "cfg_scale", "steps", "width", "height", "prompts", "variations"],
+    "required": ["prompt_settings", "prompts"],
     "properties": {
-        "prefix_prompt": {"type": "string"},
-        "negative_prompt": {"type": "string"},
-        "cfg_scale": {"type": "number", "minimum": 1},
-        "steps": {"type": "integer", "minimum": 1},
-        "width": {"type": "integer", "minimum": 64},
-        "height": {"type": "integer", "minimum": 64},
-        "seeds": {"type": "array", "items": {"type": "integer"}},
-        "prompts": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+        "prompt_settings": {
+            "type": "object",
+            "properties": {
+                "prefix": {"type": "string"},
+                "negative": {"type": "string"}
+            },
+            "required": ["prefix", "negative"]
+        },
+        "prompts": {
+            "type": "array",
+            "items": {"type": "string"},
+            "minItems": 1
+        },
         "variations": {
             "type": "object",
             "additionalProperties": {
                 "type": "object",
                 "properties": {
                     "values": {"type": "array", "items": {"type": "string"}},
-                    "type": {"type": "string", "enum": ["static", "sequential", "random"]},
+                    "type": {"type": "string", "enum": ["static", "sequential", "random"]}
                 },
-                "required": ["values", "type"],
-            },
+                "required": ["values", "type"]
+            }
+        },
+        "workflows": {
+            "type": "object",
+            "properties": {
+                "dev": {
+                    "type": "object",
+                    "properties": {
+                        "steps": {"type": "integer", "minimum": 1},
+                        "cfg_scale": {"type": "number", "minimum": 1},
+                        "width": {"type": "integer", "minimum": 64},
+                        "height": {"type": "integer", "minimum": 64},
+                        "seeds": {"type": "array", "items": {"type": "integer"}}
+                    }
+                },
+                "schnell": {
+                    "type": "object",
+                    "properties": {
+                        "steps": {"type": "integer", "minimum": 1},
+                        "cfg_scale": {"type": "number", "minimum": 1}
+                    }
+                }
+            }
         },
         "loras": {
-            "type": "array",
-            "items": {
-                "type": "object",
-                "required": ["name", "strength_model", "strength_clip"],
-                "properties": {
-                    "name": {"type": "string"},
-                    "strength_model": {"type": "number", "minimum": 0, "maximum": 1},
-                    "strength_clip": {"type": "number", "minimum": 0, "maximum": 1}
-                }
-            },
-            "default": [
-                {
-                    "name": "aidmaFLUXpro1.1-FLUX-V0.1.safetensors",
-                    "strength_model": 0.5,
-                    "strength_clip": 0.5
-                },
-                {
-                    "name": "FluxMythV2.safetensors",
-                    "strength_model": 0.6,
-                    "strength_clip": 0.6
-                },
-                {
-                    "name": "Luminous_Shadowscape-000016.safetensors",
-                    "strength_model": 0.6,
-                    "strength_clip": 0.6
-                }
-            ]
-        },
-    },
+            "type": "object",
+            "properties": {
+                "name": {"type": "string"},
+                "strength_model": {"type": "number"},
+                "strength_clip": {"type": "number"}
+            }
+        }
+    }
 }
 
 
@@ -158,11 +164,13 @@ def validate_config(config):
 
 def setup_logging(output_dir: Path):
     """Set up logging configuration."""
-    log_config = config.logging
     logging.basicConfig(
-        level=getattr(logging, log_config.level.upper()),
-        format=log_config.format,
-        handlers=[logging.FileHandler(output_dir / log_config.file), logging.StreamHandler()],
+        level=logging.DEBUG,
+        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+        handlers=[
+            logging.StreamHandler(),
+            logging.FileHandler(output_dir / 'flux.log')
+        ]
     )
 
 
@@ -249,6 +257,9 @@ def get_images(ws, workflow_api, server_address, client_id):
         # Submit prompt
         p = {"prompt": workflow_api, "client_id": client_id}
         data = json.dumps(p).encode("utf-8")
+        
+        # Debug log the workflow being sent
+        logging.debug(f"Submitting workflow: {json.dumps(workflow_api, indent=2)}")
 
         req = request.Request(f"http://{server_address}/prompt", data=data)
         req.add_header("Content-Type", "application/json")
@@ -502,277 +513,251 @@ def get_vram_stats(server_address):
         return None, None, None
 
 
-def generate_image(
-    prompt,
-    negative_prompt,
-    count,
-    seed,
-    steps,
-    width,
-    height,
-    cfg_scale,
-    output_dir,
-    server_address,
-    client_id,
-    workflow_path,
-    current_time,
-    prompt_media_path=None,
-    loras=None,
-    global_count=0,
-):
-    """Generate images using the ComfyUI server"""
+def load_workflow(workflow_path, prompt_data=None, prompt=None, negative_prompt=None):
+    """
+    Load and customize workflow based on prompt data.
+    
+    Args:
+        workflow_path (str): Path to the workflow JSON file
+        prompt_data (dict): The loaded prompt data containing lora information
+        prompt (str): The prompt to use in the workflow
+        negative_prompt (str): The negative prompt to use in the workflow
+        
+    Returns:
+        dict: The loaded and customized workflow
+    """
+    from engine.image.flux.template_processor import Jinja2TemplateProcessor, WorkflowContextBuilder
+    
+    # Build context from prompt data
+    workflow_config = {
+        "filename_prefix": "output",
+        "negative_text": negative_prompt if negative_prompt else "",
+        "steps": 25,
+        "cfg_scale": 7,
+        "width": 768,
+        "height": 768,
+        "seeds": [1]
+    }
+    
+    # Update workflow config with LoRA info if present
+    lora_config = None
+    if prompt_data and "loras" in prompt_data and "lora" in prompt_data["loras"]:
+        # List of allowed LoRA names from ComfyUI server
+        allowed_loras = [
+            'AntiBlur.safetensors', 'CPA.safetensors', 'EldritchCandids1.1.2.safetensors',
+            'FLUX-daubrez-DB4RZ.safetensors', 'FluxMythV2.safetensors',
+            'Hyper-FLUX.1-dev-8steps-lora.safetensors', 'Luminous_Shadowscape-000016.safetensors',
+            'SameFace_Fix.safetensors', 'aidmaFLUXpro1.1-FLUX-V0.1.safetensors',
+            'ck-shadow-circuit-000021.safetensors', 'detailed_v2_flux_ntc.safetensors',
+            'flux_realism_lora.safetensors', 'midjourney_whisper_flux_lora_v01.safetensors'
+        ]
+
+        lora_config = prompt_data["loras"]["lora"][0]  # Get first LoRA config
+        # Ensure the LoRA name has .safetensors extension
+        lora_name = lora_config["name"]
+        if not lora_name.endswith(".safetensors"):
+            lora_name = f"{lora_name}.safetensors"
+        
+        # Validate LoRA name against allowed list
+        if lora_name not in allowed_loras:
+            raise ValueError(f"Invalid LoRA name: {lora_name}. Must be one of: {', '.join(allowed_loras)}")
+        
+        lora_config["name"] = lora_name
+        logging.debug(f"Using LoRA configuration: {lora_config}")
+    
+    # Build template context
+    context = WorkflowContextBuilder.build_context(
+        prompt=prompt,
+        workflow_config=workflow_config,
+        lora_config=lora_config
+    )
+    
+    # Process template
+    template_processor = Jinja2TemplateProcessor()
     try:
-        logging.info(f"{MessageSymbols.INFO} Loading workflow from: {workflow_path}")
-        # Load and modify the workflow
-        with open(workflow_path, "r") as f:
-            workflow = json.load(f)
+        workflow_content = template_processor.process_template(workflow_path, context)
+        workflow = json.loads(workflow_content)
+        logging.debug(f"Generated workflow: {json.dumps(workflow, indent=2)}")
+        return workflow
+    except Exception as e:
+        logging.error(f"{MessageSymbols.ERROR} Failed to process workflow template: {str(e)}")
+        raise
 
-        logging.info(f"{MessageSymbols.INFO} Updating workflow parameters:")
-        logging.info(f"  - Prompt: {prompt}")
-        logging.info(f"  - Negative Prompt: {negative_prompt}")
-        logging.info(f"  - Dimensions: {width}x{height}")
-        logging.info(f"  - Steps: {steps}")
-        logging.info(f"  - CFG Scale: {cfg_scale}")
-        logging.info(f"  - Seed: {seed}")
-        if loras:
-            logging.info(f"  - LoRAs: {json.dumps(loras, indent=2)}")
 
-        # Find the checkpoint loader node
-        checkpoint_node = None
-        for node_id, node in workflow.items():
-            if node["class_type"] == "CheckpointLoaderSimple":
-                checkpoint_node = (node_id, node)
-                break
+def select_workflow(prompt_data, workflow_path=None):
+    """
+    Select the appropriate workflow based on prompt configuration.
+    
+    Args:
+        prompt_data (dict): The loaded prompt.yaml data
+        workflow_path (str, optional): User-specified workflow path
         
-        if not checkpoint_node:
-            raise ValueError("No checkpoint loader found in workflow")
+    Returns:
+        str: Path to the selected workflow JSON file
+    """
+    base_dir = Path(__file__).parent / "workflows" / "api"
+    
+    # Handle user-specified workflow
+    if workflow_path:
+        if workflow_path == "schnell":
+            return str(base_dir / "flux1-schnell-fp8-api.json")
+        return workflow_path
+    
+    # Check for LoRA in prompts
+    if has_lora_in_prompts(prompt_data):
+        return str(base_dir / "flux1-dev-fp8-1lora-api.json")
+    
+    # Default workflow
+    return str(base_dir / "flux1-dev-fp8-api.json")
 
-        # Clear existing LoRA nodes from workflow
-        lora_nodes = {}
-        nodes_to_remove = []
-        for node_id, node in workflow.items():
-            if node["class_type"] == "LoraLoader":
-                lora_nodes[node_id] = node
-                nodes_to_remove.append(node_id)
-        
-        for node_id in nodes_to_remove:
-            del workflow[node_id]
 
-        # Find the CLIP nodes that need updating
-        clip_nodes = []
-        for node_id, node in workflow.items():
-            if node["class_type"] == "CLIPTextEncode":
-                clip_nodes.append((node_id, node))
+def generate_image(
+    prompt: str,
+    negative_prompt: str,
+    global_count: int,
+    seed: int,
+    steps: int,
+    width: int,
+    height: int,
+    cfg_scale: float,
+    output_dir: str,
+    server_address: str,
+    client_id: str,
+    workflow_path: str,
+    current_time: datetime.datetime,
+    prompt_media_path: str | None = None,
+) -> None:
+    """
+    Generate an image using the specified workflow and parameters.
 
-        # Create new LoRA chain if LoRAs are provided
-        if loras:
-            prev_node = checkpoint_node
-            next_node_id = max(int(nid) for nid in workflow.keys()) + 1
-            
-            for i, lora_config in enumerate(loras):
-                node_id = str(next_node_id + i)
-                
-                # Create new LoRA node
-                workflow[node_id] = {
-                    "inputs": {
-                        "lora_name": lora_config["name"],
-                        "strength_model": lora_config["strength_model"],
-                        "strength_clip": lora_config["strength_clip"],
-                        "model": [prev_node[0], 0],
-                        "clip": [prev_node[0], 1]
-                    },
-                    "class_type": "LoraLoader",
-                    "_meta": {
-                        "title": f"Load LoRA {lora_config['name']}"
-                    }
-                }
-                
-                # Update clip nodes to use the latest LoRA
-                for clip_node_id, clip_node in clip_nodes:
-                    clip_node["inputs"]["clip"] = [node_id, 1]
-                
-                # Update KSampler to use the latest LoRA's model output
-                for node_id_sampler, node in workflow.items():
-                    if node["class_type"] == "KSampler":
-                        node["inputs"]["model"] = [node_id, 0]
-                
-                prev_node = (node_id, workflow[node_id])
-                logging.info(f"  Added LoRA node {node_id}: {lora_config['name']}")
-                logging.info(f"    - Model Strength: {lora_config['strength_model']}")
-                logging.info(f"    - CLIP Strength: {lora_config['strength_clip']}")
-        else:
-            # If no LoRAs provided, connect CLIP and KSampler directly to checkpoint
-            for clip_node_id, clip_node in clip_nodes:
-                clip_node["inputs"]["clip"] = [checkpoint_node[0], 1]
-                logging.info(f"  Connected CLIP node {clip_node_id} directly to checkpoint")
-            
-            for node_id, node in workflow.items():
-                if node["class_type"] == "KSampler":
-                    node["inputs"]["model"] = [checkpoint_node[0], 0]
-                    logging.info(f"  Connected KSampler node {node_id} directly to checkpoint")
-
-        # Update other workflow parameters
-        for node_id, node in workflow.items():
-            if node["class_type"] == "CLIPTextEncode" and node.get("_meta", {}).get("title") == "CLIP Text Encode (Positive Prompt)":
-                node["inputs"]["text"] = prompt
-                logging.info(f"  Updated positive prompt in node {node_id}")
-            elif node["class_type"] == "CLIPTextEncode" and node.get("_meta", {}).get("title") == "CLIP Text Encode (Negative Prompt)":
-                node["inputs"]["text"] = negative_prompt
-                logging.info(f"  Updated negative prompt in node {node_id}")
-            elif node["class_type"] == "EmptySD3LatentImage":
-                node["inputs"]["width"] = width
-                node["inputs"]["height"] = height
-                node["inputs"]["batch_size"] = count
-                logging.info(f"  Updated latent image dimensions in node {node_id}")
-            elif node["class_type"] == "KSampler":
-                node["inputs"]["seed"] = seed
-                node["inputs"]["steps"] = steps
-                node["inputs"]["cfg"] = cfg_scale
-                logging.info(f"  Updated sampler settings in node {node_id}")
-
-        # Create a unique prompt ID
-        prompt_id = str(uuid.uuid4())
-        prompt = {
-            "prompt": workflow,
-            "client_id": client_id,
-        }
-
-        logging.info(f"{MessageSymbols.INFO} Checking server status at {server_address}")
+    Args:
+        prompt (str): The prompt text for image generation
+        negative_prompt (str): The negative prompt text
+        global_count (int): Global counter for image numbering
+        seed (int): Seed for reproducible generation
+        steps (int): Number of steps for generation
+        width (int): Image width
+        height (int): Image height
+        cfg_scale (float): CFG scale for generation
+        output_dir (str): Directory to save generated images
+        server_address (str): ComfyUI server address
+        client_id (str): Client ID for WebSocket connection
+        workflow_path (str): Path to the workflow file
+        current_time (datetime.datetime): Current time for file organization
+        prompt_media_path (str, optional): Path to the prompt media file
+    """
+    try:
         # Check server status
         if not check_server_status(server_address):
-            logging.error(f"{MessageSymbols.ERROR}ComfyUI server is not responding at {server_address}")
-            return None
+            raise ConnectionError(f"ComfyUI server at {server_address} is not responsive")
 
-        logging.info(f"{MessageSymbols.INFO} Creating WebSocket connection")
+        # Load and customize workflow
+        workflow = load_workflow(workflow_path, prompt=prompt, negative_prompt=negative_prompt)
+        if not workflow:
+            raise ValueError("Failed to load workflow")
+
         # Create WebSocket connection
         ws = create_websocket_connection(server_address, client_id)
         if not ws:
-            return None
+            raise ConnectionError("Failed to create WebSocket connection")
 
-        logging.info(f"{MessageSymbols.INFO} Sending prompt to server")
-        # Queue the prompt
-        ws.send(json.dumps(prompt))
-
-        logging.info(f"{MessageSymbols.INFO} Waiting for generated images")
-        # Get the generated images
+        # Get generated images
         images = get_images(ws, workflow, server_address, client_id)
-        ws.close()
-
         if not images:
-            logging.error(f"{MessageSymbols.ERROR}No images were generated")
-            return None
+            raise ValueError("No images were generated")
 
-        logging.info(f"{MessageSymbols.INFO} Saving images")
-        # Save the images
-        saved_images = save_images(images, output_dir, global_count, seed, current_time, prompt_media_path)
-        logging.info(f"{MessageSymbols.SUCCESS} Images saved successfully")
-
-        # Return both the images and the number of images saved for global count tracking
-        return images, len(saved_images) if saved_images else 0
+        # Save the generated images
+        save_images(images, output_dir, global_count, seed, current_time, prompt_media_path)
 
     except Exception as e:
-        logging.error(f"{MessageSymbols.ERROR}Error generating image: {str(e)}")
-        logging.error(f"Stack trace: ", exc_info=True)
-        return None
+        logging.error(f"{MessageSymbols.ERROR} Failed to generate image: {e}")
+        raise
 
 
 def main(
     workflow_path: str,
-    prompt_media_path: str = None,
-    output_dir: str = None,
+    prompt_media_path: str | None = None,
+    output_dir: str | None = None,
     dry_run: bool = False,
-    user_preference: str = None,
-    server_address: str = None,
-    client_id: str = None,
-    loras: str = None,
-):
+    user_preference: str | None = None,
+    server_address: str | None = None,
+    client_id: str | None = None,
+) -> str | None:
     """Main function to run the image generation process."""
     try:
+        # Load and validate prompt data
         if not prompt_media_path:
-            prompt_media_path = config.paths.prompt_media
-
-        if not output_dir:
-            output_dir = config.paths.output_dir
-
-        if not server_address:
-            server_address = f"{config.server.host}:{config.server.port}"
-
-        if not client_id:
-            client_id = str(uuid.uuid4())
-
-        # Create output directory if it doesn't exist
-        Path(output_dir).mkdir(parents=True, exist_ok=True)
-
-        # Set up logging
-        setup_logging(Path(output_dir))
-
-        # Read and validate the prompt media file
-        data = read_file(prompt_media_path)
-        validate_config(data)
-
-        # Extract configuration
-        prefix_prompt = data.get("prefix_prompt", "")
-        prompts = data.get("prompts", [])
-        variations = data.get("variations", {})
+            raise ValueError("prompt_media_path must be provided")
         
-        # Handle LoRAs from either command line or YAML file
-        if isinstance(loras, str):
-            # If it's a string (from command line), parse it as JSON
-            loras = json.loads(loras)
-        else:
-            # If it's not a string (from YAML), use it as is
-            loras = data.get("loras", [])
+        prompt_data = read_file(prompt_media_path)
+        if not prompt_data:
+            raise ValueError(f"Failed to load prompt data from {prompt_media_path}")
+
+        # Select appropriate workflow based on prompt data
+        workflow_path = select_workflow(prompt_data, workflow_path)
+        if not workflow_path:
+            raise ValueError("Failed to select a workflow")
+
+        if dry_run:
+            logging.info(f"{MessageSymbols.SUCCESS} Dry run complete. Generated prompts saved to output/generated_prompts.json")
+            return workflow_path
+
+        # Handle None values for optional parameters
+        output_dir = output_dir or "output"
+        server_address = server_address or "http://127.0.0.1:8188"
+        client_id = client_id or str(uuid.uuid4())
+
+        # Convert string paths to Path objects
+        output_dir_path = Path(output_dir)
+        output_dir_path.mkdir(parents=True, exist_ok=True)
+
+        # Setup logging with Path object
+        setup_logging(output_dir_path)
+        logger = logging.getLogger(__name__)
+
+        # Validate configuration
+        if not validate_config(prompt_data):
+            raise ValueError("Invalid configuration")
+
+        negative_prompt = prompt_data.get("prompt_settings", {}).get("negative", "")
+        prefix_prompt = prompt_data.get("prompt_settings", {}).get("prefix", "")
+        prompts = prompt_data.get("prompts", [])
+        variations = prompt_data.get("variations", {})
 
         suffix_files_types = parse_suffix_files(variations)
         sequential_state = None  # Initialize sequential state
 
-        # Get current time for output directory organization
+        count = 0
         current_time = datetime.datetime.now()
-
-        # Process each prompt
-        global_count = 0
-        for prompt in prompts:
-            if not prompt:
-                continue
-
-            # Generate variations of the prompt
-            generated_prompts, sequential_state = generate_prompts(
-                prefix_prompt,
-                prompt,
-                suffix_files_types,
-                user_preference,
-                sequential_state,
-            )
-
-            # Process each generated prompt
-            for generated_prompt in generated_prompts:
-                if dry_run:
-                    print(f"Would generate: {generated_prompt}")
-                    continue
-
-                # Generate the image and get the number of images generated
-                result = generate_image(
-                    generated_prompt,
-                    data.get("negative_prompt", ""),
-                    1,  # count
-                    data.get("seeds", [random.randint(1, 1000000)])[0],
-                    data.get("steps", 20),
-                    data.get("width", 512),
-                    data.get("height", 512),
-                    data.get("cfg_scale", 7.0),
-                    output_dir,
-                    server_address,
-                    client_id,
-                    workflow_path,
-                    current_time,
-                    prompt_media_path,
-                    loras,
-                    global_count,
+        for seed in prompt_data.get("workflows", {}).get("dev", {}).get("seeds", [1]):
+            for base_prompt in prompts:
+                generated_prompts, sequential_state = generate_prompts(
+                    prefix_prompt, base_prompt, suffix_files_types, user_preference, sequential_state
                 )
-                
-                if result:
-                    images, num_saved = result
-                    global_count += num_saved  # Update global count with number of images saved
+                for generated_prompt in generated_prompts:
+                    logging.info(f"{MessageSymbols.PROCESSING} Executing Prompt: {generated_prompt}")
+                    print(f"{COLORS.HIGHLIGHT} Executing Prompt: {generated_prompt}{COLORS.ENDC}")
+                    generate_image(
+                        generated_prompt,
+                        negative_prompt,
+                        count,
+                        seed,
+                        prompt_data.get("workflows", {}).get("dev", {}).get("steps", 20),
+                        prompt_data.get("workflows", {}).get("dev", {}).get("width", 512),
+                        prompt_data.get("workflows", {}).get("dev", {}).get("height", 512),
+                        prompt_data.get("workflows", {}).get("dev", {}).get("cfg_scale", 7),
+                        output_dir,
+                        server_address,
+                        client_id,
+                        workflow_path,
+                        current_time,
+                        prompt_media_path,
+                    )
+                    count += 1
+
+        logging.info(f"{MessageSymbols.SUCCESS} Image generation complete.")
+        print(f"{COLORS.OKGREEN}{MessageSymbols.SUCCESS} Image generation complete.{COLORS.ENDC}")
+
     except Exception as e:
         logging.error(f"{MessageSymbols.ERROR} Failed to generate images: {e}")
         raise
@@ -791,17 +776,45 @@ if __name__ == "__main__":
     parser.add_argument("--preference", type=str, help="User preference for filtering options")
     parser.add_argument("--server", type=str, help=f"ComfyUI server address (default: {config.server.host}:{config.server.port})")
     parser.add_argument("--client-id", type=str, help="Client ID for WebSocket connection (default: random UUID)")
-    parser.add_argument("--loras", type=str, help="JSON string of LoRA configurations to override defaults. Format: '[{\"name\": \"lora.safetensors\", \"strength_model\": 0.5, \"strength_clip\": 0.5}]'")
 
     args = parser.parse_args()
 
     # Determine the workflow path based on the selected option
     base_dir = Path(__file__).parent
     if args.dev:
-        workflow_path = base_dir / "workflows" / "flux1-dev-fp8.json"
+        workflow_path = base_dir / "workflows" / "api" / "flux1-dev-fp8-api.json"
     elif args.schnell:
-        workflow_path = base_dir / "workflows" / "flux1-schnell-fp8.json"
+        workflow_path = base_dir / "workflows" / "api" / "flux1-schnell-fp8-api.json"
     else:  # Custom workflow
         workflow_path = args.workflow
 
-    main(str(workflow_path), args.prompt_media, args.output_dir, args.dry_run, args.preference, args.server, args.client_id, args.loras)
+    main(str(workflow_path), args.prompt_media, args.output_dir, args.dry_run, args.preference, args.server, args.client_id)
+
+
+def has_lora_in_prompts(prompt_data):
+    """
+    Check if any prompt in the prompt data contains valid LoRA tags.
+    
+    Args:
+        prompt_data (dict): The loaded prompt.yaml data
+        
+    Returns:
+        bool: True if any prompt contains a valid LoRA tag, False otherwise
+    """
+    # Check for legacy LoRA configuration
+    if "loras" in prompt_data and prompt_data["loras"]:
+        return True
+        
+    # Check for LoRA tags in prompts
+    if not prompt_data or 'prompts' not in prompt_data:
+        return False
+        
+    for prompt in prompt_data['prompts']:
+        if isinstance(prompt, str):
+            # Find all LoRA tags
+            lora_tags = prompt.split('<lora:')[1:]
+            for tag in lora_tags:
+                # Check if the tag has content and ends with '>'
+                if ':' in tag and tag.strip().endswith('>'):
+                    return True
+    return False

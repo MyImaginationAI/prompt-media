@@ -266,13 +266,13 @@ make batch/dry-run
 python engine/image/flux/run.py --dev `
     --prompt-media prompt.yaml `
     --output-dir collections/images `
-    --server 127.0.0.1:7860
+    --server 127.0.0.1:8188
 
 # Run FLUX model in schnell mode
 python engine/image/flux/run.py --schnell `
     --prompt-media prompt.yaml `
     --output-dir collections/images `
-    --server 127.0.0.1:7860
+    --server 127.0.0.1:8188
 ```
 
 ### Output Organization

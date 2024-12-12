@@ -1,9 +1,11 @@
 import logging
+from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
 import yaml
 
 from .config_schema import FluxConfig, WorkflowConfig, WorkflowType
+from .template_processor import Jinja2TemplateProcessor, WorkflowContextBuilder
 
 
 class WorkflowManager:
@@ -15,6 +17,7 @@ class WorkflowManager:
         self.config: Optional[FluxConfig] = None
         self.workflows: Optional[Dict[WorkflowType, WorkflowConfig]] = None
         self.logger = logging.getLogger(__name__)
+        self.template_processor = Jinja2TemplateProcessor()
         self._load_config()
 
     def _load_config(self) -> None:
@@ -72,3 +75,37 @@ class WorkflowManager:
         if not self.config:
             raise RuntimeError("Configuration not loaded")
         return [{"oom": oom.dict()} for oom_dict in self.config.ooms for oom in oom_dict.values()]
+
+    def generate_workflow(self, template_path: str, output_dir: str, prompt: str) -> str:
+        """Generate a workflow file from template for a given prompt."""
+        if not self.config or not self.workflow_config:
+            raise RuntimeError("Configuration not loaded")
+
+        # Get dev workflow configuration
+        workflow_config = self.workflow_config.get('dev', {})
+        lora_config = self.workflow_config.get('lora', [{}])[0]  # Get first LoRA config if exists
+
+        # Build context for template
+        context = WorkflowContextBuilder.build_context(
+            prompt=prompt,
+            workflow_config=workflow_config,
+            lora_config=lora_config
+        )
+
+        # Process template and generate output path
+        workflow_content = self.template_processor.process_template(template_path, context)
+        output_path = self.template_processor.generate_workflow_path(
+            output_dir=output_dir,
+            filename_prefix=context['filename_prefix'],
+            context=context
+        )
+
+        # Ensure output directory exists
+        Path(output_dir).mkdir(parents=True, exist_ok=True)
+
+        # Write workflow file
+        with open(output_path, 'w') as f:
+            f.write(workflow_content)
+
+        self.logger.info(f"✨ Generated workflow file: {output_path}")
+        return output_path
