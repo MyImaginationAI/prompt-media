@@ -5,7 +5,7 @@
 # Server Configuration
 server:
   host: "127.0.0.1"
-  port: 7860
+  port: 8188 #ComfyUI port
   debug: false
 
 # Media Configuration
@@ -24,7 +24,7 @@ image:
   seed_start: 1
   seed_end: 10
   video_duration: 3
-  cfg_scale: 1
+  cfg: 1
   steps: 20
 
 # Model Configuration

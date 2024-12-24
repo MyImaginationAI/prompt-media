@@ -48,7 +48,7 @@ class ImageGenerator:
             # Find and update KSampler node
             sampler_nodes = [k for k, v in workflow_api.items() if v.get("class_type") == "KSampler"]
             if sampler_nodes:
-                workflow_api[sampler_nodes[0]]["inputs"].update({"seed": seed, "steps": config.steps, "cfg": config.cfg_scale})
+                workflow_api[sampler_nodes[0]]["inputs"].update({"seed": seed, "steps": config.steps, "cfg": config.cfg})
 
             # Find and update Empty Latent Image node
             latent_nodes = [k for k, v in workflow_api.items() if v.get("class_type") == "EmptyLatentImage"]
@@ -89,7 +89,7 @@ class ImageGenerator:
             self.logger.error(f"❌ Failed to get images: {e}")
             raise
 
-    def _save_images(self, images: List[bytes], output_dir: str, count: int, seed: int) -> List[str]:
+    def _save_images(self, images: List[bytes], output_dir: str, count: int, seed: int, workflow_metadata: dict) -> List[str]:
         """Save generated images to output directory."""
         os.makedirs(output_dir, exist_ok=True)
 
@@ -102,6 +102,12 @@ class ImageGenerator:
                 image.save(filepath)
                 image_paths.append(filepath)
                 self.logger.info(f"💾 Saved image to: {filepath}")
+
+                # Save workflow metadata alongside the image
+                metadata_path = os.path.splitext(filepath)[0] + '.json'
+                with open(metadata_path, 'w') as f:
+                    json.dump(workflow_metadata, f, indent=2)
+                self.logger.info(f"💾 Saved workflow metadata to: {metadata_path}")
             except Exception as e:
                 self.logger.error(f"❌ Failed to save image {idx + 1}: {e}")
                 continue
@@ -124,14 +130,17 @@ class ImageGenerator:
             # Update workflow with current settings
             workflow_api = self._update_workflow(workflow_api, prompt, config, seed)
 
+            # Generate workflow and get metadata
+            _, workflow_metadata = self.workflow_manager.generate_workflow(workflow_path, output_dir, prompt)
+
             # Generate and get images
             images = self._get_images(ws, workflow_api)
             if not images:
                 self.logger.error("❌ No images were returned from the API")
                 return []
 
-            # Save images
-            return self._save_images(images, output_dir, count, seed)
+            # Save images with workflow metadata
+            return self._save_images(images, output_dir, count, seed, workflow_metadata)
 
         except Exception as e:
             self.logger.error(f"❌ Error occurred while generating image: {e}")

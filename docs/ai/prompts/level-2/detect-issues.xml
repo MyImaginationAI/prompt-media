@@ -1,0 +1,12 @@
+<purpose>
+    Detect issues on the codebase based on the instructions.
+</purpose>
+
+<instructions>
+    <instruction>Don't assume things, ask me first before doing anything</instruction>
+    <instruction>Only use makefile, make targets to perform commands</instruction>
+    <instruction>Understand the codebase deeply</instruction>
+    <instruction>Provide a summary of the issues found in a cohesive manner</instruction>
+    <instruction>Provide a plan of action</instruction>
+    <instruction>Help test the changes</instruction>
+</instructions>

@@ -1,0 +1,35 @@
+# Default prompt settings
+prompt_settings:
+  prefix: ""
+  negative: ""
+
+# Image generation parameters
+## Image sizes
+### portrait: 832x1216
+### landscape: 1216x832
+### wide: 1344x768
+
+cfg: 3.5
+steps: 35
+width: 1344
+height: 768
+seeds: [1]
+sampler: "euler"
+scheduler: "normal"
+denoise: 1.0
+
+# LoRA configurations
+loras:
+  lora:
+    - name: "aidmaImageUprader-FLUX-v0.3"
+      strength: 0.6
+
+# List of prompts to generate
+prompts:
+  - "ancient greek style vase, with an image of a In this captivating painting, the iconic discovery of America comes to life. The colors are bold and vibrant, with shades of orange, yellow, and red dominating the scene. Peaceful, ceramic decor, vase painting, red- and black-figure vessels"
+
+# Variations for prompt generation
+variations:
+  time:
+    type: "static"
+    values: [""]

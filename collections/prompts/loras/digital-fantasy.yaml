@@ -1,0 +1,148 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "aidmaMJ6.1,"
+  negative: ""
+
+# Image generation parameters
+## Image sizes
+### portrait: 832x1216
+### landscape: 1216x832
+### wide: 1344x768
+
+cfg: 1.0
+steps: 30
+width: 832
+height: 1216
+seeds: [1, 10, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200, 210, 220, 230, 240, 250, 260, 270, 280, 290, 300]
+sampler: "euler"
+scheduler: "normal"
+denoise: 1.0
+
+# LoRA configurations
+loras:
+  lora:
+    - name: "aidmaMJ6.1-FLUX-v0.4"
+      strength: 0.6
+
+# List of prompts to generate
+prompts:
+  - "In a sleek, modern world, a vibrant digital artwork depicts the iconic silhouette of a woman. The intricate details of her hair and features are brought to life with stunning clarity, Impressionism, aidmaMJ6.1"
+  - "A luminous digital portrait of a woman emerging from abstract brushstrokes, her silhouette glowing against a modern cityscape backdrop, Impressionism, aidmaMJ6.1"
+  - "Ethereal female figure dancing through particles of light, her form dissolving into impressionistic swirls of color, Abstract, aidmaMJ6.1"
+  - "Cyberpunk goddess with flowing digital hair made of binary code and neon streams, Futurism, aidmaMJ6.1"
+  - "Renaissance meets futurism: a classical female portrait fragmented into geometric digital patterns, Cubism, aidmaMJ6.1"
+  - "Woman's face composed of floating crystal shards, reflecting prismatic light in a minimalist space, Minimalism, aidmaMJ6.1"
+  - "Surreal digital painting of a woman whose hair transforms into a flock of luminescent butterflies, Surrealism, aidmaMJ6.1"
+  - "Art nouveau-inspired portrait with swirling patterns forming a woman's profile in electric colors, Art Nouveau, aidmaMJ6.1"
+  - "Abstract female figure emerging from a cascade of liquid metal and digital rain, Cyberpunk, aidmaMJ6.1"
+  - "Holographic portrait where traditional oil painting techniques blend with glitch art elements, Mixed Media, aidmaMJ6.1"
+  - "Ethereal digital portrait where quantum particles form a woman's delicate features, Quantum Art, aidmaMJ6.1"
+  - "Cybernetic priestess emerging from a cascade of holographic mandalas, Digital Art, aidmaMJ6.1"
+  - "Woman's essence captured in crystalline fractals, each facet telling a different story, Crystal Art, aidmaMJ6.1"
+  - "Digital sorceress with hair made of flowing neural networks, AI Art, aidmaMJ6.1"
+  - "Portrait where renaissance oils transform into cascading binary waterfalls, Mixed Media, aidmaMJ6.1"
+  - "Techno-shamanic goddess emerging from virtual reality mist, Digital Art, aidmaMJ6.1"
+  - "Woman's face formed by intersecting planes of digital aurora, Northern Lights, aidmaMJ6.1"
+  - "Digital muse dissolving into a constellation of data points, Space Art, aidmaMJ6.1"
+  - "Quantum beauty emerging from the void between dimensions, Abstract, aidmaMJ6.1"
+  - "Cyber-geisha with kimono patterns morphing into circuit boards, Fusion Art, aidmaMJ6.1"
+  - "Digital dryad where nature meets virtual reality, Nature Tech, aidmaMJ6.1"
+  - "Woman's profile crafted from weaving strands of quantum light, Physics Art, aidmaMJ6.1"
+  - "Modern oracle surrounded by floating mathematical equations, Math Art, aidmaMJ6.1"
+  - "Digital valkyrie with wings made of holographic data streams, Norse Tech, aidmaMJ6.1"
+  - "Portrait where baroque meets blockchain aesthetics, Crypto Art, aidmaMJ6.1"
+  - "Cyber-nymph emerging from a sea of floating algorithms, Code Art, aidmaMJ6.1"
+  - "Woman's essence captured in crystalline quantum states, Science Art, aidmaMJ6.1"
+  - "Digital alchemist transforming code into golden light, Alchemy, aidmaMJ6.1"
+  - "Portrait where DNA helixes form feminine features, Bio Art, aidmaMJ6.1"
+  - "Techno-sphinx emerging from pyramids of pure data, Egyptian Tech, aidmaMJ6.1"
+  - "Woman's face formed by colliding particle accelerator streams, Physics Art, aidmaMJ6.1"
+  - "Digital mermaid swimming through oceans of flowing data, Ocean Tech, aidmaMJ6.1"
+  - "Quantum goddess weaving reality from probability waves, Wave Art, aidmaMJ6.1"
+  - "Cyber-venus rising from shells of crystalline code, Classical Tech, aidmaMJ6.1"
+  - "Portrait where star maps form feminine constellations, Space Art, aidmaMJ6.1"
+  - "Digital banshee with voice visualized as flowing data, Sound Art, aidmaMJ6.1"
+  - "Woman's essence captured in quantum entanglement patterns, Physics Art, aidmaMJ6.1"
+  - "Modern medusa with hair of flowing fiber optics, Greek Tech, aidmaMJ6.1"
+  - "Portrait where neural networks form delicate features, AI Art, aidmaMJ6.1"
+  - "Cyber-fairy dancing through digital flower gardens, Nature Tech, aidmaMJ6.1"
+  - "Woman's face emerging from collapsing quantum states, Science Art, aidmaMJ6.1"
+  - "Digital shaman channeling streams of virtual energy, Spiritual Tech, aidmaMJ6.1"
+  - "Quantum beauty dissolving into probability clouds, Physics Art, aidmaMJ6.1"
+  - "Cyber-goddess with crown of rotating data spheres, Royal Tech, aidmaMJ6.1"
+  - "Portrait where time crystals form eternal features, Crystal Art, aidmaMJ6.1"
+  - "Digital sylph riding winds of flowing information, Air Tech, aidmaMJ6.1"
+  - "Woman's essence captured in quantum mirror reflections, Mirror Art, aidmaMJ6.1"
+  - "Modern muse conducting symphonies of light, Music Tech, aidmaMJ6.1"
+  - "Portrait where cosmic rays paint delicate features, Space Art, aidmaMJ6.1"
+  - "Cyber-witch brewing potions of pure data, Magic Tech, aidmaMJ6.1"
+  - "Woman's face formed by quantum teleportation effects, Physics Art, aidmaMJ6.1"
+  - "Digital naiad emerging from fountains of code, Water Tech, aidmaMJ6.1"
+  - "Quantum priestess channeling digital divination, Oracle Art, aidmaMJ6.1"
+  - "Cyber-empress with robes of flowing algorithms, Royal Tech, aidmaMJ6.1"
+  - "Portrait where sacred geometry forms divine features, Sacred Art, aidmaMJ6.1"
+  - "Digital phoenix rising from ashes of binary code, Fire Tech, aidmaMJ6.1"
+  - "Woman's essence captured in quantum field theory, Science Art, aidmaMJ6.1"
+  - "Modern artemis hunting through digital forests, Greek Tech, aidmaMJ6.1"
+  - "Portrait where dark matter forms mysterious features, Space Art, aidmaMJ6.1"
+  - "Cyber-siren singing songs of pure data, Sound Tech, aidmaMJ6.1"
+  - "Woman's face emerging from quantum foam, Physics Art, aidmaMJ6.1"
+  - "Digital valkyrie choosing from streams of code, Norse Tech, aidmaMJ6.1"
+  - "Quantum beauty dancing through probability space, Math Art, aidmaMJ6.1"
+  - "Cyber-gaia with earth's data flowing through her, Earth Tech, aidmaMJ6.1"
+  - "Portrait where string theory weaves delicate features, Physics Art, aidmaMJ6.1"
+  - "Digital oracle reading patterns in flowing data, Oracle Tech, aidmaMJ6.1"
+  - "Woman's essence captured in quantum entanglement, Science Art, aidmaMJ6.1"
+  - "Modern calliope inspiring digital poetry, Muse Tech, aidmaMJ6.1"
+  - "Portrait where quantum tunneling reveals hidden features, Physics Art, aidmaMJ6.1"
+  - "Cyber-persephone bridging digital underworlds, Greek Tech, aidmaMJ6.1"
+  - "Woman's face formed by collapsing wave functions, Science Art, aidmaMJ6.1"
+  - "Digital dryad with leaves of flowing code, Nature Tech, aidmaMJ6.1"
+  - "Quantum goddess weaving spacetime fabric, Physics Art, aidmaMJ6.1"
+  - "Cyber-athena with wisdom of artificial intelligence, Greek Tech, aidmaMJ6.1"
+  - "Portrait where cosmic inflation forms eternal features, Space Art, aidmaMJ6.1"
+  - "Digital muse inspiring virtual creativity, Art Tech, aidmaMJ6.1"
+  - "Woman's essence captured in quantum superposition, Science Art, aidmaMJ6.1"
+  - "Modern iris carrying messages of pure data, Greek Tech, aidmaMJ6.1"
+  - "Portrait where quantum gravity shapes divine features, Physics Art, aidmaMJ6.1"
+  - "Cyber-selene glowing with digital moonlight, Moon Tech, aidmaMJ6.1"
+  - "Woman's face emerging from holographic universe, Space Art, aidmaMJ6.1"
+  - "Digital nyx bringing virtual night's mystery, Greek Tech, aidmaMJ6.1"
+  - "Quantum beauty dancing through probability clouds, Physics Art, aidmaMJ6.1"
+  - "Cyber-flora blooming with digital flowers, Nature Tech, aidmaMJ6.1"
+  - "Portrait where quantum fields paint eternal features, Science Art, aidmaMJ6.1"
+  - "Digital theia bringing virtual light's birth, Greek Tech, aidmaMJ6.1"
+  - "Woman's essence captured in quantum resonance, Physics Art, aidmaMJ6.1"
+  - "Modern hemera awakening digital dawn, Greek Tech, aidmaMJ6.1"
+  - "Portrait where virtual particles form divine features, Science Art, aidmaMJ6.1"
+  - "Cyber-thetis swimming through data oceans, Greek Tech, aidmaMJ6.1"
+  - "Woman's face formed by quantum fluctuations, Physics Art, aidmaMJ6.1"
+  - "Digital eos bringing virtual morning light, Greek Tech, aidmaMJ6.1"
+  - "Quantum goddess dancing through probability space, Science Art, aidmaMJ6.1"
+  - "Cyber-demeter nurturing digital harvest, Greek Tech, aidmaMJ6.1"
+  - "Portrait where cosmic strings weave eternal features, Physics Art, aidmaMJ6.1"
+  - "Digital hestia tending virtual sacred flame, Greek Tech, aidmaMJ6.1"
+  - "Woman's essence captured in quantum harmony, Science Art, aidmaMJ6.1"
+  - "Modern nike bringing digital victory, Greek Tech, aidmaMJ6.1"
+  - "Portrait where quantum chaos forms divine order, Physics Art, aidmaMJ6.1"
+  - "Cyber-tyche bringing digital fortune's wheel, Greek Tech, aidmaMJ6.1"
+  - "Woman's face emerging from quantum symmetry, Science Art, aidmaMJ6.1"
+  - "Digital nemesis balancing virtual justice, Greek Tech, aidmaMJ6.1"
+  - "Quantum beauty weaving probability patterns, Physics Art, aidmaMJ6.1"
+  - "Cyber-eirene bringing digital peace, Greek Tech, aidmaMJ6.1"
+  - "Portrait where virtual reality meets quantum dreams, Science Art, aidmaMJ6.1"
+  - "Digital eunomia ordering cosmic data, Greek Tech, aidmaMJ6.1"
+  - "Woman's essence captured in quantum grace, Physics Art, aidmaMJ6.1"
+  - "Modern dike weighing digital truth, Greek Tech, aidmaMJ6.1"
+  - "Portrait where quantum beauty meets virtual wisdom, Science Art, aidmaMJ6.1"
+  - "Cyber-moira weaving digital fate, Greek Tech, aidmaMJ6.1"
+  - "Woman's face formed by quantum destiny, Physics Art, aidmaMJ6.1"
+  - "Digital arete embodying virtual excellence, Greek Tech, aidmaMJ6.1"
+  - "Quantum goddess dancing eternal patterns, Science Art, aidmaMJ6.1"
+  - "Cyber-harmonia bringing digital balance, Greek Tech, aidmaMJ6.1"
+
+# Variations for prompt generation
+variations:
+  time:
+    type: "sequential"
+    values: ["fantasy Digital art, "]

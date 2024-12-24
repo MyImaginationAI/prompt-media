@@ -42,3 +42,8 @@ workflows:
     width: 768
     height: 768
     seeds: [1]
+
+loras:
+  name: midjourney_whisper_flux_lora_v01.safetensors
+  strength_model: 1
+  strength_clip: 1

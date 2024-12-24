@@ -1,7 +1,7 @@
 {
   "6": {
     "inputs": {
-      "text": "Create a surreal photo of a gorgeous sixties retro woman in a colorful dress kissing a big robot, it’s a cloudy day, day in Paris, dark pastel colors, 35mm vintage kodak photography, easynegative, detailxl, CyberRealistic_Negative, perfecteyes, perfect eyes, skin blemish, detailed skin, FRESHIDEAS Illustration 62#, dark, chiaroscuro, low-key\ndetailmaximizer\n<lora:ImageUpgraderV2:.75> <lora:style_of_Hieronymus_Bosch_FLUX_189:1>",
+      "text": "{{ prompt_text | json_str }}",
       "clip": [
         "30",
         1
@@ -30,7 +30,7 @@
   },
   "9": {
     "inputs": {
-      "filename_prefix": "2024-09-18_",
+      "filename_prefix": "{{ filename_prefix | json_str }}",
       "images": [
         "8",
         0
@@ -43,8 +43,8 @@
   },
   "27": {
     "inputs": {
-      "width": 1216,
-      "height": 832,
+      "width": {{ width | safe_int(768) }},
+      "height": {{ height | safe_int(768) }},
       "batch_size": 1
     },
     "class_type": "EmptySD3LatentImage",
@@ -54,7 +54,7 @@
   },
   "30": {
     "inputs": {
-      "ckpt_name": "flux1-dev-fp8.safetensors"
+      "ckpt_name": "{{ ckpt_name | default('flux1-dev-fp8.safetensors') | json_str }}"
     },
     "class_type": "CheckpointLoaderSimple",
     "_meta": {
@@ -63,12 +63,12 @@
   },
   "31": {
     "inputs": {
-      "seed": 802823495713089,
-      "steps": 30,
-      "cfg": 1,
-      "sampler_name": "euler",
-      "scheduler": "simple",
-      "denoise": 1,
+      "seed": {{ seed | safe_int(1647211062) }},
+      "steps": {{ steps | safe_int(25) }},
+      "cfg": {{ cfg | safe_float(1) }},
+      "sampler_name": "{{ sampler_name | default('euler') | json_str }}",
+      "scheduler": "{{ scheduler | default('normal') | json_str }}",
+      "denoise": {{ denoise | safe_float(1) }},
       "model": [
         "30",
         0
@@ -93,7 +93,7 @@
   },
   "33": {
     "inputs": {
-      "text": "",
+      "text": "{{ negative_text | default('') | json_str }}",
       "clip": [
         "30",
         1

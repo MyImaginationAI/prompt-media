@@ -30,7 +30,7 @@ class WorkflowConfig(BaseModel):
     """Configuration for a specific workflow type."""
 
     steps: int = Field(..., ge=1, description="Number of steps for image generation")
-    cfg_scale: float = Field(..., ge=1, description="Configuration scale factor")
+    cfg: float = Field(..., ge=1, description="Configuration scale factor")
     width: int = Field(..., ge=64, description="Image width in pixels")
     height: int = Field(..., ge=64, description="Image height in pixels")
     seeds: Optional[List[int]] = Field(default=None, description="List of seeds for reproducibility")

@@ -1,0 +1,35 @@
+# Default prompt settings
+prompt_settings:
+  prefix: ""
+  negative: ""
+
+# Image generation parameters
+## Image sizes
+### portrait: 832x1216
+### landscape: 1216x832
+### wide: 1344x768
+
+cfg: 1.0
+steps: 30
+width: 1344
+height: 768
+seeds: [1]
+sampler: "euler"
+scheduler: "normal"
+denoise: 1.0
+
+# LoRA configurations
+loras:
+  lora:
+    - name: "AntiBlur"
+      strength: 1.7
+
+# List of prompts to generate
+prompts:
+  - "A cat floats on a raft along the street of a flooded city"
+
+# Variations for prompt generation
+variations:
+  time:
+    type: "static"
+    values: [""]

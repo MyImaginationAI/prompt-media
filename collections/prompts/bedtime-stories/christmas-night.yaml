@@ -1,0 +1,67 @@
+prompt_settings:
+  prefix: "Colorful, soft, and whimsical, perfect for children. Storybook Illustration art style "
+  negative: ""
+
+cfg: 1.0
+steps: 20
+width: 1344
+height: 768
+seeds: [10, 11, 12]
+sampler: "euler"
+scheduler: "simple"
+denoise: 1
+
+# LoRA configurations
+loras:
+  lora:
+    - name: "Illustration_story book"
+      strength: 0.9
+
+# Summary: A magical Christmas Eve adventure where Santa Claus encounters two siblings, teaching them about holiday spirit, kindness, and the joy of giving while sharing enchanting moments and festive activities.
+
+prompts:
+  - "A jolly man with rosy cheeks and a flowing white beard meets a small boy with messy brown hair at the Christmas tree"
+  - "The little girl with pigtails and sparkly pajamas catches the red-suited man placing presents under the tree"
+  - "The white-bearded man shows the curious boy with glasses how reindeer fly using magical sparkles"
+  - "The small girl in polka dot slippers discovers magical reindeer footprints on the roof"
+  - "The boy with tousled hair helps the kind bearded man fix his sleigh's broken bell"
+  - "Santa's red hat falls off while delivering presents, and the little girl in star pajamas helps him find it"
+  - "The jolly man teaches the boy with the toy airplane how his magical compass works"
+  - "The girl with rainbow socks learns how to wrap presents using special North Pole paper"
+  - "The white-bearded visitor shares hot chocolate with the sleepy boy by the fireplace"
+  - "The small girl in unicorn slippers helps the jolly man read his list of good children"
+  - "The boy with glasses learns how candy canes are made from the jolly red-suited man"
+  - "The bearded man shows the girl with pigtails how snowflakes are made with magic"
+  - "The small boy helps the jolly visitor feed carrots to the magical reindeer"
+  - "The girl in sparkly pajamas learns how to make bells jingle like sleigh bells"
+  - "The white-bearded man teaches the curious boy how to spot the North Star"
+  - "The little girl helps the jolly man untangle Christmas lights with magic"
+  - "The boy with messy hair learns how letters fly to the North Pole"
+  - "The jolly visitor shows the girl in polka dot slippers how elves make toys"
+  - "The small boy discovers how magic dust makes reindeer fly with the bearded man"
+  - "The girl with pigtails helps sort magical candy canes by color"
+  - "The white-bearded man teaches the boy how to whisper to snowmen"
+  - "The little girl learns how to make cookies sparkle with North Pole magic"
+  - "The jolly man shows the curious boy how he slides down chimneys"
+  - "The girl in star pajamas helps polish the magical sleigh bells"
+  - "The bearded visitor teaches the boy how to make perfect snow angels"
+  - "The small girl learns how to spot magical reindeer in the night sky"
+  - "The jolly man shows the boy with glasses how presents fit in his magic bag"
+  - "The girl with rainbow socks discovers how Santa keeps his beard so white"
+  - "The white-bearded man teaches the boy how to read magical Christmas maps"
+  - "The little girl learns how Santa knows who's been good all year"
+
+# Characters:
+# - Main: Jolly man with rosy cheeks and flowing white beard (Santa)
+# - Supporting: Small boy with messy brown hair and glasses
+# - Supporting: Little girl with pigtails and sparkly pajamas
+# - Background: Mrs. Claus with silver hair and red apron
+# - Background: Tall elf with pointed ears and green hat
+
+variations:
+  animals:
+    type: "static"
+    values: [""]
+  # characters:
+  #   type: "sequential"
+  #   values: ["Cute animals, dreamy children, fantasy creatures"]

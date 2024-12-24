@@ -140,19 +140,19 @@ variations:
 workflows:
   dev:
     steps: 20
-    cfg_scale: 7
+    cfg: 7
     width: 1216
     height: 832  # landscape orientation
     seeds: [1, 2, 3]
   schnell:
     steps: 4
-    cfg_scale: 7
+    cfg: 7
     width: 1216
     height: 832
     seeds: [1, 2]
   default:
     steps: 30
-    cfg_scale: 7
+    cfg: 7
     width: 1216
     height: 832
     seeds: [1]
@@ -266,13 +266,13 @@ make batch/dry-run
 python engine/image/flux/run.py --dev `
     --prompt-media prompt.yaml `
     --output-dir collections/images `
-    --server 127.0.0.1:7860
+    --server 127.0.0.1:8188
 
 # Run FLUX model in schnell mode
 python engine/image/flux/run.py --schnell `
     --prompt-media prompt.yaml `
     --output-dir collections/images `
-    --server 127.0.0.1:7860
+    --server 127.0.0.1:8188
 ```
 
 ### Output Organization

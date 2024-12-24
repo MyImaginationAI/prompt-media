@@ -8,7 +8,7 @@ def sample_prompt_config():
         "prompt_settings": {"prefix": "test prefix", "negative": "test negative"},
         "prompts": ["test prompt"],
         "variations": {"time": {"type": "sequential", "values": ["morning", "night"]}},
-        "workflows": {"test": {"steps": 10, "cfg_scale": 7, "width": 512, "height": 512, "seeds": [1]}},
+        "workflows": {"test": {"steps": 10, "cfg": 7, "width": 512, "height": 512, "seeds": [1]}},
     }
 
 

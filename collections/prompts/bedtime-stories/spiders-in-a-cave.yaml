@@ -1,0 +1,67 @@
+prompt_settings:
+  prefix: "Painterly fantasy realism with whimsical storybook charm, anime artwork line art drawing professional 3d model <lora:DreamwovenTales:0.8>,"
+  negative: "ugly, deformed, noisy, low poly, blurry, painting, anime, photorealistic, 35mm film, deformed, glitch, blurry, noisy, off-center, deformed, cross-eyed, closed eyes, bad anatomy, ugly, disfigured, mutated, realism, realistic, impressionism, expressionism, oil, acrylic, photo, deformed, black and white, realism, disfigured, low contrast"
+
+cfg: 1.0
+steps: 20
+width: 1344
+height: 768
+seeds: [159753]
+sampler: "euler"
+scheduler: "simple"
+denoise: 1
+
+# LoRA configurations
+loras:
+  lora:
+    - name: "DreamwovenTales-000004"
+      strength: 0.9
+
+
+# ## Story Summary
+# Deep within a mysterious cave system, two young explorers embark on an extraordinary adventure. 
+# They are guided by a clever fox through crystal-filled passages and encounter a friendly dragon who protects them from dangers. 
+# Together, they discover ancient treasures, meet a wise mummy who teaches them about cave paintings, and learn to grow magical flowers in the darkness. 
+# The children must use their wit and courage to navigate past giant spiders, while a gruff but goodhearted pirate shares tales of old. 
+# Their journey becomes a magical experience where friendship and discovery intertwine in an underground world filled with wonder.
+
+prompts:
+  - "A lanky boy with messy brown hair leaps across rocks while a petite girl with golden braids points excitedly at a cave entrance"
+  - "A small red fox with white-tipped tail bounds ahead as a tall boy with round glasses scrambles to follow"
+  - "A slim boy with freckles crouches behind pillars, watching a towering mummy patrol ancient treasures"
+  - "A sturdy girl with fiery red hair kneels to examine fresh dragon tracks while her silver-streaked friend peers nervously around"
+  - "A weathered pirate with grey beard swings from ropes as an emerald-scaled dragon soars past crystal formations"
+  - "A willowy girl with jet-black braids pulls her stocky brother with copper curls through spider-filled tunnels"
+  - "A thin explorer with auburn ponytail traces hieroglyphics while her muscular friend holds a flickering torch"
+  - "A sapphire-eyed fox darts between shadows, leading a small girl with chestnut pigtails through caverns"
+  - "A rainbow-scaled dragon circles overhead as a plump boy with wire glasses climbs ancient stairs"
+  - "A rugged pirate with wooden leg gestures wildly while telling tales to a tiny boy with golden curls"
+  - "A curious girl with raven hair crawls forward as her broad-shouldered friend keeps watch over a sleeping mummy"
+  - "A short boy with tousled hair follows silver-eared fox tracks through winding caverns"
+  - "A crystal-winged dragon swoops down beside a lean girl with violet streaks climbing rock walls"
+  - "A one-eared fox leaps protectively before a delicate girl with honey braids crossing a narrow bridge"
+  - "A petite girl with copper hair unfolds an ancient map while her indigo-spiked friend holds up a glowing crystal"
+  - "A thin boy in patches ducks behind columns as a jeweled mummy patrols golden corridors"
+  - "A robust girl with flame curls tiptoes past a frost-tailed fox guarding treasure piles"
+  - "A wiry boy with scraped knees chases his plump sister through dragon-carved tunnels"
+  - "A golden-crowned mummy demonstrates hieroglyphics to a stocky boy with ash-blonde hair"
+  - "A starlit-eyed fox races ahead while an opal-scaled dragon glides above searching children"
+  - "A sturdy girl with muddy boots digs up glowing flowers as her silver-streaked brother keeps watch"
+  - "A tiny boy with chestnut curls unrolls an ancient scroll while his midnight-braided sister holds torches"
+  - "A jewel-scaled dragon swoops under a willowy girl with amber waves crossing rope bridges"
+  - "A moon-tailed fox darts between treasure piles leading a sunflower-braided girl through mazes"
+  - "A copper-haired boy sketches cave paintings while his jade-spiked friend illuminates wall sections"
+  - "A leather-armored girl scales crystal formations as a rainbow-winged dragon circles protectively"
+  - "A hieroglyph-wrapped mummy guides a robust boy with russet curls through secret passages"
+  - "A starlit-eyed fox leads a wooden-legged pirate away from collapsing treasure chambers"
+  - "A sapphire-scaled dragon soars beside obsidian-braided girl swinging across chasms"
+  - "A flower-crowned copper-haired girl sorts artifacts while jeweled mummy unwraps ancient scrolls"
+
+
+variations:
+  animals:
+    type: "static"
+    values: [""]
+  # characters:
+  #   type: "sequential"
+  #   values: ["Cute animals, dreamy children, fantasy creatures"]

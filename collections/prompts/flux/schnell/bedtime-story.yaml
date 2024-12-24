@@ -1,0 +1,56 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "soft, dreamy, children's book illustration, watercolor, gentle, magical"
+  negative: "dark, scary, realistic, harsh, photographic"
+
+# Image generation parameters
+## Image sizes
+### portrait: 832x1216
+### landscape: 1216x832
+### wide: 1344x768
+
+cfg: 7.0
+steps: 4
+width: 1344
+height: 768
+seeds: [1, 2, 3, 4, 5]
+sampler: "euler"
+scheduler: "normal"
+denoise: 1.0
+
+prompts:
+  - "A small bunny with fluffy white fur wearing blue pajamas, sitting on a rocking chair, moonlight streaming through window, soft watercolor bedroom, red balloon floating nearby"
+  - "A little girl with long chestnut braids, wearing a white nightgown, sitting on a windowsill, watching fireflies dance outside"
+  - "A teddy bear with worn patches, sitting alone on a child's bed, moonlight casting gentle shadows"
+  - "A sleepy child with curly hair, hugging a stuffed elephant, surrounded by soft pillows and a night light"
+  - "A woodland creature with big eyes peering out from a cozy treehouse, starry night sky visible through round window"
+  - "A small mouse in tiny striped pajamas, reading a miniature book by candlelight"
+  - "A sleeping kitten curled up in a woven basket, moonbeams filtering through lace curtains"
+  - "A young rabbit wearing a green nightcap, tiptoeing across a moonlit garden"
+  - "A child's bedroom with floating dream bubbles showing magical adventures"
+  - "A sleepy dragon with soft scales, wrapped in a patchwork quilt, gentle snoring"
+  - "A fairy with gossamer wings, sitting on a flower petal, surrounded by glowing fireflies"
+  - "A young wolf cub nestled between his sleeping parents, mountain cave in background"
+  - "A tiny owl wearing spectacles, perched on a bookshelf filled with bedtime stories"
+  - "A child riding a cloud through a starry night sky, trailing magical stardust"
+  - "A hedgehog in a tiny knitted sweater, drinking warm milk by a miniature fireplace"
+  - "A sleepy unicorn with a pastel mane, resting in a meadow of glowing moonflowers"
+  - "A raccoon in striped pajamas, reading a bedtime story to smaller forest animals"
+  - "A young pirate in a nightshirt, dreaming of sea adventures while tucked in bed"
+  - "A baby dragon curled around a treasure chest, soft snores creating tiny smoke rings"
+  - "A forest sprite with leaf-like hair, sleeping in a hollowed-out acorn"
+  - "A child floating on a giant dandelion seed through a moonlit sky"
+  - "A penguin in blue pajamas, hugging a fish-shaped pillow in an igloo"
+  - "A tiny robot with soft glowing eyes, powered down for the night in a child's bedroom"
+  - "A mermaid child sleeping on a coral bed, bioluminescent sea creatures nearby"
+  - "A young witch with a cat familiar, both asleep on a patchwork quilt"
+  - "A cloud sheep floating through a starry night, leaving trails of soft cotton"
+  - "A baby griffin nestled between eagle and lion parents, mountain cave background"
+  - "A forest gnome in a mushroom house, reading by a tiny lantern"
+  - "A sleepy astronaut child floating in a bedroom that transforms into outer space"
+  - "A baby phoenix nestled in warm ashes, soft ember glow surrounding it"
+
+variations:
+  time:
+    type: "random"
+    values: ["nighttime", "soft evening light", "moonlit moment"]

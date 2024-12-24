@@ -1,0 +1,30 @@
+<purpose>
+Create content based on the instructions, example-output.
+</purpose>
+
+<instructions>
+    <instruction>Create suitable bedtime story prompts for a 5 year old boy and a 3 year old girl</instruction>
+    <instruction>Summarize the story at the beggining.</instruction>
+    <instruction>Output in YAML format</instruction>
+    <instruction>Create 1 main character, 2 supporting characters, and 2 background characters</instruction>
+    <instruction>Characters should have physical descriptions rather than their names</instruction>
+    <instruction>Each character should have a different physical attribute</instruction>
+    <instruction>Ensure that each prompt has two distinct character with different physical attributes explicit in the prompts</instruction>
+    <instruction>Each prompt must be explicit in depcting the movements of the characters</instruction>
+    <instruction>Avoid creating prompts where the characters are still, make the characters look active</instruction>
+    <instruction>Avoid creating prompts where the characters are at the center of the scene and looking at the viewer</instruction>
+    <instruction>Avoid creating prompts where the characters are looking at the viewer, their faces and body posture must be aligned with the context of the story</instruction>
+    <instruction>Repeat the same characters with same physical attributes in different prompts</instruction>
+    <instruction>Generate at least 30 prompts.</instruction>
+    <instruction>Each prompt should have 2 characters maximum</instruction>
+    <instruction>Limit each prompt to 77 tokens, maximum</instruction>
+</instructions>
+
+<example-output>
+# Summary: a summary of the story with key points.
+
+prompts:
+  - ""
+  - ""
+  - .. and so on
+</example-output>

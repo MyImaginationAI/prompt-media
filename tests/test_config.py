@@ -12,13 +12,13 @@ def test_prompt_config_structure(sample_prompt_config):
 def test_workflow_config_validation(sample_prompt_config):
     """Test that workflow configurations have required parameters"""
     workflow = sample_prompt_config["workflows"]["test"]
-    required_params = ["steps", "cfg_scale", "width", "height", "seeds"]
+    required_params = ["steps", "cfg", "width", "height", "seeds"]
 
     for param in required_params:
         assert param in workflow, f"Missing required parameter: {param}"
 
     assert isinstance(workflow["steps"], int)
-    assert isinstance(workflow["cfg_scale"], (int, float))
+    assert isinstance(workflow["cfg"], (int, float))
     assert isinstance(workflow["width"], int)
     assert isinstance(workflow["height"], int)
     assert isinstance(workflow["seeds"], list)

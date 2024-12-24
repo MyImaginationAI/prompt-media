@@ -1,0 +1,64 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "aidmaMJ6.1, mermaid, digital fantasy"
+  negative: ""
+
+# Image generation parameters
+## Image sizes
+### portrait: 832x1216
+### landscape: 1216x832
+### wide: 1344x768
+
+cfg: 1.0
+steps: 30
+width: 832
+height: 1216
+seeds: [1, 10, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200, 210, 220, 230, 240, 250, 260, 270, 280, 290, 300]
+sampler: "euler"
+scheduler: "normal"
+denoise: 1.0
+
+# LoRA configurations
+loras:
+  lora:
+    - name: "aidmaMJ6.1-FLUX-v0.4"
+      strength: 0.6
+
+# List of prompts to generate
+prompts:
+  - "Ethereal mermaid with iridescent scales emerging from crystal-clear waters, her form glowing with bioluminescent patterns, Fantasy Art, aidmaMJ6.1"
+  - "Regal sea princess with flowing aqua hair adorned with pearl and coral crown, her tail shimmering with rainbow scales, Realism, aidmaMJ6.1"
+  - "Deep sea siren with luminous skin and flowing hair made of living seafoam, her tail gleaming like precious opals, Digital Art, aidmaMJ6.1"
+  - "Mermaid queen perched on ancient ruins, her golden tail catching rays of underwater sunlight, Classical, aidmaMJ6.1"
+  - "Mystical sea maiden with hair woven from bioluminescent jellyfish tendrils, her scales shifting like northern lights, Fantasy, aidmaMJ6.1"
+  - "Ocean goddess emerging from a spiral of dancing bubbles, her tail adorned with flowing silk-like fins, Ethereal, aidmaMJ6.1"
+  - "Coral reef guardian with hair of flowing seaweed and crown of living anemones, her tail shimmering with pearl dust, Nature, aidmaMJ6.1"
+  - "Twilight mermaid basking in moonlit waters, her scales reflecting starlight like mirrors, Romantic, aidmaMJ6.1"
+  - "Ancient mermaid sorceress wielding oceanic magic, her tail crystalline and translucent, Mystical, aidmaMJ6.1"
+  - "Pearl diving mermaid surrounded by schools of ethereal fish, her tail decorated with precious gems, Underwater, aidmaMJ6.1"
+  - "Storm-calling siren with electric blue scales and lightning-touched hair, her tail crackling with energy, Storm Art, aidmaMJ6.1"
+  - "Tropical lagoon mermaid resting on sun-warmed rocks, her tail adorned with exotic flowers, Paradise, aidmaMJ6.1"
+  - "Deep ocean empress with bio-luminescent markings, her tail fading into the abyss like smoke, Dark Fantasy, aidmaMJ6.1"
+  - "Sunset mermaid silhouetted against golden waters, her scales catching the dying light, Impressionist, aidmaMJ6.1"
+  - "Arctic mermaid guardian with crystalline scales and aurora-touched skin, her tail like frozen starlight, Ice Art, aidmaMJ6.1"
+  - "Shipwreck princess among ancient treasures, her tail woven with golden threads, Historical, aidmaMJ6.1"
+  - "Dawn mermaid rising with the morning tide, her scales pink like cherry blossoms, Sunrise, aidmaMJ6.1"
+  - "Volcanic sea maiden with obsidian scales and flame-like fins, her tail glowing like embers, Fire Art, aidmaMJ6.1"
+  - "Crystal cave mermaid surrounded by geometric gems, her tail reflecting rainbow prisms, Crystal, aidmaMJ6.1"
+  - "Kelp forest guardian with emerald scales and crown of sea flowers, her tail trailing living vines, Nature, aidmaMJ6.1"
+  - "Abyssal mermaid with constellation patterns across her skin, her tail dark as space, Cosmic, aidmaMJ6.1"
+  - "Coral garden princess with rose-gold scales and flowing pearl veils, her tail adorned with living coral, Garden, aidmaMJ6.1"
+  - "Storm reef guardian with silver scales and lightning-touched crown, her tail splitting waves, Ocean, aidmaMJ6.1"
+  - "Moonlit lagoon dancer with pearl-dusted skin, her tail trailing stardust through water, Night, aidmaMJ6.1"
+  - "Ancient temple mermaid among marble ruins, her tail carved like classical sculptures, Greek, aidmaMJ6.1"
+  - "Rainbow reef maiden with prismatic scales and flowing ribbons, her tail catching light like crystal, Prism, aidmaMJ6.1"
+  - "Twilight siren calling ships with her ethereal voice, her tail glowing with phosphorescence, Mystery, aidmaMJ6.1"
+  - "Ocean depths sorceress wielding water magic, her tail swirling with currents, Magic, aidmaMJ6.1"
+  - "Pearl throne queen with mother-of-pearl scales, her tail adorned with precious shells, Royal, aidmaMJ6.1"
+  - "Sunset reef guardian with golden scales and flowing veils, her tail trailing light like silk, Evening, aidmaMJ6.1"
+
+# Variations for prompt generation
+variations:
+  time:
+    type: "sequential"
+    values: ["fantasy Digital art, "]

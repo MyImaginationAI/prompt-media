@@ -1,8 +1,8 @@
 {
   "5": {
     "inputs": {
-      "width": 1216,
-      "height": 832,
+      "width": {{ width | safe_int(768) }},
+      "height": {{ height | safe_int(768) }},
       "batch_size": 1
     },
     "class_type": "EmptyLatentImage",
@@ -12,7 +12,7 @@
   },
   "6": {
     "inputs": {
-      "text": "Photo of a cute woman, in kitchen cooking turkey, looking at viewer, left hand fixing her beatuiful hair, holding a kitchen knife on the right hand.",
+      "text": "{{ prompt_text | json_str }}",
       "clip": [
         "11",
         0
@@ -41,7 +41,7 @@
   },
   "9": {
     "inputs": {
-      "filename_prefix": "ComfyUI",
+      "filename_prefix": "{{ filename_prefix | json_str }}",
       "images": [
         "8",
         0
@@ -112,7 +112,7 @@
   },
   "16": {
     "inputs": {
-      "sampler_name": "euler"
+      "sampler_name": "{{ sampler_name | default('euler') | json_str }}"
     },
     "class_type": "KSamplerSelect",
     "_meta": {
@@ -121,9 +121,9 @@
   },
   "17": {
     "inputs": {
-      "scheduler": "simple",
-      "steps": 4,
-      "denoise": 1,
+      "scheduler": "{{ scheduler | default('normal') | json_str }}",
+      "steps": {{ steps | safe_int(25) }},
+      "denoise": {{ denoise | safe_float(1) }},
       "model": [
         "12",
         0
@@ -152,7 +152,7 @@
   },
   "25": {
     "inputs": {
-      "noise_seed": 481575575693660
+      "noise_seed": {{ seed | safe_int(1647211062) }}
     },
     "class_type": "RandomNoise",
     "_meta": {

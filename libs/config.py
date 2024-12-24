@@ -20,7 +20,7 @@ class ServerConfig(BaseModel):
     """Server configuration."""
 
     host: str = Field(default_factory=lambda: os.getenv("APP_SERVER_HOST", "127.0.0.1"))
-    port: int = Field(default_factory=lambda: int(os.getenv("APP_SERVER_PORT", "7860")))
+    port: int = Field(default_factory=lambda: int(os.getenv("APP_SERVER_PORT", "8188")))
     debug: bool = Field(default=False)
 
 

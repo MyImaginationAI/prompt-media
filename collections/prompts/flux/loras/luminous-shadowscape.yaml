@@ -1,0 +1,35 @@
+# Default prompt settings
+prompt_settings:
+  prefix: ""
+  negative: ""
+
+# Image generation parameters
+## Image sizes
+### portrait: 832x1216
+### landscape: 1216x832
+### wide: 1344x768
+
+cfg: 1.0
+steps: 25
+width: 1344
+height: 768
+seeds: [1]
+sampler: "euler"
+scheduler: "normal"
+denoise: 1.0
+
+# LoRA configurations
+loras:
+  lora:
+    - name: "Luminous_Shadowscape-000016"
+      strength: 0.6
+
+# List of prompts to generate
+prompts:
+  - "An enigmatic fortune teller in a dimly lit room, her hands hovering over a crystal ball. Her eyes are intense, peering into the swirling mists within the glass. The table in front of her is cluttered with tarot cards, candles, and strange artifacts, creating an atmosphere thick with mystery"
+
+# Variations for prompt generation
+variations:
+  time:
+    type: "static"
+    values: [""]

@@ -26,19 +26,19 @@ variations:
 workflows:
   dev:
     steps: 20
-    cfg_scale: 7
+    cfg: 7
     width: 1344
     height: 768
     seeds: [1, 2, 3]
   schnell:
     steps: 4
-    cfg_scale: 7
+    cfg: 7
     width: 1216
     height: 832
     seeds: [1,2]
   default:
     steps: 30
-    cfg_scale: 7
+    cfg: 7
     width: 768
     height: 768
     seeds: [1]

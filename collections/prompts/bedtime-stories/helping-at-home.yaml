@@ -1,0 +1,58 @@
+prompt_settings:
+  prefix: "Painterly fantasy realism with whimsical storybook charm, anime artwork line art drawing professional 3d model <lora:DreamwovenTales:0.8>,"
+  negative: "ugly, deformed, noisy, low poly, blurry, painting, anime, photorealistic, 35mm film, deformed, glitch, blurry, noisy, off-center, deformed, cross-eyed, closed eyes, bad anatomy, ugly, disfigured, mutated, realism, realistic, impressionism, expressionism, oil, acrylic, photo, deformed, black and white, realism, disfigured, low contrast"
+
+cfg: 1.0
+steps: 20
+width: 1344
+height: 768
+seeds: [159753]
+sampler: "euler"
+scheduler: "simple"
+denoise: 1
+
+# LoRA configurations
+loras:
+  lora:
+    - name: "DreamwovenTales-000004"
+      strength: 0.9
+
+prompts:
+  - "A tall girl with copper braids stirs bubbling soup while her petite silver-streaked mother chops vegetables"
+  - "A lanky boy with wild curls hammers nails as his broad-shouldered father measures wooden planks"
+  - "A tiny girl with black pigtails waters flowers while her wispy-haired grandfather prunes rose bushes"
+  - "A slender teen with blonde dreadlocks demonstrates math while his ginger-curled sister scribbles notes"
+  - "A spiky-haired red-headed boy tosses clothes while his tall mother with dark locks folds sheets"
+  - "A plump girl with golden ringlets kneads dough beside her thin grandmother sifting flour"
+  - "A blue-streaked teen reaches high shelves while his small brother with brown curls sorts books"
+  - "A sturdy boy with cornrows carries tools while his slim father with gray temples fixes pipes"
+  - "A willowy girl with straight black hair wipes counters as her stout mother scrubs dishes"
+  - "A chubby toddler with auburn curls stacks blocks while his lean sister reads storybooks"
+  - "A silver-haired woman demonstrates knitting while her tall daughter with chestnut locks untangles yarn"
+  - "A muscular father spots his delicate son with wispy curls practicing handstands"
+  - "A round-faced girl with messy ponytail sweeps floors while her elegant mother dusts shelves"
+  - "A slim boy with sandy hair passes wrenches to his burly bearded father under the car"
+  - "A petite grandmother with white pixie cut rolls pastry while her tall granddaughter mixes filling"
+  - "A stocky purple-highlighted teen pushes swing for his tiny brother with downy blonde hair"
+  - "A robust red-bearded father demonstrates archery to his slight son with sleek black hair"
+  - "A tall woman with caramel dreadlocks braids her small daughter's tight brown curls"
+  - "A lanky teen with green-tipped spikes carries groceries while his chubby brother sorts them"
+  - "A slender ash-blonde mother demonstrates dance steps to her sturdy dark-braided daughter"
+  - "A short boy with copper curls follows sheet music while his tall sister plays piano"
+  - "A plump father with peppered curls shows his thin son how to cast fishing lines"
+  - "A tiny red-pigtailed girl arranges flowers while her tall mother with smooth hair trims stems"
+  - "A robust teen with blue-black braids helps her petite sister climb monkey bars"
+  - "A stout silver-bunned grandmother rolls cookies while her slim granddaughter decorates them"
+  - "A willowy father with dark dreadlocks teaches his round son to balance on skateboard"
+  - "A muscular purple-spiked girl lifts weights while her delicate silver-haired mother counts reps"
+  - "A short boy with tight curls passes soccer ball to his tall father with wavy brown hair"
+  - "A sturdy green-streaked teen guides her tiny sister's hands on pottery wheel"
+  - "A slim mother with auburn waves demonstrates yoga while her chubby daughter attempts poses"
+
+variations:
+  animals:
+    type: "static"
+    values: [""]
+  # characters:
+  #   type: "sequential"
+  #   values: ["Cute animals, dreamy children, fantasy creatures"]

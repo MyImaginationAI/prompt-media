@@ -1,0 +1,88 @@
+# MyImaginationAI Brand Identity for My Agent AI
+
+prompt_settings:
+  prefix: ""
+  negative: ""
+
+prompts:
+  # Modern Minimal
+  - "circular minimalist logo design with a single continuous line forming an abstract AI face, clean white on dark background"
+  - "simple geometric circular logo with interconnected nodes forming 'AI' in negative space, modern tech style"
+  - "elegant circular emblem with thin line work forming a neural network pattern, minimal color palette"
+  
+  # Sticker Style
+  - "playful circular sticker design with cute robot character, bold colors and thick outline"
+  - "retro-style circular badge with AI agent mascot, vibrant colors and distressed texture"
+  - "fun circular sticker featuring interconnected nodes with emoji-style expressions"
+  
+  # Urban/Street
+  - "graffiti-inspired circular logo with tech elements and urban texture, spray paint effect"
+  - "street art style circular emblem with circuit board patterns and grungy details"
+  - "urban badge design with mechanical elements and street wear aesthetic"
+  
+  # Elegant/Corporate
+  - "sophisticated circular monogram combining 'M' and 'A' for My Agent, premium gold on black"
+  - "luxury circular emblem with abstract AI representation in metallic finish"
+  - "refined circular logo with flowing data streams in platinum and deep blue"
+  
+  # Tech/Futuristic
+  - "high-tech circular logo with glowing circuit paths and holographic elements"
+  - "cyberpunk-inspired circular emblem with neon accents and digital artifacts"
+  - "futuristic circular badge with animated data flow patterns"
+  
+  # Abstract/Artistic
+  - "abstract circular design with flowing organic and digital elements intertwined"
+  - "artistic circular logo with brush stroke effects forming AI patterns"
+  - "creative circular emblem with geometric deconstruction of AI concept"
+  
+  # Flat/Material
+  - "material design circular logo with layered shapes and subtle shadows"
+  - "flat style circular emblem with bold iconography and clean lines"
+  - "modern circular badge with material design principles and color blocking"
+  
+  # Vintage/Classic
+  - "vintage-inspired circular seal with classical elements and tech motifs"
+  - "retro circular emblem with art deco influences and modern tech elements"
+  - "classic circular badge with traditional crest elements reimagined for AI"
+  
+  # Dynamic/3D
+  - "3D circular logo with depth layers showing network connections"
+  - "dynamic circular emblem with rotating elements and perspective"
+  - "dimensional circular badge with floating geometric shapes"
+  
+  # Mascot/Character
+  - "friendly AI agent character integrated into circular frame"
+  - "mascot-style circular logo with expressive robot face"
+  - "character-based circular emblem with cute tech assistant"
+  
+  # Combination/Hybrid
+  - "hybrid circular design mixing minimal tech with organic elements"
+  - "fusion circular logo combining traditional seal with modern tech"
+  - "eclectic circular emblem blending multiple style elements harmoniously"
+
+
+variations:
+  empty:
+    type: "static"
+    values: [""]
+
+# Using wide format for most brand assets (good for web banners and presentations)
+workflows:
+  dev:
+    steps: 20
+    cfg_scale: 1
+    width: 1344
+    height: 768
+    seeds: [1]
+  schnell:
+    steps: 4
+    cfg_scale: 7
+    width: 1344
+    height: 768
+    seeds: [1, 2]
+  default:
+    steps: 20
+    cfg_scale: 1
+    width: 1344
+    height: 768
+    seeds: [1]

@@ -35,11 +35,15 @@ endif
 # Server Configuration (from .env)
 SERVER_ADDRESS ?= $(APP_SERVER_HOST):$(APP_SERVER_PORT)
 
+# Workflow paths
+FLUX_WORKFLOWS_DIR = $(ENGINE_IMAGE)/flux/workflows/api
+FLUX_DEV_WORKFLOW = $(FLUX_WORKFLOWS_DIR)/flux1-dev-fp8-api.json
+FLUX_SCHNELL_WORKFLOW = $(FLUX_WORKFLOWS_DIR)/flux1-schnell-fp8-api.json
+FLUX_LORA_WORKFLOW = $(FLUX_WORKFLOWS_DIR)/flux1-dev-fp8-1lora-api.json
+
 # --- FLUX Model Commands ---
 FLUX_CMD = $(PYTHON) $(FLUX_SCRIPTS)/run.py
 PROMPT_MEDIA_FILE ?= prompt.yaml
-FLUX_WORKFLOW ?= $(FLUX_SCRIPTS)/workflows/api/flux1-dev-fp8-3-lora-units-api.json
-FLUX_LORAS ?= '[{"name":"aidmaFLUXpro1.1-FLUX-V0.1.safetensors","strength_model":0.5,"strength_clip":0.5},{"name":"FluxMythV2.safetensors","strength_model":0.6,"strength_clip":0.6},{"name":"Luminous_Shadowscape-000016.safetensors","strength_model":0.6,"strength_clip":0.6}]'
 
 .PHONY: flux flux/dev flux/schnell flux/dry-run flux/custom flux/lora flux/help
 
@@ -50,7 +54,7 @@ flux: flux/dev
 flux/dev:
 	@mkdir -p "$(MEDIA_IMAGES_DIR)"
 	$(FLUX_CMD) \
-		--dev \
+		--workflow $(FLUX_DEV_WORKFLOW) \
 		--prompt-media $(PROMPT_MEDIA_FILE) \
 		--output-dir $(MEDIA_IMAGES_DIR) \
 		--server $(SERVER_ADDRESS)
@@ -59,18 +63,12 @@ flux/dev:
 flux/schnell:
 	@mkdir -p "$(MEDIA_IMAGES_DIR)"
 	$(FLUX_CMD) \
-		--schnell \
+		--workflow $(FLUX_SCHNELL_WORKFLOW) \
 		--prompt-media $(PROMPT_MEDIA_FILE) \
 		--output-dir $(MEDIA_IMAGES_DIR) \
 		--server $(SERVER_ADDRESS)
 
-# Custom workflow with default LoRAs
 flux/custom:
-	@if [ -z "$(FLUX_WORKFLOW)" ]; then \
-		echo "Error: FLUX_WORKFLOW path not specified"; \
-		echo "Usage: make flux/custom FLUX_WORKFLOW=path/to/workflow.json"; \
-		exit 1; \
-	fi
 	@mkdir -p "$(MEDIA_IMAGES_DIR)"
 	$(FLUX_CMD) \
 		--workflow $(FLUX_WORKFLOW) \
@@ -80,18 +78,12 @@ flux/custom:
 
 # Custom workflow with LoRA configuration
 flux/lora:
-	@if [ -z "$(FLUX_WORKFLOW)" ]; then \
-		echo "Error: FLUX_WORKFLOW path not specified"; \
-		echo "Usage: make flux/lora FLUX_WORKFLOW=path/to/workflow.json [FLUX_LORAS='[{...}]']"; \
-		exit 1; \
-	fi
 	@mkdir -p "$(MEDIA_IMAGES_DIR)"
 	$(FLUX_CMD) \
-		--workflow $(FLUX_WORKFLOW) \
+		--workflow $(FLUX_LORA_WORKFLOW) \
 		--prompt-media $(PROMPT_MEDIA_FILE) \
 		--output-dir $(MEDIA_IMAGES_DIR) \
-		--server $(SERVER_ADDRESS) \
-		--loras '$(FLUX_LORAS)'
+		--server $(SERVER_ADDRESS)
 
 # Dry run (no image generation)
 flux/dry-run:
@@ -115,34 +107,15 @@ flux/help:
 	@echo "Configuration Variables:"
 	@echo "  PROMPT_MEDIA_FILE : Path to prompt file (default: prompt.yaml)"
 	@echo "  FLUX_WORKFLOW    : Path to workflow JSON file"
-	@echo "  FLUX_LORAS       : JSON string of LoRA configurations"
 	@echo ""
 	@echo "Examples:"
 	@echo "  make flux/custom FLUX_WORKFLOW=path/to/workflow.json"
-	@echo "  make flux/lora FLUX_WORKFLOW=path/to/workflow.json FLUX_LORAS='[{\"name\":\"my-lora.safetensors\",\"strength_model\":0.7,\"strength_clip\":0.7}]'"
-
-# --- Stable Diffusion Commands ---
-SD_CMD = $(PYTHON) $(SD_SCRIPTS)/run.py
-SD_PROMPTS ?= $(SD_SCRIPTS)/prompts.yaml
-
-.PHONY: sd sd/txt2img sd/img2img sd/dry-run
-
-sd/txt2img:
-	@echo "Stable Diffusion text-to-image not implemented yet"
-
-sd/img2img:
-	@echo "Stable Diffusion image-to-image not implemented yet"
-
-sd/dry-run:
-	@echo "Stable Diffusion dry-run not implemented yet"
-
-sd: sd/txt2img
 
 # --- ComfyUI Configuration ---
 COMFYUI_DIR ?= /home/valter/Workspaces/github.com/comfyanonymous/ComfyUI
 COMFYUI_VENV ?= $(COMFYUI_DIR)/venv/bin/activate
 
-.PHONY: comfyui comfyui/start comfyui/kill kill-comfyui
+.PHONY: comfyui comfyui/start comfyui/kill
 
 comfyui: comfyui/start
 
@@ -155,16 +128,11 @@ comfyui/start:
 		--use-split-cross-attention \
 		--lowvram \
 		--cpu-vae \
-		--port 7860"
+		--port 8188"
 
 comfyui/kill:
 	@echo "Killing ComfyUI processes..."
-	@pkill -f "python.*ComfyUI" || echo "No ComfyUI processes found"
-
-# Alias for comfyui/kill
-kill-comfyui:
-	@echo "Killing ComfyUI processes..."
-	@pkill -f "python.*ComfyUI" || echo "No ComfyUI processes found"
+	@pkill -f "python main.py" || echo "No ComfyUI processes found"
 
 # --- Image Composition Commands ---
 COMPOSER_CMD = $(PYTHON) tools/image_composer.py
@@ -244,7 +212,7 @@ batch: batch/schnell
 
 # Run all tests
 test:
-	$(PYTHON) -m pytest
+	pytest tests/test_workflow_selection.py tests/test_workflow_loading.py -v
 
 # Run tests with coverage report
 test-coverage:

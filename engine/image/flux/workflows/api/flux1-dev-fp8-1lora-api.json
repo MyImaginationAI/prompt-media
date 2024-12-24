@@ -1,9 +1,9 @@
 {
   "6": {
     "inputs": {
-      "text": "high quality, detailed, 8k uhd, masterpiece, mythp0rt, aidmafluxpro1.1, cinematic photo of a mythical turtle, long legs and tails, armor-like, with shell made with white diamonds, beautiful light,, evening, artistic",
+      "text": "{{ prompt_text | json_str }}",
       "clip": [
-        "37",
+        "38",
         1
       ]
     },
@@ -30,7 +30,7 @@
   },
   "9": {
     "inputs": {
-      "filename_prefix": "ComfyUI",
+      "filename_prefix": "{{ filename_prefix | json_str }}",
       "images": [
         "8",
         0
@@ -43,8 +43,8 @@
   },
   "27": {
     "inputs": {
-      "width": 1216,
-      "height": 832,
+      "width": {{ width | safe_int(768) }},
+      "height": {{ height | safe_int(768) }},
       "batch_size": 1
     },
     "class_type": "EmptySD3LatentImage",
@@ -63,14 +63,14 @@
   },
   "31": {
     "inputs": {
-      "seed": 1881954142,
-      "steps": 20,
-      "cfg": 1,
-      "sampler_name": "euler",
-      "scheduler": "simple",
-      "denoise": 1,
+      "seed": {{ seed | safe_int(1) }},
+      "steps": {{ steps | safe_int(20) }},
+      "cfg": {{ cfg | safe_float(1) }},
+      "sampler_name": "{{ sampler_name | default('euler') | json_str }}",
+      "scheduler": "{{ scheduler | default('simple') | json_str }}",
+      "denoise": {{ denoise | safe_int(1) }},
       "model": [
-        "37",
+        "38",
         0
       ],
       "positive": [
@@ -93,9 +93,9 @@
   },
   "33": {
     "inputs": {
-      "text": "",
+      "text": "{{ negative_text | default('') | json_str }}",
       "clip": [
-        "37",
+        "38",
         1
       ]
     },
@@ -117,55 +117,17 @@
       "title": "FluxGuidance"
     }
   },
-  "37": {
-    "inputs": {
-      "lora_name": "Luminous_Shadowscape-000016.safetensors",
-      "strength_model": 0.6,
-      "strength_clip": 0.6,
-      "model": [
-        "39",
-        0
-      ],
-      "clip": [
-        "39",
-        1
-      ]
-    },
-    "class_type": "LoraLoader",
-    "_meta": {
-      "title": "Load LoRA"
-    }
-  },
   "38": {
     "inputs": {
-      "lora_name": "aidmaFLUXpro1.1-FLUX-V0.1.safetensors",
-      "strength_model": 0.5,
-      "strength_clip": 0.5,
+      "lora_name": "{{ lora.name | lora_name | json_str }}",
+      "strength_model": {{ lora.strength_model | default(0.9) | safe_float }},
+      "strength_clip": {{ lora.strength_clip | default(0.9) | safe_float }},
       "model": [
         "30",
         0
       ],
       "clip": [
         "30",
-        1
-      ]
-    },
-    "class_type": "LoraLoader",
-    "_meta": {
-      "title": "Load LoRA"
-    }
-  },
-  "39": {
-    "inputs": {
-      "lora_name": "FluxMythV2.safetensors",
-      "strength_model": 0.6,
-      "strength_clip": 0.6,
-      "model": [
-        "38",
-        0
-      ],
-      "clip": [
-        "38",
         1
       ]
     },

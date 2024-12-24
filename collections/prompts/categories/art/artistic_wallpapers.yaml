@@ -1,0 +1,40 @@
+# Default prompt settings
+prefix_prompt: "masterpiece, ultra high quality, artistic wallpaper, 8k resolution"
+negative_prompt: "blurry, low quality, distorted, deformed, watermark, signature, text"
+
+# List of prompts to generate
+prompts:
+  - "impressionist landscape with vibrant sunset, style of Monet, with water lilies and reflective water"
+  - "abstract expressionist composition in the style of Kandinsky, dynamic shapes and bold colors"
+  - "surrealist dreamscape inspired by Salvador Dali, floating objects and melting clocks in a desert landscape"
+  - "art nouveau floral patterns with elegant curves and natural motifs, Alphonse Mucha style"
+  - "Japanese ukiyo-e wave scene inspired by Hokusai, with mount Fuji in the background"
+  - "pop art composition in the style of Andy Warhol, with bold colors and repeated patterns"
+  - "minimalist geometric abstract art with clean lines and color blocks"
+  - "renaissance inspired celestial scene with golden ratio composition"
+
+# Order of magnitude variations
+variations:
+  style:
+    type: "static"
+    values: ["highly detailed", "professional lighting", "dramatic composition"]
+
+workflows:
+  dev:
+    steps: 20
+    cfg_scale: 7
+    width: 1344
+    height: 768
+    seeds: [1, 2, 3]
+  schnell:
+    steps: 4
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1,2]
+  default:
+    steps: 30
+    cfg_scale: 7
+    width: 768
+    height: 768
+    seeds: [1]

@@ -1,0 +1,38 @@
+<purpose>
+    Create content based on the instructions and example-output.
+</purpose>
+
+<instructions>
+    <instruction>Output in YAML format</instruction>
+    <instruction>Understand @orders-of-magnitude.md</instruction>
+    <instruction>Write a file in the same format as the example-output, the file should be based on inspirations-directives</instruction>
+    <instruction>Write at least 20 prompts</instruction>
+    <instruction>Ensure prompts have a fixed maximum sequence length of 77 tokens</instruction>
+</instructions>
+
+<example-output>
+prompt_settings:
+  prefix: "children's book illustration"
+  negative: ""
+
+steps: 4
+width: 1344
+height: 768
+seeds: [1]
+sampler: "euler"
+scheduler: "normal"
+denoise: 1.0
+
+prompts:
+  - "a small bunny with fluffy white fur wearing blue pajamas, sitting on a rocking chair, moonlight streaming through window, soft watercolor bedroom, red balloon floating nearby"
+  ..shorten for brevity..
+
+variations:
+  time:
+    type: "random"
+    values: ["nighttime", "soft evening light", "moonlit moment"]
+</example-output>
+
+<inspirations-directives>
+    {{ inspiration }}
+</inspirations-directives>

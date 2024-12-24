@@ -8,6 +8,7 @@
     <instruction>Analyze @prompt.sample.yaml, a prompt media file.</instruction>
     <instruction>Write, at least 3 prompt media files </instruction>
     <instruction>Each prompt media file should have at least 6 prompts, the prompts must be cohesive and coherent between them</instruction>
+    <instruction>Prompts have a fixed maximum sequence length of 77 tokens</instruction>
     <instruction>Each prompt media file should be based on inspirations-directives</instruction>
     <instruction>Decide the orientation of each file, based on orientations-directives.</instruction>
     <instruction>Save the files under collections directory, collections/prompts/categories/art/<unique-name>.yaml</instruction>
