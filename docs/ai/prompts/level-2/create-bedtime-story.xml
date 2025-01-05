@@ -9,6 +9,7 @@ Create content based on the instructions, example-output.
     <instruction>Create 1 main character, 2 supporting characters, and 2 background characters</instruction>
     <instruction>Characters should have physical descriptions rather than their names</instruction>
     <instruction>Each character should have a different physical attribute</instruction>
+    <instruction>Ensure all prompts are cohesive and coherent, they must be in a chronological order</instruction>
     <instruction>Ensure that each prompt has two distinct character with different physical attributes explicit in the prompts</instruction>
     <instruction>Each prompt must be explicit in depcting the movements of the characters</instruction>
     <instruction>Avoid creating prompts where the characters are still, make the characters look active</instruction>
