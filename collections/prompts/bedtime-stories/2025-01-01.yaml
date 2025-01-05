@@ -1,0 +1,101 @@
+prompt_settings:
+  prefix: "Painterly fantasy realism with whimsical storybook charm, anime artwork line art drawing professional 3d model <lora:DreamwovenTales:0.8>,"
+  negative: "ugly, deformed, noisy, low poly, blurry, painting, anime, photorealistic, 35mm film, deformed, glitch, blurry, noisy, off-center, deformed, cross-eyed, closed eyes, bad anatomy, ugly, disfigured, mutated, realism, realistic, impressionism, expressionism, oil, acrylic, photo, deformed, black and white, realism, disfigured, low contrast"
+
+cfg: 1.0
+steps: 20
+width: 1344
+height: 768
+seeds: [159753]
+sampler: "euler"
+scheduler: "simple"
+denoise: 1
+
+# LoRA configurations
+loras:
+  lora:
+    - name: "DreamwovenTales-000004"
+      strength: 0.9
+
+title: "The Kind Shepherd"
+summary: "A heartwarming tale about a gentle shepherd with long brown hair who teaches valuable lessons about kindness and helping others through his daily adventures with animals and people."
+
+characters:
+  main:
+    - "A young shepherd with flowing brown hair and gentle eyes wearing simple robes"
+  supporting:
+    - "A small child with curly red hair and freckles"
+    - "An elderly woman with silver braided hair"
+  background:
+    - "A merchant with a thick black beard"
+    - "A fisherman with weathered tan skin"
+
+prompts:
+  - "A young shepherd with flowing brown hair kneeling beside a lost lamb in a meadow, reaching out gently"
+  
+  - "A shepherd with kind eyes helping a small child with curly red hair climb over rocky terrain"
+  
+  - "A gentle-faced shepherd sharing bread with an elderly woman with silver braided hair under an olive tree"
+  
+  - "A shepherd with long brown hair walking along a dusty path, carrying a tired lamb on his shoulders"
+  
+  - "A young shepherd teaching a child with red curls how to tend to sheep in a green pasture"
+  
+  - "A shepherd with flowing hair crossing a stream, carefully guiding his flock through the water"
+  
+  - "A kind-eyed shepherd sitting by a campfire, sharing fish with a child who has curly red hair"
+  
+  - "A shepherd with brown flowing hair leading sheep through flowering hills at sunrise"
+  
+  - "A gentle shepherd helping an elderly woman with silver braids carry water jugs uphill"
+  
+  - "A young shepherd with kind eyes showing a red-haired child how to feed gentle doves"
+  
+  - "A shepherd with flowing hair walking through a village, giving bread to hungry children"
+  
+  - "A gentle-faced shepherd teaching fishing techniques to a child with curly red hair by a lake"
+  
+  - "A shepherd with long brown hair helping farmers plant seeds in their fields"
+  
+  - "A kind shepherd sharing water with travelers under the shade of palm trees"
+  
+  - "A shepherd with flowing hair telling stories to children gathered under starlight"
+  
+  - "A gentle shepherd helping an elderly silver-haired woman tend to her garden"
+  
+  - "A young shepherd with kind eyes healing a wounded bird while children watch"
+  
+  - "A shepherd with brown hair teaching a red-haired child to make wooden toys"
+  
+  - "A gentle shepherd showing children how to care for small animals in a courtyard"
+  
+  - "A shepherd with flowing hair helping fishermen pull their nets from the sea"
+  
+  - "A kind-eyed shepherd comforting a crying child with red curls in an olive grove"
+  
+  - "A shepherd with long hair feeding hungry birds while walking through fields"
+  
+  - "A gentle shepherd showing an elderly woman with braids how to tend sheep"
+  
+  - "A shepherd with flowing brown hair helping children gather fresh fruit"
+  
+  - "A kind shepherd teaching a red-haired child to play a wooden flute"
+  
+  - "A gentle-faced shepherd helping villagers repair their homes after a storm"
+  
+  - "A shepherd with kind eyes showing children how to make bread"
+  
+  - "A young shepherd helping an elderly woman with silver hair carry baskets"
+  
+  - "A shepherd with flowing hair teaching children to be gentle with animals"
+  
+  - "A kind shepherd showing a red-haired child how to weave wool into cloth"
+
+
+variations:
+  animals:
+    type: "static"
+    values: [""]
+  # characters:
+  #   type: "sequential"
+  #   values: ["Cute animals, dreamy children, fantasy creatures"]

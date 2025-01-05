@@ -1,0 +1,106 @@
+prompt_settings:
+  prefix: "Painterly fantasy realism with whimsical storybook charm, lego, lego story,"
+  negative: "By bad artist -neg, , V2, FastNegativeV2, ,  (1), ,(worst quality:2), (low quality:2), (normal quality:2),(uneven eyes),lowres, normal quality,bad anatomy,bad face,(uneven eyes),paintings,ugly, bad hands,open mouth,multiple girls,extra faces, extro breasts, multiple breasts,obese, fat rolls,extra arms, extra eyes,inverted nipples,extra ears,nipple rings,severed arm, bad arm, nipple bar,asymmetrical eyebrows,big mouth, embedding:ng_deepnegative_v1_75t, embedding:negative_hand-neg, embedding:EasyNegative, embedding:badhandv4, embedding:verybadimagenegative_v1.3"
+
+cfg: 1.0
+steps: 20
+width: 1344
+height: 768
+seeds: [159753]
+sampler: "euler"
+scheduler: "simple"
+denoise: 1
+
+loras:
+  lora:
+    - name: "DreamwovenTales-000004"
+      strength: 0.9
+
+title: "The Ninja Spider-Hero's Lego Adventure"
+summary: "A magical tale about a young ninja with spider-like abilities who discovers a mystical Lego city. Through adventures with new friends, he learns to combine his ninja skills and spider powers to protect the city from chaos while discovering the true meaning of heroism and friendship."
+
+characters:
+  main:
+    - "A nimble young ninja in red and blue suit with web patterns and a flowing black scarf"
+  supporting:
+    - "A wise old master with silver beard wearing golden Lego armor"
+    - "A quick-thinking robot with glowing blue eyes and chrome plated limbs"
+  background:
+    - "A mysterious shadow ninja with purple smoke trailing behind"
+    - "A friendly dragon with shimmering green scales"
+
+prompts:
+  # Discovery of the Lego City
+  - "A nimble ninja in red and blue suit leaping across colorful Lego rooftops while web patterns on his suit shimmer"
+
+  - "A wise master with silver beard demonstrating martial arts moves to the red-suited ninja in a golden Lego dojo"
+
+  - "A chrome-plated robot with glowing blue eyes leading the web-patterned ninja through secret Lego passages"
+
+  # Training Begins
+  - "A red-suited ninja swinging on webs while the silver-bearded master watches from a Lego tower"
+
+  - "A wise master with golden armor teaching the web-patterned ninja to balance on spinning Lego gears"
+
+  - "A nimble ninja in red suit practicing wall-running while blue-eyed robot calculates trajectories"
+
+  # City Exploration
+  - "A chrome robot with glowing eyes showing the web-patterned ninja hidden Lego city mechanisms"
+
+  - "A red-suited ninja helping the blue-eyed robot repair broken Lego bridges"
+
+  - "A nimble ninja with web patterns discovering ancient scrolls while green dragon flies overhead"
+
+  # First Challenge
+  - "A shadow ninja with purple smoke confronting the red-suited hero in a Lego marketplace"
+
+  - "A web-patterned ninja dodging purple smoke while leaping between Lego buildings"
+
+  - "A chrome robot with blue eyes launching power bricks to the nimble red-suited ninja"
+
+  # Learning New Powers
+  - "A wise master in golden armor teaching the red-suited ninja to combine web-powers with Lego elements"
+
+  - "A nimble ninja with web patterns creating Lego structures using mystical web-energy"
+
+  - "A blue-eyed robot analyzing the web-patterned ninja's new building techniques"
+
+  # City Defense
+  - "A red-suited ninja swinging past while green dragon battles shadow forces"
+
+  - "A chrome robot with glowing eyes operating Lego defense mechanisms beside the web-patterned hero"
+
+  - "A nimble ninja in red suit protecting citizens from falling Lego debris"
+
+  # Underground Adventure
+  - "A web-patterned ninja exploring crystal-lit Lego caves with the blue-eyed robot"
+
+  - "A chrome robot with glowing eyes decoding ancient Lego mechanisms while red-suited ninja keeps watch"
+
+  - "A nimble ninja with web patterns swinging across underground Lego chasms"
+
+  # Ancient Temple
+  - "A wise master with silver beard revealing sacred Lego artifacts to the red-suited ninja"
+
+  - "A web-patterned ninja solving complex Lego puzzles while purple smoke approaches"
+
+  - "A chrome robot with blue eyes defending ancient Lego relics alongside the nimble hero"
+
+  # Final Battle
+  - "A red-suited ninja confronting shadow forces in a massive Lego arena"
+
+  - "A nimble hero with web patterns creating elaborate Lego traps for purple smoke ninjas"
+
+  - "A chrome robot with glowing eyes launching power-ups to the web-patterned warrior"
+
+  # Victory and Celebration
+  - "A wise master in golden armor presenting ancient scrolls to the red-suited hero"
+
+  - "A web-patterned ninja high-fiving the blue-eyed robot amid cheering Lego citizens"
+
+  - "A nimble hero in red suit watching sunset with green dragon from highest Lego tower"
+
+variations:
+  animals:
+    type: "static"
+    values: [""]

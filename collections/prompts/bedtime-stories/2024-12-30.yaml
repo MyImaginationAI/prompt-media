@@ -1,0 +1,77 @@
+prompt_settings:
+  prefix: "Painterly fantasy realism with whimsical storybook charm, anime artwork line art drawing professional 3d model <lora:DreamwovenTales:0.8>,"
+  negative: "ugly, deformed, noisy, low poly, blurry, painting, anime, photorealistic, 35mm film, deformed, glitch, blurry, noisy, off-center, deformed, cross-eyed, closed eyes, bad anatomy, ugly, disfigured, mutated, realism, realistic, impressionism, expressionism, oil, acrylic, photo, deformed, black and white, realism, disfigured, low contrast"
+
+cfg: 1.0
+steps: 20
+width: 1344
+height: 768
+seeds: [159753]
+sampler: "euler"
+scheduler: "simple"
+denoise: 1
+
+# LoRA configurations
+loras:
+  lora:
+    - name: "DreamwovenTales-000004"
+      strength: 0.9
+
+title: "The Deep Sea Discovery"
+summary: "An enchanting underwater adventure where a curious young girl and her new friend explore the magical depths of the ocean, meeting wonderful sea creatures and learning about friendship and bravery."
+
+characters:
+  main:
+    - "A girl with flowing silver hair and iridescent scales on her cheeks"
+  supporting:
+    - "A boy with coral-colored curly hair and starfish-shaped freckles"
+    - "A friendly dolphin with rainbow fins"
+  background:
+    - "A wise sea turtle with glowing shell patterns"
+    - "A playful octopus with pearl-decorated tentacles"
+
+prompts:
+  - "A silver-haired girl swimming through a coral arch, while the coral-haired boy follows with bubbles trailing"
+  - "The boy with starfish freckles pointing at glowing jellyfish, as the silver-haired girl twirls nearby"
+  - "A girl with iridescent scales diving deeper, while the coral-haired boy chases colorful fish"
+  - "The coral-haired boy discovering a sunken treasure, as the silver-haired girl swims excitedly"
+  - "A silver-haired girl dancing with seaweed, while the boy with starfish freckles watches in wonder"
+  - "The boy with coral curls racing through a school of fish, as the scaled-cheeked girl spins behind"
+  - "A girl with iridescent scales collecting pearls, while the coral-haired boy explores a shipwreck"
+  - "The starfish-freckled boy swinging on kelp vines, as the silver-haired girl floats above"
+  - "A silver-haired girl riding ocean currents, while the coral-haired boy follows through bubbles"
+  - "The boy with starfish freckles finding a magic shell, as the scaled girl swims circles around him"
+  - "The silver-haired girl weaving through underwater caves, while coral-haired boy photographs with bubbles"
+  - "A boy with starfish freckles balancing on a whale's back, as the scaled girl swims alongside"
+  - "The iridescent-scaled girl discovering an ancient map, while coral-haired boy examines sea crystals"
+  - "A coral-curled boy untangling a trapped seahorse, as silver-haired girl holds a glowing pearl"
+  - "The girl with scaled cheeks playing hide-and-seek in anemones, while starfish-freckled boy searches"
+  - "A boy with coral hair building an underwater sandcastle, as silver-haired girl decorates with shells"
+  - "The scaled girl conducting a choir of singing clownfish, while coral-haired boy dances through bubbles"
+  - "A silver-haired girl sliding down a dolphin's back, as the boy with starfish freckles waves below"
+  - "The coral-haired boy mapping underwater volcanoes, while scaled girl investigates hot springs"
+  - "A girl with iridescent scales painting with squid ink, as starfish-freckled boy gathers colors"
+  - "The boy with coral curls discovering a mermaid's garden, while silver-haired girl plants sea flowers"
+  - "A scaled girl racing through underwater canyons, as coral-haired boy explores crystal formations"
+  - "The starfish-freckled boy leading a parade of seahorses, while silver-haired girl orchestrates"
+  - "A coral-haired boy swinging on giant kelp vines, as scaled girl catches falling starfish"
+  - "The silver-haired girl solving an octopus's puzzle, while boy with starfish freckles assists"
+  - "A girl with iridescent scales skating on frozen undersea lake, as coral-haired boy spins nearby"
+  - "The coral-curled boy discovering glowing plankton, while scaled girl creates light patterns"
+  - "A silver-haired girl riding sea turtle express, as starfish-freckled boy follows on dolphin"
+  - "The boy with coral hair exploring sunken pirate ship, while scaled girl finds treasure map"
+  - "A girl with iridescent scales teaching fish to dance, as coral-haired boy plays shell music"
+  - "The starfish-freckled boy climbing underwater mountains, while silver-haired girl floats above"
+  - "A coral-haired boy painting reef murals, as scaled girl arranges living colors"
+  - "The silver-haired girl surfing ocean currents, while boy with starfish freckles rides waves"
+  - "A girl with iridescent scales leading midnight coral chorus, as coral-haired boy conducts"
+  - "The boy with starfish freckles building bubble bridges, while scaled girl tests their strength"
+
+
+variations:
+  animals:
+    type: "static"
+    values: [""]
+  # characters:
+  #   type: "sequential"
+  #   values: ["Cute animals, dreamy children, fantasy creatures"]

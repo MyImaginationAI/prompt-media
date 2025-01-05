@@ -1,0 +1,102 @@
+prompt_settings:
+  prefix: "Painterly fantasy realism with whimsical storybook charm, anime artwork line art drawing professional 3d model <lora:DreamwovenTales:0.8>,"
+  negative: "ugly, deformed, noisy, low poly, blurry, painting, anime, photorealistic, 35mm film, deformed, glitch, blurry, noisy, off-center, deformed, cross-eyed, closed eyes, bad anatomy, ugly, disfigured, mutated, realism, realistic, impressionism, expressionism, oil, acrylic, photo, deformed, black and white, realism, disfigured, low contrast"
+
+cfg: 1.0
+steps: 20
+width: 1344
+height: 768
+seeds: [159753]
+sampler: "euler"
+scheduler: "simple"
+denoise: 1
+
+# LoRA configurations
+loras:
+  lora:
+    - name: "DreamwovenTales-000004"
+      strength: 0.9
+
+title: "The Boy Who Built Dreams"
+
+summary: "A heartwarming tale about a lonely boy who dreams of building a robot companion, leading to an extraordinary friendship where they teach each other about the wonders of both Earth and space, proving that the best friendships grow through shared learning and adventure."
+
+main_character:
+  - "A small boy with messy auburn hair and star-patterned pajamas"
+
+supporting_characters:
+  - "A silver robot with gentle blue glowing eyes"
+  - "A tabby cat wearing a tiny astronaut helmet"
+
+background_characters:
+  - "A wise grandmother with silver-streaked hair"
+  - "A friendly mailman with a curly mustache"
+
+prompts:
+  - "A small boy with messy auburn hair drawing robot designs in his notebook while his silver robot friend peeks over his shoulder"
+  
+  - "A silver robot with gentle blue eyes teaching the boy with messy hair how to count constellations on his rooftop"
+  
+  - "A small boy with auburn hair showing his silver robot friend how to plant seedlings in the garden"
+  
+  - "A silver robot with glowing eyes helping the messy-haired boy build a cardboard rocket ship"
+  
+  - "A small boy with star pajamas teaching his silver robot friend how to skip stones across a pond"
+  
+  - "A silver robot with gentle eyes learning to tie shoelaces while the auburn-haired boy demonstrates patiently"
+  
+  - "A small boy with messy hair and his silver robot friend making shadow puppets of spacecraft on the wall"
+  
+  - "A silver robot with blue eyes showing the auburn-haired boy how to measure the distance to the moon"
+  
+  - "A small boy in star pajamas teaching his robot friend how to make paper airplanes fly"
+  
+  - "A silver robot with gentle eyes helping the messy-haired boy collect interesting rocks for their collection"
+  
+  - "A small boy with auburn hair showing his robot friend how to blow dandelion seeds into the wind"
+  
+  - "A silver robot with glowing eyes teaching the boy in star pajamas about the phases of the moon"
+  
+  - "A small boy with messy hair and his robot friend painting a mural of the solar system"
+  
+  - "A silver robot with gentle eyes learning to bake cookies while the auburn-haired boy explains measurements"
+  
+  - "A small boy in star pajamas showing his robot friend how to build a blanket fort observatory"
+  
+  - "A silver robot with blue eyes teaching the messy-haired boy about meteor showers"
+  
+  - "A small boy with auburn hair showing his robot friend how to make hot chocolate on cold nights"
+  
+  - "A silver robot with gentle eyes helping the boy in pajamas track shooting stars"
+  
+  - "A small boy with messy hair teaching his robot friend how to play hopscotch with constellation patterns"
+  
+  - "A silver robot with glowing eyes showing the auburn-haired boy how to map star positions"
+  
+  - "A small boy in star pajamas and his robot friend creating a telescope from cardboard tubes"
+  
+  - "A silver robot with gentle eyes learning to fly a kite while the messy-haired boy guides the string"
+  
+  - "A small boy with auburn hair showing his robot friend how to make leaf rubbings in autumn"
+  
+  - "A silver robot with blue eyes teaching the boy in pajamas about different galaxies"
+  
+  - "A small boy with messy hair and his robot friend building a mini greenhouse together"
+  
+  - "A silver robot with gentle eyes learning to splash in puddles while the auburn-haired boy laughs"
+  
+  - "A small boy in star pajamas teaching his robot friend how to whistle with grass blades"
+  
+  - "A silver robot with glowing eyes showing the boy how to identify planets in the night sky"
+  
+  - "A small boy with messy hair and his robot friend collecting rainwater to measure precipitation"
+  
+  - "A silver robot with gentle eyes learning to draw clouds while the boy in pajamas watches proudly"
+
+variations:
+  animals:
+    type: "static"
+    values: [""]
+  # characters:
+  #   type: "sequential"
+  #   values: ["Cute animals, dreamy children, fantasy creatures"]

@@ -1,0 +1,103 @@
+prompt_settings:
+  prefix: "Painterly fantasy realism with whimsical storybook charm, anime artwork line art drawing professional 3d model <lora:DreamwovenTales:0.8>,"
+  negative: "ugly, deformed, noisy, low poly, blurry, painting, anime, photorealistic, 35mm film, deformed, glitch, blurry, noisy, off-center, deformed, cross-eyed, closed eyes, bad anatomy, ugly, disfigured, mutated, realism, realistic, impressionism, expressionism, oil, acrylic, photo, deformed, black and white, realism, disfigured, low contrast"
+
+cfg: 1.0
+steps: 20
+width: 1344
+height: 768
+seeds: [159753]
+sampler: "euler"
+scheduler: "simple"
+denoise: 1
+
+# LoRA configurations
+loras:
+  lora:
+    - name: "DreamwovenTales-000004"
+      strength: 0.9
+
+title: "The Magical Forest Adventure"
+
+summary: "A heartwarming tale about a brave little boy with curly red hair who helps a lost baby dragon find its way home through an enchanted forest."
+
+characters:
+  main_character:
+    - "A small boy with wild curly red hair and freckles across his nose"
+  
+  supporting_characters:
+    - "A baby dragon with shimmering purple scales and tiny wings"
+    - "A wise owl with spectacles perched on its beak"
+  
+  background_characters:
+    - "A tall deer with golden antlers"
+    - "A blue butterfly with glowing wings"
+
+prompts:
+  - "A small boy with wild curly red hair climbing over a fallen log, reaching out to a purple baby dragon hiding underneath"
+  
+  - "A purple baby dragon with tiny wings following a boy with curly red hair through a misty forest path"
+  
+  - "A wise owl with spectacles perched on a branch, pointing its wing toward a boy with red curly hair"
+  
+  - "A small boy with wild red hair sitting cross-legged on moss, sharing berries with a purple baby dragon"
+  
+  - "A purple baby dragon learning to fly while a boy with curly red hair watches from below"
+  
+  - "A wise owl with spectacles swooping down to land beside a boy with red hair"
+  
+  - "A boy with wild red curls ducking under low branches, leading a purple baby dragon through the forest"
+  
+  - "A purple dragon practicing fire breathing while a red-haired boy jumps back in surprise"
+  
+  - "A wise owl with spectacles teaching a red-haired boy how to read forest signs"
+  
+  - "A boy with curly red hair swinging from a vine, while a purple dragon tries to catch up"
+  
+  - "A purple baby dragon splashing in a stream while the red-haired boy throws pebbles"
+  
+  - "A wise owl with spectacles showing a map to an excited red-haired boy"
+  
+  - "A boy with wild red hair gathering glowing mushrooms as a purple dragon watches curiously"
+  
+  - "A purple baby dragon getting tangled in vines while the red-haired boy tries to help"
+  
+  - "A wise owl with spectacles flying alongside a running boy with red curly hair"
+  
+  - "A boy with wild red hair building a shelter while a purple dragon carries small branches"
+  
+  - "A purple baby dragon chasing fireflies as a red-haired boy laughs and points"
+  
+  - "A wise owl with spectacles perched on a tree stump, listening to a red-haired boy's story"
+  
+  - "A boy with curly red hair crossing a fallen tree bridge, purple dragon flying nervously beside him"
+  
+  - "A purple baby dragon sneezing sparkles while a red-haired boy ducks for cover"
+  
+  - "A wise owl with spectacles leading a red-haired boy through a moonlit clearing"
+  
+  - "A boy with wild red hair sliding down a mossy hill, purple dragon tumbling after him"
+  
+  - "A purple baby dragon learning to roar while a red-haired boy covers his ears"
+  
+  - "A wise owl with spectacles showing star patterns to a boy with red curly hair"
+  
+  - "A boy with wild red hair picking berries while a purple dragon sniffs the bushes"
+  
+  - "A purple baby dragon trying to catch raindrops as a red-haired boy splashes in puddles"
+  
+  - "A wise owl with spectacles helping a red-haired boy climb a tall tree"
+  
+  - "A boy with curly red hair jumping across stepping stones, purple dragon hovering nearby"
+  
+  - "A purple baby dragon discovering its reflection while a red-haired boy points and smiles"
+  
+  - "A wise owl with spectacles and red-haired boy sharing secrets in a hollow tree"
+
+variations:
+  animals:
+    type: "static"
+    values: [""]
+  # characters:
+  #   type: "sequential"
+  #   values: ["Cute animals, dreamy children, fantasy creatures"]

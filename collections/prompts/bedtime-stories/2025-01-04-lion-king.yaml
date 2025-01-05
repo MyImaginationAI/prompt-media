@@ -1,0 +1,108 @@
+prompt_settings:
+  prefix: "Painterly fantasy realism with whimsical storybook charm,"
+  negative: "By bad artist -neg, , V2, FastNegativeV2, ,  (1), ,(worst quality:2), (low quality:2), (normal quality:2),(uneven eyes),lowres, normal quality,bad anatomy,bad face,(uneven eyes),paintings,ugly, bad hands,open mouth,multiple girls,extra faces, extro breasts, multiple breasts,obese, fat rolls,extra arms, extra eyes,inverted nipples,extra ears,nipple rings,severed arm, bad arm, nipple bar,asymmetrical eyebrows,big mouth, embedding:ng_deepnegative_v1_75t, embedding:negative_hand-neg, embedding:EasyNegative, embedding:badhandv4, embedding:verybadimagenegative_v1.3"
+
+cfg: 1.0
+steps: 20
+width: 1344
+height: 768
+seeds: [159753]
+sampler: "euler"
+scheduler: "simple"
+denoise: 1
+
+# LoRA configurations
+loras:
+  lora:
+    - name: "DreamwovenTales-000004"
+      strength: 0.9
+
+title: "The Lion King's Journey"
+summary: "A magical tale about a young lion cub with golden fur learning to become a wise and brave leader. Through adventures with friends and mentors, he discovers the true meaning of courage, responsibility, and the circle of life in the African savanna."
+
+characters:
+  main:
+    - "A young lion cub with bright golden fur and playful amber eyes"
+  supporting:
+    - "A wise mandrill with silver-grey fur and colorful face markings"
+    - "A small meerkat with rusty brown fur and quick movements"
+  background:
+    - "A hornbill bird with blue and white feathers"
+    - "A warthog with rough grey skin"
+
+prompts:
+  # Beginning - Pride Rock and early life
+  - "A wise mandrill with silver-grey fur presenting a tiny golden-furred lion cub to the animals from atop a majestic rock"
+
+  - "A golden-furred lion cub taking first wobbly steps while a blue-feathered hornbill watches proudly"
+
+  - "A young lion cub with golden fur pouncing on morning dew drops while a wise mandrill observes from a twisted tree"
+
+  - "A golden-furred lion cub exploring Pride Rock's ledges while a blue hornbill hovers protectively nearby"
+
+  # Learning and playing
+  - "A wise mandrill with colorful markings showing the young golden cub ancient cave paintings beneath a massive baobab tree"
+
+  - "A golden-furred lion cub practicing his first roar atop a sun-warmed rock while a hornbill with blue feathers soars overhead"
+
+  - "A young lion cub with golden fur leaping playfully through tall savanna grass while a grey warthog watches amusedly"
+
+  # The gorge incident and exile
+  - "A golden-furred lion cub running through a dusty gorge while shadows loom above"
+
+  - "A young lion cub with golden fur trudging alone through desert sand under a harsh sun"
+
+  # Meeting new friends
+  - "A small meerkat with rusty fur discovering the exhausted golden cub beneath a thorny bush"
+
+  - "A rusty-furred meerkat and grey warthog sharing fruits with the tired golden cub in jungle shade"
+
+  # Learning jungle life
+  - "A small meerkat with rusty fur teaching the golden-furred lion cub how to dig for insects beneath a fallen log"
+
+  - "A rusty-furred meerkat balancing on the golden lion cub's head as they cross a shallow stream"
+
+  - "A golden-furred lion cub learning to swing on vines while a rusty-furred meerkat demonstrates"
+
+  - "A small meerkat with rusty fur showing the golden cub how to find shelter in hollow logs"
+
+  # Growing up in the jungle
+  - "A rusty-furred meerkat and golden cub sliding down a sandy dune together at sunset"
+
+  - "A golden-furred lion cub splashing in a waterfall pool while a grey warthog wallows nearby"
+
+  - "A small meerkat with rusty fur teaching the golden cub to catch crickets in moonlit grass"
+
+  - "A golden-furred lion cub helping a grey warthog dig up sweet roots in soft earth"
+
+  # The return begins
+  - "A wise mandrill with colorful markings finding the grown golden-furred lion in jungle clearings"
+
+  - "A golden-furred lion looking at his reflection in still water while wise mandrill gestures to the stars"
+
+  # Journey back
+  - "A rusty-furred meerkat and golden lion traversing barren lands under storm clouds"
+
+  - "A golden-furred lion leading his friends through tall grass while a blue hornbill scouts ahead"
+
+  # Approaching Pride Rock
+  - "A wise mandrill with silver fur showing the golden lion hidden paths through thorny barriers"
+
+  - "A golden-furred lion climbing rocky outcrops while a rusty-furred meerkat keeps watch"
+
+  # The final confrontation and victory
+  - "A golden-furred lion ascending Pride Rock through lightning-lit rain"
+
+  - "A wise mandrill with colorful markings and golden lion gathering at dawn atop Pride Rock"
+
+  # Peace restored
+  - "A golden-furred lion watching sunrise while a blue-feathered hornbill soars triumphantly"
+
+  - "A rusty-furred meerkat and grey warthog celebrating beneath Pride Rock's summit"
+
+  - "A wise mandrill with silver-grey fur presenting a new cub while the golden-furred lion watches proudly"
+
+variations:
+  animals:
+    type: "static"
+    values: [""]

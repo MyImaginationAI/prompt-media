@@ -1,0 +1,84 @@
+prompt_settings:
+  prefix: "Painterly fantasy realism with whimsical storybook charm, anime artwork line art drawing professional 3d model <lora:DreamwovenTales:0.8>,"
+  negative: "ugly, deformed, noisy, low poly, blurry, painting, anime, photorealistic, 35mm film, deformed, glitch, blurry, noisy, off-center, deformed, cross-eyed, closed eyes, bad anatomy, ugly, disfigured, mutated, realism, realistic, impressionism, expressionism, oil, acrylic, photo, deformed, black and white, realism, disfigured, low contrast"
+
+cfg: 1.0
+steps: 20
+width: 1344
+height: 768
+seeds: [159753]
+sampler: "euler"
+scheduler: "simple"
+denoise: 1
+
+# LoRA configurations
+loras:
+  lora:
+    - name: "DreamwovenTales-000004"
+      strength: 0.9
+
+title: "Elsa's Ice Cream Unicorn Adventure"
+summary: "A magical tale where Queen Elsa and her enchanted unicorn Crystal create the most spectacular ice cream wonderland, bringing joy and sweetness to everyone in Arendelle."
+
+characters:
+  main:
+    - "Queen Elsa with flowing platinum hair and sparkling ice gown"
+  supporting:
+    - "Crystal, a majestic unicorn with shimmering white fur and rainbow mane"
+    - "A playful snowman with a carrot nose"
+  background:
+    - "A young princess with strawberry-blonde braids"
+    - "A cheerful ice cream vendor with a curly mustache"
+
+prompts:
+  - "Queen Elsa with flowing platinum hair creating swirling ice cream clouds while riding Crystal the shimmering unicorn"
+  
+  - "A majestic white unicorn with rainbow mane galloping through floating scoops of colorful ice cream"
+  
+  - "Elsa gracefully skating on an ice cream river while Crystal sprinkles magical toppings from her horn"
+  
+  - "The platinum-haired queen waving her hands to create a towering ice cream castle as Crystal prances nearby"
+  
+  - "Crystal the unicorn leaping over a chocolate waterfall while Elsa creates ice cream bridges"
+  
+  - "Queen Elsa dancing atop a giant ice cream sundae while Crystal flies through candy-colored clouds"
+  
+  - "The shimmering unicorn and ice queen racing through a forest of ice cream cone trees"
+  
+  - "Elsa and Crystal sliding down rainbow sherbet hills in the magical kingdom"
+  
+  - "The platinum-haired queen and her unicorn friend creating ice cream snowflakes in the night sky"
+  
+  - "Crystal teaching Elsa to balance on a giant waffle cone while sprinkles rain down"
+
+  - "Marina the mermaid splashing through waves of vanilla ice cream while Elsa creates frozen sprinkles above"
+  
+  - "The turquoise-tailed mermaid leaping through crystal waterfalls as Crystal the unicorn gallops on rainbow clouds"
+  
+  - "Queen Elsa sliding down an ice cream spiral while Marina swims through floating sundae bubbles"
+  
+  - "The rainbow-maned unicorn and mermaid dancing through swirling strawberry storms"
+  
+  - "Marina twirling in a whirlpool of chocolate while Elsa creates ice cream pearls"
+  
+  - "The platinum-haired queen and turquoise mermaid creating an underwater ice cream castle"
+  
+  - "Crystal prancing on mint ice cream waves while Marina jumps through sparkly hoops"
+  
+  - "The mermaid and unicorn playing tag through cotton candy coral reefs"
+  
+  - "Elsa and Marina racing through tunnels of swirling soft-serve"
+  
+  - "The turquoise mermaid teaching Crystal to swim in a sea of butterscotch ripple"
+  
+  - "Queen Elsa and Marina building bridges between ice cream islands"
+  
+  - "The rainbow unicorn and mermaid creating whirlpools of rainbow sherbet"
+
+variations:
+  animals:
+    type: "static"
+    values: [""]
+  # characters:
+  #   type: "sequential"
+  #   values: ["Cute animals, dreamy children, fantasy creatures"]

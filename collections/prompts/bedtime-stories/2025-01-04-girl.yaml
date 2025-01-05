@@ -1,0 +1,106 @@
+prompt_settings:
+  prefix: "Painterly fantasy realism with whimsical storybook charm, lego, lego story, "
+  negative: "By bad artist -neg, , V2, FastNegativeV2, ,  (1), ,(worst quality:2), (low quality:2), (normal quality:2),(uneven eyes),lowres, normal quality,bad anatomy,bad face,(uneven eyes),paintings,ugly, bad hands,open mouth,multiple girls,extra faces, extro breasts, multiple breasts,obese, fat rolls,extra arms, extra eyes,inverted nipples,extra ears,nipple rings,severed arm, bad arm, nipple bar,asymmetrical eyebrows,big mouth, embedding:ng_deepnegative_v1_75t, embedding:negative_hand-neg, embedding:EasyNegative, embedding:badhandv4, embedding:verybadimagenegative_v1.3"
+
+cfg: 1.0
+steps: 20
+width: 1344
+height: 768
+seeds: [159753]
+sampler: "euler"
+scheduler: "simple"
+denoise: 1
+
+loras:
+  lora:
+    - name: "DreamwovenTales-000004"
+      strength: 0.9
+
+title: "The Magical Ocean Adventure"
+summary: "A whimsical tale about a sparkly white unicorn with a rainbow mane who befriends a gentle blue whale and a fluffy white bunny. Together they embark on a magical journey across land and sea, helping a brown horse find its way home and meeting a golden horse along their adventure. This story teaches the value of friendship, courage, and helping others."
+
+characters:
+  main:
+    - "A sparkly white unicorn with flowing rainbow-colored mane and a crystal horn"
+  supporting:
+    - "A massive gentle blue whale with twinkling eyes and starry patterns on its skin"
+    - "A fluffy white bunny with long floppy ears and pink nose"
+  background:
+    - "A strong brown horse with windswept mane and golden hooves"
+    - "A majestic golden horse with silver streaks in its flowing tail"
+
+prompts:
+  # Once upon a time...
+  - "A sparkly white unicorn with rainbow mane playing alone on a misty beach at sunrise"
+  
+  - "A massive blue whale rising gently from crystal waters, catching the unicorn's attention"
+  
+  - "A fluffy white bunny with floppy ears peeking shyly at the unicorn from behind seashells"
+  
+  - "A sparkly unicorn bowing gracefully to invite the bunny to play"
+
+  # New Friends Playing Together
+  - "A gentle blue whale lifting the giggling fluffy bunny on its waterspout"
+  
+  - "A sparkly unicorn with rainbow mane creating magical bubbles for the bunny to chase"
+  
+  - "A fluffy bunny hopping joyfully between the unicorn's prancing legs"
+  
+  - "A rainbow-maned unicorn and blue whale playing hide-and-seek in morning mist"
+
+  # Discovering Someone Needs Help
+  - "A strong brown horse with windswept mane looking lost among coastal rocks"
+  
+  - "A sparkly unicorn approaching the sad brown horse with gentle steps"
+  
+  - "A fluffy white bunny offering a flower to cheer up the brown horse"
+  
+  - "A massive blue whale swimming closer to hear the brown horse's story"
+
+  # Starting the Journey to Help
+  - "A sparkly unicorn leading the way while the brown horse follows hopefully"
+  
+  - "A fluffy bunny riding atop the brown horse's back, pointing to distant shores"
+  
+  - "A blue whale creating gentle waves to cool the tired horses' hooves"
+  
+  - "A rainbow-maned unicorn using magic to make stepping stones across deep water"
+
+  # Making a New Friend Along the Way
+  - "A majestic golden horse with silver-streaked tail offering directions from a hilltop"
+  
+  - "A sparkly unicorn and golden horse putting their heads together to study starlight paths"
+  
+  - "A fluffy bunny and golden horse sharing carrots in a moonlit meadow"
+  
+  - "A blue whale teaching the golden horse to speak with ocean waves"
+
+  # Working Together to Find Home
+  - "A brown horse following the whale's glowing starry patterns through shallow waters"
+  
+  - "A sparkly unicorn lighting dark caves with its crystal horn as they search"
+  
+  - "A fluffy bunny hopping ahead to scout safe paths through misty valleys"
+  
+  - "A golden horse leading everyone through a secret rainbow tunnel"
+
+  # The Happy Discovery
+  - "A brown horse joyfully recognizing familiar meadows ahead"
+  
+  - "A gentle blue whale spraying a celebratory rainbow through its spout"
+  
+  - "A fluffy bunny and golden horse decorating trees with magical flowers"
+  
+  - "A sparkly unicorn creating shooting stars to mark the special moment"
+
+  # Sweet Goodbyes
+  - "A brown horse nuzzling each friend goodbye with grateful touches"
+  
+  - "A massive blue whale and fluffy bunny playing one last splashing game"
+  
+  - "A sparkly unicorn and golden horse prancing together under the setting sun"
+
+variations:
+  animals:
+    type: "static"
+    values: [""]
