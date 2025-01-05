@@ -1,0 +1,57 @@
+prompt_settings:
+  prefix: "aidmaMJ6.1, fantasy Digital art, "
+  negative: ""
+
+# Image generation parameters
+## Image sizes
+### portrait: 832x1216
+### landscape: 1216x832
+### wide: 1344x768
+
+cfg: 1.0
+steps: 30
+width: 832
+height: 1216
+seeds: [1]
+sampler: "euler"
+scheduler: "normal"
+denoise: 1.0
+
+# LoRA configurations
+loras:
+  lora:
+    - name: "aidmaMJ6.1-FLUX-v0.4"
+      strength: 0.6
+
+# List of prompts to generate
+prompts:
+  - "Cyberpunk goddess with flowing digital hair made of binary code and neon streams, Futurism, aidmaMJ6.1"
+  - "Abstract female figure emerging from a cascade of liquid metal and digital rain, Cyberpunk, aidmaMJ6.1"
+  - "Cybernetic priestess emerging from a cascade of holographic mandalas, Digital Art, aidmaMJ6.1"
+  - "Cyber-geisha with kimono patterns morphing into circuit boards, Fusion Art, aidmaMJ6.1"
+  - "Cyber-nymph emerging from a sea of floating algorithms, Code Art, aidmaMJ6.1"
+  - "Cyber-venus rising from shells of crystalline code, Classical Tech, aidmaMJ6.1"
+  - "Cyber-fairy dancing through digital flower gardens, Nature Tech, aidmaMJ6.1"
+  - "Cyber-goddess with crown of rotating data spheres, Royal Tech, aidmaMJ6.1"
+  - "Cyber-witch brewing potions of pure data, Magic Tech, aidmaMJ6.1"
+  - "Cyber-empress with robes of flowing algorithms, Royal Tech, aidmaMJ6.1"
+  - "Cyber-siren singing songs of pure data, Sound Tech, aidmaMJ6.1"
+  - "Cyber-gaia with earth's data flowing through her, Earth Tech, aidmaMJ6.1"
+  - "Cyber-persephone bridging digital underworlds, Greek Tech, aidmaMJ6.1"
+  - "Cyber-athena with wisdom of artificial intelligence, Greek Tech, aidmaMJ6.1"
+  - "Cyber-selene glowing with digital moonlight, Moon Tech, aidmaMJ6.1"
+  - "Cyber-flora blooming with digital flowers, Nature Tech, aidmaMJ6.1"
+  - "Cyber-thetis swimming through data oceans, Greek Tech, aidmaMJ6.1"
+  - "Cyber-demeter nurturing digital harvest, Greek Tech, aidmaMJ6.1"
+  - "Cyber-tyche bringing digital fortune's wheel, Greek Tech, aidmaMJ6.1"
+  - "Cyber-eirene bringing digital peace, Greek Tech, aidmaMJ6.1"
+  - "Cyber-moira weaving digital fate, Greek Tech, aidmaMJ6.1"
+  - "Cyber-harmonia bringing digital balance, Greek Tech, aidmaMJ6.1"
+
+  
+
+# Variations for prompt generation
+variations:
+  time:
+    type: "sequential"
+    values: ["fantasy Digital art, "]

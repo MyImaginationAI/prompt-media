@@ -1,0 +1,69 @@
+prompt_settings:
+  prefix: "aidmaMJ6.1, fantasy Digital art, "
+  negative: ""
+
+# Image generation parameters
+## Image sizes
+### portrait: 832x1216
+### landscape: 1216x832
+### wide: 1344x768
+
+cfg: 1.0
+steps: 30
+width: 832
+height: 1216
+seeds: [1]
+sampler: "euler"
+scheduler: "normal"
+denoise: 1.0
+
+# LoRA configurations
+loras:
+  lora:
+    - name: "aidmaMJ6.1-FLUX-v0.4"
+      strength: 0.6
+
+# List of prompts to generate
+prompts:
+  - "A dynamic splash of liquid colors in mid-air, capturing vibrant purples, teals, and golden hues swirling together against a deep black background, Photorealistic, aidmaMJ6.1"
+  - "Abstract fluid art with flowing iridescent colors merging like cosmic nebulae, featuring rich blues, magentas and emerald greens, Artistic, aidmaMJ6.1"
+  - "Macro photography of colorful soap bubbles creating prismatic rainbow patterns, with intricate details and mesmerizing color transitions, Ultra HD, aidmaMJ6.1"
+  - "Paint drops colliding in slow motion, creating an explosive burst of neon colors and intricate patterns against a pure white backdrop, High Detail, aidmaMJ6.1"
+  - "Marbled ink swirls in water forming ethereal patterns, with deep indigos blending into bright corals and shimmering gold accents, Elegant, aidmaMJ6.1"
+  - "Liquid marble swirls in motion, iridescent gold and turquoise flowing together against deep black, ultra HD, ethereal glow, aidmaMJ6.1"
+  - "Abstract watercolor explosion, vibrant splashes of magenta, teal and violet dancing in zero gravity, dreamlike, aidmaMJ6.1"
+  - "Cosmic nebula with swirling stardust, rich purples and blues with golden particles, ethereal glow, aidmaMJ6.1"
+  - "Crystalline geometric patterns morphing into organic shapes, prismatic rainbow reflections, elegant, aidmaMJ6.1"
+  - "Paint drops colliding in slow motion, neon pink and electric blue creating mesmerizing patterns, ultra detail, aidmaMJ6.1"
+  - "Ethereal northern lights dancing across a starlit sky, vibrant greens and purples, mystical atmosphere, aidmaMJ6.1"
+  - "Fluid art with metallic copper and deep emerald green swirls, luxury finish, artistic, aidmaMJ6.1"
+  - "Abstract ocean waves at sunset, turquoise meeting coral pink in flowing curves, dreamy, aidmaMJ6.1"
+  - "Cosmic butterfly wings made of glowing nebula dust, magical iridescent colors, ethereal, aidmaMJ6.1"
+  - "Floating ink clouds in water, deep indigo bleeding into bright coral and gold, elegant, aidmaMJ6.1"
+  - "Crystal prisms refracting light into rainbow spectrums, pure white background, minimal, aidmaMJ6.1"
+  - "Elegant smoke art in motion, violet and turquoise tendrils dancing together, mystical, aidmaMJ6.1"
+  - "Abstract flower petals dissolving into color particles, soft pastels, dreamy atmosphere, aidmaMJ6.1"
+  - "Liquid gold and black marble patterns swirling together, luxury finish, elegant, aidmaMJ6.1"
+  - "Cosmic dust and stardust forming abstract patterns, deep space colors, magical, aidmaMJ6.1"
+  - "Holographic foil texture with rainbow ripples, ultra modern, sleek finish, aidmaMJ6.1"
+  - "Dancing aurora ribbons in the night sky, ethereal green and purple lights, mystical, aidmaMJ6.1"
+  - "Abstract butterfly wings made of liquid crystal, prismatic colors, elegant, aidmaMJ6.1"
+  - "Flowing silk fabric in zero gravity, iridescent pastels, dreamy atmosphere, aidmaMJ6.1"
+  - "Crystalline fractals growing in geometric patterns, rainbow prisms, magical, aidmaMJ6.1"
+  - "Cosmic jellyfish made of starlight and nebula clouds, ethereal glow, mystical, aidmaMJ6.1"
+  - "Abstract sound waves visualized in neon colors, electric atmosphere, modern, aidmaMJ6.1"
+  - "Liquid metal mercury drops dancing in space, chrome finish, ultra modern, aidmaMJ6.1"
+  - "Cosmic peacock feathers made of stardust, iridescent colors, magical, aidmaMJ6.1"
+  - "Abstract DNA helix made of flowing light ribbons, scientific art, elegant, aidmaMJ6.1"
+  - "Crystal caves with glowing geometric formations, prismatic reflections, mystical, aidmaMJ6.1"
+  - "Floating lotus petals dissolving into light particles, dreamy pastels, ethereal, aidmaMJ6.1"
+  - "Abstract phoenix wings made of liquid fire, vibrant oranges and golds, magical, aidmaMJ6.1"
+  - "Cosmic roses blooming in zero gravity, deep space colors, ethereal glow, aidmaMJ6.1"
+  - "Liquid rainbow prisms melting together, ultra modern, artistic flow, aidmaMJ6.1"
+
+
+# Variations for prompt generation
+variations:
+  time:
+    type: "sequential"
+    values: ["fantasy Digital art, "]

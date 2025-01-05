@@ -1,0 +1,69 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "aidmaMJ6.1, vertical split, split screen,"
+  negative: ""
+
+# Image generation parameters
+## Image sizes
+### portrait: 832x1216
+### landscape: 1216x832
+### wide: 1344x768
+
+cfg: 1.0
+steps: 30
+width: 832
+height: 1216
+seeds: [2025]
+sampler: "euler"
+scheduler: "normal"
+denoise: 1.0
+
+# LoRA configurations
+loras:
+  lora:
+    - name: "aidmaMJ6.1-FLUX-v0.4"
+      strength: 0.6
+
+# List of prompts to generate
+prompts:
+  - "Luminescent crystalline beings with translucent bodies that refract light like living prisms. Their elongated forms pulse with internal rainbow energies, while delicate geometric patterns flow across their surface. Floating gracefully, they communicate through pulses of colored light, Ethereal, MidJourney"
+  - "Bioluminescent aquatic humanoids with iridescent scales and flowing fins like living silk. Their large, mesmerizing eyes contain swirling galaxies, while patterns of light dance across their azure skin like northern lights beneath water, Fantasy, MidJourney"
+  - "Plant-based sentients with bodies made of intertwining vines and blooming flowers in impossible colors. Their faces are elegant arrangements of petals that shift with their emotions, while spores of light drift around them like fireflies, Organic, MidJourney"
+  - "Ethereal energy beings composed of swirling auroras and stellar matter. Their forms shift between solid and gaseous states, leaving trails of stardust as they move through space. Multiple pairs of eyes shine like distant nebulae, Cosmic, MidJourney"
+  - "Insectoid creatures with bodies like polished opal, their wings shimmering with holographic patterns. Multiple arms move in perfect synchronization while antennae crowned with bioluminescent orbs sense the world around them, Alien, MidJourney"
+  - "Quantum computing chamber bathed in holographic light, crystalline processors pulse with data streams while a scientist interfaces through neural implants. Geometric patterns dance across transparent screens as artificial intelligence visualizes complex calculations, Sci-fi, MidJourney"
+  - "Advanced nanobot swarm forms shifting architectural structures, their microscopic bodies weaving together like liquid metal. Utility fog transforms from furniture to floating platforms while emitting a soft blue glow, Future Tech, MidJourney"
+  - "VTOL flying car hovers above a neon-lit megalopolis, its sleek aerodynamic form highlighted by streams of plasma energy. Vertical thrusters emit ethereal light as it navigates between towering skyscrapers, Urban Sci-fi, MidJourney"
+  - "Li-Fi enabled chamber where light beams transfer data through LED matrices, creating intricate patterns of information flow. Holographic displays materialize from pure light while quantum processors calculate in the background, Technology, MidJourney"
+  - "E-skin interface laboratory where scientists test haptic feedback suits, surrounded by floating holographic anatomical displays. Neural sensors pulse with bioluminescent energy while transmitting touch sensations across digital space, Biotech, MidJourney"
+
+  # - "A lone astronaut gazes upward, their reflective helmet split vertically - the left side shrouded in deep cosmic shadows while the right illuminated by a brilliant nebula. Above, a luminous planet hovers against a starlit backdrop, Cyberpunk, MidJourney"
+  # - "Cyberpunk warrior in a neon-trimmed helmet looks skyward, where a glowing moon hangs in perfect balance. The composition splits down the middle - left side in midnight blues, right side in electric pinks and purples, Synthwave, MidJourney"
+  # - "Vertical duality: An astronaut in a pristine spacesuit stands contemplative, helmet reflecting the cosmos. Left hemisphere drowns in darkness with dim stars, right side explodes with a radiant gas giant and stellar brilliance, Sci-fi, MidJourney"
+  # - "Retro-futuristic space explorer in an iridescent helmet gazes at a binary star system. The scene divides - darkness consumes the left while technicolor auroras dance across the right, Neo-retro, MidJourney"
+  # - "Split reality: A space-faring figure in modernist helmet design observes a crescent moon. Left panel embraces cosmic void, right panel bursts with stellar energy and swirling nebulae, Futurism, MidJourney"
+  # # cyberpunk
+  # - "Neon-drenched figure in a sleek cybernetic helmet, split vertically - left side consumed by urban decay and shadows, right side blazing with electric blues and purples. Holographic displays reflect in the visor while a digital moon hovers in a polluted sky, Cyberpunk, MidJourney"
+  # - "High-tech warrior stands beneath a fractured digital moon, helmet adorned with glowing circuit patterns. The scene divides: left half showing crumbling megastructures in darkness, right half exploding with neon pink and cyan lighting effects, Neo-Tokyo, MidJourney"
+  # - "Futuristic sentinel gazes skyward through an iridescent visor, their silhouette bisected - shadowy dystopian ruins dominate the left while crystalline neon structures illuminate the right. A holographic planet pulses above, casting prismatic reflections, Synthwave, MidJourney"
+  # - "Chrome-clad figure in luminous helmet contemplates a glitching binary star system. Split composition contrasts dystopian darkness with cybernetic radiance, enhanced by rain-slicked surfaces and ethereal tech patterns, Retrowave, MidJourney"
+  # - "Techno-organic warrior beneath a fractured digital moon, their augmented helmet reflecting both void and virtual light. Left panel embraces urban decay, right panel celebrates neon-soaked technological ascension, Cyberpunk, MidJourney"
+  # # steampunk
+  # - "Victorian-era astronaut in brass-fitted helmet adorned with intricate clockwork gears, split vertically - left side draped in industrial shadows and steam, right side gleaming with copper and bronze luminescence. A mechanical moon with visible cogs hovers overhead, Steampunk, MidJourney"
+  # - "Steam-powered explorer gazes through an ornate brass and copper helmet, its glass panels etched with celestial patterns. The scene divides: left showing smoke-filled darkness, right radiating golden mechanical light. Above floats a brass-worked celestial orb trailing wisps of steam, Victorian, MidJourney"
+  # - "Brass-clad voyager in an antique diving bell helmet studded with pressure gauges and copper piping. The composition splits between industrial revolution darkness and steam-lit mechanical splendor. A clockwork planet rotates majestically overhead, Steampunk, MidJourney"
+  # - "Time-traveling aeronaut in leather and brass helmet with whirring gears and telescopic eyepiece. Left side reveals shadowy Victorian machinery, right side glows with steam-powered brass mechanisms. An elaborate mechanical moon turns on visible springs and gears above, Retro-industrial, MidJourney"
+  # - "Industrial age explorer wearing an elaborate copper helmet with spinning astronomical calculations. Scene bisected between coal-smoke shadows and brass-bright illumination, crowned by a steam-driven planetary mechanism with visible clockwork interior, Neo-Victorian, MidJourney"
+  # # dark fantasy
+  # - "A dark sorcerer in ornate black robes stands beneath a blood moon, their shadowy silhouette split vertically - obsidian darkness consumes the left while crimson magical energies illuminate the right. Ethereal spirits swirl around a cursed staff held high, Dark Fantasy, MidJourney"
+  # - "Malevolent necromancer gazes at an ancient grimoire, scene divided between deepest shadow and sickly green spell-light. Above looms a ghostly apparition of twisted souls bound to their will, Gothic Horror, MidJourney"
+  # - "Cursed warrior in jagged black armor contemplates a corrupted crystal moon. The composition splits between abyssal darkness and haunting purple energies, while spectral chains bind the figure to ancient evil, Dark Fantasy, MidJourney"
+  # - "Fallen angel with tattered wings observes an eclipsed sun through stained glass. Left side drowns in cathedral shadows while right side blazes with unholy radiance, Medieval Gothic, MidJourney"
+  # - "Dark fantasy portrait of a witch queen crowned in thorns, her realm divided between eternal night and cursed twilight. Arcane runes spiral around her throne while tortured souls writhe in the darkness below, Occult, MidJourney"
+
+
+# Variations for prompt generation
+variations:
+  time:
+    type: "static"
+    values: ["vertical split, "]

@@ -1,0 +1,65 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "aidmaMJ6.1,"
+  negative: ""
+
+# Image generation parameters
+## Image sizes
+### portrait: 832x1216
+### landscape: 1216x832
+### wide: 1344x768
+
+cfg: 1.0
+steps: 30
+width: 832
+height: 1216
+seeds: [2025]
+sampler: "euler"
+scheduler: "normal"
+denoise: 1.0
+
+# LoRA configurations
+loras:
+  lora:
+    - name: "aidmaMJ6.1-FLUX-v0.4"
+      strength: 0.6
+
+# List of prompts to generate
+prompts:
+  - "A mesmerizing smartphone wallpaper featuring a gradient transition from deep midnight blue to vibrant purple, with subtle ethereal light streams dancing across the surface, creating an elegant balance between dark depths and luminous highlights, digital art, ultra HD resolution"
+  - "A mesmerizing cosmic swirl with deep purples and electric blues, featuring luminous particles dancing through space, ethereal glow, otherworldly atmosphere, digital art, ultra HD"
+  - "Elegant black marble texture with gold veins flowing like liquid metal, minimalist luxury, deep contrast, digital art"
+  - "Abstract geometric crystals in deep twilight colors, faceted surfaces catching light, modern digital art"
+  - "Dark cityscape at midnight with neon rain reflections, cyberpunk aesthetic, moody atmosphere"
+  - "Flowing dark silk waves with subtle iridescent highlights, elegant minimalism"
+  - "Deep space nebula with vibrant teal and magenta clouds, cosmic dust, stellar formation"
+  - "Abstract liquid metal waves in chrome and obsidian, sleek modern design"
+  - "Dark forest silhouettes against a starlit purple sky, mystical atmosphere"
+  - "Geometric sacred patterns in gold on deep navy background, spiritual art"
+  - "Swirling aurora borealis in deep blues and greens, night sky magic"
+  - "Abstract ink drops in water, dark tones with bright color accents"
+  - "Crystalline fractals in deep sapphire and emerald, mathematical beauty"
+  - "Moody ocean waves at night with moonlight reflections, serenity"
+  - "Dark Japanese ink painting style mountains in mist, zen aesthetic"
+  - "Abstract sound waves in neon on black background, music visualization"
+  - "Cosmic butterfly wings made of stardust and nebulae, magical realism"
+  - "Dark marble swirls with rose gold veins, luxury minimalism"
+  - "Abstract dark matter visualization, cosmic energy flows"
+  - "Glowing bioluminescent patterns on black background, natural wonder"
+  - "Deep space black hole event horizon, cosmic phenomenon"
+  - "Dark crystal geode with glowing interior, natural wonder"
+  - "Abstract dark smoke patterns with golden light streams"
+  - "Night city lights bokeh in purple and blue tones, urban dreams"
+  - "Dark volcanic glass texture with rainbow iridescence"
+  - "Abstract quantum field visualization, scientific art"
+  - "Moonlit cherry blossoms against dark sky, Japanese aesthetic"
+  - "Dark water ripples with neon light reflections, liquid art"
+  - "Abstract neural network visualization in dark tones, AI art"
+  - "Deep space galaxy cluster, cosmic beauty in darkness"
+  - "Dark prism light dispersion, rainbow in shadows"
+
+# Variations for prompt generation
+variations:
+  empty:
+    type: "static"
+    values: [""]
