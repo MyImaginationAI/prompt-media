@@ -122,6 +122,7 @@ comfyui: comfyui/start
 comfyui/start:
 	@echo "Starting ComfyUI server..."
 	@cd $(COMFYUI_DIR) && \
+		git pull && \
 		bash -c "source $(COMFYUI_VENV) && \
 		python main.py \
 		--listen \
