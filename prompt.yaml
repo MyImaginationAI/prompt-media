@@ -26,7 +26,7 @@ variations:
 workflows:
   dev:
     steps: 20
-    cfg: 7
+    cfg: 1
     width: 1344
     height: 768
     seeds: [1, 2, 3]
