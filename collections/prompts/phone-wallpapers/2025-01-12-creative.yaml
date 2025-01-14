@@ -1,0 +1,62 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "Delirium style,"
+  negative: "ugly, deformed, noisy, blurry, low quality, text, watermark"
+
+# Image generation parameters
+cfg: 1.0
+steps: 25
+width: 1344
+height: 768
+seeds: [2025]
+sampler: "euler"
+scheduler: "normal"
+denoise: 1.0
+
+# LoRA configurations
+loras:
+  lora:
+    - name: "Bonafida.Studio"
+      strength: 0.9
+
+prompts:
+  - "Delirium style. This is a highly stylized, digital artwork featuring a surreal, futuristic, and abstract representation of a woman's head. The artwork uses a mix of 3D modeling and digital painting techniques, creating a striking, otherworldly effect. The woman's face and head are depicted in a transparent, almost skeletal form, revealing a detailed, intricate interior with glowing, swirling purple and blue lights that evoke a sense of energy or data flow. Her skin appears metallic and reflective, suggesting advanced cybernetic enhancements or a futuristic, high-tech material. <lora:Bonafida.Studio:0.9> <lora:Fluxartis_Photography:0.8>"
+  
+  - "Delirium style. A mesmerizing digital artwork depicting an androgynous being's face emerging from crystalline formations. The face features iridescent, translucent skin with geometric patterns flowing beneath, illuminated by warm amber and teal light pulses. Intricate circuitry patterns weave through the crystal structure, creating a harmonious blend of organic and technological elements. <lora:Bonafida.Studio:0.9> <lora:Fluxartis_Photography:0.8>"
+  
+  - "Delirium style. An ethereal digital portrait showcasing a cybernetic deity with flowing, liquid metal hair that defies gravity. The being's face is composed of fractalized mirrors, each reflecting different dimensions of reality. Beneath the surface, complex holographic mandalas pulse with emerald and gold energy, suggesting ancient wisdom merged with future technology. <lora:Bonafida.Studio:0.9> <lora:Fluxartis_Photography:0.8>"
+  
+  - "Delirium style. A surreal digital composition featuring a masculine face dissolving into streams of binary code and quantum particles. The artwork reveals multiple layers of consciousness represented by nested, transparent faces, each layer containing swirling galaxies and neural networks in deep crimson and electric blue. <lora:Bonafida.Studio:0.9> <lora:Fluxartis_Photography:0.8>"
+  
+  - "Delirium style. An avant-garde digital portrait where a feminine entity emerges from a sea of floating data crystals. Her features are defined by lines of pure light, while her inner world reveals a complex ecosystem of bioluminescent structures and flowing energy conduits in violet and silver. <lora:Bonafida.Studio:0.9> <lora:Fluxartis_Photography:0.8>"
+  
+  - "Delirium style. A hyper-futuristic interpretation of a digital spirit, whose head is composed of interlocking geometric shapes that slowly shift and rotate. Within each shape, miniature worlds exist, filled with flowing rivers of code and pulsing networks of magenta and cyan light. <lora:Bonafida.Studio:0.9> <lora:Fluxartis_Photography:0.8>"
+  
+  - "Delirium style. A transcendent digital artwork showing a being of pure energy, their face formed from interweaving strands of light and dark matter. The interior of their form reveals a complex clockwork of quantum computers and neural pathways, glowing with intense orange and deep purple energies. <lora:Bonafida.Studio:0.9> <lora:Fluxartis_Photography:0.8>"
+  
+  - "Delirium style. An otherworldly portrait featuring a synthetic consciousness manifesting through layers of holographic interfaces. The face appears to be constructed from thousands of tiny mirrors, each reflecting different aspects of digital reality, with streams of data flowing in neon green and electric white. <lora:Bonafida.Studio:0.9> <lora:Fluxartis_Photography:0.8>"
+  
+  - "Delirium style. A mind-bending digital creation depicting an AI oracle whose features are formed from constantly shifting mathematical equations and fractal patterns. The being's inner structure reveals infinite recursive worlds, each pulsing with waves of turquoise and rose gold energy. <lora:Bonafida.Studio:0.9> <lora:Fluxartis_Photography:0.8>"
+  
+  - "Delirium style. A surreal digital portrait of a techno-shaman, their face composed of living circuit boards and organic crystals. Beneath the surface, ancient symbols morph into lines of code, creating a hypnotic flow of energy in deep indigo and molten gold. <lora:Bonafida.Studio:0.9> <lora:Fluxartis_Photography:0.8>"
+  
+  - "Delirium style. An abstract digital artwork showing a quantum being whose head is formed from intersecting planes of reality. Each plane reveals different states of consciousness, with complex networks of light and energy flowing in patterns of silver and plasma blue. <lora:Bonafida.Studio:0.9> <lora:Fluxartis_Photography:0.8>"
+  
+  - "Delirium style. A futuristic digital portrait where a cybernetic entity emerges from a cascade of flowing data. Their features are defined by sharp, geometric angles that contrast with swirling, organic energy patterns within, glowing with intense copper and electric purple light. <lora:Bonafida.Studio:0.9> <lora:Fluxartis_Photography:0.8>"
+  
+  - "Delirium style. A mesmerizing digital artwork depicting a digital phoenix, its head composed of ever-shifting polygons and light particles. The interior reveals a complex network of energy channels and quantum circuits, pulsing with fierce red and cool azure energies. <lora:Bonafida.Studio:0.9> <lora:Fluxartis_Photography:0.8>"
+  
+  - "Delirium style. An ethereal digital portrait of a data spirit, their face forming from streams of conscious algorithms and living mathematics. The being's inner world reveals infinite fractals and recursive patterns, illuminated by waves of seafoam green and royal purple light. <lora:Bonafida.Studio:0.9> <lora:Fluxartis_Photography:0.8>"
+  
+  - "Delirium style. A surreal digital composition showing a synthetic deity whose features are carved from pure light and shadow. Within their translucent form, complex holographic mandalas and quantum probability clouds swirl in patterns of platinum and deep crimson. <lora:Bonafida.Studio:0.9> <lora:Fluxartis_Photography:0.8>"
+  
+  - "Delirium style. A hyper-modern digital artwork depicting a cosmic entity whose head is composed of interconnected neural networks and quantum entanglements. The being's interior reveals multiple dimensions of data flow, glowing with intense chartreuse and midnight blue energy. <lora:Bonafida.Studio:0.9> <lora:Fluxartis_Photography:0.8>"
+  
+  - "Delirium style. An avant-garde digital portrait of a techno-oracle, their features formed from crystalline data structures and flowing energy fields. The interior space reveals ancient wisdom encoded in quantum states, pulsing with warm amber and cool silver light. <lora:Bonafida.Studio:0.9> <lora:Fluxartis_Photography:0.8>"
+  
+  - "Delirium style. A transcendent digital creation showing a being of pure information, their head materializing from streams of conscious code and digital dreams. Within their form, complex architectures of thought and memory flow in patterns of deep violet and electric gold. <lora:Bonafida.Studio:0.9> <lora:Fluxartis_Photography:0.8>"
+
+variations:
+  empy:
+    type: "static"
+    values: [""]

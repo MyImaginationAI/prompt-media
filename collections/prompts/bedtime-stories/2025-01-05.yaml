@@ -1,0 +1,74 @@
+# Summary: A heartwarming story about a small boy with curly red hair who discovers his passion for playing the violin. 
+# With help from his tall grandmother with silver hair and a friendly music teacher with round glasses, 
+# he learns to overcome his initial struggles and finds joy in making music. Along the way, he inspires 
+# a shy girl with braided pigtails and catches the attention of an elderly man with a walking cane who 
+# always stops to listen.
+prompt_settings:
+  prefix: "Painterly fantasy realism with whimsical storybook, "
+  negative: "By bad artist -neg, , V2, FastNegativeV2, ,  (1), ,(worst quality:2), (low quality:2), (normal quality:2),(uneven eyes),lowres, normal quality,bad anatomy,bad face,(uneven eyes),paintings,ugly, bad hands,open mouth,multiple girls,extra faces, extro breasts, multiple breasts,obese, fat rolls,extra arms, extra eyes,inverted nipples,extra ears,nipple rings,severed arm, bad arm, nipple bar,asymmetrical eyebrows,big mouth, embedding:ng_deepnegative_v1_75t, embedding:negative_hand-neg, embedding:EasyNegative, embedding:badhandv4, embedding:verybadimagenegative_v1.3"
+
+cfg: 1.0
+steps: 20
+width: 1344
+height: 768
+seeds: [159753]
+sampler: "euler"
+scheduler: "simple"
+denoise: 1
+
+loras:
+  lora:
+    - name: "DreamwovenTales-000004"
+      strength: 0.9
+
+prompts:
+  - "A small boy with curly red hair stands nervously at a music shop window, pressing his hands against the glass while gazing at a shiny violin displayed inside"
+  - "The tall grandmother with silver hair gently leads the curly red-haired boy by the hand into the music shop, both looking excited"
+  - "A music teacher with round glasses demonstrates proper violin holding position to the curly red-haired boy, who watches with wide-eyed fascination"
+  - "The curly red-haired boy awkwardly attempts to hold the violin while his grandmother with silver hair adjusts his elbow position"
+  - "The music teacher with round glasses guides the boy's small hand on the bow, showing him how to make smooth movements"
+  - "The curly red-haired boy practices in his room, tongue sticking out in concentration while his grandmother peeks through the doorway"
+  - "A shy girl with braided pigtails watches from behind a tree as the red-haired boy practices in his backyard"
+  - "The boy with curly red hair shows the girl with braided pigtails how to hold the violin bow properly"
+  - "An elderly man with a walking cane stops on his daily walk to listen as the red-haired boy practices near an open window"
+  - "The music teacher with round glasses claps enthusiastically as the curly red-haired boy successfully plays his first note"
+  - "The grandmother with silver hair wipes happy tears while watching the boy practice his violin exercises"
+  - "The shy girl with braided pigtails sits cross-legged on the grass, swaying to the melody as the red-haired boy plays"
+  - "The elderly man with walking cane taps his cane in rhythm while the curly red-haired boy plays a simple tune"
+  - "The boy with red curls struggles with a difficult piece while his grandmother encouragingly pats his shoulder"
+  - "The music teacher with round glasses demonstrates finger placement while the red-haired boy mimics the movement"
+  - "The curly red-haired boy excitedly shows a new sheet of music to his grandmother with silver hair"
+  - "The shy girl with pigtails applauds as the red-haired boy successfully completes a short piece"
+  - "The elderly man with walking cane shares stories about his own musical past with the attentive red-haired boy"
+  - "The boy with curly red hair practices bow movements while his music teacher adjusts his grip"
+  - "The grandmother with silver hair helps the red-haired boy organize his sheet music at a small desk"
+  - "The shy girl with braided pigtails joins the red-haired boy for an impromptu outdoor practice session"
+  - "The music teacher with round glasses points to notes on the sheet while the red-haired boy follows along"
+  - "The curly red-haired boy performs for his grandmother, who sits in her favorite rocking chair"
+  - "The elderly man with walking cane introduces the red-haired boy to classical music records"
+  - "The boy with red curls practices scales while his music teacher nods approvingly"
+  - "The shy girl with pigtails shares her favorite song with the red-haired boy, who attempts to play it"
+  - "The grandmother with silver hair dances slowly while the red-haired boy plays a cheerful tune"
+  - "The music teacher with round glasses and the red-haired boy select new sheet music together"
+  - "The elderly man with walking cane conducts with his cane as the boy plays in the garden"
+  - "The curly red-haired boy and the shy girl with pigtails practice reading music notes together"
+  - "The grandmother with silver hair helps the red-haired boy prepare for his first small performance"
+  - "The music teacher with round glasses straightens the boy's posture during a final rehearsal"
+  - "The elderly man with walking cane presents the red-haired boy with a vintage music book"
+  - "The shy girl with pigtails hands flowers to the red-haired boy after his successful performance"
+  - "The curly red-haired boy hugs his grandmother with silver hair, both beaming with pride after the show"
+  - "A curious squirrel with bushy tail perches on a tree branch, tilting its head as the red-haired boy practices outside"
+  - "Two rabbits with floppy ears hop closer to listen while the boy with red curls plays a gentle melody"
+  - "A graceful deer pauses at the garden's edge, ears twitching as the red-haired boy practices his violin"
+  - "The boy with curly red hair plays softly as a mother bird feeds her chicks in a nearby nest"
+  - "A playful puppy with spotted fur dances in circles while the red-haired boy plays an upbeat tune"
+  - "The curly red-haired boy practices near a pond where a duck family glides by, bobbing their heads to the rhythm"
+  - "A majestic horse in the neighboring field raises its head, ears forward as the boy plays his violin"
+  - "The red-haired boy plays beneath a tree where a wise owl watches from its hollow, blinking slowly"
+  - "A family of mice peeks from their garden home while the boy with red curls practices a lullaby"
+  - "The curly red-haired boy plays near a butterfly garden, where monarchs dance to his melody"
+  - "A friendly cat with striped fur weaves between the boy's legs as he practices his violin"
+  - "Two bluebirds land on a fence post, swaying as the red-haired boy plays a morning song"
+  - "A young fox sits attentively at the forest edge while the boy with red curls plays at sunset"
+  - "The curly red-haired boy plays softly as a mother deer and her fawn listen from the meadow"
+  - "A peacock displays its feathers, seeming to dance while the red-haired boy plays in the garden"

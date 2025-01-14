@@ -1,0 +1,83 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "Delirium style,"
+  negative: "ugly, deformed, noisy, blurry, low quality, text, watermark"
+
+# Image generation parameters
+cfg: 1.0
+steps: 25
+width: 1344
+height: 768
+seeds: [2025]
+sampler: "euler"
+scheduler: "normal"
+denoise: 1.0
+
+# LoRA configurations
+loras:
+  lora:
+    - name: "Bonafida.Studio"
+      strength: 1.0
+
+prompts:
+- "Digital artwork, hyper-realistic CGI style, depicting a graceful dancer mid-leap, her body transparent like crystal. Within her form, a miniature galaxy spins, stars being born in the nebulae of her heart while cosmic dust trails follow her movements. Her dance creates ripples in the cosmic fabric within. <lora:Bonafida.Studio:1>"
+
+- "Digital artwork, hyper-realistic CGI style, showing a martial artist in perfect balance, his body formed of clear water. Inside him, an entire ocean ecosystem thrives - whales breach through internal waves, coral reefs bloom in his chest, and bioluminescent creatures illuminate the depths. <lora:Bonafida.Studio:1>"
+
+- "Digital artwork, hyper-realistic CGI style, featuring a meditation master floating in lotus position, their body made of pure light. Within them, a pristine Zen garden exists, where cherry blossoms fall eternally and koi fish swim through rivers of starlight that flow through their chakras. <lora:Bonafida.Studio:1>"
+
+- "Digital artwork, hyper-realistic CGI style, portraying an athlete mid-sprint, their body composed of wind currents. Inside them, an entire weather system lives - storms brew in their chest, lightning arcs through their limbs, and rainbows form in the mist of their movement. <lora:Bonafida.Studio:1>"
+
+- "Digital artwork, hyper-realistic CGI style, showing a musician playing an ethereal instrument, their body made of crystalline sound waves. Within them, musical notes take physical form - flowering into gardens, building cities of symphony, and creating auroras of pure melody. <lora:Bonafida.Studio:1>"
+
+- "Digital artwork, hyper-realistic CGI style, depicting a painter in creative flow, their body formed from liquid colors. Inside them, paintings come alive - van Gogh's stars swirl with Monet's water lilies, while new masterpieces bloom from the fusion of classical and contemporary art. <lora:Bonafida.Studio:1>"
+
+- "Digital artwork, hyper-realistic CGI style, featuring a climber reaching for the summit, their body made of living crystal. Within them, entire mountain ranges rise and fall, glaciers flow like rivers, and hidden valleys bloom with impossible flowers that grow in the light of inner suns. <lora:Bonafida.Studio:1>"
+
+- "Digital artwork, hyper-realistic CGI style, showing a surfer riding a massive wave, their body composed of ocean spray. Inside them, an entire marine world exists - ancient shipwrecks harbor secret gardens, merfolk cities glow with pearl-light, and leviathans dance in the depths. <lora:Bonafida.Studio:1>"
+
+- "Digital artwork, hyper-realistic CGI style, portraying a chess master in deep thought, their body formed from interweaving light and shadow. Within them, armies of chess pieces come alive, waging epic battles across landscapes that shift between crystal kingdoms and nebula fields. <lora:Bonafida.Studio:1>"
+
+- "Digital artwork, hyper-realistic CGI style, depicting a gardener tending to plants, their body made of living earth. Inside them, forests grow in miniature - ancient trees reach for internal skies, fairy rings bloom in magical clearings, and nature spirits dance through mushroom circles. <lora:Bonafida.Studio:1>"
+
+- "Digital artwork, hyper-realistic CGI style, showing a pilot soaring through clouds, their body formed of aurora lights. Within them, an entire aviation history unfolds - from Leonardo's flying machines to futuristic spacecraft, all sailing through seas of cosmic light. <lora:Bonafida.Studio:1>"
+
+- "Digital artwork, hyper-realistic CGI style, featuring a writer lost in creation, their body made of flowing text. Inside them, stories come to life - characters leap from page to page, plot lines weave golden threads through space, and new worlds are born from poetry. <lora:Bonafida.Studio:1>"
+
+- "Digital artwork, hyper-realistic CGI style, portraying a chef cooking with passion, their body composed of culinary elements. Within them, ingredients dance and transform - spices create constellation patterns, flavors paint aurora lights, and recipes evolve into living art. <lora:Bonafida.Studio:1>"
+
+- "Digital artwork, hyper-realistic CGI style, showing a blacksmith forging metal, their body made of living flame. Inside them, an entire forge-world exists - molten rivers flow through crystal caverns, phoenix-sparks birth new metals, and ancient artifacts hold impossible powers. <lora:Bonafida.Studio:1>"
+
+- "Digital artwork, hyper-realistic CGI style, depicting a scientist in discovery, their body formed from pure energy. Within them, the fundamentals of universe unfold - DNA strands spiral into galaxies, quantum particles dance ballet, and new dimensions bloom like flowers. <lora:Bonafida.Studio:1>"
+
+- "Digital artwork, hyper-realistic CGI style, featuring a photographer capturing light, their body made of prismatic crystal. Inside them, moments in time are frozen - butterflies made of stained glass, cities built from camera flashes, and memories crystallized into gems. <lora:Bonafida.Studio:1>"
+
+- "Digital artwork, hyper-realistic CGI style, showing an architect designing dreams, their body composed of geometric patterns. Within them, impossible buildings rise - stairs loop through möbius strips, gardens grow upside down, and windows look into other dimensions. <lora:Bonafida.Studio:1>"
+
+- "Digital artwork, hyper-realistic CGI style, portraying a dancer performing ballet, their body made of morning mist. Inside them, a theater of elements performs - fire and water dance together, earth and air create new forms, and light itself learns to pirouette. <lora:Bonafida.Studio:1>"
+
+- "Digital artwork, hyper-realistic CGI style, depicting a healer at work, their body formed from pure light. Within them, the mysteries of life flow - cells become cities, neurons spark like stars, and healing energy flows through golden rivers. <lora:Bonafida.Studio:1>"
+
+- "Digital artwork, hyper-realistic CGI style, showing a sculptor carving dreams, their body made of living marble. Inside them, statues breathe and move, ancient gods step from pedestals, and stone flows like water through ethereal galleries. <lora:Bonafida.Studio:1>"
+
+- "Digital artwork, hyper-realistic CGI style, featuring an astronomer stargazing, their body composed of cosmic dust. Within them, constellations rearrange themselves, supernovas birth new elements, and black holes dance in gravitational harmony. <lora:Bonafida.Studio:1>"
+
+- "Digital artwork, hyper-realistic CGI style, portraying a botanist studying life, their body formed from living vines. Inside them, extinct species bloom again, evolution accelerates in rainbow gardens, and plants communicate through networks of golden light. <lora:Bonafida.Studio:1>"
+
+- "Digital artwork, hyper-realistic CGI style, showing a violinist performing, their body made of vibrating strings. Within them, music takes physical form - notes become butterflies, harmonies build crystal cities, and melodies paint auroras across internal skies. <lora:Bonafida.Studio:1>"
+
+- "Digital artwork, hyper-realistic CGI style, depicting a watchmaker crafting time, their body formed from clockwork gears. Inside them, moments crystallize into gems, centuries spiral in mechanical ballets, and time itself flows like liquid gold. <lora:Bonafida.Studio:1>"
+
+- "Digital artwork, hyper-realistic CGI style, featuring a weaver creating tapestries, their body made of shimmering threads. Within them, stories weave themselves into living scenes, myths come alive in silk, and patterns tell tales of forgotten worlds. <lora:Bonafida.Studio:1>"
+
+- "Digital artwork, hyper-realistic CGI style, portraying a perfumer distilling essences, their body composed of fragrant mist. Inside them, scents take visible form - memories bloom as flowers, emotions swirl as colored smoke, and aromas paint pictures in the air. <lora:Bonafida.Studio:1>"
+
+- "Digital artwork, hyper-realistic CGI style, showing a mathematician solving equations, their body made of flowing numbers. Within them, geometric shapes dance and transform, fractals grow like crystal gardens, and abstract concepts take beautiful form. <lora:Bonafida.Studio:1>"
+
+- "Digital artwork, hyper-realistic CGI style, depicting a puppeteer performing stories, their body formed from stage curtains. Inside them, theatrical worlds come alive - shadow plays create reality, strings weave destinies, and characters step from imagination into being. <lora:Bonafida.Studio:1>"
+
+# Variations for prompt generation
+variations:
+  empy:
+    type: "sequential"
+    values: ["man", "woman", "child"]

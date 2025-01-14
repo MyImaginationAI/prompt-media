@@ -1,39 +1,104 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "aidmafluxpro1.1,"
+  negative: ""
+
+# Image generation parameters
+cfg: 1.0
+steps: 30
+width: 832
+height: 1216
+seeds: [2025]
+sampler: "euler"
+scheduler: "normal"
+denoise: 1.0
+
+# LoRA configurations
+loras:
+  lora:
+    - name: "aidmaFLUXpro1.1-FLUX-V0.1"
+      strength: 0.8
+
 prompts:
-  - name: "new-year-hourglass-en"
-    prompt: "A magical hourglass against a dark background, glowing neon text reading 'Goodbye 2024' in top chamber and 'Hello 2025' in bottom chamber, glowing crystalline sand flowing between chambers, glass material with high reflectivity and transparency, cosmic sparkles and particles floating around, dark wooden base and top, ultra detailed, octane render, volumetric lighting, bokeh particles, 8k"
-    negative_prompt: "blurry, low quality, grainy, noisy, oversaturated, flat lighting, plain background, simple glass, basic textures"
+- "Magical scene with glowing text,"
 
-  - name: "new-year-hourglass-es-fr"
-    prompt: "A magical hourglass against a dark background, glowing neon text reading 'Adiós 2024' and 'Au revoir 2024' in top chamber and 'Hola 2025' and 'Bonjour 2025' in bottom chamber, glowing crystalline sand flowing between chambers, glass material with high reflectivity and transparency, cosmic sparkles and particles floating around, dark wooden base and top, ultra detailed, octane render, volumetric lighting, bokeh particles, 8k"
-    negative_prompt: "blurry, low quality, grainy, noisy, oversaturated, flat lighting, plain background, simple glass, basic textures"
+# Variations for prompt generation
+variations:
+  scene:
+    type: "sequential"
+    values: [
+      "ethereal hourglass with flowing cosmic sand",
+      "blooming cherry blossom tree under starlight",
+      "mystical doorway opening to a new dawn",
+      "floating lanterns ascending into the night sky",
+      "magical compass pointing to dreams",
+      "crystalline butterfly emerging from cocoon",
+      "enchanted garden with glowing flowers",
+      "cosmic spiral of shooting stars",
+      "magical book opening to blank pages",
+      "phoenix rising from stardust"
+    ]
 
-  - name: "new-year-hourglass-de-it"
-    prompt: "A magical hourglass against a dark background, glowing neon text reading 'Auf Wiedersehen 2024' and 'Arrivederci 2024' in top chamber and 'Hallo 2025' and 'Ciao 2025' in bottom chamber, glowing crystalline sand flowing between chambers, glass material with high reflectivity and transparency, cosmic sparkles and particles floating around, dark wooden base and top, ultra detailed, octane render, volumetric lighting, bokeh particles, 8k"
-    negative_prompt: "blurry, low quality, grainy, noisy, oversaturated, flat lighting, plain background, simple glass, basic textures"
+  text:
+    type: "sequential"
+    values: [
+      "'Welcome 2025'",
+      "'2025: A New Chapter'",
+      "'Embrace the Magic of 2025'",
+      "'2025: Your Year to Shine'",
+      "'Dreams Take Flight in 2025'",
+      "'2025: Time for Adventure'",
+      "'Make 2025 Magical'",
+      "'2025: Write Your Story'",
+      "'Journey into 2025'",
+      "'2025: Believe in Possibilities'",
+      "'Create Magic in 2025'",
+      "'2025: Follow Your Dreams'",
+      "'Transform in 2025'",
+      "'2025: Your Time is Now'",
+      "'Embrace Change in 2025'",
+      "'2025: Make it Happen'",
+      "'Discover Joy in 2025'",
+      "'2025: Your Adventure Awaits'",
+      "'Shine Bright in 2025'",
+      "'2025: Dream Bigger'",
+      "'Find Your Path in 2025'",
+      "'2025: Embrace the Journey'",
+      "'Let Hope Guide You in 2025'",
+      "'2025: Your Year of Growth'",
+      "'Spread Your Wings in 2025'",
+      "'2025: Make Every Day Count'",
+      "'Chase Your Stars in 2025'",
+      "'2025: Begin Again'",
+      "'Rise and Shine in 2025'",
+      "'2025: Your Canvas Awaits'",
+      "'Dance with Joy in 2025'",
+      "'2025: Your Story Begins'",
+      "'Embrace Wonder in 2025'",
+      "'2025: Make Magic Happen'",
+      "'Soar Higher in 2025'",
+      "'2025: Choose Joy'",
+      "'Create Wonders in 2025'",
+      "'2025: Your Light Shines'",
+      "'Dream Bold in 2025'",
+      "'2025: Your Journey Begins'"
+    ]
 
-  - name: "new-year-hourglass-pt-nl"
-    prompt: "A magical hourglass against a dark background, glowing neon text reading 'Adeus 2024' and 'Vaarwel 2024' in top chamber and 'Olá 2025' and 'Hallo 2025' in bottom chamber, glowing crystalline sand flowing between chambers, glass material with high reflectivity and transparency, cosmic sparkles and particles floating around, dark wooden base and top, ultra detailed, octane render, volumetric lighting, bokeh particles, 8k"
-    negative_prompt: "blurry, low quality, grainy, noisy, oversaturated, flat lighting, plain background, simple glass, basic textures"
+  style:
+    type: "sequential"
+    values: [
+      "ethereal and dreamy",
+      "cosmic and mystical",
+      "magical and enchanting",
+      "celestial and luminous",
+      "whimsical and bright",
+      "elegant and graceful",
+      "vibrant and dynamic",
+      "serene and peaceful",
+      "radiant and glowing",
+      "sparkling and magical"
+    ]
 
-  - name: "new-year-hourglass-ja-ko"
-    prompt: "A magical hourglass against a dark background, glowing neon text reading 'さようなら 2024' and '안녕히 가세요 2024' in top chamber and 'こんにちは 2025' and '안녕하세요 2025' in bottom chamber, glowing crystalline sand flowing between chambers, glass material with high reflectivity and transparency, cosmic sparkles and particles floating around, dark wooden base and top, ultra detailed, octane render, volumetric lighting, bokeh particles, 8k"
-    negative_prompt: "blurry, low quality, grainy, noisy, oversaturated, flat lighting, plain background, simple glass, basic textures"
-
-  - name: "new-year-hourglass-zh-ru"
-    prompt: "A magical hourglass against a dark background, glowing neon text reading '再见 2024' and 'До свидания 2024' in top chamber and '你好 2025' and 'Привет 2025' in bottom chamber, glowing crystalline sand flowing between chambers, glass material with high reflectivity and transparency, cosmic sparkles and particles floating around, dark wooden base and top, ultra detailed, octane render, volumetric lighting, bokeh particles, 8k"
-    negative_prompt: "blurry, low quality, grainy, noisy, oversaturated, flat lighting, plain background, simple glass, basic textures"
-
-  - name: "new-year-hourglass-ar-hi"
-    prompt: "A magical hourglass against a dark background, glowing neon text reading 'مع السلامة 2024' and 'अलविदा 2024' in top chamber and 'مرحبا 2025' and 'नमस्ते 2025' in bottom chamber, glowing crystalline sand flowing between chambers, glass material with high reflectivity and transparency, cosmic sparkles and particles floating around, dark wooden base and top, ultra detailed, octane render, volumetric lighting, bokeh particles, 8k"
-    negative_prompt: "blurry, low quality, grainy, noisy, oversaturated, flat lighting, plain background, simple glass, basic textures"
-
-  - name: "new-year-hourglass-tr-sv"
-    prompt: "A magical hourglass against a dark background, glowing neon text reading 'Güle güle 2024' and 'Adjö 2024' in top chamber and 'Merhaba 2025' and 'Hej 2025' in bottom chamber, glowing crystalline sand flowing between chambers, glass material with high reflectivity and transparency, cosmic sparkles and particles floating around, dark wooden base and top, ultra detailed, octane render, volumetric lighting, bokeh particles, 8k"
-    negative_prompt: "blurry, low quality, grainy, noisy, oversaturated, flat lighting, plain background, simple glass, basic textures"
-
-style_modifiers:
-  - "dramatic rim lighting, volumetric glow, bioluminescent particles"
-  - "cosmic blues and purples, neon pink accents, ethereal cyan highlights"
-  - "glass refraction, subsurface scattering, metallic flakes in sand"
-  - "dark moody atmosphere, floating dust particles, subtle lens flares"
-  - "high dynamic range, depth of field, chromatic aberration, cinematic color grading"
+  suffix:
+    type: "static"
+    values: ["volumetric lighting, magical particles, lens flares, bokeh effects, iridescent highlights, cinematic atmosphere, intricate details, 8k"]

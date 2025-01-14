@@ -6,8 +6,8 @@ prompt_settings:
 # Image generation parameters
 cfg: 1.0
 steps: 30
-width: 832
-height: 1216
+width: 1344
+height: 768
 seeds: [2025]
 sampler: "euler"
 scheduler: "normal"

@@ -1,0 +1,87 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "Delirium style,"
+  negative: "ugly, deformed, noisy, blurry, low quality, text, watermark"
+
+# Image generation parameters
+cfg: 1.0
+steps: 25
+width: 1344
+height: 768
+seeds: [2025]
+sampler: "euler"
+scheduler: "normal"
+denoise: 1.0
+
+# LoRA configurations
+loras:
+  lora:
+    - name: "Bonafida.Studio"
+      strength: 1.0
+
+prompts:
+- "The image is a digital artwork, rendered in a hyper-realistic CGI style, featuring a surreal and abstract depiction of a human head. The central figure is a stylized, almost robotic humanoid head with a glossy, dark, almost black surface that reflects and refracts light, giving it a sleek, metallic appearance. The head is split vertically, with the upper half forming a hollow, transparent, and reflective dome. Inside this dome, a stunning, glowing image of a tree with a fiery, orange-yellow aura is visible, creating a stark contrast to the dark outer surface. <lora:Bonafida.Studio:1>,"
+- "The image is a digital artwork, rendered in a hyper-realistic CGI style, featuring a surreal and abstract depiction of a human head. The head appears to be made of crystal-clear ice, with intricate fractal patterns etched throughout its surface. Within the transparent form, a vibrant ecosystem thrives - delicate butterflies in iridescent blues and purples flutter through internal chambers, while bioluminescent flowers bloom along neural pathways. The background fades from deep indigo to midnight blue. <lora:Bonafida.Studio:1>,"
+- "The image is a digital artwork, rendered in a hyper-realistic CGI style, depicting an abstract human profile composed entirely of flowing water. The liquid form maintains the distinct shape of a face while containing a mesmerizing underwater scene within - schools of ethereal, glowing jellyfish pulse rhythmically through the aqueous form, trailing threads of light. The surrounding space is a gradient of deep marine blues to turquoise. <lora:Bonafida.Studio:1>,"
+- "The image is a digital artwork, rendered in a hyper-realistic CGI style, showing a sculptural human head formed from intertwining vines and branches. The organic structure creates hollow chambers within the head, where a miniature aurora borealis dances - ribbons of green, purple, and cyan light weave through the natural lattice. Tiny stars twinkle in the dark spaces between the foliage. <lora:Bonafida.Studio:1>,"
+- "Digital artwork, hyper-realistic CGI style, depicting a human head made of shimmering liquid mercury. Within its fluid form, cosmic nebulae swirl in vibrant purples and teals, with stardust particles suspended throughout. The metallic surface catches and reflects prismatic light, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, showing a crystalline human head composed of geometric prisms. Inside, a miniature galaxy spirals, with planets orbiting through transparent chambers. The faceted surface refracts rainbow light patterns, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, portraying a human head formed from woven strands of light. Within its luminous structure, a perpetual sunset cycles, painting the internal space in warm golds and fierce crimsons. Light rays pierce through the gaps, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, featuring a human head sculpted from swirling storm clouds. Lightning arcs through its vaporous form, illuminating rain droplets suspended within. The stormy surface roils with dark greys and electric blues, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, showing a human head composed of floating autumn leaves. Inside, fireflies dance through the spaces between the foliage, creating patterns of warm, golden light. The leaves shift from deep reds to bright oranges, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, depicting a human head made of fractured mirror shards. Each piece reflects a different season, creating a kaleidoscopic effect of winter snow, spring blooms, summer sun, and autumn colors, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, portraying a human head formed from delicate paper origami. Within its folded structure, a Japanese garden miniature thrives, complete with tiny koi ponds and cherry blossoms. The paper surface shows subtle textures, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, featuring a human head constructed from flowing silk ribbons. Inside, a ballet dancer twirls eternally, trailing streams of stardust through the ethereal space. The silk shifts colors like an opal, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, showing a human head carved from ancient tree rings. Within its wooden layers, time itself is visible as glowing rings pulse with memories and dreams. The surface shows rich, warm wood grain patterns, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, depicting a human head composed of floating musical notes. Inside, sound waves visualize as colorful ripples, creating an aurora-like display of rhythm and melody. The notes shimmer with metallic gold, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, portraying a human head formed from intertwining DNA helixes. Within its genetic structure, microscopic cells pulse with bioluminescent life. The surface gleams with an iridescent, pearl-like quality, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, featuring a human head made of cascading waterfalls. Inside, a miniature rainforest thrives, with tiny exotic birds flying through the mist. The water catches rainbow refractions, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, showing a human head sculpted from volcanic glass. Within its obsidian form, magma flows create patterns of fierce orange and red, with sparks of white-hot energy. The surface reflects light like polished onyx, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, depicting a human head woven from starlight. Inside, constellations shift and reform, telling ancient stories through patterns of light. The stellar surface twinkles with cosmic energy, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, portraying a human head formed from frozen time. Within its crystalline structure, moments are suspended like insects in amber, each one glowing with its own temporal energy. The surface ripples with chronological waves, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, featuring a human head composed of quantum particles. Inside, probability waves collapse and reform in mesmerizing patterns of light and energy. The surface shimmers with quantum uncertainty, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, showing a human head made of living coral. Within its organic structure, schools of tropical fish dart through elaborate chambers. The coral surface glows with subtle bioluminescence, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, depicting a human head carved from wind currents. Inside, weather patterns swirl and form, creating miniature tornados and storm systems. The surface ripples with visible air currents, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, portraying a human head formed from digital code. Within its binary structure, artificial life evolves and adapts, creating patterns of green and blue energy. The surface displays scrolling matrices of numbers, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, featuring a human head constructed from butterfly wings. Inside, a perpetual metamorphosis occurs as chrysalises open to release new life. The wing surfaces shimmer with iridescent patterns, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, showing a human head composed of ancient scrolls. Within its papyrus structure, words flow and reform into new stories and poems. The surface shows aged parchment textures, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, depicting a human head made of shifting sand dunes. Inside, ancient civilizations rise and fall in miniature, leaving traces in the granular landscape. The surface ripples with desert winds, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, portraying a human head formed from northern lights. Within its auroral structure, solar winds dance and play across a miniature polar landscape. The surface shimmers with ethereal colors, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, featuring a human head sculpted from crystal geodes. Inside, mineral formations grow and evolve in rainbow hues. The surface sparkles with natural crystalline facets, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, showing a human head woven from spider silk. Within its delicate structure, dewdrops catch and reflect entire worlds in their spherical surfaces. The silk gleams with pearlescent light, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, depicting a human head composed of clockwork gears. Inside, time mechanisms turn and spin in perfect synchronization. The surface shows polished brass and copper textures, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, portraying a human head formed from radio waves. Within its electromagnetic structure, music visualizes as complex geometric patterns. The surface pulses with rhythmic energy, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, featuring a human head made of living moss and lichen. Inside, tiny ecosystems thrive with microscopic creatures. The surface shows rich organic textures, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, showing a human head carved from pure light. Within its radiant form, prisms split and recombine colors in endless variations. The surface glows with intense luminosity, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, depicting a human head composed of floating book pages. Inside, characters and stories come to life in miniature theatrical scenes. The surface shows delicate paper textures, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, portraying a human head formed from ocean waves. Inside, deep-sea creatures illuminate the dark waters with bioluminescent displays. The surface reflects and refracts like moving water, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, featuring a human head sculpted from moon phases. Within its lunar structure, tides of stardust ebb and flow. The surface glows with soft, silvery light, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, showing a human head woven from neural networks. Inside, thoughts fire like electrical impulses through a complex web. The surface pulses with synaptic energy, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, depicting a human head made of floating feathers. Inside, birds of paradise perform elaborate courtship dances. The surface shows delicate barb and vane patterns, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, portraying a human head formed from smoke rings. Within its vaporous structure, dreams take shape and dissolve. The surface swirls with ethereal patterns, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, featuring a human head composed of melting snowflakes. Inside, winter scenes play out in miniature ice crystals. The surface sparkles with frozen fractals, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, showing a human head carved from living roots. Within its organic network, nutrients flow like rivers of gold. The surface shows intricate growth patterns, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, depicting a human head made of shifting constellations. Inside, new stars are born in nebular clouds. The surface twinkles with celestial light, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, portraying a human head formed from piano keys. Within its musical structure, notes visualize as blooming flowers. The surface alternates black and white in perfect harmony, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, featuring a human head sculpted from morning dew. Inside, sunrise colors paint the water droplets in pastel hues. The surface catches early morning light, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, showing a human head woven from city lights. Within its urban structure, miniature life unfolds in glowing windows. The surface sparkles like a nighttime cityscape, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, depicting a human head composed of floating equations. Inside, mathematical concepts take physical form in geometric patterns. The surface shows elegant formula scripts, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, portraying a human head formed from volcanic ash. Within its mineral structure, new landscapes form and erode. The surface shows subtle gradients of grey, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, featuring a human head made of prismatic crystals. Inside, light splits into pure spectral colors. The surface refracts rainbow patterns, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, showing a human head carved from bamboo. Within its hollow segments, zen gardens create spaces of perfect tranquility. The surface shows natural wood grain, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, depicting a human head composed of falling rain. Inside, stories write themselves in water droplets. The surface ripples with liquid motion, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, portraying a human head formed from autumn winds. Within its aerial structure, leaves dance in complex patterns. The surface shows visible air currents, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, featuring a human head sculpted from desert mirages. Inside, oases appear and disappear in shimmering heat. The surface wavers with thermal distortion, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, showing a human head woven from spider webs. Within its silken structure, morning dew creates rainbow prisms. The surface gleams with delicate threads, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, depicting a human head made of floating memories. Inside, past moments replay in soft, dreamy colors. The surface ripples like old film, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, portraying a human head formed from magnetic fields. Within its energetic structure, iron filings create dynamic patterns. The surface pulses with magnetic force, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, featuring a human head composed of floating petals. Inside, gardens bloom in eternal spring. The surface shows delicate flower textures, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, showing a human head carved from frozen lightning. Within its electrical structure, storms rage in miniature. The surface crackles with frozen energy, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, depicting a human head made of shifting shadows. Inside, light and dark dance in eternal balance. The surface ripples with umbral patterns, <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, portraying a human head formed from burning embers. Within its fiery structure, phoenixes rise from ash. The surface glows with inner heat, <lora:Bonafida.Studio:1>"
+
+# Variations for prompt generation
+variations:
+  empy:
+    type: "static"
+    values: [""]

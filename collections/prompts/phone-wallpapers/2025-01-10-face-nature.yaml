@@ -1,0 +1,33 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "Delirium style,"
+  negative: "ugly, deformed, noisy, blurry, low quality, text, watermark"
+
+# Image generation parameters
+cfg: 1.0
+steps: 25
+width: 832
+height: 1216
+seeds: [2025]
+sampler: "euler"
+scheduler: "normal"
+denoise: 1.0
+
+# LoRA configurations
+loras:
+  lora:
+    - name: "Bonafida.Studio"
+      strength: 1.0
+
+prompts:
+- "The image is a digital artwork, rendered in a hyper-realistic CGI style, featuring a surreal and abstract depiction of a human head. The head appears to be made of crystal-clear ice, with intricate fractal patterns etched throughout its surface. Within the transparent form, a vibrant ecosystem thrives - delicate butterflies in iridescent blues and purples flutter through internal chambers, while bioluminescent flowers bloom along neural pathways. The background fades from deep indigo to midnight blue. <lora:Bonafida.Studio:1>,"
+
+- "The image is a digital artwork, rendered in a hyper-realistic CGI style, depicting an abstract human profile composed entirely of flowing water. The liquid form maintains the distinct shape of a face while containing a mesmerizing underwater scene within - schools of ethereal, glowing jellyfish pulse rhythmically through the aqueous form, trailing threads of light. The surrounding space is a gradient of deep marine blues to turquoise. <lora:Bonafida.Studio:1>,"
+
+- "The image is a digital artwork, rendered in a hyper-realistic CGI style, showing a sculptural human head formed from intertwining vines and branches. The organic structure creates hollow chambers within the head, where a miniature aurora borealis dances - ribbons of green, purple, and cyan light weave through the natural lattice. Tiny stars twinkle in the dark spaces between the foliage. <lora:Bonafida.Studio:1>,"
+
+# Variations for prompt generation
+variations:
+  empy:
+    type: "static"
+    values: [""]

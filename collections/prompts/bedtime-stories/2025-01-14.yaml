@@ -1,0 +1,58 @@
+# Summary: A heartwarming tale of a tall giraffe who dreams of becoming a dancer. With the help of a graceful spotted leopard 
+# and an energetic red-feathered parrot, the giraffe learns different dance moves. A wise grey elephant and a playful striped zebra 
+# watch and cheer as the giraffe discovers the joy of dancing and eventually performs in the jungle talent show.
+
+prompt_settings:
+  prefix: "Painterly fantasy realism with whimsical storybook, "
+  negative: "By bad artist -neg, , V2, FastNegativeV2, ,  (1), ,(worst quality:2), (low quality:2), (normal quality:2),(uneven eyes),lowres, normal quality,bad anatomy,bad face,(uneven eyes),paintings,ugly, bad hands,open mouth,multiple girls,extra faces, extro breasts, multiple breasts,obese, fat rolls,extra arms, extra eyes,inverted nipples,extra ears,nipple rings,severed arm, bad arm, nipple bar,asymmetrical eyebrows,big mouth, embedding:ng_deepnegative_v1_75t, embedding:negative_hand-neg, embedding:EasyNegative, embedding:badhandv4, embedding:verybadimagenegative_v1.3"
+
+cfg: 1.0
+steps: 20
+width: 1344
+height: 768
+seeds: [159753]
+sampler: "euler"
+scheduler: "simple"
+denoise: 1
+
+loras:
+  lora:
+    - name: "Bonafida.Studio"
+      strength: 1.0
+
+prompts:
+  - "A tiny fairy with iridescent wings flutters curiously around a young dragon with emerald scales who's hiding behind a waterfall"
+  - "The young dragon with emerald scales stretches his wings timidly while the tiny fairy hovers encouragingly nearby"
+  - "A wise owl with spectacles perches on a branch, gesturing with his wing as the emerald dragon watches attentively"
+  - "The tiny fairy with iridescent wings demonstrates graceful aerial moves while the emerald dragon follows with his eyes"
+  - "A gentle unicorn with rainbow mane gallops alongside the emerald dragon who's attempting small hops"
+  - "The young dragon with emerald scales climbs a hill while the tiny fairy circles around him supportively"
+  - "A playful rabbit with golden fur bounds ahead as the emerald dragon chases playfully"
+  - "The tiny fairy with iridescent wings pulls the emerald dragon's tail playfully toward a cliff edge"
+  - "The wise owl with spectacles swoops down to correct the emerald dragon's wing position"
+  - "The young dragon with emerald scales flaps his wings vigorously while the tiny fairy cheers"
+  - "The gentle unicorn with rainbow mane demonstrates a graceful leap while the emerald dragon observes"
+  - "The tiny fairy with iridescent wings sprinkles magical dust over the emerald dragon's wings"
+  - "The playful rabbit with golden fur jumps over logs while the emerald dragon follows"
+  - "The young dragon with emerald scales glides briefly while the tiny fairy flies alongside"
+  - "The wise owl with spectacles demonstrates a landing technique to the emerald dragon"
+  - "The tiny fairy with iridescent wings guides the emerald dragon through cloud formations"
+  - "The gentle unicorn with rainbow mane races beneath the emerald dragon's first sustained flight"
+  - "The young dragon with emerald scales soars while the tiny fairy loops joyfully around him"
+  - "The playful rabbit with golden fur watches from below as the emerald dragon practices turns"
+  - "The tiny fairy with iridescent wings leads the emerald dragon through a forest obstacle course"
+  - "The wise owl with spectacles supervises as the emerald dragon attempts a dive"
+  - "The young dragon with emerald scales catches air currents while the tiny fairy points the way"
+  - "The gentle unicorn with rainbow mane creates a rainbow path for the emerald dragon to follow"
+  - "The tiny fairy with iridescent wings shows the emerald dragon how to ride thermal winds"
+  - "The playful rabbit with golden fur arranges target areas for the emerald dragon's landing practice"
+  - "The young dragon with emerald scales performs aerial twirls while the tiny fairy applauds"
+  - "The wise owl with spectacles nods approvingly as the emerald dragon executes perfect loops"
+  - "The tiny fairy with iridescent wings and emerald dragon race through puffy clouds"
+  - "The gentle unicorn with rainbow mane gallops through meadows as the emerald dragon glides overhead"
+  - "The young dragon with emerald scales dives gracefully while the tiny fairy watches proudly"
+  - "The playful rabbit with golden fur bounces excitedly as the emerald dragon lands smoothly"
+  - "The tiny fairy with iridescent wings and emerald dragon soar together at sunset"
+  - "The wise owl with spectacles presents the emerald dragon with a golden feather"
+  - "The young dragon with emerald scales performs a victory loop while the tiny fairy celebrates"
+  - "The gentle unicorn with rainbow mane creates a spectacular rainbow as the emerald dragon soars through"
