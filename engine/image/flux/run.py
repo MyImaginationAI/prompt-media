@@ -365,7 +365,7 @@ def save_images(images, output_dir, global_count, seed, current_time, prompt_med
     # Convert the output_dir to Path object if it's a string
     output_base = Path(output_dir)
 
-    # Use the current time to generate the datetime-based directory structure
+    # Create datetime-based directory structure using the helper function
     output_path = get_datetime_output_path(output_base, current_time)
 
     # Create the media and images directories
@@ -648,11 +648,12 @@ def generate_image(
             "timestamp": current_time.isoformat()
         }
         
-        # Generate output path for metadata
+        # Generate output path for metadata using datetime structure
         output_dir_path = Path(output_dir)
-        metadata_path = output_dir_path / f"{global_count:03d}_seed_{seed}.json"
-        output_dir_path.mkdir(parents=True, exist_ok=True)
+        output_path = get_datetime_output_path(output_dir_path, current_time)
+        output_path.mkdir(parents=True, exist_ok=True)
         
+        metadata_path = output_path / f"{global_count:03d}_seed_{seed}.json"
         with open(metadata_path, 'w') as f:
             json.dump(workflow_metadata, f, indent=2)
         logging.info(f"{MessageSymbols.SAVE} Saved workflow metadata to: {metadata_path}")

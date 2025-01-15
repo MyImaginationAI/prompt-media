@@ -94,13 +94,29 @@ def test_process_template(tmp_path):
 
 
 def test_generate_workflow_path(tmp_path):
-    """Test generating workflow path."""
+    """Test generating workflow path with datetime directory structure."""
+    from datetime import datetime
+    from unittest.mock import patch
+    
     processor = Jinja2TemplateProcessor()
     context = {
         "prompt_text": "Test prompt",
         "lora_name": "test_lora.safetensors"
     }
     
-    path = processor.generate_workflow_path(str(tmp_path), "test", context)
-    assert Path(path).suffix == ".json"
-    assert "test" in Path(path).name
+    # Mock current time to ensure consistent test results
+    mock_time = datetime(2025, 1, 15, 15, 39)
+    with patch('datetime.datetime') as mock_datetime:
+        mock_datetime.now.return_value = mock_time
+        
+        path = processor.generate_workflow_path(str(tmp_path), "test", context)
+        path_obj = Path(path)
+        
+        # Verify file extension and name pattern
+        assert path_obj.suffix == ".json"
+        assert "test" in path_obj.name
+        
+        # Verify directory structure (YYYY/MM/DD/HHMM)
+        expected_dir = tmp_path / "2025" / "01" / "15" / "1539"
+        assert path_obj.parent == expected_dir
+        assert expected_dir.exists()

@@ -161,12 +161,23 @@ class Jinja2TemplateProcessor(WorkflowTemplateProcessor):
             raise
 
     def generate_workflow_path(self, output_dir: str, filename_prefix: str, context: Dict[str, Any]) -> str:
-        """Generate a unique workflow path based on context."""
+        """Generate a unique workflow path based on context and datetime structure."""
+        from datetime import datetime
+        
         # Create a hash of the context to ensure unique filenames
         context_hash = hashlib.md5(json.dumps(context, sort_keys=True).encode()).hexdigest()[:8]
         
         # Generate filename with prefix and hash
         filename = f"{filename_prefix}_{context_hash}.json"
         
+        # Create datetime-based directory structure
+        current_time = datetime.now()
+        date_dir = current_time.strftime("%Y/%m/%d")
+        time_dir = current_time.strftime("%H%M")
+        
+        # Combine all parts
+        output_path = Path(output_dir) / date_dir / time_dir
+        output_path.mkdir(parents=True, exist_ok=True)
+        
         # Return full path
-        return str(Path(output_dir) / filename)
+        return str(output_path / filename)

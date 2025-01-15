@@ -125,10 +125,11 @@ class WorkflowManager:
             "timestamp": datetime.now().isoformat()
         }
         
-        # Save workflow metadata as JSON alongside workflow file
-        json_path = Path(output_path).with_suffix('.json')
+        # Save workflow metadata as JSON in the same directory
+        workflow_path = Path(output_path)
+        json_path = workflow_path.with_name(f"{workflow_path.stem}_metadata.json")
         with open(json_path, 'w') as f:
             json.dump(workflow_metadata, f, indent=2)
-        self.logger.info(f"💾 Saved workflow metadata to: {json_path}")
+        self.logger.info(f"💾 Saved workflow metadata to: {json_path.relative_to(output_dir)}")
 
         return output_path, workflow_metadata

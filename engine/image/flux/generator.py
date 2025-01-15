@@ -91,14 +91,23 @@ class ImageGenerator:
 
     def _save_images(self, images: List[bytes], output_dir: str, count: int, seed: int, workflow_metadata: dict) -> List[str]:
         """Save generated images to output directory."""
-        os.makedirs(output_dir, exist_ok=True)
+        # Create date-based directory structure
+        current_time = datetime.datetime.now()
+        date_dir = os.path.join(
+            output_dir,
+            current_time.strftime("%Y"),
+            current_time.strftime("%m"),
+            current_time.strftime("%d"),
+            current_time.strftime("%H%M")
+        )
+        os.makedirs(date_dir, exist_ok=True)
 
         image_paths = []
         for idx, image_data in enumerate(images):
             try:
                 image = Image.open(io.BytesIO(image_data))
                 filename = f"{count + idx + 1:04d}_seed_{seed}.png"
-                filepath = os.path.join(output_dir, filename)
+                filepath = os.path.join(date_dir, filename)
                 image.save(filepath)
                 image_paths.append(filepath)
                 self.logger.info(f"💾 Saved image to: {filepath}")
