@@ -1,0 +1,225 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "Digital artwork, hyper-realistic CGI style, <lora:cyborgheadv2:1>, "
+  negative: ""
+
+# Image generation parameters
+cfg: 1.0
+steps: 25
+width: 1344
+height: 768
+seeds: [2025]
+sampler: "euler"
+scheduler: "normal"
+denoise: 1.0
+
+# LoRA configurations
+loras:
+  lora:
+    - name: "cyborgheadv2"
+      strength: 1.0
+
+variations:
+- cat wearing orange sunglasses, a gray beanie with a pom-pom, and a casual gray hoodie holds up a wooden sign reading 
+
+variations:
+  text:
+    type: "sequential"
+    values:
+    # AI and Intelligence Terms
+    - "INTELLIGENCE"
+    - "ARTIFICIAL"
+    - "NEURAL"
+    - "COGNITIVE"
+    - "SENTIENT"
+    - "CONSCIOUS"
+    - "SAPIENT"
+    - "ALGORITHM"
+    - "LEARNING"
+    - "DEEPMIND"
+    - "CORTEX"
+    - "QUANTUM"
+    - "SYNTHETIC"
+    - "AUTONOMOUS"
+    - "ADAPTIVE"
+    
+    # Imagination and Creativity
+    - "IMAGINE"
+    - "IMAGINATION"
+    - "CREATIVE"
+    - "DREAM"
+    - "VISION"
+    - "INSPIRE"
+    - "INNOVATE"
+    - "DISCOVER"
+    - "EXPLORE"
+    - "WONDER"
+    - "PERCEIVE"
+    - "CONCEIVE"
+    - "ENVISION"
+    - "IDEATE"
+    - "THINK"
+    
+    # Technology Terms
+    - "DIGITAL"
+    - "CYBER"
+    - "BINARY"
+    - "NETWORK"
+    - "SYSTEM"
+    - "MATRIX"
+    - "VECTOR"
+    - "CIRCUIT"
+    - "PROGRAM"
+    - "CODE"
+    - "DATA"
+    - "COMPUTE"
+    - "PROCESS"
+    - "MACHINE"
+    - "ROBOT"
+    
+    # Future Concepts
+    - "FUTURE"
+    - "EVOLVE"
+    - "ADVANCE"
+    - "PROGRESS"
+    - "DEVELOP"
+    - "ENHANCE"
+    - "UPGRADE"
+    - "OPTIMIZE"
+    - "TRANSFORM"
+    - "TRANSCEND"
+    - "ASCEND"
+    - "BEYOND"
+    - "INFINITE"
+    - "ETERNAL"
+    - "LIMITLESS"
+    
+    # Scientific Terms
+    - "SCIENCE"
+    - "RESEARCH"
+    - "ANALYZE"
+    - "CALCULATE"
+    - "MEASURE"
+    - "OBSERVE"
+    - "EXPERIMENT"
+    - "DISCOVER"
+    - "INNOVATE"
+    - "PIONEER"
+    - "EXPLORE"
+    - "STUDY"
+    - "LEARN"
+    - "SOLVE"
+    - "DECODE"
+    
+    # Mind and Consciousness
+    - "MIND"
+    - "THOUGHT"
+    - "AWARE"
+    - "CONSCIOUS"
+    - "COGNITION"
+    - "REASON"
+    - "LOGIC"
+    - "WISDOM"
+    - "KNOWLEDGE"
+    - "INSIGHT"
+    - "INTELLECT"
+    - "MEMORY"
+    - "PROCESS"
+    - "COMPUTE"
+    - "THINK"
+    
+    # Power and Energy
+    - "POWER"
+    - "ENERGY"
+    - "FORCE"
+    - "CHARGE"
+    - "PULSE"
+    - "SURGE"
+    - "FLOW"
+    - "CURRENT"
+    - "STREAM"
+    - "WAVE"
+    - "FIELD"
+    - "BEAM"
+    - "PLASMA"
+    - "QUANTUM"
+    - "FUSION"
+    
+    # Control and Command
+    - "CONTROL"
+    - "COMMAND"
+    - "DIRECT"
+    - "MANAGE"
+    - "OPERATE"
+    - "EXECUTE"
+    - "PROCESS"
+    - "REGULATE"
+    - "MONITOR"
+    - "OVERSEE"
+    - "GUIDE"
+    - "LEAD"
+    - "DRIVE"
+    - "PILOT"
+    - "NAVIGATE"
+    
+    # Evolution and Growth
+    - "EVOLVE"
+    - "GROW"
+    - "DEVELOP"
+    - "ADVANCE"
+    - "PROGRESS"
+    - "EXPAND"
+    - "EXTEND"
+    - "ENHANCE"
+    - "IMPROVE"
+    - "OPTIMIZE"
+    - "UPGRADE"
+    - "UPDATE"
+    - "REFINE"
+    - "PERFECT"
+    - "MASTER"
+    
+    # Connection and Network
+    - "CONNECT"
+    - "NETWORK"
+    - "LINK"
+    - "BRIDGE"
+    - "INTERFACE"
+    - "SYNC"
+    - "MERGE"
+    - "INTEGRATE"
+    - "UNITE"
+    - "BOND"
+    - "JOIN"
+    - "MESH"
+    - "WEAVE"
+    - "COMBINE"
+    - "FUSION"
+    
+    # Brands and Products
+    - "MYIMAGINATIONAI"
+    - "OPENAI"
+    - "ANTHROPIC"
+    - "CLAUDE"
+    - "TESLA"
+    - "NVIDIA"
+    - "INTEL"
+    - "GOOGLE"
+    - "MICROSOFT"
+    - "AMAZON"
+    - "APPLE"
+    - "META"
+    - "NEURALINK"
+    - "DEEPMIND"
+    - "BOSTON_DYNAMICS"
+  suffix:
+    type: "static"
+    values: 
+    - " creating a perfect blend of urban street art and digital illustration styles, while surrounded by dynamic,"
+  colors:
+    type: "sequential"
+    values:
+    - orange splatter effects
+    - red splatter effects
+    - blue splatter effects
+    - green splatter effects

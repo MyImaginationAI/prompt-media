@@ -1,0 +1,48 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "Delirium style,"
+  negative: "ugly, deformed, noisy, blurry, low quality, text, watermark"
+
+# Image generation parameters
+cfg: 1.0
+steps: 25
+width: 1344
+height: 768
+seeds: [2025]
+sampler: "euler"
+scheduler: "normal"
+denoise: 1.0
+
+# LoRA configurations
+loras:
+  lora:
+    - name: "Bonafida.Studio"
+      strength: 1.0
+
+prompts:
+- "Digital artwork, hyper-realistic CGI style, depicting a human face emerging from a pool of liquid prismatic colors. The skin appears to be made of opal, with iridescent patches that shift from deep azure to molten gold as light plays across its surface. Within the translucent form, streams of rainbow colors flow like northern lights, creating ethereal patterns. <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, showing a face composed of pure spectral light. The features are defined by where different colors intersect - violet eyes that fade to indigo, cheekbones traced in electric blue, lips painted in warm crimson that bleeds into orange. The entire form radiates with internal luminescence. <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, portraying a face formed from thousands of floating paint droplets. Each droplet contains a different color, creating a pointillist effect where cool tones of teal and cerulean form the shadows, while warm coral and amber droplets define the highlights. <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, featuring a face emerging from a color spectrum vortex. The skin transitions through the entire visible spectrum, from deep violets at the crown to vibrant reds at the chin, with each color seeming to swirl and blend into the next. <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, depicting a crystalline face that refracts light like a prism. Each facet catches and splits light differently, creating a kaleidoscopic display where ruby reds meet sapphire blues and emerald greens in geometric patterns. <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, showing a face composed of color-changing flowers. The blooms shift from deep purple to electric blue to seafoam green, creating a living portrait where each petal contributes to the facial features. <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, portraying a face made of colored smoke. Tendrils of violet and turquoise vapor intertwine to form the features, while golden particles of light dance through the ethereal structure. <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, featuring a face emerging from a cascade of liquid metals. Rose gold flows into sterling silver, which bleeds into molten copper, creating an ever-shifting metallic portrait with rainbow patina effects. <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, depicting a face formed from color-changing ink in water. Deep indigo bleeds into vibrant magenta, while swirls of electric cyan define the features, all suspended in clear liquid. <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, showing a face composed of aurora borealis lights. The features are painted in sweeping bands of green, purple, and blue energy, with particles of stellar light scattered throughout. <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, portraying a face made of dichroic glass. The surface shifts colors depending on viewing angle, transitioning from deep peacock blue to molten amber to royal purple. <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, featuring a face emerging from a field of color-changing crystals. Each crystal pulses with its own internal light, creating a mosaic of jewel tones that form the facial features. <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, depicting a face composed of living rainbows. The features are formed where different spectrums intersect, creating areas of intense color saturation and ethereal light. <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, showing a face made of color-changing plasma. Electric blues and hot pinks surge through the form like lightning, while cool greens and purples create depth and shadow. <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, portraying a face formed from iridescent butterfly wings. Each section shifts color as light moves across it, creating a living kaleidoscope of blues, purples, and greens. <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, featuring a face emerging from a sunset sky. The features are painted in warm golds, fierce oranges, and soft lavenders, with hints of blue night creeping in at the edges. <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, depicting a face composed of bioluminescent organisms. Different species create various colors - blue algae, green fireflies, and purple deep-sea creatures all contributing to the portrait. <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, showing a face made of color-changing mercury. The liquid metal surface shifts through metallic rainbow hues, creating an ever-changing portrait of flowing colors. <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, portraying a face formed from thousands of tiny prisms. Each one catches light differently, creating a complex interplay of pure spectral colors that form the features. <lora:Bonafida.Studio:1>"
+- "Digital artwork, hyper-realistic CGI style, featuring a face emerging from a field of color-changing quantum particles. The subatomic display shifts through impossible colors as probability waves collapse and reform. <lora:Bonafida.Studio:1>"
+
+# Variations for prompt generation
+variations:
+  empy:
+    type: "static"
+    values: [""]

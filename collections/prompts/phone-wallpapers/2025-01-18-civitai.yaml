@@ -1,0 +1,46 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "Digital artwork, hyper-realistic CGI style, <lora:cyborgheadv2:1>, "
+  negative: ""
+
+# Image generation parameters
+cfg: 1.0
+steps: 25
+width: 1344
+height: 768
+seeds: [2025]
+sampler: "euler"
+scheduler: "normal"
+denoise: 1.0
+
+# LoRA configurations
+loras:
+  lora:
+    - name: "cyborgheadv2"
+      strength: 1.0
+
+prompts:
+# Combat Ready Series
+- "depicting a menacing cybernetic humanoid with a stark white skeletal face in a combat stance, exposed internal wiring pulsing with red energy, and pristine white-and-black armored plating. A prominent crimson skull emblem on the chest plate glows ominously as the figure aims a sleek plasma rifle, silhouetted against emergency red lighting in a dark industrial corridor"
+- "showing an imposing cyborg warrior emerging from shadows, bone-white facial structure illuminated by red warning lights, tactical black and white armor panels arranged in aggressive angles. The figure stands alert with a high-tech rifle at the ready, internal systems casting an eerie red glow through armor seams"
+- "featuring a militaristic android sentinel with a ghostly white skull-like visage, advanced targeting systems glowing red in its eye sockets, and segmented white-black combat armor. The figure stands guard with a futuristic weapon, backlit by pulsing red emergency lights that cast long shadows"
+
+# Patrol Series
+- "depicting a cybernetic enforcer with white skeletal facial features patrolling a dark corridor, internal mechanisms glowing red through gaps in pristine white and black armor plating. The crimson skull insignia on its chest reflects off polished surfaces as it scans the area with its rifle raised"
+- "showing a robotic guardian with bone-white face plates stalking through steam-filled maintenance tunnels, red warning lights reflecting off its black and white tactical armor. Exposed power conduits pulse with crimson energy as it moves with predatory grace"
+- "featuring a mechanical hunter with stark white skull-like features prowling through shadow-filled halls, its white-and-black armored form illuminated by strobing red alarm lights. The skull emblem on its chest plate seems to watch intently as it tracks unseen targets"
+
+# Battle Stance Series
+- "depicting an armored cyborg warrior in an aggressive stance, its white skeletal face reflecting red emergency lighting as internal systems pulse with crimson energy. Black and white armor plates shift as it levels a plasma rifle, the skull emblem on its chest casting an intimidating glow"
+- "showing a combat-ready android with bone-white facial structure preparing to engage, red power signatures visible through gaps in its pristine white and black plating. The figure stands resolute, weapon primed, as crimson warning lights paint the scene in threatening hues"
+- "featuring a militant synthetic being with ghost-white skull features assuming a defensive position, tactical white-and-black armor gleaming under red alert lighting. Its chest-mounted skull insignia pulses with power as it readies its advanced weaponry"
+
+# Sentry Mode Series
+- "depicting a vigilant cybernetic guardian with white skeletal face plates scanning the perimeter, exposed circuitry glowing red beneath white and black armor segments. The skull emblem on its chest plate serves as a warning while it maintains its watch with rifle at the ready"
+- "showing an ever-watchful robotic sentry with bone-white facial features monitoring for threats, its black and white armored form stationed against a backdrop of pulsing red indicator lights. Internal systems cast an eerie glow through armor joints as it stands guard"
+- "featuring a mechanical protector with pristine white skull-like features maintaining its post, tactical white-and-black plating reflecting crimson emergency lighting. The figure remains motionless yet alert, advanced weapon systems primed for immediate response"
+
+# Alert Status Series
+- "depicting a cybernetic soldier with stark white skeletal face responding to a threat, red alert lighting casting dramatic shadows across its white and black armored form. The skull emblem pulses with warning as it moves with calculated precision, weapon raised"
+- "showing a robotic warrior with bone-white facial plating reacting to danger, internal systems flaring red through gaps in pristine black and white armor. Emergency lights strobe across its form as it assumes a combat-ready stance with its rifle"
+- "featuring an android defender with ghost-white skull features transitioning to battle mode, tactical white-and-black armor segments shifting as red warning lights flood the area. The crimson skull emblem on its chest signals imminent engagement"

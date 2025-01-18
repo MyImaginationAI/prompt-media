@@ -1,0 +1,55 @@
+# Summary: A heartwarming tale of friendship between toys who come to life when humans aren't around. 
+# A tall cowboy doll with a brown vest learns to share leadership with a shiny space ranger toy with glowing buttons. 
+# Together, with help from a pink piggy bank with a cork bottom, a green dinosaur toy with tiny arms, and a stretchy 
+# dog toy with metal coil body, they embark on an adventure to return home before their young owner returns.
+
+prompt_settings:
+  prefix: "3D animation style, Pixar-inspired rendering, "
+  negative: "By bad artist -neg, , V2, FastNegativeV2, ,  (1), ,(worst quality:2), (low quality:2), (normal quality:2),(uneven eyes),lowres, normal quality,bad anatomy,bad face,(uneven eyes),paintings,ugly, bad hands,open mouth,multiple girls,extra faces, extro breasts, multiple breasts,obese, fat rolls,extra arms, extra eyes,inverted nipples,extra ears,nipple rings,severed arm, bad arm, nipple bar,asymmetrical eyebrows,big mouth, embedding:ng_deepnegative_v1_75t, embedding:negative_hand-neg, embedding:EasyNegative, embedding:badhandv4, embedding:verybadimagenegative_v1.3"
+
+cfg: 1.0
+steps: 20
+width: 1344
+height: 768
+seeds: [159753]
+sampler: "euler"
+scheduler: "simple"
+denoise: 1
+
+loras:
+  lora:
+    - name: "Bonafida.Studio"
+      strength: 1.0
+
+prompts:
+  - "A tall cowboy doll with a brown vest tiptoes across a wooden desk while a shiny space ranger toy with glowing buttons watches from behind a lamp"
+  - "The shiny space ranger toy with glowing buttons demonstrates his laser arm while the tall cowboy doll with a brown vest rolls his eyes"
+  - "A pink piggy bank with a cork bottom waddles excitedly as the tall cowboy doll with a brown vest climbs down bedsheets"
+  - "The tall cowboy doll with a brown vest swings from a doorknob while the shiny space ranger toy glides past"
+  - "A green dinosaur toy with tiny arms helps push the tall cowboy doll up onto a windowsill"
+  - "The shiny space ranger toy with glowing buttons carries the pink piggy bank across a gap between furniture"
+  - "The tall cowboy doll with a brown vest rides the stretchy dog toy with metal coil body down a staircase"
+  - "A pink piggy bank with a cork bottom rolls rapidly as the green dinosaur toy chases playfully"
+  - "The shiny space ranger toy with glowing buttons poses dramatically while the tall cowboy doll climbs a bookshelf"
+  - "The stretchy dog toy with metal coil body bounces with the tall cowboy doll holding onto its back"
+  - "A green dinosaur toy with tiny arms balances precariously while the shiny space ranger toy reaches to help"
+  - "The tall cowboy doll with a brown vest lassos a toy car while the pink piggy bank cheers"
+  - "The shiny space ranger toy with glowing buttons jet-packs upward with the tall cowboy doll hanging on"
+  - "A pink piggy bank with a cork bottom slides down a ramp while the stretchy dog toy springs alongside"
+  - "The tall cowboy doll with a brown vest swings from Christmas lights while the green dinosaur toy watches nervously"
+  - "The shiny space ranger toy with glowing buttons and tall cowboy doll work together to push open a heavy drawer"
+  - "A stretchy dog toy with metal coil body forms a bridge for the pink piggy bank to cross"
+  - "The tall cowboy doll with a brown vest rides a remote-controlled car while the shiny space ranger toy flies above"
+  - "A green dinosaur toy with tiny arms accidentally knocks over dominoes while the tall cowboy doll jumps clear"
+  - "The shiny space ranger toy with glowing buttons carries the pink piggy bank through a ventilation duct"
+  - "The tall cowboy doll with a brown vest slides down a banister while the stretchy dog toy bounces below"
+  - "A pink piggy bank with a cork bottom rolls through a maze of building blocks as the green dinosaur follows"
+  - "The shiny space ranger toy with glowing buttons and tall cowboy doll hide behind curtains from approaching footsteps"
+  - "The stretchy dog toy with metal coil body launches the tall cowboy doll onto a high shelf"
+  - "A green dinosaur toy with tiny arms gets tangled in yarn while the pink piggy bank tries to help"
+  - "The tall cowboy doll with a brown vest and shiny space ranger toy race through a cardboard box tunnel"
+  - "The pink piggy bank with a cork bottom tips over coins creating a path for others to cross"
+  - "The shiny space ranger toy with glowing buttons carries the tall cowboy doll through a ceiling fan's spinning blades"
+  - "A stretchy dog toy with metal coil body coils up tightly then springs the green dinosaur toy upward"
+  - "The tall cowboy doll with a brown vest pulls the pink piggy bank up using a jump rope"
+  - "The shiny space ranger toy with glowing buttons and tall cowboy doll high-five after completing their mission"

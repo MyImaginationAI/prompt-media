@@ -1,0 +1,66 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "Digital artwork, hyper-realistic CGI style, <lora:PCB_Image_Enhancer_for_FLUX:1>, "
+  negative: ""
+
+# Image generation parameters
+cfg: 1.0
+steps: 25
+width: 1344
+height: 768
+seeds: [2025]
+sampler: "euler"
+scheduler: "normal"
+denoise: 1.0
+
+# LoRA configurations
+loras:
+  lora:
+    - name: "PCB_Image_Enhancer_for_FLUX"
+      strength: 1.0
+
+prompts:
+# Mystical Number Vortex Series
+- "depicting a mystical vortex of glowing golden numbers, specifically the number 33 repeating in various sizes, creating a spiral portal effect against a deep blue cosmic background. Energy waves and light particles swirl around the numbers, <lora:Bonafida.Studio:1>"
+- "showing a tunnel of floating silver numbers, the number 33 emerging from a quantum realm, surrounded by mathematical equations and sacred geometry patterns in electric blue. Time dilation effects bend the space around the numbers, <lora:Bonafida.Studio:1>"
+- "featuring a mandala made entirely of the number 33, radiating outward in fractal patterns, with copper and bronze metallic finish. Ancient symbols and celestial coordinates weave between the numbers, <lora:Bonafida.Studio:1>"
+
+# Snake and Coffee Series
+- "showing a sleek black cobra coiled elegantly around a steaming coffee cup, set in a warm, sunlit window scene with potted plants. The snake's scales have a subtle metallic sheen, and the coffee surface reflects warm ambient light, <lora:Bonafida.Studio:1>"
+- "depicting an emerald green python wrapped around a vintage espresso machine, steam rising in artistic swirls. Morning sunlight creates a cozy café atmosphere with books and pastries in the background, <lora:Bonafida.Studio:1>"
+- "featuring a golden serpent intertwined with coffee beans and cinnamon sticks, arranged in a spiral pattern on a rustic wooden table. Soft bokeh lights create a dreamy morning ambiance, <lora:Bonafida.Studio:1>"
+
+# Japanese Pagoda Snake Series
+- "featuring a majestic black serpent wrapped around a traditional Japanese pagoda, with cherry blossoms in the background. The scene includes traditional calligraphy and soft pink petals floating in the air, <lora:Bonafida.Studio:1>"
+- "showing a white and gold serpent guardian protecting an ancient Zen temple, surrounded by maple leaves in autumn colors. Lanterns cast a warm glow as mist rolls through the scene, <lora:Bonafida.Studio:1>"
+- "depicting a jade serpent coiled around a moonlit torii gate, with koi fish swimming in the air like spirits. The scene is illuminated by paper lanterns and fireflies, <lora:Bonafida.Studio:1>"
+
+# Abstract Snake Series
+- "portraying an abstract serpentine form against a dark background, with golden paint splashes and swirls creating a dynamic, fluid motion effect. The snake's form is partially dissolved into the artistic elements, <lora:Bonafida.Studio:1>"
+- "showing a snake made of liquid mercury, breaking apart into chrome spheres and ribbons. Neon lights reflect off each droplet creating a cyberpunk aesthetic, <lora:Bonafida.Studio:1>"
+- "featuring a serpent composed of shattered mirror fragments, each piece reflecting a different phase of the moon. The background shifts between deep purple and midnight blue, <lora:Bonafida.Studio:1>"
+
+# Golden Portal Series
+- "depicting a massive golden portal in the night sky, emanating bright light that illuminates a silhouetted crowd below. The portal creates a perfect circle of light with streaming rays, <lora:Bonafida.Studio:1>"
+- "showing an ancient stone archway transformed into a portal of pure energy, with quantum particles and time fragments swirling through. A lone figure stands at the threshold of infinite possibilities, <lora:Bonafida.Studio:1>"
+- "featuring a series of concentric rings forming a dimensional gateway, each ring rotating independently and glowing with different colored energy. Sacred geometry patterns float in the space between worlds, <lora:Bonafida.Studio:1>"
+
+# Superhero Silhouette Series
+- "showing a superhero silhouette against a vibrant splash of neon colors, with electric blue and hot pink energy waves radiating outward. The figure stands in a powerful pose with a cosmic energy effect, <lora:Bonafida.Studio:1>"
+- "depicting a caped figure emerging from a vortex of lightning and plasma, their outline defined by crackling energy. The background explodes with rainbow chromatic aberration effects, <lora:Bonafida.Studio:1>"
+- "featuring a heroic silhouette composed of pure light, surrounded by orbiting particles and energy shields. Quantum effects create multiple overlapping versions of the figure, <lora:Bonafida.Studio:1>"
+
+# Gothic Swan Heart Series
+- "featuring two swans forming a heart shape on a blood-red lake, with their reflection creating a perfect symmetry. Dark trees frame the scene, creating a gothic romantic atmosphere, <lora:Bonafida.Studio:1>"
+- "showing two mechanical swans with gears and clockwork visible through crystal feathers, their necks forming a heart silhouette against a crimson sunset. Steam and sparks emanate from their joints, <lora:Bonafida.Studio:1>"
+- "depicting two ghost swans made of translucent starlight, their forms merging into a heart-shaped constellation. Dark roses and thorny vines frame the ethereal scene, <lora:Bonafida.Studio:1>"
+
+# Split Hair Portrait Series
+- "portraying a striking portrait with half black and half white hair, dramatic gothic makeup, and intense eyes. The lighting creates sharp contrasts and shadows, emphasizing the dual-tone theme, <lora:Bonafida.Studio:1>"
+- "showing a face split between day and night, one side with flowing silver hair like moonlight, the other with hair dark as a raven's wing. Celestial symbols adorn the skin, <lora:Bonafida.Studio:1>"
+- "featuring a portrait divided between fire and ice, with crimson and frost-blue hair creating dynamic tension. Elements swirl and clash along the dividing line, <lora:Bonafida.Studio:1>"
+
+# Aquatic Face Series
+- "depicting a surreal face with aquatic elements, where the features morph into fish-like structures. The skin has a metallic, scale-like quality with an iridescent sheen, <lora:Bonafida.Studio:1>"
+- "showing a face emerging from a coral reef, with sea anemones for hair and pearls for eyes. Bioluminescent particles float around like underwater snow, <lora:Bonafida.Studio:1>"
+- "featuring a face composed of swirling water currents, with jellyfish tentacles flowing as hair and sea glass fragments creating a vibrant underwater landscape, <lora:Bonafida.Studio:1>"
