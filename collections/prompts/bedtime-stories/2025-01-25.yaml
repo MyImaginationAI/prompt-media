@@ -1,0 +1,55 @@
+# Summary: A magical adventure about a brave mouse who helps woodland creatures prepare for a big storm. 
+# A small mouse with silver fur and bright red boots discovers dark clouds approaching the forest. With help from 
+# a tall giraffe with rainbow-colored spots and a plump penguin with golden glasses, they work together to warn 
+# and protect all the animals. A slim cat with purple stripes and a fluffy sheep with blue wool join their efforts 
+# to create a cozy shelter before the storm arrives.
+
+prompt_settings:
+  prefix: "3D animation style, Pixar-inspired rendering, "
+  negative: "By bad artist -neg, , V2, FastNegativeV2, ,  (1), ,(worst quality:2), (low quality:2), (normal quality:2),(uneven eyes),lowres, normal quality,bad anatomy,bad face,(uneven eyes),paintings,ugly, bad hands,open mouth,multiple girls,extra faces, extro breasts, multiple breasts,obese, fat rolls,extra arms, extra eyes,inverted nipples,extra ears,nipple rings,severed arm, bad arm, nipple bar,asymmetrical eyebrows,big mouth, embedding:ng_deepnegative_v1_75t, embedding:negative_hand-neg, embedding:EasyNegative, embedding:badhandv4, embedding:verybadimagenegative_v1.3"
+
+cfg: 1.0
+steps: 20
+width: 1344
+height: 768
+seeds: [159753]
+sampler: "euler"
+scheduler: "simple"
+denoise: 1
+
+loras:
+  lora:
+    - name: "Bonafida.Studio"
+      strength: 1.0
+
+prompts:
+  - "A small mouse with silver fur and bright red boots leaps across mushrooms while a tall giraffe with rainbow-colored spots stretches to eat leaves"
+  - "The tall giraffe with rainbow-colored spots bends down as the small mouse with red boots slides down its long neck"
+  - "A plump penguin with golden glasses waddles quickly beside the small mouse with silver fur who's pointing at storm clouds"
+  - "The small mouse with bright red boots swings on a dandelion while the tall giraffe catches falling acorns with its spots glowing"
+  - "A slim cat with purple stripes helps the plump penguin with golden glasses stack stones to make a shelter"
+  - "The tall giraffe with rainbow spots uses its neck as a bridge while the small mouse runs across carrying supplies"
+  - "A fluffy sheep with blue wool rolls down a hill as the small mouse with silver fur surfs on a leaf beside it"
+  - "The plump penguin with golden glasses slides on its belly while the small mouse rides on its back"
+  - "A tall giraffe with rainbow-colored spots creates a rainbow umbrella while the fluffy sheep shakes water from its wool"
+  - "The small mouse with bright red boots jumps through raindrops while holding a tiny leaf umbrella"
+  - "A slim cat with purple stripes leaps between branches while the small mouse guides from below"
+  - "The plump penguin with golden glasses catches fish while the tall giraffe watches from the shoreline"
+  - "A fluffy sheep with blue wool bounces on puddles while the small mouse with silver fur navigates using a leaf boat"
+  - "The tall giraffe with rainbow spots creates a slide with its neck as the plump penguin gleefully slides down"
+  - "A small mouse with silver fur swings on flower stems while the slim cat with purple stripes pounces playfully"
+  - "The fluffy sheep with blue wool dances in rain while the plump penguin spins with its flippers spread"
+  - "A tall giraffe with rainbow-colored spots gallops through meadow while small mouse holds onto its spots"
+  - "The plump penguin with golden glasses belly-slides down a hill as the small mouse cheers from a floating leaf"
+  - "A slim cat with purple stripes balances on a branch while the fluffy sheep bounces on a trampoline below"
+  - "The small mouse with bright red boots rides a paper boat while the plump penguin swims alongside"
+  - "A tall giraffe with rainbow spots twirls in circles while the small mouse dances on its head"
+  - "The fluffy sheep with blue wool rolls in flowers while the slim cat with purple stripes leaps through petals"
+  - "A small mouse with silver fur climbs a vine while the tall giraffe spots catch morning dew"
+  - "The plump penguin with golden glasses builds a snowball while the small mouse adds decorative leaves"
+  - "A slim cat with purple stripes stretches in sunlight while the fluffy sheep creates wool clouds"
+  - "The small mouse with bright red boots hops between water lilies while the plump penguin splashes nearby"
+  - "A tall giraffe with rainbow spots paints the sky with its spots while the small mouse conducts with a twig"
+  - "The fluffy sheep with blue wool jumps over the moon while the small mouse rides on a shooting star"
+  - "A plump penguin with golden glasses ice skates in circles while the tall giraffe cheers with colorful spot patterns"
+  - "The small mouse with silver fur and bright red boots takes a final bow while rainbow spots light up the sky"

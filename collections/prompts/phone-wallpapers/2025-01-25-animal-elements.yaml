@@ -1,0 +1,37 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "aidmafluxpro1.1, vertical split composition, masterpiece, best quality, highly detailed, dramatic lighting, "
+  negative: "low quality, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, bad feet"
+
+# Image generation parameters
+cfg: 1.0
+steps: 30
+width: 832
+height: 1216
+seeds: [2025]
+sampler: "euler"
+scheduler: "normal"
+denoise: 1.0
+
+# LoRA configurations
+loras:
+  lora:
+    - name: "aidmaFLUXpro1.1-FLUX-V0.1"
+      strength: 0.7
+
+prompts:
+- "Majestic phoenix rising from flames, its wings spread wide, left side showing smoldering embers and dark smoke, right side blazing with brilliant golden fire, magical fire particles, fire aura"
+- "Powerful dragon with scales made of living flame, left side showing deep crimson fire core, right side erupting with intense blue flame breath, flame wings spread"
+- "Mystical fire fox with nine tails of different colored flames, left side showing ethereal purple flame tails, right side radiating with bright kitsune fire"
+- "Fierce tiger with fur made of dancing flames, left side showing deep orange flame stripes, right side blazing with white-hot intensity, heat ripples in the air"
+- "Majestic lion with mane of solar flames, left side showing sunset-colored flame mane, right side burning with intense golden fire, flame particles"
+- "Elegant fire deer with antlers of pure flame, left side showing ember-spotted coat, right side glowing with gentle flame light, fire footprints"
+- "Powerful wolf with fur of arctic fire, left side showing cool blue flames, right side blazing with intense white fire, snow melting around"
+- "Mystical fire serpent coiled in flames, left side showing deep magma scales, right side radiating with intense heat, flame patterns"
+- "Fierce falcon with wings of solar fire, left side showing ember feathers, right side blazing with golden flames, fire trailing"
+- "Noble horse with mane and tail of living flame, left side showing flowing fire hair, right side galloping through intense flames"
+- "Powerful bear with fur of volcanic fire, left side showing magma-cracked skin, right side erupting with intense flame power"
+- "Swift cheetah with spots of burning flame, left side showing ember-spotted coat, right side blazing with speed-fire trails"
+- "Wise owl with feathers of blue flame, left side showing mystical fire wisdom, right side radiating with intense magical flames"
+- "Graceful swan with wings of pure white fire, left side showing gentle flame feathers, right side radiating with intense light"
+- "Mighty elephant with tusks of golden flame, left side showing ember-cracked skin, right side radiating with intense power"

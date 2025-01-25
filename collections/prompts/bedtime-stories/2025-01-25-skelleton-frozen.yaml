@@ -1,0 +1,55 @@
+# Summary: A magical adventure about a brave mouse who helps woodland creatures prepare for a big storm. 
+# A small mouse with silver fur and bright red boots discovers dark clouds approaching the forest. With help from 
+# a tall giraffe with rainbow-colored spots and a plump penguin with golden glasses, they work together to warn 
+# and protect all the animals. A slim cat with purple stripes and a fluffy sheep with blue wool join their efforts 
+# to create a cozy shelter before the storm arrives.
+
+prompt_settings:
+  prefix: "3D animation style, Pixar-inspired rendering, "
+  negative: "By bad artist -neg, , V2, FastNegativeV2, ,  (1), ,(worst quality:2), (low quality:2), (normal quality:2),(uneven eyes),lowres, normal quality,bad anatomy,bad face,(uneven eyes),paintings,ugly, bad hands,open mouth,multiple girls,extra faces, extro breasts, multiple breasts,obese, fat rolls,extra arms, extra eyes,inverted nipples,extra ears,nipple rings,severed arm, bad arm, nipple bar,asymmetrical eyebrows,big mouth, embedding:ng_deepnegative_v1_75t, embedding:negative_hand-neg, embedding:EasyNegative, embedding:badhandv4, embedding:verybadimagenegative_v1.3"
+
+cfg: 1.0
+steps: 20
+width: 1344
+height: 768
+seeds: [159753]
+sampler: "euler"
+scheduler: "simple"
+denoise: 1
+
+loras:
+  lora:
+    - name: "Bonafida.Studio"
+      strength: 1.0
+
+prompts:
+  - "A tall bony skeleton with glowing blue eyes walks carefully across a snow-covered bridge, his bones rattling in the wind"
+  - "A graceful woman with flowing white-blonde hair creates swirling ice patterns in the air, her blue dress sparkling"
+  - "The skeleton's glowing blue eyes widen in wonder as he watches ice crystals dance around the castle courtyard"
+  - "A woman with frost-covered hair extends her hand toward the nervous skeleton, gentle snowflakes falling around them"
+  - "The bony skeleton attempts to ice skate, arms flailing wildly as the white-haired queen glides beside him"
+  - "A small snowman with a carrot nose waddles excitedly around the skeleton's legs, making him stumble"
+  - "The white-haired woman demonstrates graceful skating moves while the skeleton watches from behind a frozen fountain"
+  - "A large reindeer with fuzzy antlers sniffs curiously at the skeleton's bony fingers through stable doors"
+  - "The skeleton carefully places a warm scarf around the ice queen's shoulders, his blue eyes glowing softly"
+  - "A girl with ginger braids peeks around a corner, watching the skeleton and ice queen build a snowman"
+  - "The white-haired woman teaches the skeleton how to create simple ice crystals, his bony fingers trembling"
+  - "The skeleton slips on ice while the reindeer with fuzzy antlers slides past him gracefully"
+  - "A servant with rosy cheeks carries hot chocolate past the skeleton, who longingly watches the steam rise"
+  - "The ice queen and skeleton sit on a balcony, watching the northern lights dance across the night sky"
+  - "The skeleton attempts to catch snowflakes on his bony fingers while the snowman mimics him"
+  - "The white-haired woman creates an ice slide as the skeleton watches in amazement from below"
+  - "The ginger-haired girl teaches the skeleton how to make snow angels, laughing at his bony imprint"
+  - "The skeleton helps the reindeer untangle Christmas lights from its fuzzy antlers"
+  - "The ice queen shows the skeleton how to create delicate frost patterns on windows"
+  - "The small snowman hugs the skeleton's legs while he awkwardly pats its snowy head"
+  - "The skeleton practices ice magic with shaky hands while the white-haired woman guides his movements"
+  - "A servant with rosy cheeks delivers warm mittens to the skeleton, who holds them curiously"
+  - "The ice queen and skeleton build an elaborate ice sculpture together, their magic combining"
+  - "The ginger-haired girl throws snowballs at the skeleton, who dodges them dramatically"
+  - "The skeleton shares his scarf with the shivering snowman, wrapping it carefully"
+  - "The white-haired woman and skeleton create an ice bridge together, their powers synchronized"
+  - "The reindeer pulls the skeleton on a sleigh while he holds on for dear life"
+  - "The skeleton helps the ice queen decorate the frozen castle with icicle ornaments"
+  - "The small snowman shows the skeleton how to slide down snowy hills on his belly"
+  - "The skeleton and white-haired woman dance in a swirling snowstorm, creating patterns of frost and light"

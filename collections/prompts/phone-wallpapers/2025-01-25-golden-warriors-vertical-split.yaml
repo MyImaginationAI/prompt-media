@@ -1,0 +1,69 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "aidmafluxpro1.1, vertical split composition, golden steampunk style, masterpiece, best quality, highly detailed, "
+  negative: "low quality, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, bad feet"
+
+# Image generation parameters
+cfg: 1.0
+steps: 30
+width: 832
+height: 1216
+seeds: [2025]
+sampler: "euler"
+scheduler: "normal"
+denoise: 1.0
+
+# LoRA configurations
+loras:
+  lora:
+    - name: "aidmaFLUXpro1.1-FLUX-V0.1"
+      strength: 0.7
+
+prompts:
+- "Majestic lion humanoid in ornate golden steampunk armor, brass gears and clockwork mane, standing proud with mechanical staff, left side dark moody lighting with shadows and brass tarnish, right side bright golden sunlight illuminating the polished metal"
+- "Wise owl humanoid wearing intricate golden clockwork armor, brass goggles, mechanical wings with gear mechanisms, left side dark mysterious night atmosphere, right side bright dawn light gleaming"
+- "Powerful wolf humanoid in golden steam-powered battle armor, brass pressure gauges, mechanical limb enhancements, left side dark stormy ambiance, right side bright lightning illumination"
+- "Elegant deer humanoid wearing delicate golden clockwork armor, antlers integrated with brass gears, mechanical hooves, left side dark forest shadows, right side bright sunbeams through leaves"
+- "Fierce tiger humanoid in heavy golden steampunk armor, mechanical claws, brass-fitted shoulder plates, left side dark jungle shadows, right side bright tropical sunlight"
+- "Graceful fox humanoid wearing lightweight golden armor, brass tail mechanisms, clockwork accessories, left side dark twilight atmosphere, right side bright sunset glow"
+- "Mighty bear humanoid in massive golden steam-powered armor, brass hydraulic joints, mechanical strength enhancers, left side dark cave shadows, right side bright mountain sunlight"
+- "Agile rabbit humanoid in sleek golden steampunk armor, mechanical jumping enhancements, brass ear mechanisms, left side dark moonlit shadows, right side bright morning light"
+- "Regal eagle humanoid wearing golden winged armor, brass flight mechanisms, clockwork feathers, left side dark storm clouds, right side bright breaking sunlight"
+- "Clever raccoon humanoid in detailed golden armor, mechanical hands, brass tool attachments, left side dark night shadows, right side bright city lights"
+- "Mystical phoenix humanoid in radiant golden armor, mechanical flame vents, brass wing gears, left side dark volcanic shadows, right side bright fire glow"
+- "Ancient tortoise humanoid in defensive golden armor, mechanical shell plates, brass joint systems, left side dark underwater depths, right side bright surface reflections"
+- "Swift hummingbird humanoid in delicate golden armor, mechanical wing array, brass nectar collectors, left side dark rainforest shade, right side bright tropical light"
+- "Powerful rhinoceros humanoid in battle golden armor, steam-powered horn system, brass plates, left side dark battlefield smoke, right side bright victory light"
+- "Elegant swan humanoid in flowing golden armor, mechanical neck joints, brass wing mechanisms, left side dark lake mist, right side bright morning reflection"
+- "Fierce dragon humanoid in majestic golden scale armor, mechanical wing system, brass flame vents, left side dark mountain shadows, right side bright volcanic glow"
+- "Agile monkey humanoid in acrobatic golden armor, mechanical tail system, brass joint enhancers, left side dark canopy shadows, right side bright jungle light"
+- "Noble stag humanoid in forest golden armor, mechanical antler crown, brass hooves, left side dark winter shadows, right side bright snow gleam"
+- "Wise serpent humanoid in sleek golden armor, mechanical coil system, brass scale plates, left side dark cave darkness, right side bright crystal light"
+- "Powerful gorilla humanoid in heavy golden armor, steam-powered strength enhancers, brass knuckles, left side dark jungle depths, right side bright canopy light"
+- "Swift falcon humanoid in aerodynamic golden armor, mechanical wing system, brass talons, left side dark storm shadows, right side bright cloud break"
+- "Cunning fox humanoid in tactical golden armor, mechanical stealth system, brass sensors, left side dark forest shadows, right side bright moonlight"
+- "Majestic elephant humanoid in ceremonial golden armor, mechanical trunk system, brass tusks, left side dark temple shadows, right side bright sacred light"
+- "Agile leopard humanoid in spotted golden armor, mechanical sprint system, brass joints, left side dark savanna night, right side bright dawn"
+- "Noble wolf humanoid in pack golden armor, mechanical fang system, brass claws, left side dark winter shadows, right side bright aurora light"
+- "Fierce bear humanoid in wilderness golden armor, steam-powered claw system, brass plates, left side dark forest depths, right side bright mountain sun"
+- "Graceful deer humanoid in forest golden armor, mechanical leap system, brass hooves, left side dark grove shadows, right side bright dappled light"
+- "Powerful lion humanoid in royal golden armor, mechanical mane system, brass crown, left side dark throne shadows, right side bright royal light"
+- "Wise owl humanoid in scholar golden armor, mechanical wing system, brass wisdom symbols, left side dark library shadows, right side bright knowledge light"
+- "Swift cheetah humanoid in racing golden armor, mechanical sprint system, brass joints, left side dark grassland shadows, right side bright sun rays"
+- "Cunning raccoon humanoid in stealth golden armor, mechanical hand system, brass tools, left side dark urban shadows, right side bright street light"
+- "Strong bull humanoid in charging golden armor, steam-powered horn system, brass plates, left side dark arena shadows, right side bright spotlight"
+- "Agile panther humanoid in night golden armor, mechanical stealth system, brass sensors, left side dark jungle night, right side bright moon glow"
+- "Noble eagle humanoid in soaring golden armor, mechanical wing system, brass talons, left side dark storm clouds, right side bright lightning flash"
+- "Fierce tiger humanoid in hunter golden armor, steam-powered claw system, brass plates, left side dark bamboo shadows, right side bright forest light"
+- "Graceful crane humanoid in dance golden armor, mechanical wing system, brass legs, left side dark marsh shadows, right side bright morning mist"
+- "Powerful rhino humanoid in battle golden armor, steam-powered charge system, brass plates, left side dark dust storm, right side bright desert sun"
+- "Wise raven humanoid in mystic golden armor, mechanical wing system, brass symbols, left side dark cosmic void, right side bright stellar light"
+- "Swift hawk humanoid in predator golden armor, mechanical wing system, brass talons, left side dark mountain shadows, right side bright thermal updraft"
+- "Cunning lynx humanoid in winter golden armor, mechanical paw system, brass sensors, left side dark snow storm, right side bright ice crystal"
+- "Strong boar humanoid in warrior golden armor, steam-powered tusk system, brass plates, left side dark forest depths, right side bright battle light"
+- "Agile squirrel humanoid in acrobat golden armor, mechanical tail system, brass joints, left side dark tree shadows, right side bright leaf light"
+- "Noble horse humanoid in cavalry golden armor, mechanical gallop system, brass hooves, left side dark battlefield smoke, right side bright charge light"
+- "Fierce wolverine humanoid in berserker golden armor, steam-powered claw system, brass plates, left side dark tundra shadows, right side bright arctic sun"
+- "Graceful gazelle humanoid in swift golden armor, mechanical leap system, brass hooves, left side dark savanna dusk, right side bright morning light"
+- "Powerful buffalo humanoid in herd golden armor, steam-powered charge system, brass horns, left side dark prairie storm, right side bright lightning flash"
+- "Wise turtle humanoid in ancient golden armor, mechanical shell system, brass joints, left side dark ocean depths, right side bright surface shimmer"

@@ -1,6 +1,6 @@
 # Default prompt settings
 prompt_settings:
-  prefix: "Digital artwork, hyper-realistic CGI style, <lora:cyborgheadv2:1>, "
+  prefix: "nvinkpunk, <lora:Inkpunk_Flux:1>, "
   negative: ""
 
 # Image generation parameters
@@ -16,10 +16,10 @@ denoise: 1.0
 # LoRA configurations
 loras:
   lora:
-    - name: "cyborgheadv2"
+    - name: "Inkpunk_Flux"
       strength: 1.0
 
-variations:
+prompts:
 - cat wearing orange sunglasses, a gray beanie with a pom-pom, and a casual gray hoodie holds up a wooden sign reading 
 
 variations:
@@ -27,6 +27,8 @@ variations:
     type: "sequential"
     values:
     # AI and Intelligence Terms
+    - "MYIMAGINATIONAI"
+    - "PROMPT-MEDIA"
     - "INTELLIGENCE"
     - "ARTIFICIAL"
     - "NEURAL"
@@ -217,9 +219,80 @@ variations:
     values: 
     - " creating a perfect blend of urban street art and digital illustration styles, while surrounded by dynamic,"
   colors:
-    type: "sequential"
+    type: "random"
     values:
-    - orange splatter effects
-    - red splatter effects
+    - amber splatter effects
+    - amethyst splatter effects
+    - aqua splatter effects
+    - azure splatter effects
+    - beige splatter effects
+    - black splatter effects
     - blue splatter effects
+    - bronze splatter effects
+    - brown splatter effects
+    - burgundy splatter effects
+    - cerulean splatter effects
+    - charcoal splatter effects
+    - chartreuse splatter effects
+    - chocolate splatter effects
+    - cobalt splatter effects
+    - copper splatter effects
+    - coral splatter effects
+    - crimson splatter effects
+    - cyan splatter effects
+    - denim splatter effects
+    - emerald splatter effects
+    - fuchsia splatter effects
+    - gold splatter effects
+    - gray splatter effects
     - green splatter effects
+    - indigo splatter effects
+    - ivory splatter effects
+    - jade splatter effects
+    - khaki splatter effects
+    - lavender splatter effects
+    - lemon splatter effects
+    - lilac splatter effects
+    - lime splatter effects
+    - magenta splatter effects
+    - maroon splatter effects
+    - mauve splatter effects
+    - mint splatter effects
+    - navy splatter effects
+    - ochre splatter effects
+    - olive splatter effects
+    - orange splatter effects
+    - orchid splatter effects
+    - peach splatter effects
+    - periwinkle splatter effects
+    - pink splatter effects
+    - plum splatter effects
+    - purple splatter effects
+    - raspberry splatter effects
+    - red splatter effects
+    - rose splatter effects
+    - ruby splatter effects
+    - russet splatter effects
+    - rust splatter effects
+    - saffron splatter effects
+    - sage splatter effects
+    - salmon splatter effects
+    - sapphire splatter effects
+    - scarlet splatter effects
+    - sepia splatter effects
+    - sienna splatter effects
+    - silver splatter effects
+    - slate splatter effects
+    - tan splatter effects
+    - tangerine splatter effects
+    - taupe splatter effects
+    - teal splatter effects
+    - terracotta splatter effects
+    - thistle splatter effects
+    - turquoise splatter effects
+    - umber splatter effects
+    - vermilion splatter effects
+    - violet splatter effects
+    - white splatter effects
+    - yellow splatter effects
+
