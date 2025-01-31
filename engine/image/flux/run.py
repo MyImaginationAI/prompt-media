@@ -164,9 +164,11 @@ def validate_config(config):
 
 def setup_logging(output_dir: Path):
     """Set up logging configuration."""
+    from libs.config import config
+    
     logging.basicConfig(
-        level=logging.DEBUG,
-        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+        level=getattr(logging, config.logging.level.upper()),
+        format=config.logging.format,
         handlers=[
             logging.StreamHandler()
         ]
@@ -228,7 +230,8 @@ def check_server_status(server_address):
 
 def create_websocket_connection(server_address, client_id, timeout=30):
     """Create a WebSocket connection with proper error handling"""
-    websocket.enableTrace(True)  # Enable tracing for all connections
+    # Only enable websocket tracing if logging level is DEBUG
+    websocket.enableTrace(logging.getLogger().getEffectiveLevel() == logging.DEBUG)
     websocket.setdefaulttimeout(timeout)
 
     # Ensure we have the port in the address
