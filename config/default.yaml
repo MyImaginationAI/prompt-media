@@ -3,9 +3,11 @@
 # =============================================================================
 
 # Server Configuration
+# host: Use "127.0.0.1" for local ComfyUI server
+#       Use server's address/IP for remote server (e.g., "remote-server.example.com" or "192.168.1.100")
 server:
-  host: "127.0.0.1"
-  port: 8188 #ComfyUI port
+  host: "127.0.0.1"  # Can be overridden by APP_SERVER_HOST env var
+  port: 8188         # ComfyUI port (can be overridden by APP_SERVER_PORT env var)
   debug: false
 
 # Media Configuration

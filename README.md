@@ -107,8 +107,22 @@ Key environment variables in `.env`:
 
 - `APP_PATHS_PROMPT_MEDIA`: Path to the unified configuration file (default: `prompt.yaml`)
 - `APP_PATHS_OUTPUT_DIR`: Directory for generated outputs
-- `APP_SERVER_HOST`: ComfyUI server host
-- `APP_SERVER_PORT`: ComfyUI server port
+- `APP_SERVER_HOST`: ComfyUI server host (use `127.0.0.1` for local server or remote server's address/IP for remote server)
+- `APP_SERVER_PORT`: ComfyUI server port (default: `8188`)
+
+#### Configuring Remote ComfyUI Server
+
+To use a remote ComfyUI server:
+
+1. Open `.env` file
+2. Update `APP_SERVER_HOST` with your remote server's address or IP:
+   ```bash
+   # Example for remote server
+   APP_SERVER_HOST=remote-server.example.com
+   # Or using IP address
+   APP_SERVER_HOST=192.168.1.100
+   ```
+3. Ensure the ComfyUI server is running and accessible on the specified port
 
 ### Unified Configuration
 
