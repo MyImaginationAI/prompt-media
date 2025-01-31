@@ -168,8 +168,7 @@ def setup_logging(output_dir: Path):
         level=logging.DEBUG,
         format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
         handlers=[
-            logging.StreamHandler(),
-            logging.FileHandler(output_dir / 'flux.log')
+            logging.StreamHandler()
         ]
     )
 
@@ -648,10 +647,18 @@ def generate_image(
             "timestamp": current_time.isoformat()
         }
         
-        # Generate output path for metadata
-        output_dir_path = Path(output_dir)
-        metadata_path = output_dir_path / f"{global_count:03d}_seed_{seed}.json"
+        # Get datetime-based output directory
+        output_dir_path = get_datetime_output_path(Path(output_dir), current_time)
         output_dir_path.mkdir(parents=True, exist_ok=True)
+        
+        # Add file handler for logging in the same directory
+        log_filename = f"{global_count:03d}_seed_{seed}.log"
+        file_handler = logging.FileHandler(output_dir_path / log_filename)
+        file_handler.setFormatter(logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s'))
+        logging.getLogger().addHandler(file_handler)
+        
+        # Save metadata in the same directory
+        metadata_path = output_dir_path / f"{global_count:03d}_seed_{seed}.json"
         
         with open(metadata_path, 'w') as f:
             json.dump(workflow_metadata, f, indent=2)
