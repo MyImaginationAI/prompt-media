@@ -5,6 +5,7 @@ jsonschema>=4.20.0
 Pillow>=10.1.0
 python-dotenv>=1.0.0
 pydantic>=2.5.2
+jinja2>=3.1.2
 
 # Testing dependencies
 pytest>=7.4.3
