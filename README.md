@@ -204,12 +204,8 @@ For detailed documentation on image composition tools, see [Image Composer Docum
 
 ## 🎨 Collections (examples)
 
-### [Ocean Pallete](collections/prompts/categories/art/ocean-palette.yaml)
-<details>
-<summary>Click to expand/collapse image</summary>
+- [MyImaginationAI LinkedIn Page](https://www.linkedin.com/company/myimaginationai/?viewAsMember=true)
 
-![image](docs/collection-ocean-pallete.png)
-</details>
 
 ## 🎮 Usage
 
