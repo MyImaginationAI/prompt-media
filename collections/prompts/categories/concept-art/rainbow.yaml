@@ -1,0 +1,75 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "designed by Pixar, octane render, cinematic lighting, shallow depth of field, Film Washi"
+  negative: "dark, harsh lighting, noise, distortion, oversaturated, blurry, low quality, deformed"
+
+# List of prompts to generate
+prompts:
+  - "A grand crystal staircase reflects prismatic light, creating rainbow cascades through a futuristic atrium, soft pastel lighting illuminates floating holographic displays"
+  - "Transparent glass dome housing a rainbow-powered laboratory, pulsing with chromatic energy, surrounded by floating research platforms"
+  - "Spiral rainbow bridge connecting two floating research facilities, iridescent energy flows through transparent tubes"
+  - "Crystalline observatory with rainbow-refracting panels, overlooking a bioluminescent cityscape, gentle color transitions"
+  - "Rainbow waterfall flowing through a glass-enclosed botanical research center, creating prismatic patterns on the walls"
+  - "Floating laboratory platforms connected by bridges of pure light, each level showcasing different rainbow phenomena"
+  - "Ancient clocktower transformed into a rainbow-powered energy station, prisms rotating in perfect synchronization"
+  - "Glass pyramid research facility with rainbow light filtering through each panel, creating a spectrum of experiments"
+  - "Suspended rainbow gardens in transparent spheres, connected by bridges of pure light, research drones collecting data"
+  - "Crystal spire laboratory with rainbow energy coursing through its veins, powering advanced experimental chambers"
+  - "Underwater research dome with rainbow bioluminescence, surrounded by schools of crystalline fish"
+  - "Rainbow-powered quantum computer core housed in a transparent cylinder, pulsing with chromatic calculations"
+  - "Ancient lighthouse converted into a rainbow energy collector, beaming prismatic light across the research district"
+  - "Floating islands connected by rainbow bridges, each hosting different scientific research facilities"
+  - "Crystal maze laboratory with rainbow light guiding researchers through various experimental chambers"
+  - "Rainbow particle accelerator housed in a transparent ring, energy pulses creating beautiful light patterns"
+  - "Glass treehouse research facility with rainbow sap flowing through transparent tubes, powering experiments"
+  - "Prismatic research tower with rotating rainbow panels, each floor dedicated to different light experiments"
+  - "Rainbow crystal cave laboratory, natural formations amplifying and directing energy flows"
+  - "Floating observatory platforms connected by rainbow light bridges, studying atmospheric phenomena"
+  - "Ancient temple transformed into a rainbow energy research facility, modern technology merged with classical architecture"
+  - "Crystal dome biodome with rainbow irrigation system, creating perfect growing conditions through light manipulation"
+  - "Rainbow-powered space elevator prototype, energy flowing through transparent tubes to the upper atmosphere"
+  - "Floating research rings connected by rainbow energy bridges, each studying different wavelengths"
+  - "Crystal palace laboratory with rainbow light filtering through geometric patterns, creating research zones"
+  - "Ancient aqueduct system repurposed for rainbow energy distribution, powering modern research facilities"
+  - "Rainbow crystal farm growing energy crystals in floating transparent chambers"
+  - "Glass pyramid network connected by rainbow bridges, each structure housing different research initiatives"
+  - "Crystal spire weather control facility, using rainbow energy to study atmospheric patterns"
+  - "Floating research platforms arranged in a spiral, connected by pulsing rainbow energy bridges"
+
+# LoRA configurations
+loras:
+  lora:
+    - name: "aidmaMJ6.1-FLUX-v0.4"
+      strength: 0.6
+
+# Order of magnitude variations
+variations:
+  style:
+    type: "static"
+    values: ["soft lighting", "dreamy atmosphere", "photographic", "highly detailed"]
+
+# Image sizes
+# portrait: 832x1216
+# landscape: 1216x832
+# wide: 1344x768
+
+# Workflow configurations
+workflows:
+  dev:
+    steps: 20
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1, 2, 3]
+  schnell:
+    steps: 4
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1, 2]
+  default:
+    steps: 30
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1]

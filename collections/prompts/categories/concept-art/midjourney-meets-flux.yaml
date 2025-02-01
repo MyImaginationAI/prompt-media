@@ -1,0 +1,64 @@
+# Default prompt settings
+prompt_settings:
+  prefix: ""
+  negative: ""
+
+# LoRA configurations
+loras:
+  lora:
+    - name: "aidmaMJ6.1-FLUX-v0.4"
+      strength: 0.6
+
+# Workflow configurations
+workflows:
+  dev:
+    steps: 35
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1, 2, 3]
+  schnell:
+    steps: 4
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1, 2]
+  default:
+    steps: 35
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1]
+
+# List of prompts to generate
+prompts:
+  - "Evil morbidly obese Oriental Sven, he is wearing a Pea coat, Thumbs up pose, Trendy hair styled as Short and slicked back, inside a nature, nature-inspired, aidmamj6.1"
+  - "Cheerful skinny Nordic Thor, wearing a Leather jacket, Peace sign pose, Long wavy blonde hair, inside an urban alley, cyberpunk-inspired, aidmamj6.1"
+  - "Mysterious tall African Zara, wearing a Flowing dress, Dancing pose, Braided crown hairstyle, inside a desert oasis, mystical-inspired, aidmamj6.1"
+  - "Playful petite Asian Mai, wearing a Kimono, Victory pose, Bob cut with bangs, inside a cherry blossom garden, traditional-inspired, aidmamj6.1"
+  - "Stern muscular Celtic Finn, wearing a Kilt, Arms crossed pose, Red curly hair, inside a misty highland, folklore-inspired, aidmamj6.1"
+  - "Elegant tall Latin Carmen, wearing a Flamenco dress, Twirling pose, Long black waves, inside a Spanish courtyard, passionate-inspired, aidmamj6.1"
+  - "Fierce short Native Kaya, wearing a Fringed leather vest, Warrior pose, Feathered mohawk, inside a canyon, tribal-inspired, aidmamj6.1"
+  - "Jolly robust Polynesian Maui, wearing a Floral shirt, Welcoming pose, Curly man bun, inside a tropical beach, paradise-inspired, aidmamj6.1"
+  - "Wise slender Middle Eastern Amir, wearing a Thobe, Meditation pose, Neat beard and short hair, inside a desert palace, ancient-inspired, aidmamj6.1"
+  - "Sassy curvy Caribbean Nina, wearing a Carnival costume, Dancing pose, Colorful dreadlocks, inside a festival street, celebration-inspired, aidmamj6.1"
+  - "Brooding tall Slavic Ivan, wearing a Military coat, Standing at attention pose, Buzzcut hair, inside a snow forest, winter-inspired, aidmamj6.1"
+  - "Graceful petite Japanese Yuki, wearing a Futuristic kimono, Elegant pose, Geometric bob cut, inside a neon temple, sci-fi-inspired, aidmamj6.1"
+  - "Bold muscular Greek Atlas, wearing a Toga, Power pose, Curly short hair, inside ancient ruins, classical-inspired, aidmamj6.1"
+  - "Mischievous short Irish Finn, wearing a Tweed suit, Leprechaun pose, Messy ginger hair, inside a fairy ring, magical-inspired, aidmamj6.1"
+  - "Serene tall Indian Priya, wearing a Saree, Mudra pose, Long braided hair, inside a lotus garden, spiritual-inspired, aidmamj6.1"
+  - "Energetic medium Mexican Diego, wearing a Charro suit, Guitar playing pose, Slicked pompadour, inside a colorful plaza, festive-inspired, aidmamj6.1"
+  - "Mysterious slim Egyptian Nefertiti, wearing a Royal gown, Regal pose, Adorned shaved head, inside a pyramid chamber, pharaonic-inspired, aidmamj6.1"
+  - "Jovial robust Scottish Duncan, wearing a Highland dress, Sword stance pose, Wild red hair, inside stone castle, medieval-inspired, aidmamj6.1"
+  - "Elegant tall Korean Min, wearing a Hanbok, Fan dance pose, Traditional updo, inside a palace garden, dynasty-inspired, aidmamj6.1"
+  - "Fierce short Maori Tane, wearing a Traditional cloak, Haka pose, Tribal tattoos and short hair, inside a sacred grove, warrior-inspired, aidmamj6.1"
+  - "Graceful medium Vietnamese Linh, wearing an Ao dai, Tea ceremony pose, Long straight hair, inside a bamboo forest, zen-inspired, aidmamj6.1"
+  - "Bold tall Persian Cyrus, wearing a Royal robe, Commanding pose, Groomed beard and waves, inside a grand palace, imperial-inspired, aidmamj6.1"
+  - "Playful curvy Brazilian Ana, wearing a Samba costume, Dancing pose, Voluminous curls, inside a rainforest, carnival-inspired, aidmamj6.1"
+  - "Wise short Tibetan Tenzin, wearing a Monk robe, Blessing pose, Shaved head, inside a mountain monastery, spiritual-inspired, aidmamj6.1"
+  - "Mysterious tall Russian Natasha, wearing a Fur coat, Ballet pose, Sleek bun hairstyle, inside an ice palace, winter-inspired, aidmamj6.1"
+  - "Cheerful medium Filipino Maria, wearing a Terno dress, Welcome pose, Flower-adorned updo, inside a rice terrace, tropical-inspired, aidmamj6.1"
+  - "Stern muscular Viking Erik, wearing a Fur armor, Battle pose, Braided beard and long hair, inside a fjord, nordic-inspired, aidmamj6.1"
+  - "Elegant slim Turkish Leyla, wearing a Kaftan, Whirling pose, Jeweled headscarf, inside a grand bazaar, ottoman-inspired, aidmamj6.1"
+  - "Fierce tall Aztec Montezuma, wearing a Feathered cloak, Ceremonial pose, Noble headdress, inside a temple pyramid, ancient-inspired, aidmamj6.1"
+  - "Graceful medium Moroccan Amira, wearing a Caftan, Henna painting pose, Intricate hijab style, inside a riad courtyard, moorish-inspired, aidmamj6.1"

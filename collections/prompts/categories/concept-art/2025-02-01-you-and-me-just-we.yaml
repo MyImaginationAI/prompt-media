@@ -1,0 +1,54 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "aidmaMJ6.1, cinematic lighting, soft natural light, romantic atmosphere, dreamy aesthetic, wood sign 'you and me, just we'"
+  negative: ""
+
+# List of prompts to generate
+prompts:
+  - "young couple standing close together, holding a minimalist wooden sign with text, warm afternoon sunlight streaming through windows"
+  - "intimate indoor scene, couple sitting on vintage couch, rustic wooden sign placed nearby, soft ambient lighting"
+  - "couple in casual attire, natural poses, holding handcrafted sign, gentle window light creating atmospheric glow"
+  - "cozy home setting, couple sharing tender moment near wall-mounted sign, warm interior lighting"
+  - "minimalist room interior, couple in relaxed poses near decorative wall sign, soft natural lighting"
+  - "magnetic fields visualized around embracing couple, wooden sign glowing with ethereal light, ambient drones creating visual waves"
+  - "bare feet couple standing on morning soil, roots growing beneath them, holding sign while energy patterns pulse upward"
+  - "couple surrounded by sacred geometric patterns, sign floating between them, water-like energy flowing through their forms"
+  - "silhouettes of couple merging with cosmic patterns, sign emerging from light particles, planetary orbits creating halos"
+  - "couple's heartbeats visualized as waves below their feet, sign pulsing with their unified rhythm, experimental light streams"
+  - "couple standing in rain of light particles, sign materializing from water droplets, boundary lines dissolving around them"
+  - "root-to-sky connection forming through intertwined couple, sign emerging from natural patterns, soft binaural waves visible"
+  - "couple's blood flow synchronized with cosmic currents, sign formed by magnetic field lines, ambient nature elements swirling"
+  - "atoms dancing between couple forming bridge of light, sign appearing in quantum particles, experimental electronic aesthetics"
+  - "couple merged with flowing water patterns, sign emerging from sacred signs in sand, boundary lines transforming to light"
+  - "magnetic day atmosphere surrounding couple, sign floating in experimental electronic visuals, nature recordings visualized"
+  - "couple's veins glowing with magnetic fields, sign appearing in morning soil patterns, ambient drones creating visual texture"
+  - "couple surrounded by sound waves forming patterns, sign materializing from glitch elements, experimental light streams"
+  - "deep cosmic connection visualized between couple, sign forming from planetary patterns, quantum particles dancing"
+  - "couple's energy fields merging into one pulse, sign emerging from wave patterns, experimental electronic aesthetics"
+
+# LoRA configurations
+loras:
+  lora:
+    - name: "aidmaMJ6.1-FLUX-v0.4"
+      strength: 0.65
+
+# Order of magnitude variations
+variations:
+  style:
+    type: "sequential"
+    values: ["soft lighting", "romantic mood", "candid moments", "natural poses"]
+
+# Workflow configurations
+workflows:
+  dev:
+    steps: 35
+    cfg_scale: 7.5
+    width: 1344
+    height: 768
+    seeds: [1, 2, 3]
+  default:
+    steps: 35
+    cfg_scale: 7
+    width: 1344
+    height: 768
+    seeds: [1]

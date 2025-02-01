@@ -1,0 +1,52 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "aidmaMJ6.1, vertical split, split screen, cinematic lighting, afternoon sunlight, peaceful atmosphere, photographic, dreamy, soft focus"
+  negative: "dark, harsh lighting, noise, distortion, oversaturated, blurry, low quality"
+
+# List of prompts to generate
+prompts:
+  - "sunlit living room, golden afternoon light streaming through large windows, dust particles dancing in sunbeams"
+  - "comfortable modern couch with plush cushions, person wearing headphones, soft shadows playing across the room"
+  - "peaceful interior with floating musical notes, warm lighting, cozy atmosphere, minimalist design"
+  - "dreamy room scene, ethereal afternoon glow, translucent curtains moving gently, music visualization in the air"
+  - "soft-focused living space, sunbeams creating patterns on wooden floors, vintage record player in corner"
+  - "person lost in music, eyes closed in bliss, afternoon sun creating a warm halo effect, contemporary interior"
+  - "harmonious home environment, music sheets scattered artistically, soft ambient lighting, zen atmosphere"
+
+# LoRA configurations
+loras:
+  lora:
+    - name: "aidmaMJ6.1-FLUX-v0.4"
+      strength: 0.6
+
+# Order of magnitude variations
+variations:
+  style:
+    type: "static"
+    values: ["soft lighting", "dreamy atmosphere", "photographic", "highly detailed"]
+
+# Image sizes
+# portrait: 832x1216
+# landscape: 1216x832
+# wide: 1344x768
+
+# Workflow configurations
+workflows:
+  dev:
+    steps: 20
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1, 2, 3]
+  schnell:
+    steps: 4
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1, 2]
+  default:
+    steps: 30
+    cfg_scale: 7
+    width: 1216
+    height: 832
+    seeds: [1]

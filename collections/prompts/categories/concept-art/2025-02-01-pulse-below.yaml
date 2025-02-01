@@ -1,0 +1,79 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "aidmaMJ6.1, experimental electronic aesthetic, ambient drones, binaural frequencies, nature recordings, glitch elements"
+  negative: "dark, harsh lighting, noise, distortion, oversaturated, blurry, low quality, text overlay, watermark"
+
+# List of prompts to generate
+prompts:
+  - "rippling water surface with sound waves visualized, gentle patterns forming in morning light, experimental electronic aesthetics"
+  - "bare feet buried in morning soil, energy tendrils coiling upward, binaural frequencies visible as light waves"
+  - "figure with glowing roots extending deep into earth, rising energy rings connecting to sky, ambient nature elements"
+  - "heart beating in sync with ocean waves, blood vessels illuminated by magnetic currents, experimental light patterns"
+  - "sacred geometric patterns forming in wet sand, boundary lines dissolving into light, glitch elements merging"
+  - "magnetic fields flowing through translucent veins, rain particles frozen in time, ambient drone visualizations"
+  - "atoms dancing in deep cosmic space, forming planetary patterns, quantum particles creating light bridges"
+  - "figure breaking through dimensional boundaries, sacred signs emerging from sand, experimental electronic waves"
+  - "root network pulsing with binaural energy, connecting earth to sky, nature recordings visualized as light"
+  - "blood flow synchronized with ocean currents, one unified pulse pattern, magnetic day atmosphere"
+  - "water droplets transforming into light particles, boundary lines dissolving, experimental glitch aesthetics"
+  - "cosmic patterns merging with human form, magnetic fields visible as flowing lines, ambient nature elements"
+  - "energy coils rising from morning soil, forming sacred geometries, binaural frequencies as light waves"
+  - "heart rhythms visualized as ocean patterns, magnetic currents flowing through space, experimental textures"
+  - "quantum particles dancing between dimensions, forming bridges of light, ambient drone patterns"
+  - "rippling water surface with sound waves visualized, gentle patterns forming in morning light, experimental electronic aesthetics"
+  - "bare feet buried in morning soil, energy tendrils coiling upward, binaural frequencies visible as light waves"
+  - "figure with glowing roots extending deep into earth, rising energy rings connecting to sky, ambient nature elements"
+  - "heart beating in sync with ocean waves, blood vessels illuminated by magnetic currents, experimental light patterns"
+  - "sacred geometric patterns forming in wet sand, boundary lines dissolving into light, glitch elements merging"
+  - "magnetic fields flowing through translucent veins, rain particles frozen in time, ambient drone visualizations"
+  - "atoms dancing in deep cosmic space, forming planetary patterns, quantum particles creating light bridges"
+  - "figure breaking through dimensional boundaries, sacred signs emerging from sand, experimental electronic waves"
+  - "root network pulsing with binaural energy, connecting earth to sky, nature recordings visualized as light"
+  - "blood flow synchronized with ocean currents, one unified pulse pattern, magnetic day atmosphere"
+  - "water droplets transforming into light particles, boundary lines dissolving, experimental glitch aesthetics"
+  - "cosmic patterns merging with human form, magnetic fields visible as flowing lines, ambient nature elements"
+  - "energy coils rising from morning soil, forming sacred geometries, binaural frequencies as light waves"
+  - "heart rhythms visualized as ocean patterns, magnetic currents flowing through space, experimental textures"
+  - "quantum particles dancing between dimensions, forming bridges of light, ambient drone patterns"
+  - "crystalline structures emerging from meditation state, sacred geometry in neural networks, morning light frequencies"
+  - "DNA helix spiraling through cosmic space, bioluminescent patterns merging with stardust, ambient electronic waves"
+  - "chakra points illuminated by earth's magnetic field, energy meridians as light streams, binaural pulse patterns"
+  - "consciousness expanding into sacred fractals, quantum entanglement visualized, experimental nature synthesis"
+  - "cellular memories awakening in morning light, ancestral patterns forming in water, ambient frequency waves"
+  - "neural pathways synchronizing with earth's resonance, light particles dancing through synapses, experimental textures"
+  - "astral projection leaving light trails, sacred geometry forming in wake, binaural drone aesthetics"
+  - "meditation brainwaves visualized as ocean currents, third eye opening into cosmic space, magnetic light patterns"
+  - "kundalini energy rising through chakra points, sacred coils forming in morning mist, experimental frequencies"
+  - "quantum healing frequencies visible as light waves, cellular regeneration patterns, ambient nature elements"
+  - "pineal gland activation sequences, sacred geometry emerging from third eye, experimental electronic aesthetics"
+  - "akashic records materializing as light patterns, cosmic library access points, ambient drone visualizations"
+  - "shamanic journey trails illuminated by morning sun, spirit animal energy signatures, experimental nature synthesis"
+  - "consciousness grid connecting to earth's core, sacred geometry network forming, binaural frequency patterns"
+  - "interdimensional portal opening in meditation space, quantum bridge forming, experimental light aesthetics"
+
+# LoRA configurations
+loras:
+  lora:
+    - name: "aidmaMJ6.1-FLUX-v0.4"
+      strength: 0.7
+
+# Order of magnitude variations
+variations:
+  style:
+    type: "sequential"
+    values: ["experimental electronic", "ambient nature", "binaural frequencies", "magnetic fields"]
+
+# Workflow configurations
+workflows:
+  dev:
+    steps: 35
+    cfg_scale: 8
+    width: 1344
+    height: 768
+    seeds: [1, 2, 3]
+  default:
+    steps: 35
+    cfg_scale: 7.5
+    width: 1344
+    height: 768
+    seeds: [1]
