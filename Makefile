@@ -21,11 +21,10 @@ PYTHON ?= .venv/bin/python3
 
 # Input/Output Configuration
 COLLECTIONS_DIR = $(WORKSPACE)/collections
-MEDIA_BASE_DIR = $(COLLECTIONS_DIR)/$(shell date +%Y/%m/%d)/media
-MEDIA_IMAGES_DIR = $(MEDIA_BASE_DIR)/images
-MEDIA_VIDEOS_DIR = $(MEDIA_BASE_DIR)/videos
-MEDIA_AUDIO_DIR = $(MEDIA_BASE_DIR)/audio
-MEDIA_OTHER_DIR = $(MEDIA_BASE_DIR)/other
+MEDIA_IMAGES_DIR = $(COLLECTIONS_DIR)/images
+MEDIA_VIDEOS_DIR = $(COLLECTIONS_DIR)/videos
+MEDIA_AUDIO_DIR = $(COLLECTIONS_DIR)/audio
+MEDIA_OTHER_DIR = $(COLLECTIONS_DIR)/other
 
 # Override media directories with environment variables if set
 ifdef PROMPT_MEDIA_BASE_DIR
