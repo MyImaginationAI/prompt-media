@@ -1,0 +1,135 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "<lora:ck-charcoal-drawing-000014:1>, cyberpunk, ck-ccd style sketch of "
+  negative: ""
+
+# List of prompts to generate
+prompts:
+- "Cyberpunk hacker with neon blue hair and retinal implants, wearing a sleek leather jacket with glowing circuitry patterns."
+-  "Street samurai with a cybernetic arm, sporting a mohawk and tactical vest, standing in a neon-lit alley."
+-  "Corporate spy with subdermal data chips, dressed in a tailored suit with hidden tech enhancements."
+-  "Rogue medic with augmented hands for precise surgery, wearing a high-tech hazmat suit in a grimy clinic."
+-  "Cyber-athlete with leg prosthetics, donning a streamlined bodysuit with sponsor logos and LED accents."
+- "Netrunner with a cranial jack, sporting a hooded jacket and VR goggles, surrounded by holographic interfaces."
+-  "Cybernetic bounty hunter with an artificial eye, wearing a trench coat with built-in weapon systems."
+-  "Augmented street artist with color-changing skin implants, dressed in avant-garde fashion with interactive fabric."
+-  "Cyber-enhanced DJ with audio implants, wearing a sound-reactive outfit in a futuristic nightclub."
+- "Rogue AI construct in a human body, dressed in glitching holographic attire that constantly shifts patterns."
+- "Cyberpunk mechanic with multi-tool arm attachments, wearing oil-stained overalls with integrated diagnostic systems."
+- "Augmented reality architect with neural interface, sporting a minimalist jumpsuit covered in AR markers."
+- "Cyber-shaman with bioluminescent tattoos, wearing tribal-tech fusion garments with embedded ritual tech."
+- "Cybernetic bartender with built-in mixology systems, dressed in a smart fabric uniform that displays drink recipes."
+- "Augmented parkour expert with gecko-grip implants, wearing flexible body armor with dynamic camouflage."
+- "Cyber-detective with enhanced sensory implants, sporting a neo-noir trench coat with concealed gadgets."
+- "Biohacked athlete with muscle enhancement implants, wearing a sleek exo-suit for extreme sports."
+- "Cyberpunk chef with taste-amplifying tongue implants, dressed in a high-tech chef's uniform with built-in temperature control."
+- "Augmented sniper with optical zoom eye implants, wearing an adaptive ghillie suit with active camouflage."
+- "Cyber-monk with meditation-enhancing neural implants, dressed in minimalist robes with subtle tech accents."
+- "Augmented firefighter with heat-resistant skin grafts, wearing a next-gen firefighting suit with integrated AI assistant."
+- "Cyberpunk fashionista with holographic hair implants, sporting a couture dress made of smart fabric and micro-LEDs."
+- "Rogue drone operator with neural link implants, wearing a lightweight exo-skeleton for enhanced mobility."
+- "Augmented urban farmer with plant-interfacing hand implants, dressed in bio-reactive overalls that monitor crop health."
+- "Cyber-gladiator with strength-enhancing exoskeleton, wearing armor plates with energy shield generators."
+- "Augmented deep-sea explorer with pressure-resistant skin mods, sporting a high-tech diving suit with bioluminescent accents."
+- "Cyberpunk street racer with reflex-boosting implants, wearing a aerodynamic suit with built-in telemetry systems."
+- "Augmented archaeologist with time-perception implants, dressed in rugged smart-fabric clothing with integrated scanning tech."
+- "Cyber-assassin with chameleon skin implants, wearing a form-fitting stealth suit with active noise cancellation."
+- "Augmented therapist with empathy-enhancing neural mods, sporting a calming smart-fabric outfit that responds to patient emotions."
+- "Cyberpunk musician with synesthesia implants, wearing a suit that translates music into visual patterns."
+- "Augmented eco-warrior with pollution-filtering lung implants, dressed in recycled tech-wear with built-in environmental sensors."
+- "Cyber-sommelier with molecular analysis taste buds, sporting a smart suit that displays wine information."
+- "Augmented parkour messenger with mag-lock foot implants, wearing sleek urban gear with package-securing tech."
+- "Cyberpunk fortune teller with predictive algorithm implants, dressed in mystical robes embedded with holographic crystals."
+- "Augmented space adaptation specialist with gravity-adjusting bone implants, wearing a modular space suit for various environments."
+- "Cyber-librarian with vast data storage brain implants, sporting smart glasses and a coat with e-ink displays for book summaries."
+- "Augmented extreme weather reporter with temperature-regulating skin mods, wearing adaptive clothing for any climate."
+- "Cyberpunk street vendor with multi-lingual voice box implants, dressed in a tech-enhanced outfit with built-in payment systems."
+- "Augmented virtual reality designer with neural-interface implants, wearing a minimalist bodysuit covered in motion capture sensors."
+- "Cyber-acrobat with balance-enhancing inner ear mods, sporting a flexible performance suit with LED light trails."
+- "Augmented waste reclamation specialist with toxin-filtering implants, wearing a high-tech hazmat suit with material analysis scanners."
+- "Cyberpunk bodyguard with subdermal armor implants, dressed in a tailored suit with concealed defense systems."
+- "Augmented deep space pilot with radiation-resistant gene mods, wearing a sleek flight suit with integrated life support."
+- "Cyber-tailor with precision-enhancing hand implants, sporting a smart fabric outfit that can change patterns and cuts instantly."
+- "Augmented urban vertical farmer with plant-growth-accelerating implants, wearing overalls with built-in hydroponics controls."
+- "Cyberpunk protest organizer with encrypted communication implants, dressed in activist gear with quick-change appearance mods."
+- "Augmented ocean cleanup specialist with water-filtering gill implants, wearing a streamlined dive suit with trash collection systems."
+- "Cyber-architect with 3D modeling brain implants, sporting a minimalist outfit that can project building designs."
+- "Augmented disaster relief worker with strength-enhancing exo-skeleton, wearing an adaptive suit with built-in medical diagnostics."
+- "Cyberpunk graffiti artist with paint-spraying finger implants, dressed in urban camouflage with active pattern-changing fabric."
+- "Augmented climate engineer with weather-sensing skin implants, wearing a high-altitude suit with atmospheric manipulation tools."
+- "Cyber-journalist with 360-degree camera eye implants, sporting a stealth suit with built-in satellite uplink."
+- "Augmented martial arts master with reflex-enhancing neural implants, wearing a sleek gi with impact-hardening smart fabric."
+- "Cyberpunk mixologist with molecular gastronomy arm attachments, dressed in a bartender's outfit with holographic drink menu displays."
+- "Augmented search and rescue specialist with infrared vision implants, wearing an all-terrain suit with integrated life-sign detectors."
+- "Cyber-courier with GPS-linked brain implants, sporting a streamlined outfit with package-securing exoskeleton."
+- "Augmented deep-sea mining operator with pressure-resistant bone implants, wearing a heavy-duty dive suit with ore analysis tech."
+- "Cyberpunk street doctor with diagnostic scanner hand implants, dressed in a high-tech medical coat with built-in sterilization systems."
+- "Augmented zero-gravity construction worker with magnetic skin implants, wearing a space-grade work suit with tool-tethering systems."
+- "Cyber-sharpshooter with targeting system eye implants, sporting a camouflage suit with active wind and distance compensation."
+- "Augmented urban vertical farmer with plant-interfacing neural implants, wearing smart overalls with crop health monitoring displays."
+- "Cyberpunk nightclub bouncer with strength-enhancing arm implants, dressed in intimidating smart-fabric attire with threat detection sensors."
+- "Augmented deep-sea archaeologist with sonar-emitting implants, wearing a pressure-resistant dive suit with built-in artifact preservation tech."
+- "Cyber-illusionist with hologram-projecting hand implants, sporting a dazzling outfit that can change appearance at will."
+- "Augmented wilderness guide with environment-analyzing skin implants, wearing adaptive camouflage gear with built-in survival tools."
+- "Cyberpunk street racer with reflex-boosting spinal implants, dressed in an aerodynamic suit with real-time biometric displays."
+- "Augmented asteroid miner with micro-gravity adaptation implants, wearing a rugged space suit with integrated mineral analysis systems."
+- "Cyber-chef with taste-enhancing tongue implants, sporting a high-tech chef's uniform with molecular gastronomy tools built-in."
+- "Augmented urban planner with city-simulation neural implants, wearing smart clothing that can project 3D city models."
+- "Cyberpunk private investigator with lie-detector implants, dressed in a neo-noir trench coat with hidden surveillance gear."
+- "Augmented polar researcher with cold-resistant skin mods, wearing an advanced thermal suit with integrated ice-core analysis tech."
+- "Cyber-linguist with universal translator vocal implants, sporting culturally adaptive clothing with real-time language displays."
+- "Augmented parkour courier with adhesive-secreting hand and foot implants, wearing flexible body armor with package-securing systems."
+- "Cyberpunk psychologist with emotion-reading eye implants, dressed in calming smart-fabric attire that responds to patient stress levels."
+- "Augmented solar panel technician with radiation-resistant skin mods, wearing a high-altitude work suit with built-in power efficiency analyzers."
+- "Cyber-tattoo artist with ink-synthesizing finger implants, sporting a body suit that showcases an ever-changing gallery of tattoo designs."
+- "Augmented traffic controller with multi-tasking neural implants, wearing a uniform with integrated holographic city grid displays."
+- "Cyberpunk storm chaser with atmospheric analysis implants, dressed in a weather-resistant suit with built-in lightning prediction tech."
+- "Augmented virtual reality game tester with sensory-override implants, wearing a minimalist bodysuit covered in haptic feedback nodes."
+- "Cyber-botanist with plant-communication implants, sporting a bio-reactive suit that changes color based on plant health."
+- "Augmented high-rise window cleaner with gravity-defying leg implants, wearing a sleek work suit with integrated safety tethers."
+- "Cyberpunk sound engineer with synesthesia-inducing ear implants, dressed in audio-reactive clothing that visualizes sound waves."
+- "Augmented deep-earth geologist with heat-resistant skin mods, wearing a pressure suit with built-in seismic activity sensors."
+- "Cyber-choreographer with motion-capture skeletal implants, sporting a form-fitting suit that records and projects dance movements."
+- "Augmented waste management specialist with toxin-neutralizing implants, wearing a high-tech hazmat suit with material sorting systems."
+- "Cyberpunk air traffic controller with radar-linked brain implants, dressed in a uniform with holographic airspace display capabilities."
+- "Augmented marine biologist with underwater breathing gill implants, wearing a smart dive suit with built-in species identification tech."
+- "Cyber-sommelier with molecular analysis taste implants, sporting a smart suit that displays detailed wine information and pairings."
+- "Augmented disaster relief coordinator with satellite-linked neural implants, wearing adaptive gear with real-time crisis mapping abilities."
+- "Cyberpunk urban beekeeper with pheromone-producing skin implants, dressed in a high-tech beekeeping suit with hive health monitoring systems."
+- "Augmented space station maintenance worker with zero-g adaptation implants, wearing a modular space suit with built-in repair tools."
+- "Cyber-archaeologist with carbon-dating finger implants, sporting adaptive clothing with integrated artifact preservation technology."
+- "Augmented volcano researcher with heat-vision eye implants, wearing a thermal protection suit with lava flow prediction displays."
+- "Cyberpunk virtual reality architect with neural-interface implants, dressed in a bodysuit that can manifest and manipulate VR environments."
+- "Augmented deep-sea energy harvester with pressure-adaptive bone implants, wearing a specialized dive suit with power collection systems."
+- "Cyber-perfumer with molecule-detecting nasal implants, sporting a smart lab coat that can synthesize and display scent formulas."
+- "Augmented space debris removal specialist with micro-gravity muscle implants, wearing a versatile space suit with debris-capturing tools."
+- "Cyberpunk holographic artist with light-manipulating eye and hand implants, dressed in a suit that serves as a canvas for 3D light sculptures."
+
+- "Augmented arctic wildlife conservationist with thermal-regulating skin implants, wearing adaptive cold-weather gear with animal tracking tech."
+
+# LoRA configurations
+loras:
+  lora:
+    - name: "ck-charcoal-drawing-000014"
+      strength: 0.7
+
+# Order of magnitude variations
+variations:
+  empty:
+    type: "static"
+    values: [""]
+
+# Workflow configurations
+workflows:
+  dev:
+    steps: 35
+    cfg_scale: 8
+    width: 1344
+    height: 768
+    seeds: [1, 2, 3]
+  default:
+    steps: 35
+    cfg_scale: 7.5
+    width: 1344
+    height: 768
+    seeds: [1]

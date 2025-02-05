@@ -1,0 +1,59 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "<lora:ck-charcoal-drawing-000014:1>, "
+  negative: ""
+
+prompts:
+  - "charcoal portrait drawing of a young Japanese woman with long straight hair, gentle smile, natural lighting, soft shadows"
+  - "detailed sketch of a Brazilian grandmother with curly grey hair and laugh lines, wearing traditional jewelry"
+  - "expressive charcoal drawing of a Nigerian man with traditional tribal marks, dignified pose, dramatic lighting"
+  - "intimate portrait sketch of a trans woman with shoulder-length hair, soft features, natural pose"
+  - "dynamic drawing of a drag queen performing, elaborate makeup, expressive face, spotlight effects"
+  - "gentle charcoal portrait of a French elderly woman with a silk scarf, refined features"
+  - "detailed sketch of an Indian child playing, messy hair, genuine laughter"
+  - "natural portrait of a Canadian non-binary person with short hair, candid expression"
+  - "charcoal drawing of a Korean teenager with round glasses, studying"
+  - "expressive portrait of a British drag queen in elaborate evening wear"
+  - "detailed sketch of a Mexican mother braiding her daughter's hair"
+  - "charcoal portrait of an Italian barista with expressive hands"
+  - "natural drawing of an Australian surfer with sun-weathered features"
+  - "intimate sketch of a German professor with wire-rimmed glasses"
+  - "dynamic portrait of a Spanish flamenco dancer mid-performance"
+  - "detailed drawing of a Filipino fisherman with weathered face"
+  - "charcoal sketch of a Russian ballet dancer in practice clothes"
+  - "portrait of an Egyptian street vendor with kind eyes"
+  - "natural drawing of an Argentine trans man with facial stubble"
+  - "gentle sketch of a Swedish grandmother knitting"
+  - "charcoal portrait of a Kenyan marathon runner in motion"
+  - "detailed drawing of an Indian classical dancer with traditional makeup"
+  - "expressive sketch of a Thai drag queen in traditional inspired costume"
+  - "natural portrait of a Dutch cyclist with windswept hair"
+  - "intimate drawing of a Maori elder with traditional face tattoos"
+  - "charcoal sketch of a Vietnamese street food vendor cooking"
+  - "detailed portrait of a South African jazz musician performing"
+  - "dynamic drawing of a Portuguese fado singer mid-song"
+  - "gentle sketch of a Turkish grandmother making bread"
+  - "charcoal portrait of a Colombian coffee farmer at sunrise"
+
+
+
+# LoRA configurations
+loras:
+  lora:
+    - name: "ck-charcoal-drawing-000014"
+      strength: 0.7
+
+# Order of magnitude variations
+variations:
+  empty:
+    type: "static"
+    values: [""]
+
+# Workflow configurations
+workflows:
+  dev:
+    steps: 35
+    cfg_scale: 8
+    width: 832
+    height: 1216
+    seeds: [1, 2, 3]

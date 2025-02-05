@@ -1,0 +1,57 @@
+# Summary: A magical adventure about a brave mouse who helps woodland creatures prepare for a big storm. 
+# A small mouse with silver fur and bright red boots discovers dark clouds approaching the forest. With help from 
+# a tall giraffe with rainbow-colored spots and a plump penguin with golden glasses, they work together to warn 
+# and protect all the animals. A slim cat with purple stripes and a fluffy sheep with blue wool join their efforts 
+# to create a cozy shelter before the storm arrives.
+
+prompt_settings:
+  prefix: "3D animation style, Pixar-inspired rendering, "
+  negative: ""
+
+cfg: 1.0
+steps: 4
+width: 1344
+height: 768
+seeds: [159753]
+sampler: "euler"
+scheduler: "simple"
+denoise: 1
+
+loras:
+  lora:
+    - name: "Bonafida.Studio"
+      strength: 1.0
+
+# Summary: A heartwarming tale of friendship and adventure in an enchanted forest. A small curious rabbit discovers magical abilities and helps forest creatures overcome challenges while making new friends. The story teaches valuable lessons about kindness, courage, and the importance of helping others.
+
+prompts:
+  - "A small white rabbit with floppy ears hops through tall grass, while a tall deer with golden antlers watches from behind a tree"
+  - "The white rabbit discovers glowing mushrooms, as a blue-feathered owl swoops silently overhead"
+  - "The floppy-eared rabbit touches a mushroom with its paw, while the golden-antlered deer steps closer in amazement"
+  - "A sparkly glow surrounds the white rabbit's paws as a red-furred squirrel peeks from behind a branch"
+  - "The white rabbit leaps over a fallen log, leaving sparkly trails, while the blue owl glides between trees"
+  - "The floppy-eared rabbit helps a limping fox with silver fur cross a stream using magical stepping stones"
+  - "The white rabbit and golden-antlered deer share berries beneath a rainbow-colored tree"
+  - "The magical rabbit creates light orbs that float upward as the red squirrel watches from a low branch"
+  - "The silver fox and white rabbit work together to clear fallen branches from a beaver's home"
+  - "The floppy-eared rabbit races through flower fields while the blue owl soars in parallel"
+  - "The white rabbit uses magic to help the red squirrel reach high branches for acorns"
+  - "The golden-antlered deer teaches the magical rabbit to leap higher over moonlit meadows"
+  - "The white rabbit creates a bridge of light as the silver fox crosses a deep ravine"
+  - "The floppy-eared rabbit and blue owl explore a crystal cave together"
+  - "The magical rabbit makes flowers bloom while the red squirrel gathers petals"
+  - "The white rabbit and golden deer drink from a sparkling stream under starlight"
+  - "The floppy-eared rabbit helps the silver fox find lost cubs using glowing trail markers"
+  - "The magical rabbit and blue owl share secrets in a hollow tree"
+  - "The white rabbit creates a rainbow path while the red squirrel follows in wonder"
+  - "The floppy-eared rabbit and golden deer dance through falling autumn leaves"
+  - "The magical rabbit lights up dark storm clouds while the silver fox seeks shelter"
+  - "The white rabbit and blue owl navigate through morning mist"
+  - "The floppy-eared rabbit teaches young deer to hop as the golden-antlered deer watches proudly"
+  - "The magical rabbit and red squirrel slide down mossy hills together"
+  - "The white rabbit creates warm light bubbles as the silver fox rests in its den"
+  - "The floppy-eared rabbit and blue owl watch sunrise from a high branch"
+  - "The magical rabbit helps the red squirrel build a cozy nest with glowing twigs"
+  - "The white rabbit and golden deer find rare flowers in a hidden meadow"
+  - "The floppy-eared rabbit shares magic tricks with amazed silver fox cubs"
+  - "The magical rabbit and blue owl celebrate under northern lights"

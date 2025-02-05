@@ -1,0 +1,91 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "<lora:ck-charcoal-drawing-000014:1>, brazilian, brazil color pallete, "
+  negative: ""
+
+# List of prompts to generate
+prompts:
+  - "ck-ccd style sketch of a humanoid jaguar wearing a gold chain and snapback, freestyling in a São Paulo favela alleyway"
+  - "drawing inspired by ck-ccd of a capybara in baggy jeans and a tank top, spinning records at a beachside party in Rio"
+  - "sketch in the style of ck-ccd featuring a toucan with a colorful beak, sporting a graffiti-patterned hoodie in front of a Brasília street mural"
+  - "ck-ccd inspired illustration of a stylish maned wolf in high-top sneakers, breakdancing on a cardboard in a Belo Horizonte plaza"
+  - "drawing reminiscent of ck-ccd, showcasing a capoeira-dancing monkey in a sleeveless shirt and bandana in Salvador's historic center"
+  - "ck-ccd style sketch of an anteater wearing oversized sunglasses and a bucket hat, nodding to the beat in a Manaus nightclub"
+  - "illustration in ck-ccd style of a sloth in a tie-dye shirt and cargo shorts, slowly beatboxing in an Amazonian treehouse"
+  - "sketch inspired by ck-ccd featuring a puma in a leather jacket and ripped jeans, tagging a wall in a Curitiba back alley"
+  - "ck-ccd style drawing of an armadillo with a gold grill, wearing a basketball jersey in a Recife street basketball court"
+  - "illustration reminiscent of ck-ccd, depicting a macaw in a crop top and high-waisted shorts, vogueing at a São Paulo pride parade"
+  - "ck-ccd inspired sketch of a capybara in a tracksuit, sipping coconut water on Copacabana beach"
+  - "drawing in the style of ck-ccd featuring a jaguarundi in a beanie and oversized sweater, scribbling lyrics in a weathered notebook"
+  - "ck-ccd style illustration of a marmoset in a puffer jacket and chains, perched on a graffitied wall in a Rio favela"
+  - "sketch inspired by ck-ccd of a tapir wearing a bandana and tank top, freestyling in a smoky underground club"
+  - "ck-ccd style drawing of an ocelot in a crop top and cargo pants, spray painting a mural in a São Paulo alley"
+  - "illustration reminiscent of ck-ccd, showing a howler monkey in a snapback and gold chain, DJing at a Carnival street party"
+  - "sketch in ck-ccd style of a giant anteater wearing baggy jeans and a sleeveless hoodie, breakdancing in a Brasília skate park"
+  - "ck-ccd inspired drawing of a three-toed sloth in a tie-dye shirt and peace sign necklace, slowly nodding to a beat in a hammock"
+  - "illustration in the style of ck-ccd featuring a maned wolf in a leather jacket and studded collar, howling lyrics into a mic"
+  - "ck-ccd style sketch of a capybara in a bucket hat and oversized tee, lounging by a graffitied wall in a favela"
+  - "drawing inspired by ck-ccd of a jaguar in a mesh tank and gold chains, freestyling in a dimly lit underground parking lot"
+  - "sketch reminiscent of ck-ccd, depicting a toucan with a blinged-out beak, wearing a Hawaiian shirt at a beachside rap battle"
+  - "ck-ccd style illustration of an armadillo in a denim vest and bandana, breakdancing on a cardboard in a busy street"
+  - "drawing in ck-ccd style of a puma wearing a snapback and basketball jersey, dribbling a ball in a graffiti-covered court"
+  - "sketch inspired by ck-ccd featuring a macaw in a crop top and high-waisted jeans, perched on a speaker at an outdoor concert"
+  - "ck-ccd style drawing of a sloth in a tie-dye hoodie, slowly scratching records on a turntable in a treehouse studio"
+  - "illustration reminiscent of ck-ccd, showing a capybara in a tracksuit and gold chain, chilling by a pool in a luxurious mansion"
+  - "sketch in ck-ccd style of a jaguarundi wearing a beanie and oversized sweater, writing rhymes in a worn notebook on a rooftop"
+  - "ck-ccd inspired drawing of a marmoset in a puffer jacket and sneakers, swinging from a clothesline in a colorful favela"
+  - "illustration in the style of ck-ccd featuring an ocelot in ripped jeans and a crop top, tagging a wall in an abandoned building"
+  - "ck-ccd style sketch of a howler monkey in a snapback and tank top, shouting lyrics from a balcony during Carnival"
+  - "drawing inspired by ck-ccd of a giant anteater in baggy pants and a hoodie, breakdancing in front of a cheering crowd"
+  - "sketch reminiscent of ck-ccd, depicting a three-toed sloth in a tie-dye shirt and peace sign necklace, slowly climbing a graffitied wall"
+  - "ck-ccd style illustration of a maned wolf in a leather jacket and spiked collar, howling at the moon from a city rooftop"
+  - "drawing in ck-ccd style of a capybara in a bucket hat and gold chain, floating on an inflatable in a rooftop pool"
+  - "sketch inspired by ck-ccd featuring a jaguar in a mesh tank and cargo pants, freestyling in a smoky underground club"
+  - "ck-ccd style drawing of a toucan with a graffiti-patterned beak, wearing sunglasses and a hoodie in a bustling street market"
+  - "illustration reminiscent of ck-ccd, showing an armadillo in a denim jacket and snapback, curled up next to a boombox"
+  - "sketch in ck-ccd style of a puma wearing high-top sneakers and a basketball jersey, dunking on a hoop in a favela court"
+  - "ck-ccd inspired drawing of a macaw in a crop top and shorts, singing into a mic at a beachside rap battle"
+  - "illustration in the style of ck-ccd featuring a sloth in a tie-dye shirt and headphones, slowly mixing beats in a treehouse studio"
+  - "ck-ccd style sketch of a capybara in a tracksuit and gold teeth grill, lounging in a jacuzzi on a penthouse terrace"
+  - "drawing inspired by ck-ccd of a jaguarundi in a beanie and ripped jeans, spray painting a mural on a subway car"
+  - "sketch reminiscent of ck-ccd, depicting a marmoset in a puffer vest and chains, swinging from a streetlight at night"
+  - "ck-ccd style illustration of an ocelot in a crop top and high-waisted shorts, voguing on a catwalk made of wooden planks"
+  - "drawing in ck-ccd style of a howler monkey in a bandana and tank top, scratching records at a street party"
+  - "sketch inspired by ck-ccd featuring a giant anteater in baggy jeans and a sleeveless hoodie, break-dancing on a cardboard box"
+  - "ck-ccd style drawing of a three-toed sloth in a tie-dye shirt and peace sign necklace, slowly hanging from a clothesline in a favela"
+  - "illustration reminiscent of ck-ccd, showing a maned wolf in a leather jacket and studded collar, howling lyrics into a mic on a rooftop"
+  - "sketch in ck-ccd style of a capybara in a bucket hat and gold chain, relaxing in a hammock strung between two palm trees"
+  - "ck-ccd inspired drawing of a jaguar in a mesh tank and cargo shorts, freestyling in front of a crowd at the beach"
+  - "illustration in the style of ck-ccd featuring a toucan with a blinged-out beak, wearing a Hawaiian shirt and spinning records at a pool party"
+  - "ck-ccd style sketch of an armadillo in a denim vest and snapback, breakdancing in front of a graffitied wall"
+  - "drawing inspired by ck-ccd of a puma wearing high-top sneakers and a basketball jersey, posing with a boom box in an alley"
+  - "sketch reminiscent of ck-ccd, depicting a macaw in a crop top and gold chains, perched on a speaker at a beachside concert"
+  - "ck-ccd style illustration of a sloth in a tie-dye hoodie and headphones, slowly nodding to the beat on a graffitied bus"
+  - "drawing in ck-ccd style of a capybara in a tracksuit and gold teeth grill, cruising in a lowrider through city streets"
+
+# LoRA configurations
+loras:
+  lora:
+    - name: "ck-charcoal-drawing-000014"
+      strength: 0.7
+
+# Order of magnitude variations
+variations:
+  empty:
+    type: "static"
+    values: [""]
+
+# Workflow configurations
+workflows:
+  dev:
+    steps: 35
+    cfg_scale: 8
+    width: 832
+    height: 1216
+    seeds: [1, 2, 3]
+  default:
+    steps: 35
+    cfg_scale: 7.5
+    width: 1344
+    height: 768
+    seeds: [1]

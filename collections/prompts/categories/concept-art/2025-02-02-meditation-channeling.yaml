@@ -1,0 +1,146 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "<lora:ck-charcoal-drawing-000014:1>, brazilian, brazil color pallete, ck-ccd style sketch of "
+  negative: ""
+
+# List of prompts to generate
+prompts:
+  - "woman in lotus position, swirling purple and blue hues, golden light beams above"
+  - "man meditating, soft green aura, rainbow-colored light rays descending"
+  - "serene figure cross-legged, warm orange light, silvery beams to ethereal silhouettes"
+  - "meditator, closed eyes, red and yellow energy, white light streaming from heavens"
+  - "peaceful woman meditating, shimmering turquoise mist, indigo light beam halo"
+  - "man concentrating, sea of pastel pink, iridescent rays reaching distant figures"
+  - "tranquil being in lotus pose, swirling galaxies, starlight beaming from celestial realms"
+  - "meditator with mudra hands, soft lavender light, golden beams to ethereal beings"
+  - "serene woman, flowing aquamarine energy, crystal light rays bridging dimensions"
+  - "man in stillness, vibrant autumn hues, pearlescent beams forming cosmic web"
+  - "figure meditating, emerald green sea, rainbow rays creating overhead mandalas"
+  - "woman gazing upward, soft pink cocoon, silver beams connecting to angelic forms"
+  - "meditator radiating peace, indigo-violet energies, golden streams of sacred geometry"
+  - "man in lotus, warm amber light, crystalline beams opening doorways to other realms"
+  - "serene being cross-legged, tropical hues, prismatic rays forming cosmic ladder"
+  - "woman contemplating, cerulean blue sea, pearlescent beams weaving intricate patterns"
+  - "meditator in prayer pose, crimson-gold energies, pure white light streaming down"
+  - "peaceful man, soft sage green mist, rainbow rays forming celestial crown"
+  - "balanced figure, rich purple light, silver beams to shadowy distant dimensions"
+  - "meditating woman, coral and turquoise hues, golden streams forming protective sphere"
+  - "man in zazen pose, deep blue aura, copper light beams connecting to star clusters"
+  - "woman floating, misty lavender surroundings, platinum rays forming DNA-like spirals"
+  - "androgynous figure meditating, shifting opal colors, diamond light creating fractals"
+  - "elderly meditator, warm sepia tones, golden threads weaving tapestry of memories"
+  - "child in lotus position, pastel rainbow aura, playful light beams dancing around"
+  - "muscular figure meditating, deep crimson energy, bronze light rays forming armor"
+  - "pregnant woman meditating, soft rose glow, pearlescent beams nurturing unborn child"
+  - "meditator with prosthetic limb, electric blue aura, silver light streams enhancing form"
+  - "twins meditating back-to-back, yin-yang energy field, light beams intertwining above"
+  - "person in wheelchair meditating, vibrant green healing light, golden rays empowering"
+  - "meditator with visible tattoos, indigo ink aura, ultraviolet beams illuminating art"
+  - "figure in lotus on water surface, rippling aqua energy, moonlight beams from above"
+  - "person meditating in zero gravity, nebula-like surroundings, starlight streams connecting"
+  - "meditator amid flames, phoenix-like orange aura, white-hot light beams rebirthing"
+  - "figure cross-legged on mountain peak, misty gray surroundings, sunbeams breaking through"
+  - "underwater meditator, bioluminescent aura, light beams refracting through waves"
+  - "person meditating in desert, golden sand aura, heat-wave light ripples ascending"
+  - "meditator in arctic setting, crystalline blue-white aura, aurora beams dancing overhead"
+  - "figure in lotus amid lush forest, emerald leaf aura, dappled light beams through canopy"
+  - "urban meditator on rooftop, neon cityscape aura, light beams piercing night sky"
+  - "meditator in cave, earth-tone aura, quartz crystal light beams illuminating darkness"
+  - "person cross-legged in meadow, flower-petal aura, rainbow light beams arching overhead"
+  - "figure meditating by waterfall, misty blue aura, light beams refracting through spray"
+  - "meditator amid ruins, ancient stone aura, time-bending light streams connecting eras"
+  - "person in lotus on beach, pearl-like sand aura, light beams bridging sea and sky"
+  - "figure meditating in storm, electric aura, lightning-like light beams striking upward"
+  - "meditator in autumn forest, fiery leaf aura, golden light streams through branches"
+  - "person cross-legged in zen garden, rippling sand aura, bamboo-filtered light beams"
+  - "figure meditating on cliff edge, misty abyss below, light beams forming bridge across"
+  - "meditator in cherry blossom grove, soft pink aura, light streams carrying petals upward"
+  - "person in lotus amid crop circle, geometric energy field, light beams forming symbols"
+  - "figure meditating by ancient tree, root-like aura, light beams connecting earth and sky"
+  - "meditator in volcanic landscape, obsidian black aura, lava-like light streams flowing"
+  - "person cross-legged on glass floor, reflective aura, light beams creating infinite mirror"
+  - "figure meditating in rain, droplet-infused aura, prismatic light beams through rainbows"
+  - "meditator amid butterflies, wing-pattern aura, light streams guiding butterfly flight"
+  - "person in lotus position on clouds, cumulus aura, sunbeam light streams piercing through"
+  - "figure meditating by sundial, clock-face aura, light beams marking passage of time"
+  - "meditator in bamboo forest, jade green aura, light streams swaying with bamboo stalks"
+  - "person cross-legged in mandala garden, kaleidoscopic aura, light beams forming mandalas"
+  - "figure meditating amid northern lights, aurora aura, light streams dancing in sky"
+  - "meditator on floating lotus leaf, rippling water aura, moonlight beams across pond"
+  - "person in lotus pose in wind tunnel, streamlined aura, light beams bending with airflow"
+  - "figure meditating in crystal cave, gemstone aura, light streams refracting through crystals"
+  - "meditator amid floating lanterns, warm glow aura, light beams connecting each lantern"
+  - "person cross-legged on solar panel, electric blue aura, light streams converting to energy"
+  - "figure meditating in coral reef, aquatic aura, light beams filtering through water"
+  - "meditator in field of sunflowers, golden petal aura, light streams following sun's arc"
+  - "person in lotus pose on mars surface, rusty red aura, light beams connecting to earth"
+  - "figure meditating in bird's nest, twig-woven aura, light streams forming protective dome"
+  - "meditator amid floating bubbles, iridescent sphere aura, light beams refracting in bubbles"
+  - "person cross-legged in library, book-page aura, light streams forming words and stories"
+  - "figure meditating on chessboard, strategic pattern aura, light beams moving like chess pieces"
+  - "meditator in field of lavender, purple haze aura, light streams carrying calming scent"
+  - "person in lotus pose on piano keys, musical note aura, light beams forming melody lines"
+  - "figure meditating amid falling autumn leaves, multicolor leaf aura, light streams guiding leaves"
+  - "meditator on spiral staircase, helical aura, light beams twisting upward with stairs"
+  - "person cross-legged on moon's surface, lunar crater aura, light streams connecting stars"
+  - "figure meditating in giant terrarium, micro-ecosystem aura, light beams nurturing plants"
+  - "meditator amid floating clock gears, steampunk aura, light streams powering time flow"
+  - "person in lotus pose on vinyl record, grooved pattern aura, light beams spinning like music"
+  - "figure meditating in field of dandelions, seed-wish aura, light streams carrying seeds aloft"
+  - "meditator inside giant soap bubble, rainbow film aura, light beams creating bubble patterns"
+  - "person cross-legged on giant lotus flower, petal-opening aura, light streams from flower center"
+  - "figure meditating amid school of fish, synchronized swimming aura, light beams guiding fish"
+  - "meditator on giant leaf in rainforest canopy, chlorophyll aura, light streams through leaves"
+  - "person in lotus pose on melting ice cap, polar bear aura, light beams preserving ice"
+  - "figure meditating in field of fireflies, bioluminescent aura, light streams mimicking fireflies"
+  - "meditator amid floating feathers, weightless plume aura, light beams guiding feather dance"
+  - "person cross-legged on giant mushroom, mycelium network aura, light streams connecting fungi"
+  - "figure meditating in field of wheat, golden grain aura, light beams rippling like wind in wheat"
+  - "meditator on giant lotus in milky way, galactic spiral aura, light streams connecting planets"
+  - "person in lotus pose amid origami creatures, paper-fold aura, light beams bringing origami to life"
+  - "figure meditating on giant pendulum, hypnotic swing aura, light streams marking time's passage"
+  - "meditator in field of bioluminescent algae, glowing tide aura, light streams activating algae"
+  - "person cross-legged on giant dreamcatcher, woven web aura, light beams catching good dreams"
+  - "figure meditating amid floating tea leaves, steeping flavor aura, light streams infusing energy"
+  - "meditator on giant compass rose, directional aura, light beams pointing to true north"
+  - "person in lotus pose on giant microchip, circuit board aura, light streams as data flow"
+  - "figure meditating in field of mirrors, infinite reflection aura, light beams creating illusions"
+  - "meditator amid floating mathematical equations, numeric aura, light streams solving problems"
+  - "person cross-legged on giant DNA helix, genetic code aura, light beams unlocking life's secrets"
+  - "figure meditating in chamber of echoes, sound wave aura, light streams visualizing vibrations"
+  - "meditator on giant astrolabe, celestial map aura, light beams charting constellations"
+  - "person in lotus pose amid floating hourglasses, time-flow aura, light streams reversing sand fall"
+  - "figure meditating on giant abacus, calculation aura, light beams moving abacus beads"
+  - "meditator in field of barcodes, data stream aura, light beams scanning and decoding"
+  - "person cross-legged on giant fingerprint, unique pattern aura, light streams highlighting ridges"
+  - "figure meditating amid floating pixels, digital mosaic aura, light beams rendering reality"
+  - "meditator on giant film reel, cinematic scene aura, light beams projecting moving images"
+  - "person in lotus pose on giant quilt, patchwork memory aura, light streams weaving stories"
+  - "figure meditating in field of prisms, spectrum-split aura, light beams refracting into rainbows"
+
+# LoRA configurations
+loras:
+  lora:
+    - name: "ck-charcoal-drawing-000014"
+      strength: 0.7
+
+# Order of magnitude variations
+variations:
+  empty:
+    type: "static"
+    values: [""]
+
+# Workflow configurations
+workflows:
+  dev:
+    steps: 35
+    cfg_scale: 8
+    width: 1344
+    height: 768
+    seeds: [1, 2, 3]
+  default:
+    steps: 35
+    cfg_scale: 7.5
+    width: 1344
+    height: 768
+    seeds: [1]

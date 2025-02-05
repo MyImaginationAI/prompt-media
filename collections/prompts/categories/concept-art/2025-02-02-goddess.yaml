@@ -1,0 +1,132 @@
+# Default prompt settings
+prompt_settings:
+  prefix: "<lora:ck-charcoal-drawing-000014:1>, "
+  negative: ""
+
+# List of prompts to generate
+prompts:
+- "Ethereal blue-haired goddess dancing gracefully in the middle of a bioluminescent ocean, surrounded by curious jellyfish and colorful coral reefs."
+- "Divine woman with flowing azure locks twirling in crystal-clear waters, with schools of neon tetras creating living light patterns around her."
+- "Celestial blue-haired figure performing an underwater ballet, accompanied by playful dolphins and shimmering sea anemones."
+- "Oceanic deity with sapphire tresses swaying to the rhythm of the tides, encircled by a rainbow of tropical fish and pulsating sea fans."
+- "Majestic blue-maned goddess pirouetting amidst a swirling vortex of glowing plankton and iridescent squid."
+- "Aquatic enchantress with cerulean hair floating serenely in deep waters, illuminated by the soft glow of anglerfish lanterns."
+- "Marine goddess with indigo locks dancing on the crest of a wave, framed by leaping flying fish and bioluminescent algae."
+- "Mystical blue-haired figure performing a mesmerizing underwater tango with a giant octopus, surrounded by a kaleidoscope of reef fish."
+- "Oceanic queen with turquoise tresses swirling in a underwater light show, created by flashing cuttlefish and electric eels."
+- "Ethereal woman with cobalt hair moving rhythmically through a kelp forest, accompanied by curious sea otters and luminous jellyfish."
+- "Aquamarine-haired deity gliding through a coral garden, with seahorses and clownfish joining her aquatic dance."
+- "Celestial blue-locked goddess performing an elegant underwater waltz, partnered by a pod of graceful manta rays."
+- "Divine figure with azure mane twirling in a vortex of bubbles, surrounded by a living rainbow of parrotfish and wrasses."
+- "Oceanic enchantress with navy hair swaying in the currents, framed by a shimmering shoal of silver sardines."
+- "Mystical blue-tressed woman dancing on the boundary between light and dark ocean zones, accompanied by lanternfish and viperfish."
+- "Marine deity with cerulean locks pirouetting atop an underwater volcano, surrounded by heat-loving tube worms and ghost crabs."
+- "Aquatic goddess with sapphire hair performing a ballet in a sunken ship, joined by moray eels and lionfish."
+- "Ethereal blue-maned figure swirling through a field of underwater geysers, with curious hammerhead sharks circling around."
+- "Celestial woman with indigo tresses dancing amidst a bloom of moon jellies, their pulsing lights creating a hypnotic display."
+- "Oceanic queen with turquoise hair moving gracefully through a garden of giant clams, their iridescent mantles shimmering in the light."
+- "Divine blue-locked deity performing an underwater tango with a giant Pacific octopus, surrounded by a cloud of colorful anthias."
+- "Aquamarine-haired enchantress twirling in a bioluminescent bay, with millions of dinoflagellates lighting up her every move."
+- "Mystical figure with cobalt locks swaying in the gentle currents of a coral atoll, joined by sea turtles and butterfly fish."
+- "Marine goddess with azure tresses dancing through a field of sea anemones, their tentacles waving in rhythm with her movements."
+- "Ethereal blue-haired woman pirouetting in the eye of an underwater storm, surrounded by swirling schools of barracuda."
+- "Celestial deity with sapphire mane performing a ballet in a deep-sea canyon, illuminated by colonies of glowing tunicates."
+- "Oceanic enchantress with navy locks twirling amidst a migration of golden jellyfish, their translucent bodies catching the light."
+- "Divine figure with cerulean hair dancing on the edge of an oceanic trench, with anglerfish and giant isopods as her audience."
+- "Aquatic queen with indigo tresses swaying in a forest of giant kelp, accompanied by playful sea lions and otters."
+- "Mystical blue-maned goddess moving rhythmically through a field of hydrothermal vents, surrounded by tube worms and blind shrimp."
+- "Marine deity with turquoise locks performing an elegant underwater waltz with a whale shark, framed by shimmering sardines."
+- "Ethereal woman with azure hair twirling in a gyre of sargassum seaweed, joined by tiny seahorses and pipefish."
+- "Celestial blue-tressed figure dancing amidst a bloom of salps, their transparent bodies refracting light in mesmerizing patterns."
+- "Oceanic enchantress with sapphire mane swirling through a cloud of marine snow, surrounded by bioluminescent creatures of the deep."
+- "Divine goddess with cobalt locks pirouetting on a seamount, with schools of hammerhead sharks circling below."
+- "Aquatic deity with indigo hair performing a ballet in a field of sea pens, their feathery bodies swaying in unison."
+- "Mystical figure with cerulean tresses dancing through a squadron of manta rays, their graceful movements perfectly synchronized."
+- "Marine queen with navy locks twirling in a psychedelic display of comb jellies, their rainbow cilia flashing in the darkness."
+- "Ethereal blue-haired woman swaying amidst a gathering of spawning corals, their tiny pink eggs filling the water like snow."
+- "Celestial enchantress with turquoise mane moving gracefully through a shoal of silver jackfish, their scales reflecting moonlight."
+- "Oceanic goddess with azure tresses performing an underwater tango with a giant squid, surrounded by curious coelacanths."
+- "Divine figure with sapphire hair dancing on the bow of a sunken ship, joined by schools of glassfish and lionfish."
+- "Aquatic deity with cobalt locks pirouetting in a field of sea lilies, their feathery arms waving in the current."
+- "Mystical blue-maned woman twirling through a cloud of microscopic phytoplankton, their bodies creating a living light show."
+- "Marine enchantress with indigo tresses swaying in the gentle currents of a mangrove forest, surrounded by baby sharks and rays."
+- "Ethereal goddess with cerulean hair performing a ballet amidst a bloom of Portuguese man-of-war, their tentacles creating a dangerous dance floor."
+- "Celestial figure with navy locks dancing on the edge of an underwater sinkhole, with schools of tarpon swirling below."
+- "Oceanic deity with turquoise mane twirling through a field of sea cucumbers, their bodies undulating in slow motion."
+- "Divine blue-haired woman moving rhythmically with a pod of spinner dolphins, their acrobatic leaps punctuating her dance."
+- "Aquatic enchantress with azure tresses pirouetting in a cloud of ink released by a giant cuttlefish, creating abstract patterns in the water."
+- "Mystical goddess with sapphire locks swaying amidst a forest of black coral, their tree-like forms creating an otherworldly backdrop."
+- "Marine figure with cobalt hair dancing through a field of sea urchins, their spines creating a hazardous but beautiful stage."
+- "Ethereal deity with indigo mane performing an elegant underwater waltz with a leopard seal, surrounded by curious penguins."
+- "Celestial blue-tressed woman twirling in a bioluminescent tide, with millions of tiny ostracods lighting up the night sea."
+- "Oceanic enchantress with cerulean locks swirling through a cloud of pteropods, their butterfly-like wings fluttering in the currents."
+- "Divine goddess with navy hair pirouetting amidst a bloom of golden crinoids, their feathery arms creating a living sunburst."
+- "Aquatic figure with turquoise tresses dancing on the edge of a blue hole, with schools of snapper and grouper swirling below."
+- "Mystical blue-haired deity moving gracefully through a field of sea whips, their long bodies swaying like underwater wheat."
+- "Marine enchantress with azure mane performing a ballet with a pod of beluga whales, their white bodies glowing in the arctic waters."
+- "Ethereal woman with sapphire locks twirling amidst a bloom of blue buttons, their tiny bodies creating a living constellation."
+- "Celestial goddess with cobalt tresses swaying in the gentle currents of a seagrass meadow, surrounded by dugongs and sea turtles."
+- "Oceanic figure with indigo hair dancing through a cloud of sea butterflies, their translucent wings catching the light."
+- "Divine blue-maned deity pirouetting in a field of sea pansies, their disc-like bodies carpeting the ocean floor."
+- "Aquatic enchantress with cerulean locks performing an underwater tango with a giant clam, its iridescent mantle flashing in rhythm."
+- "Mystical woman with navy tresses twirling through a shoal of flashlight fish, their bioluminescent organs creating a strobe-like effect."
+- "Marine goddess with turquoise hair moving gracefully through a forest of gorgonian fans, their branches swaying in the current."
+- "Ethereal blue-locked figure dancing on the crest of an underwater sand dune, surrounded by garden eels and flatfish."
+- "Celestial deity with azure mane pirouetting amidst a bloom of upside-down jellyfish, their pulsing bodies creating a hypnotic display."
+- "Oceanic enchantress with sapphire tresses swaying in a field of sea daisies, their tentacles waving like petals in the wind."
+- "Divine woman with cobalt hair performing a ballet with a school of spinner sharks, their rotating bodies creating a vortex around her."
+- "Aquatic figure with indigo locks twirling through a cloud of marine snow, surrounded by deep-sea hatchetfish and lanternfish."
+- "Mystical blue-haired goddess dancing amidst a gathering of spawning grunion, their silver bodies flashing in the moonlight."
+- "Marine deity with cerulean mane moving rhythmically through a field of feather stars, their arms creating a living mandala."
+- "Ethereal woman with navy tresses pirouetting in a bioluminescent cave, with glowworms creating a starry ceiling above."
+- "Celestial enchantress with turquoise locks swirling through a shoal of shrimpfish, their vertical bodies creating a living forest."
+- "Oceanic figure with azure hair performing an elegant underwater waltz with a ribbon eel, its serpentine body flowing like silk."
+- "Divine blue-maned goddess twirling amidst a bloom of sea gooseberries, their comb rows refracting light like tiny rainbows."
+- "Aquatic deity with sapphire tresses dancing through a field of sea pens, their feathery bodies swaying like underwater wheat."
+- "Mystical woman with cobalt locks moving gracefully among a pod of narwhals, their tusks gleaming in the arctic light."
+- "Marine enchantress with indigo hair pirouetting on the edge of a methane seep, surrounded by chemosynthetic mussels and tube worms."
+- "Ethereal blue-tressed figure swaying in a forest of giant kelp, with garibaldi and sheephead fish darting among the fronds."
+- "Celestial goddess with cerulean mane performing a ballet with a school of mola mola, their flat bodies creating surreal shapes."
+- "Oceanic deity with navy locks twirling through a cloud of sea sparkle, their bioluminescence creating a glittering underwater galaxy."
+- "Divine woman with turquoise hair dancing amidst a gathering of leafy seadragons, their ornate appendages swaying in unison."
+- "Aquatic figure with azure tresses moving rhythmically through a field of sea tulips, their stalked bodies bowing in the current."
+- "Mystical blue-haired enchantress pirouetting in a shower of marine snow, surrounded by vampire squid and fangtooth fish."
+- "Marine goddess with sapphire locks performing an underwater tango with a giant isopod, its prehistoric form creating a striking contrast."
+- "Ethereal deity with cobalt mane twirling amidst a bloom of fire coral, their stinging cells creating a hazardous but beautiful stage."
+- "Celestial woman with indigo tresses swaying in a forest of soft coral, their tree-like forms creating a pastel underwater world."
+- "Oceanic figure with cerulean hair dancing through a field of sea apples, their vibrant colors rivaling any terrestrial flower garden."
+- "Divine blue-locked enchantress pirouetting among a pod of orcas, their black and white bodies creating a monochromatic ballet."
+- "Aquatic goddess with navy mane moving gracefully through a cloud of ctenophores, their transparent bodies refracting light like living prisms."
+- "Mystical woman with turquoise tresses twirling in a bioluminescent tide, with millions of tiny dinoflagellates lighting up her every move."
+- "Marine deity with azure locks performing an elegant underwater waltz with a giant pacific octopus, its arms creating a living sculpture."
+- "Ethereal blue-haired figure dancing amidst a gathering of spawning christmas tree worms, their colorful crowns bursting like fireworks."
+- "Celestial enchantress with sapphire mane swirling through a shoal of flying fish, their aerial acrobatics breaking the ocean's surface."
+- "Oceanic goddess with cobalt tresses pirouetting in a field of sea lilies, their ancient forms reaching towards the sunlit surface."
+
+
+# LoRA configurations
+loras:
+  lora:
+    - name: "ck-charcoal-drawing-000014"
+      strength: 0.7
+
+# Order of magnitude variations
+variations:
+  empty:
+    type: "static"
+    values: [""]
+
+# Workflow configurations
+workflows:
+  dev:
+    steps: 35
+    cfg_scale: 8
+    width: 1344
+    height: 768
+    seeds: [1, 2, 3]
+  default:
+    steps: 35
+    cfg_scale: 7.5
+    width: 1344
+    height: 768
+    seeds: [1]
