@@ -111,8 +111,7 @@ flux/help:
 	@echo "  make flux/custom FLUX_WORKFLOW=path/to/workflow.json"
 
 # --- ComfyUI Configuration ---
-COMFYUI_DIR ?= /home/valter/Workspaces/github.com/comfyanonymous/ComfyUI
-COMFYUI_VENV ?= $(COMFYUI_DIR)/venv/bin/activate
+COMFYUI_VENV ?= $(COMFYUI_DIR)/.venv/bin/activate
 
 .PHONY: comfyui comfyui/start comfyui/kill
 
@@ -123,6 +122,8 @@ comfyui/start:
 	@cd $(COMFYUI_DIR) && \
 		git pull && \
 		bash -c "source $(COMFYUI_VENV) && \
+		pip install -U pip && \
+		pip install -r requirements.txt && \
 		python main.py \
 		--listen \
 		--use-split-cross-attention \
