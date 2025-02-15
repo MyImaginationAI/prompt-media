@@ -33,13 +33,11 @@ workflows:
   schnell:
     steps: 4
     cfg: 7
-    cfg: 7
     width: 1216
     height: 832
     seeds: [1,2]
   default:
     steps: 30
-    cfg: 7
     cfg: 7
     width: 768
     height: 768
