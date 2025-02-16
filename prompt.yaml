@@ -1,21 +1,69 @@
 # Default prompt settings
 prompt_settings:
-  prefix: "high quality, detailed, 8k uhd, masterpiece"
-  negative: "blurry, low quality, distorted, deformed"
+  prefix: "<lora:ck-shadow-circuit-000021:1>, "
+  negative: ""
 
-# List of prompts to generate
+cfg: 1.0
+steps: 30
+width: 1344
+height: 768
+seeds: [2025]
+sampler: "euler"
+scheduler: "normal"
+denoise: 1.0
+
+# LoRA configurations
+loras:
+  lora:
+    - name: "ck-shadow-circuit-000021"
+      strength: 0.6
+
+story:
+  title: "The Tale of Dr. Simius Primate: The Simian Suit Savant"
+  content: |
+    In the neon-lit treetops of Neo-Banana City, Dr. Simius Primate - a genetically enhanced capuchin with an IQ of 287 - adjusted his laser-proof lab goggles. His latest creation, the SimianX Mk. IX exosuit, hummed with quantum energy from its banana-shaped core reactor. The chest hatch hissed open, revealing a cockpit lined with walnut-shaped control interfaces.
+    "Initiate neural link," he chittered, his mech's HUD projecting equations across the curved windshield. Across the city, his nemesis Dr. Malvolio Simian piloted the Shadow Simian - a twisted fusion of dark matter and durian spikes - preparing to unleash his Nano-Rot Virus on humanity's cloud servers.
+
 prompts:
-  - "A serene mountain landscape,"
+  - "in the style of cksc, cybernetic capuchin scientist, lab coat with circuit patterns, holding a holographic banana tablet, neon-green eyes glowing, surrounded by floating robot parts"
+  - "in the style of cksc, monkey engineer welding robot arm, sparks flying, augmented reality visor displaying schematics, jungle workshop with neon vines"
+  - "in the style of cksc, hero monkey piloting mech suit, chest cockpit glowing yellow, plasma cannons charging, cityscape battlefield behind"
+  - "in the style of cksc, evil monkey villain laughing maniacally, control console made of skulls, red energy swirling around cyborg tail"
+  - "in the style of cksc, monkey hacker interface, neural cables connecting to spaceship core, data streams reflected in round glasses"
+  - "in the style of cksc, robotic monkey army marching, glowing blue optics, banana-shaped energy rifles, toxic jungle backdrop"
+  - "in the style of cksc, monkey meditating inside quantum computer core, floating in lotus position, circuit patterns on fur"
+  - "in the style of cksc, aerial mech battle, hero suit dodging durian-shaped missiles, explosion lighting up rainy night city"
+  - "in the style of cksc, monkey inventor's workbench, holographic tools floating above, half-built drone with coconut shell armor"
+  - "in the style of cksc, evil monkey's lair, floating dark matter reactor, cyborg orangutan guards, bioluminescent fungus walls"
+  - "in the style of cksc, neural interface cockpit, monkey surrounded by glowing controls, windshield showing incoming threats"
+  - "in the style of cksc, monkey scientist analyzing virus samples, UV light revealing glowing pathogens, emergency lights flashing"
+  - "in the style of cksc, mech suit transformation sequence, armor plates shifting, energy core pulsing, monkey shouting mid-transformation"
+  - "in the style of cksc, jungle city skyline, floating monorails through giant trees, neon signs in monkey language"
+  - "in the style of cksc, hero monkey rescuing human child, mech hand gently lifting rubble, compassionate expression"
+  - "in the style of cksc, evil monkey's biomechanical tail, razor-sharp segments, dripping corrosive green liquid"
+  - "in the style of cksc, monkey hacker collective, group wearing VR headsets, digital warfare interface floating mid-air"
+  - "in the style of cksc, mech suit maintenance scene, monkey using robotic arms to repair leg hydraulics, oil smudge on cheek"
+  - "in the style of cksc, quantum banana core reactor, crystalline structure glowing, energy tendrils licking the containment field"
+  - "in the style of cksc, monkey vs robot boxing match, exoskeleton fists colliding, shockwave rippling through arena"
+  - "in the style of cksc, stealth mech infiltration, active camouflage engaged, partial visibility showing monkey pilot concentrating"
+  - "in the style of cksc, evil monkey's virus manifesting, digital corruption patterns spreading across city monitors"
+  - "in the style of cksc, monkey engineer racing against time, multiple holographic screens displaying countdown, sweat dripping"
+  - "in the style of cksc, mech suit powering up, energy flowing through palm-mounted cannons, monkey grinning fiercely"
+  - "in the style of cksc, jungle lab exterior, camouflaged dome with retractable roof, satellite dishes shaped like leaves"
+  - "in the style of cksc, monkey using tool belt gadgets, laser cutter emerging from wrist module, cutting through vault door"
+  - "in the style of cksc, evil monkey's monologue moment, standing atop crumbling monument, lightning striking behind"
+  - "in the style of cksc, hero mech emerging from waterfall, water cascading off armor plates, targeting systems activating"
+  - "in the style of cksc, monkey analyzing holographic battle map, strategic markers floating above tropical terrain"
+  - "in the style of cksc, final showdown, mech suits locked in energy blade clash, sparks flying, both monkeys screaming in effort"
 
 # Order of magnitude configurations
-variations:
-  time:
-    type: "sequential"
-    values: ["morning", "afternoon", "evening", "night"]
-  style:
-    type: "random"
-    values: ["realistic", "artistic", "abstract"]
-
+# variations:
+#   time:
+#     type: "sequential"
+#     values: ["morning", "afternoon", "evening", "night"]
+#   style:
+#     type: "random"
+#     values: ["realistic", "artistic", "abstract"]
 
 # Image sizes
 # portrait: 832x1216
@@ -25,20 +73,20 @@ variations:
 # Workflow configurations
 workflows:
   dev:
-    steps: 20
+    steps: 4
     cfg: 1
     width: 1344
     height: 768
-    seeds: [1, 2, 3]
+    seeds: [1]
   schnell:
     steps: 4
     cfg: 7
-    width: 1216
-    height: 832
-    seeds: [1,2]
+    width: 1344
+    height: 768
+    seeds: [1]
   default:
-    steps: 30
+    steps: 4
     cfg: 7
-    width: 768
+    width: 1344
     height: 768
     seeds: [1]
