@@ -1,13 +1,13 @@
 # Default prompt settings
 prompt_settings:
-  prefix: "<lora:ck-shadow-circuit-000021:1>, "
+  prefix: "<lora:ck-shadow-circuit-000021:1>, in the style of cksc, monochrome manga sketch, "
   negative: ""
 
 cfg: 1.0
 steps: 30
-width: 1344
-height: 768
-seeds: [2025]
+width: 768
+height: 
+seeds: [41536094]
 sampler: "euler"
 scheduler: "normal"
 denoise: 1.0
@@ -16,45 +16,39 @@ denoise: 1.0
 loras:
   lora:
     - name: "ck-shadow-circuit-000021"
-      strength: 0.6
-
-story:
-  title: "The Tale of Dr. Simius Primate: The Simian Suit Savant"
-  content: |
-    In the neon-lit treetops of Neo-Banana City, Dr. Simius Primate - a genetically enhanced capuchin with an IQ of 287 - adjusted his laser-proof lab goggles. His latest creation, the SimianX Mk. IX exosuit, hummed with quantum energy from its banana-shaped core reactor. The chest hatch hissed open, revealing a cockpit lined with walnut-shaped control interfaces.
-    "Initiate neural link," he chittered, his mech's HUD projecting equations across the curved windshield. Across the city, his nemesis Dr. Malvolio Simian piloted the Shadow Simian - a twisted fusion of dark matter and durian spikes - preparing to unleash his Nano-Rot Virus on humanity's cloud servers.
+      strength: 1.0
 
 prompts:
-  - "in the style of cksc, cybernetic capuchin scientist, lab coat with circuit patterns, holding a holographic banana tablet, neon-green eyes glowing, surrounded by floating robot parts"
-  - "in the style of cksc, monkey engineer welding robot arm, sparks flying, augmented reality visor displaying schematics, jungle workshop with neon vines"
-  - "in the style of cksc, hero monkey piloting mech suit, chest cockpit glowing yellow, plasma cannons charging, cityscape battlefield behind"
-  - "in the style of cksc, evil monkey villain laughing maniacally, control console made of skulls, red energy swirling around cyborg tail"
-  - "in the style of cksc, monkey hacker interface, neural cables connecting to spaceship core, data streams reflected in round glasses"
-  - "in the style of cksc, robotic monkey army marching, glowing blue optics, banana-shaped energy rifles, toxic jungle backdrop"
-  - "in the style of cksc, monkey meditating inside quantum computer core, floating in lotus position, circuit patterns on fur"
-  - "in the style of cksc, aerial mech battle, hero suit dodging durian-shaped missiles, explosion lighting up rainy night city"
-  - "in the style of cksc, monkey inventor's workbench, holographic tools floating above, half-built drone with coconut shell armor"
-  - "in the style of cksc, evil monkey's lair, floating dark matter reactor, cyborg orangutan guards, bioluminescent fungus walls"
-  - "in the style of cksc, neural interface cockpit, monkey surrounded by glowing controls, windshield showing incoming threats"
-  - "in the style of cksc, monkey scientist analyzing virus samples, UV light revealing glowing pathogens, emergency lights flashing"
-  - "in the style of cksc, mech suit transformation sequence, armor plates shifting, energy core pulsing, monkey shouting mid-transformation"
-  - "in the style of cksc, jungle city skyline, floating monorails through giant trees, neon signs in monkey language"
-  - "in the style of cksc, hero monkey rescuing human child, mech hand gently lifting rubble, compassionate expression"
-  - "in the style of cksc, evil monkey's biomechanical tail, razor-sharp segments, dripping corrosive green liquid"
-  - "in the style of cksc, monkey hacker collective, group wearing VR headsets, digital warfare interface floating mid-air"
-  - "in the style of cksc, mech suit maintenance scene, monkey using robotic arms to repair leg hydraulics, oil smudge on cheek"
-  - "in the style of cksc, quantum banana core reactor, crystalline structure glowing, energy tendrils licking the containment field"
-  - "in the style of cksc, monkey vs robot boxing match, exoskeleton fists colliding, shockwave rippling through arena"
-  - "in the style of cksc, stealth mech infiltration, active camouflage engaged, partial visibility showing monkey pilot concentrating"
-  - "in the style of cksc, evil monkey's virus manifesting, digital corruption patterns spreading across city monitors"
-  - "in the style of cksc, monkey engineer racing against time, multiple holographic screens displaying countdown, sweat dripping"
-  - "in the style of cksc, mech suit powering up, energy flowing through palm-mounted cannons, monkey grinning fiercely"
-  - "in the style of cksc, jungle lab exterior, camouflaged dome with retractable roof, satellite dishes shaped like leaves"
-  - "in the style of cksc, monkey using tool belt gadgets, laser cutter emerging from wrist module, cutting through vault door"
-  - "in the style of cksc, evil monkey's monologue moment, standing atop crumbling monument, lightning striking behind"
-  - "in the style of cksc, hero mech emerging from waterfall, water cascading off armor plates, targeting systems activating"
-  - "in the style of cksc, monkey analyzing holographic battle map, strategic markers floating above tropical terrain"
-  - "in the style of cksc, final showdown, mech suits locked in energy blade clash, sparks flying, both monkeys screaming in effort"
+  - "A Closeup Portrait of a cowboy, extreme Closeup of His Face - shrouded in mystery. He wears a, tattered high collar coat that billows dramatically in the wind, creating a striking contrast against the rugged landscape. Hyperdetailed badass Closeup, hyperdetailed, deadly Gaze, bleaked orange and Grey beige moody cloud Sky and Desert Background, Holding gun,"
+  - "A Fierce samurai warrior, Extreme closeup of face beneath traditional helmet, War-painted features illuminated by moonlight, Ornate armor with dragon motifs, Stormy night backdrop with lightning, Gripping katana, Intense determined expression, Hyperdetailed portrait"
+  - "Ancient mystic healer, Weathered face with tribal markings, Adorned in ceremonial feathers and beads, Piercing wise eyes, Smoke tendrils curling around, Dramatic golden hour lighting, Mountain peaks background, Holding crystal staff"
+  - "Cyberpunk street fighter, Face half-hidden by neon-lit mask, Augmented eyes glowing electric blue, Rain-slicked streets reflecting neon, Urban decay background, Holding energy blade, Hyperdetailed tech details"
+  - "Desert nomad queen, Face wrapped in ornate golden scarf, Kohl-lined eyes with fierce determination, Sand storm approaching, Ancient ruins background, Holding ceremonial dagger, Dramatic sunset lighting"
+  - "Arctic explorer, Frost-covered protective gear, Steam from breath visible, Ice crystals in beard, Northern lights background, Extreme weather conditions, Holding ice pick, Determined gaze"
+  - "Post-apocalyptic survivor, Face scarred but resilient, Makeshift armor from salvaged tech, Toxic storm clouds behind, Ruins of civilization backdrop, Holding modified weapon, Gritty hyperdetailed"
+  - "Tribal warrior chief, Face painted with sacred symbols, Headdress of exotic feathers, Jungle mists swirling, Ancient temple background, Holding ceremonial spear, Dramatic forest lighting"
+  - "Space marine commander, Face partially visible through cracked visor, Battle-damaged armor, Alien world horizon, Distant explosions in sky, Holding plasma rifle, Emergency lights reflecting"
+  - "Victorian monster hunter, Face shadowed by wide-brimmed hat, Gothic attire with silver accessories, Foggy cobblestone streets, Full moon background, Holding ornate crossbow, Gaslight illumination"
+  - "Tech shaman, Face adorned with circuitry tattoos, Dreadlocks with fiber optic threads, Digital storm approaching, Matrix-like background, Holding quantum staff, Cybernetic enhancements glowing"
+  - "Dragon rider warrior, Face marked by ancient runes, Wind-whipped hair and leather armor, Storm clouds with lightning, Mountain peaks background, Holding dragon reins, Beast's flames illuminating"
+  - "Wasteland mechanic, Face smeared with oil and grime, Steampunk goggles pushed up, Industrial ruins background, Smoke stacks billowing, Holding modified wrench, Harsh sun lighting"
+  - "Forest guardian, Face merged with natural elements, Living armor of bark and leaves, Mystical forest backdrop, Sacred grove glowing, Holding staff of ancient wood, Nature's power emanating"
+  - "Shadow assassin, Face obscured by magical darkness, Ethereal black armor flowing, Moonlit city rooftops, Mystical fog rising, Holding shadow blade, Purple energy crackling"
+  - "Time traveler, Face showing multiple temporal echoes, Quantum armor shifting phases, Temporal storm background, Reality fracturing, Holding chronometer device, Time distortion visible"
+  - "Elemental mage, Face marked by elemental sigils, Robes of flowing energy, Magical maelstrom background, Power vortex swirling, Holding orb of power, Elements converging"
+  - "Neon samurai, Face illuminated by cyber-enhanced tattoos, Modern tech-infused armor, Rainy night city, Holographic displays floating, Holding energy katana, Neon reflections everywhere"
+  - "Desert phantom, Face partially translucent and mysterious, Flowing robes of sand and wind, Mirage-filled desert, Heat distortions visible, Holding ancient artifact, Supernatural aura"
+  - "Frost queen warrior, Face adorned with ice crystals, Crystal armor reflecting light, Eternal winter landscape, Snow storm approaching, Holding ice sword, Aurora borealis backdrop"
+  - "Quantum knight, Face phasing between dimensions, Reality-bending armor, Cosmic void background, Stars and nebulae swirling, Holding probability sword, Space-time distortions"
+  - "Plague doctor warrior, Face behind crystal-enhanced mask, Modern tactical plague gear, Quarantine zone backdrop, Biohazard warnings glowing, Holding medical staff, Emergency lighting"
+  - "Solar warrior, Face glowing with inner light, Sun-forged armor radiating, Desert temple background, Heat waves visible, Holding solar blade, Dramatic sun flare effects"
+  - "Ocean guardian, Face adorned with bioluminescent markings, Living coral armor, Underwater ruins background, Sea creatures swimming, Holding trident, Caustic light effects"
+  - "Mountain sage, Face carved like ancient stone, Crystal-embedded robes, Sacred peak background, Snow storm approaching, Holding earth staff, Mystical mountain lighting"
+  - "Blood moon hunter, Face painted with ritual markings, Crimson-stained armor, Eclipse sky background, Red mist rising, Holding cursed weapon, Blood moon illumination"
+  - "Tech necromancer, Face covered in circuit-rune hybrids, Biomechanical armor pulsing, Digital graveyard scene, Data spirits rising, Holding techno-staff, Electric energy flowing"
+  - "Wind nomad, Face weathered by eternal storms, Storm-weaver robes flowing, Floating islands background, Cyclones visible, Holding air blade, Dynamic wind effects"
+  - "Crystal guardian, Face reflecting prismatic light, Geometric crystal armor, Cave of wonders backdrop, Gems glowing everywhere, Holding crystal sword, Rainbow light refractions"
+  - "Void walker, Face showing cosmic patterns, Star-field armor flowing, Deep space background, Reality tears visible, Holding null staff, Gravitational lensing effects"
 
 # Order of magnitude configurations
 # variations:
@@ -69,24 +63,3 @@ prompts:
 # portrait: 832x1216
 # landscape: 1216x832
 # wide: 1344x768
-
-# Workflow configurations
-workflows:
-  dev:
-    steps: 4
-    cfg: 1
-    width: 1344
-    height: 768
-    seeds: [1]
-  schnell:
-    steps: 4
-    cfg: 7
-    width: 1344
-    height: 768
-    seeds: [1]
-  default:
-    steps: 4
-    cfg: 7
-    width: 1344
-    height: 768
-    seeds: [1]
