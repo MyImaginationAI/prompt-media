@@ -1,13 +1,13 @@
 # Default prompt settings
 prompt_settings:
-  prefix: "<lora:ck-shadow-circuit-000021:1>, ppstorybook,"
+  prefix: "<lora:ck-shadow-circuit-000021:1>, in the style of cksc, monochrome manga sketch, "
   negative: ""
 
 cfg: 1.0
 steps: 30
-width: 1344
-height: 768
-seeds: [2025]
+width: 768
+height: 
+seeds: [41536094]
 sampler: "euler"
 scheduler: "normal"
 denoise: 1.0
@@ -16,44 +16,60 @@ denoise: 1.0
 loras:
   lora:
     - name: "ck-shadow-circuit-000021"
-      strength: 0.6
-
-story:
-  title: "The Brave Journey"
-  content: |
-    In a lush forest filled with towering trees and winding paths, a small russet fox with a white-tipped tail and a young monkey with bright curious eyes embark on an adventure that teaches them the true meaning of bravery and courage. Along their journey, they meet a wise old eagle with silver feathers who challenges them to face their fears, a gentle deer with golden spots who shows them the power of standing up for others, and two playful butterflies who demonstrate that even the smallest creatures can be brave. Together, they discover that true courage isn't about being fearless, but about facing your fears and doing what's right even when it's difficult.
+      strength: 1.0
 
 prompts:
-  - "A small russet fox with white-tipped tail hesitantly approaching a rushing stream, while a young monkey with bright eyes swings on a branch above"
-  - "The young monkey with bright eyes reaching down from a branch to help the white-tipped fox cross stepping stones in the stream"
-  - "A majestic eagle with silver feathers swooping down toward the white-tipped fox, who stands his ground despite visible fear"
-  - "The bright-eyed monkey leaping between branches to distract the silver-feathered eagle from his fox friend"
-  - "A gentle deer with golden spots showing the white-tipped fox how to stand tall against approaching shadows"
-  - "The bright-eyed monkey and white-tipped fox working together to help a trapped butterfly escape a spider's web"
-  - "The silver-feathered eagle teaching the bright-eyed monkey how to spot safe paths through the misty forest"
-  - "The white-tipped fox racing through underbrush to warn the golden-spotted deer of approaching danger"
-  - "The bright-eyed monkey and white-tipped fox sharing berries with smaller forest animals during a storm"
-  - "The silver-feathered eagle demonstrating a brave dive through strong winds to the watching monkey"
-  - "The white-tipped fox leading the golden-spotted deer through a dark cave illuminated by glowworms"
-  - "The bright-eyed monkey swinging through rain to gather medicinal leaves for his injured fox friend"
-  - "Two colorful butterflies guiding the white-tipped fox across a precarious fallen log"
-  - "The bright-eyed monkey defending a group of young birds from a menacing shadow"
-  - "The silver-feathered eagle and white-tipped fox soaring/leaping through morning mist"
-  - "The golden-spotted deer teaching the bright-eyed monkey how to blend into the forest shadows"
-  - "The white-tipped fox diving into rapid waters to rescue a struggling butterfly"
-  - "The bright-eyed monkey creating a rope bridge from vines for smaller animals to cross"
-  - "The silver-feathered eagle and bright-eyed monkey scouting from the highest tree branch"
-  - "The white-tipped fox standing guard while the golden-spotted deer rests in a meadow"
-  - "The bright-eyed monkey teaching younger animals how to safely climb through the canopy"
-  - "The white-tipped fox and silver-feathered eagle tracking through nighttime forest"
-  - "The golden-spotted deer showing the bright-eyed monkey how to cross a rickety bridge"
-  - "The white-tipped fox leading small animals to shelter as storm clouds gather"
-  - "The bright-eyed monkey swinging through branches carrying healing herbs for injured animals"
-  - "The silver-feathered eagle and white-tipped fox navigating through a lightning storm"
-  - "The bright-eyed monkey comforting scared young animals during thunder"
-  - "The white-tipped fox and golden-spotted deer protecting a nest from predators"
-  - "The bright-eyed monkey and colorful butterflies creating a beautiful distraction from danger"
-  - "The white-tipped fox and bright-eyed monkey resting under starlight, sharing their days adventures"
+  - "Ukrainian President closeup, Determined expression, Military fatigues, Emergency bunker setting, Maps and screens background, Blue-yellow lighting, Crisis meeting atmosphere"
+  - "Former US President portrait, Confrontational expression, Business suit, Luxury office setting, American flags backdrop, Dramatic shadows, Power pose"
+  - "European diplomat, Concerned face, Formal attire, EU parliament background, Flag array, Institutional lighting, Document in hand"
+  - "Russian leader, Stone-faced expression, Dark suit, Kremlin office setting, Traditional symbols, Cold lighting, Calculated pose"
+  - "War correspondent, Weathered face, Protective vest, Active combat zone, Smoke and flares, Urban ruins background, Journalism equipment"
+  - "Peace negotiator, Strategic expression, Professional suit, Saudi conference room, World maps display, Diplomatic lighting, Document focus"
+  - "Military strategist, Intense focus, Combat uniform, Command center, Digital battlefield displays, Technical lighting, Communication gear"
+  - "Displaced civilian, Resilient expression, Traditional clothes, Temporary shelter, Urban destruction backdrop, Natural lighting, Personal belongings"
+  - "UN Secretary portrait, Diplomatic pose, Formal suit, Security Council chamber, International flags, Official lighting, Speaking gesture"
+  - "NATO Commander, Stern expression, Military dress uniform, Alliance headquarters, Strategic maps, Professional lighting, Command presence"
+  - "Protest leader, Passionate expression, Casual attire, Street demonstration, Urban setting, Natural lighting, Megaphone detail"
+  - "Intelligence officer, Calculating look, Business casual, Secure facility, Data screens, Low-key lighting, Technology focus"
+  - "Humanitarian worker, Compassionate face, Aid organization vest, Refugee camp, Emergency supplies, Dawn lighting, Helper pose"
+  - "Defense minister, Official expression, Military dress, Ministry briefing room, National symbols, Formal lighting, Authority stance"
+  - "Foreign correspondent, Analytical expression, Field jacket, News studio, World map background, Broadcast lighting, Microphone detail"
+  - "Resistance fighter, Determined look, Combat gear, Underground bunker, Tactical equipment, Emergency lighting, Weapon ready"
+  - "Political analyst, Thoughtful expression, Professional attire, Television studio, News graphics, Studio lighting, Analysis gesture"
+  - "Emergency coordinator, Focused face, High-vis vest, Crisis center, Status screens, Technical lighting, Communication device"
+  - "Cyber warfare specialist, Intent expression, Technical outfit, Digital command center, Code displays, Blue light ambiance, Tech interface"
+  - "Diplomatic security, Alert expression, Tactical suit, Embassy corridor, Security cameras, Shadow lighting, Protective stance"
+  - "Media mogul, Controlling expression, Executive suit, Corporate newsroom, Broadcasting equipment, Dramatic lighting, Power pose"
+  - "Military advisor, Strategic face, Combat fatigues, Pentagon office, Classified documents, Official lighting, Advisory gesture"
+  - "Refugee coordinator, Caring expression, Aid worker uniform, Processing center, Registration desk, Fluorescent lighting, Helper stance"
+  - "War crimes investigator, Serious expression, Professional coat, Evidence room, Document walls, Harsh lighting, Investigation focus"
+  - "Peace activist, Passionate face, Casual clothes, Rally podium, Crowd background, Natural lighting, Speaking pose"
+  - "Military attaché, Official expression, Dress uniform, Embassy office, National symbols, Formal lighting, Diplomatic stance"
+  - "Crisis negotiator, Intense focus, Business suit, Secure room, Communication equipment, Low light, Mediation pose"
+  - "Battlefield reporter, Determined look, Press vest, Combat zone, Explosion background, Natural lighting, Camera ready"
+  - "Intelligence analyst, Concentrated expression, Casual professional, Analysis center, Data screens, Blue lighting, Research pose"
+  - "Diplomatic courier, Alert face, Security uniform, Secure facility, Diplomatic pouches, Shadow lighting, Guardian stance"
+  - "War photographer, Focused expression, Combat gear, Conflict zone, Urban destruction, Natural lighting, Camera equipment"
+  - "Strategic advisor, Calculating look, Business attire, Situation room, Military displays, Emergency lighting, Planning gesture"
+  - "Humanitarian director, Concerned face, Professional casual, Aid headquarters, Crisis maps, Office lighting, Leadership pose"
+  - "Defense contractor, Serious expression, Executive suit, Military facility, Technology displays, Industrial lighting, Business stance"
+  - "Political prisoner, Defiant look, Prison uniform, Cell interior, Barred window, Harsh lighting, Resistance pose"
+  - "Embassy official, Diplomatic expression, Formal suit, Consulate office, National symbols, Professional lighting, Official stance"
+  - "Military journalist, Investigative look, Field gear, Forward base, Combat equipment, Natural lighting, Reporting pose"
+  - "Peace corps worker, Hopeful expression, Casual uniform, Field station, Aid supplies, Morning lighting, Helper stance"
+  - "Security advisor, Strategic face, Professional suit, Command center, Tactical displays, Technical lighting, Advisory pose"
+  - "War zone doctor, Determined expression, Medical scrubs, Field hospital, Emergency equipment, Harsh lighting, Treatment focus"
+  - "Diplomatic interpreter, Attentive face, Professional attire, Conference room, International flags, Formal lighting, Translation pose"
+  - "Resistance leader, Strong expression, Combat casual, Secret base, Resistance symbols, Shadow lighting, Leadership stance"
+  - "Foreign minister, Official look, Diplomatic suit, Ministry office, National emblems, Professional lighting, Authority pose"
+  - "Combat medic, Focused expression, Medical gear, Battlefield triage, Medical supplies, Emergency lighting, Treatment stance"
+  - "Intelligence director, Stern face, Executive suit, Control room, Surveillance feeds, Low lighting, Command pose"
+  - "Refugee advocate, Passionate expression, Business casual, Aid office, Case files, Office lighting, Advocacy gesture"
+  - "Military commander, Authoritative look, Battle uniform, Command post, Strategic maps, Technical lighting, Leadership stance"
+  - "Crisis reporter, Alert expression, Press gear, Emergency scene, Disaster background, Natural lighting, Broadcast pose"
+  - "Peace negotiator, Thoughtful face, Formal suit, Meeting room, Peace proposals, Professional lighting, Mediation stance"
+  - "Defense analyst, Analytical expression, Professional casual, Think tank office, Research displays, Office lighting, Analysis pose"
+  - "War correspondent, Intense look, Field jacket, Combat zone, War aftermath, Natural lighting, Reporting stance"
 
 # Order of magnitude configurations
 # variations:
@@ -68,24 +84,3 @@ prompts:
 # portrait: 832x1216
 # landscape: 1216x832
 # wide: 1344x768
-
-# Workflow configurations
-workflows:
-  dev:
-    steps: 35
-    cfg: 1
-    width: 1344
-    height: 768
-    seeds: [1]
-  schnell:
-    steps: 4
-    cfg: 7
-    width: 1344
-    height: 768
-    seeds: [1]
-  default:
-    steps: 35
-    cfg: 7
-    width: 1344
-    height: 768
-    seeds: [1]
