@@ -122,8 +122,6 @@ comfyui/start:
 	@cd $(COMFYUI_DIR) && \
 		git pull && \
 		bash -c "source $(COMFYUI_VENV) && \
-		pip install -U pip && \
-		pip install -r requirements.txt && \
 		python main.py \
 		--listen \
 		--use-split-cross-attention \

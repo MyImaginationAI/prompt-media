@@ -1,13 +1,13 @@
 # Default prompt settings
 prompt_settings:
-  prefix: "<lora:ck-shadow-circuit-000021:1>, in the style of cksc, monochrome manga sketch, "
+  prefix: "<lora:ck-shadow-circuit-000021:1>, ppstorybook,"
   negative: ""
 
 cfg: 1.0
 steps: 30
-width: 768
-height: 
-seeds: [41536094]
+width: 1344
+height: 768
+seeds: [2025]
 sampler: "euler"
 scheduler: "normal"
 denoise: 1.0
@@ -16,39 +16,44 @@ denoise: 1.0
 loras:
   lora:
     - name: "ck-shadow-circuit-000021"
-      strength: 1.0
+      strength: 0.6
+
+story:
+  title: "The Brave Journey"
+  content: |
+    In a lush forest filled with towering trees and winding paths, a small russet fox with a white-tipped tail and a young monkey with bright curious eyes embark on an adventure that teaches them the true meaning of bravery and courage. Along their journey, they meet a wise old eagle with silver feathers who challenges them to face their fears, a gentle deer with golden spots who shows them the power of standing up for others, and two playful butterflies who demonstrate that even the smallest creatures can be brave. Together, they discover that true courage isn't about being fearless, but about facing your fears and doing what's right even when it's difficult.
 
 prompts:
-  - "A Closeup Portrait of a cowboy, extreme Closeup of His Face - shrouded in mystery. He wears a, tattered high collar coat that billows dramatically in the wind, creating a striking contrast against the rugged landscape. Hyperdetailed badass Closeup, hyperdetailed, deadly Gaze, bleaked orange and Grey beige moody cloud Sky and Desert Background, Holding gun,"
-  - "A Fierce samurai warrior, Extreme closeup of face beneath traditional helmet, War-painted features illuminated by moonlight, Ornate armor with dragon motifs, Stormy night backdrop with lightning, Gripping katana, Intense determined expression, Hyperdetailed portrait"
-  - "Ancient mystic healer, Weathered face with tribal markings, Adorned in ceremonial feathers and beads, Piercing wise eyes, Smoke tendrils curling around, Dramatic golden hour lighting, Mountain peaks background, Holding crystal staff"
-  - "Cyberpunk street fighter, Face half-hidden by neon-lit mask, Augmented eyes glowing electric blue, Rain-slicked streets reflecting neon, Urban decay background, Holding energy blade, Hyperdetailed tech details"
-  - "Desert nomad queen, Face wrapped in ornate golden scarf, Kohl-lined eyes with fierce determination, Sand storm approaching, Ancient ruins background, Holding ceremonial dagger, Dramatic sunset lighting"
-  - "Arctic explorer, Frost-covered protective gear, Steam from breath visible, Ice crystals in beard, Northern lights background, Extreme weather conditions, Holding ice pick, Determined gaze"
-  - "Post-apocalyptic survivor, Face scarred but resilient, Makeshift armor from salvaged tech, Toxic storm clouds behind, Ruins of civilization backdrop, Holding modified weapon, Gritty hyperdetailed"
-  - "Tribal warrior chief, Face painted with sacred symbols, Headdress of exotic feathers, Jungle mists swirling, Ancient temple background, Holding ceremonial spear, Dramatic forest lighting"
-  - "Space marine commander, Face partially visible through cracked visor, Battle-damaged armor, Alien world horizon, Distant explosions in sky, Holding plasma rifle, Emergency lights reflecting"
-  - "Victorian monster hunter, Face shadowed by wide-brimmed hat, Gothic attire with silver accessories, Foggy cobblestone streets, Full moon background, Holding ornate crossbow, Gaslight illumination"
-  - "Tech shaman, Face adorned with circuitry tattoos, Dreadlocks with fiber optic threads, Digital storm approaching, Matrix-like background, Holding quantum staff, Cybernetic enhancements glowing"
-  - "Dragon rider warrior, Face marked by ancient runes, Wind-whipped hair and leather armor, Storm clouds with lightning, Mountain peaks background, Holding dragon reins, Beast's flames illuminating"
-  - "Wasteland mechanic, Face smeared with oil and grime, Steampunk goggles pushed up, Industrial ruins background, Smoke stacks billowing, Holding modified wrench, Harsh sun lighting"
-  - "Forest guardian, Face merged with natural elements, Living armor of bark and leaves, Mystical forest backdrop, Sacred grove glowing, Holding staff of ancient wood, Nature's power emanating"
-  - "Shadow assassin, Face obscured by magical darkness, Ethereal black armor flowing, Moonlit city rooftops, Mystical fog rising, Holding shadow blade, Purple energy crackling"
-  - "Time traveler, Face showing multiple temporal echoes, Quantum armor shifting phases, Temporal storm background, Reality fracturing, Holding chronometer device, Time distortion visible"
-  - "Elemental mage, Face marked by elemental sigils, Robes of flowing energy, Magical maelstrom background, Power vortex swirling, Holding orb of power, Elements converging"
-  - "Neon samurai, Face illuminated by cyber-enhanced tattoos, Modern tech-infused armor, Rainy night city, Holographic displays floating, Holding energy katana, Neon reflections everywhere"
-  - "Desert phantom, Face partially translucent and mysterious, Flowing robes of sand and wind, Mirage-filled desert, Heat distortions visible, Holding ancient artifact, Supernatural aura"
-  - "Frost queen warrior, Face adorned with ice crystals, Crystal armor reflecting light, Eternal winter landscape, Snow storm approaching, Holding ice sword, Aurora borealis backdrop"
-  - "Quantum knight, Face phasing between dimensions, Reality-bending armor, Cosmic void background, Stars and nebulae swirling, Holding probability sword, Space-time distortions"
-  - "Plague doctor warrior, Face behind crystal-enhanced mask, Modern tactical plague gear, Quarantine zone backdrop, Biohazard warnings glowing, Holding medical staff, Emergency lighting"
-  - "Solar warrior, Face glowing with inner light, Sun-forged armor radiating, Desert temple background, Heat waves visible, Holding solar blade, Dramatic sun flare effects"
-  - "Ocean guardian, Face adorned with bioluminescent markings, Living coral armor, Underwater ruins background, Sea creatures swimming, Holding trident, Caustic light effects"
-  - "Mountain sage, Face carved like ancient stone, Crystal-embedded robes, Sacred peak background, Snow storm approaching, Holding earth staff, Mystical mountain lighting"
-  - "Blood moon hunter, Face painted with ritual markings, Crimson-stained armor, Eclipse sky background, Red mist rising, Holding cursed weapon, Blood moon illumination"
-  - "Tech necromancer, Face covered in circuit-rune hybrids, Biomechanical armor pulsing, Digital graveyard scene, Data spirits rising, Holding techno-staff, Electric energy flowing"
-  - "Wind nomad, Face weathered by eternal storms, Storm-weaver robes flowing, Floating islands background, Cyclones visible, Holding air blade, Dynamic wind effects"
-  - "Crystal guardian, Face reflecting prismatic light, Geometric crystal armor, Cave of wonders backdrop, Gems glowing everywhere, Holding crystal sword, Rainbow light refractions"
-  - "Void walker, Face showing cosmic patterns, Star-field armor flowing, Deep space background, Reality tears visible, Holding null staff, Gravitational lensing effects"
+  - "A small russet fox with white-tipped tail hesitantly approaching a rushing stream, while a young monkey with bright eyes swings on a branch above"
+  - "The young monkey with bright eyes reaching down from a branch to help the white-tipped fox cross stepping stones in the stream"
+  - "A majestic eagle with silver feathers swooping down toward the white-tipped fox, who stands his ground despite visible fear"
+  - "The bright-eyed monkey leaping between branches to distract the silver-feathered eagle from his fox friend"
+  - "A gentle deer with golden spots showing the white-tipped fox how to stand tall against approaching shadows"
+  - "The bright-eyed monkey and white-tipped fox working together to help a trapped butterfly escape a spider's web"
+  - "The silver-feathered eagle teaching the bright-eyed monkey how to spot safe paths through the misty forest"
+  - "The white-tipped fox racing through underbrush to warn the golden-spotted deer of approaching danger"
+  - "The bright-eyed monkey and white-tipped fox sharing berries with smaller forest animals during a storm"
+  - "The silver-feathered eagle demonstrating a brave dive through strong winds to the watching monkey"
+  - "The white-tipped fox leading the golden-spotted deer through a dark cave illuminated by glowworms"
+  - "The bright-eyed monkey swinging through rain to gather medicinal leaves for his injured fox friend"
+  - "Two colorful butterflies guiding the white-tipped fox across a precarious fallen log"
+  - "The bright-eyed monkey defending a group of young birds from a menacing shadow"
+  - "The silver-feathered eagle and white-tipped fox soaring/leaping through morning mist"
+  - "The golden-spotted deer teaching the bright-eyed monkey how to blend into the forest shadows"
+  - "The white-tipped fox diving into rapid waters to rescue a struggling butterfly"
+  - "The bright-eyed monkey creating a rope bridge from vines for smaller animals to cross"
+  - "The silver-feathered eagle and bright-eyed monkey scouting from the highest tree branch"
+  - "The white-tipped fox standing guard while the golden-spotted deer rests in a meadow"
+  - "The bright-eyed monkey teaching younger animals how to safely climb through the canopy"
+  - "The white-tipped fox and silver-feathered eagle tracking through nighttime forest"
+  - "The golden-spotted deer showing the bright-eyed monkey how to cross a rickety bridge"
+  - "The white-tipped fox leading small animals to shelter as storm clouds gather"
+  - "The bright-eyed monkey swinging through branches carrying healing herbs for injured animals"
+  - "The silver-feathered eagle and white-tipped fox navigating through a lightning storm"
+  - "The bright-eyed monkey comforting scared young animals during thunder"
+  - "The white-tipped fox and golden-spotted deer protecting a nest from predators"
+  - "The bright-eyed monkey and colorful butterflies creating a beautiful distraction from danger"
+  - "The white-tipped fox and bright-eyed monkey resting under starlight, sharing their days adventures"
 
 # Order of magnitude configurations
 # variations:
@@ -63,3 +68,24 @@ prompts:
 # portrait: 832x1216
 # landscape: 1216x832
 # wide: 1344x768
+
+# Workflow configurations
+workflows:
+  dev:
+    steps: 35
+    cfg: 1
+    width: 1344
+    height: 768
+    seeds: [1]
+  schnell:
+    steps: 4
+    cfg: 7
+    width: 1344
+    height: 768
+    seeds: [1]
+  default:
+    steps: 35
+    cfg: 7
+    width: 1344
+    height: 768
+    seeds: [1]
